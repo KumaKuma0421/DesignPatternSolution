@@ -48,12 +48,14 @@ var hierarchy =
       [ "GoF_Decorator::FrequencyCounter", "d9/da8/class_go_f___decorator_1_1_frequency_counter.html", null ],
       [ "GoF_Decorator::TickCounter", "d6/d44/class_go_f___decorator_1_1_tick_counter.html", null ]
     ] ],
+    [ "GoF_FactoryMethod::Creator", "d3/df9/class_go_f___factory_method_1_1_creator.html", [
+      [ "GoF_FactoryMethod::ConcreteCreator", "df/d47/class_go_f___factory_method_1_1_concrete_creator.html", null ]
+    ] ],
     [ "GoF_Memento::DataManager", "de/d24/class_go_f___memento_1_1_data_manager.html", null ],
     [ "GoF_AbstractFactory::DisplayProduct", "d4/d56/class_go_f___abstract_factory_1_1_display_product.html", [
       [ "GoF_AbstractFactory::ConsoleDisplayProduct", "db/db8/class_go_f___abstract_factory_1_1_console_display_product.html", null ],
       [ "GoF_AbstractFactory::WindowDisplayProduct", "d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html", null ]
     ] ],
-    [ "GoF_FactoryMethod::FactoryMethod", "d6/d3c/class_go_f___factory_method_1_1_factory_method.html", null ],
     [ "GoF_Bridge::FileOperationImpl", "d7/d59/class_go_f___bridge_1_1_file_operation_impl.html", [
       [ "GoF_Bridge::UnixFileOperationImpl", "d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html", null ],
       [ "GoF_Bridge::WindowsFileOperationImpl", "d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html", null ]
@@ -73,12 +75,14 @@ var hierarchy =
     [ "GoF_Observer::Observer", "d5/dcb/class_go_f___observer_1_1_observer.html", [
       [ "GoF_Observer::Watcher", "d3/df5/class_go_f___observer_1_1_watcher.html", null ]
     ] ],
-    [ "GoF_FactoryMethod::Observer", "d4/d17/class_go_f___factory_method_1_1_observer.html", null ],
     [ "GoF_Visitor::Operation", "de/dfe/class_go_f___visitor_1_1_operation.html", [
       [ "GoF_Visitor::RotateOperation", "db/d25/class_go_f___visitor_1_1_rotate_operation.html", null ],
       [ "GoF_Visitor::ShiftOperation", "de/d90/class_go_f___visitor_1_1_shift_operation.html", null ]
     ] ],
     [ "GoF_Visitor::Position", "d5/dfa/class_go_f___visitor_1_1_position.html", null ],
+    [ "GoF_FactoryMethod::Product", "d6/d7e/class_go_f___factory_method_1_1_product.html", [
+      [ "GoF_FactoryMethod::ConcreteProduct", "df/d1c/class_go_f___factory_method_1_1_concrete_product.html", null ]
+    ] ],
     [ "GoF_Prototype::Prototype", "d9/dc2/class_go_f___prototype_1_1_prototype.html", [
       [ "GoF_Prototype::ConcretePrototype", "d9/d3d/class_go_f___prototype_1_1_concrete_prototype.html", null ]
     ] ],
@@ -115,9 +119,6 @@ var hierarchy =
       [ "GoF_Strategy1::PreviousStrategy", "d5/d07/class_go_f___strategy1_1_1_previous_strategy.html", null ]
     ] ],
     [ "GoF_Strategy2::Strategy2", "d5/dfc/class_go_f___strategy2_1_1_strategy2.html", null ],
-    [ "GoF_FactoryMethod::Subscriber", "df/db3/class_go_f___factory_method_1_1_subscriber.html", [
-      [ "GoF_FactoryMethod::Timer", "d2/d14/class_go_f___factory_method_1_1_timer.html", null ]
-    ] ],
     [ "GoF_Observer::Subscriber", "d3/d81/class_go_f___observer_1_1_subscriber.html", [
       [ "GoF_Observer::ClockGenerator", "d5/ddd/class_go_f___observer_1_1_clock_generator.html", null ]
     ] ],
@@ -131,6 +132,5 @@ var hierarchy =
       [ "GoF_ChainOfResponsibility::RangeValidation< T >", "dc/d05/class_go_f___chain_of_responsibility_1_1_range_validation.html", null ]
     ] ],
     [ "Sample::VirtualShop", "d5/dec/class_sample_1_1_virtual_shop.html", null ],
-    [ "GoF_State::VoiceRecorder", "d1/db5/class_go_f___state_1_1_voice_recorder.html", null ],
-    [ "GoF_FactoryMethod::Watcher", "d1/d46/class_go_f___factory_method_1_1_watcher.html", null ]
+    [ "GoF_State::VoiceRecorder", "d1/db5/class_go_f___state_1_1_voice_recorder.html", null ]
 ];

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/FactoryMethod/Creator.cpp ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d5/d3e/_creator_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Creator.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d3e/_creator_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Creator.cpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/dd7/_creator_8h.html">Creator.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d2/d1b/namespace_go_f___factory_method.html">GoF_FactoryMethod</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d3/df9/class_go_f___factory_method_1_1_creator.html#abdde228294a78387338fe874accd629b">    9</a></span>&#160;<a class="code" href="../../d3/df9/class_go_f___factory_method_1_1_creator.html#abdde228294a78387338fe874accd629b">Creator::Creator</a>()</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d3/df9/class_go_f___factory_method_1_1_creator.html#af8ecf377073058ea5156afa2e79f901e">   14</a></span>&#160;<a class="code" href="../../d3/df9/class_go_f___factory_method_1_1_creator.html#af8ecf377073058ea5156afa2e79f901e">Creator::~Creator</a>()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#a2169de71384fe2ffde2059e5348c94dc">   19</a></span>&#160;<a class="code" href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#a2169de71384fe2ffde2059e5348c94dc">ConcreteCreator::ConcreteCreator</a>()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#affb07caf98e6f0f4c1246d54ed7a2b1e">   24</a></span>&#160;<a class="code" href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#affb07caf98e6f0f4c1246d54ed7a2b1e">ConcreteCreator::~ConcreteCreator</a>()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#acea5e84d753098d63ed8bb13e1a7f07a">   29</a></span>&#160;<a class="code" href="../../d6/d7e/class_go_f___factory_method_1_1_product.html">Product</a>* <a class="code" href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#acea5e84d753098d63ed8bb13e1a7f07a">ConcreteCreator::CreateProduct</a>()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../df/d1c/class_go_f___factory_method_1_1_concrete_product.html">ConcreteProduct</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespace_go_f___state_html_af330a938dcf2003eaa175adc38d3ad8a"><div class="ttname"><a href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8a">GoF_State::Action</a></div><div class="ttdeci">Action</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00019">State.h:20</a></div></div>
+<div class="ttc" id="aclass_go_f___factory_method_1_1_creator_html_af8ecf377073058ea5156afa2e79f901e"><div class="ttname"><a href="../../d3/df9/class_go_f___factory_method_1_1_creator.html#af8ecf377073058ea5156afa2e79f901e">GoF_FactoryMethod::Creator::~Creator</a></div><div class="ttdeci">virtual ~Creator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/_creator_8cpp_source.html#l00014">Creator.cpp:14</a></div></div>
+<div class="ttc" id="a_strategy1_2_main_8cpp_html_a8273000bc606d90b57874b40b7ee6486"><div class="ttname"><a href="../../da/d94/_strategy1_2_main_8cpp.html#a8273000bc606d90b57874b40b7ee6486">init</a></div><div class="ttdeci">void init(Container *container)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d94/_strategy1_2_main_8cpp_source.html#l00010">Main.cpp:10</a></div></div>
+<div class="ttc" id="aclass_go_f___factory_method_1_1_creator_html_abdde228294a78387338fe874accd629b"><div class="ttname"><a href="../../d3/df9/class_go_f___factory_method_1_1_creator.html#abdde228294a78387338fe874accd629b">GoF_FactoryMethod::Creator::Creator</a></div><div class="ttdeci">Creator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/_creator_8cpp_source.html#l00009">Creator.cpp:9</a></div></div>
+<div class="ttc" id="a_command_list_8txt_html_a9cf45fcd4bd61943d73fd28b86acf5be"><div class="ttname"><a href="../../db/d91/_command_list_8txt.html#a9cf45fcd4bd61943d73fd28b86acf5be">Operand</a></div><div class="ttdeci">Operator Operand</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d91/_command_list_8txt_source.html#l00004">CommandList.txt:4</a></div></div>
+<div class="ttc" id="aclass_go_f___factory_method_1_1_product_html"><div class="ttname"><a href="../../d6/d7e/class_go_f___factory_method_1_1_product.html">GoF_FactoryMethod::Product</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/_product_8h_source.html#l00009">Product.h:10</a></div></div>
+<div class="ttc" id="a_memento_2_main_8cpp_html_a652101a1223d59dd6539433ed13ebeec"><div class="ttname"><a href="../../d7/d06/_memento_2_main_8cpp.html#a652101a1223d59dd6539433ed13ebeec">prepare</a></div><div class="ttdeci">bool prepare()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d06/_memento_2_main_8cpp_source.html#l00014">Main.cpp:14</a></div></div>
+<div class="ttc" id="a_composite_2_main_8cpp_html_a934806ab7bbf360108d05fdea57cf413"><div class="ttname"><a href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413">search</a></div><div class="ttdeci">void search(Node *node)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d02/_composite_2_main_8cpp_source.html#l00047">Main.cpp:47</a></div></div>
+<div class="ttc" id="a_chain_of_responsibility_2_main_8cpp_html_a0e4e6e39be0c43adcde28e35530bde3e"><div class="ttname"><a href="../../d7/d14/_chain_of_responsibility_2_main_8cpp.html#a0e4e6e39be0c43adcde28e35530bde3e">doubleCheck</a></div><div class="ttdeci">bool doubleCheck(double value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d14/_chain_of_responsibility_2_main_8cpp_source.html#l00031">Main.cpp:31</a></div></div>
+<div class="ttc" id="anamespace_go_f___factory_method_html"><div class="ttname"><a href="../../d2/d1b/namespace_go_f___factory_method.html">GoF_FactoryMethod</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd7/_creator_8h_source.html#l00009">Creator.h:10</a></div></div>
+<div class="ttc" id="aclass_go_f___factory_method_1_1_concrete_creator_html_affb07caf98e6f0f4c1246d54ed7a2b1e"><div class="ttname"><a href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#affb07caf98e6f0f4c1246d54ed7a2b1e">GoF_FactoryMethod::ConcreteCreator::~ConcreteCreator</a></div><div class="ttdeci">~ConcreteCreator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/_creator_8cpp_source.html#l00024">Creator.cpp:24</a></div></div>
+<div class="ttc" id="aclass_go_f___factory_method_1_1_concrete_product_html"><div class="ttname"><a href="../../df/d1c/class_go_f___factory_method_1_1_concrete_product.html">GoF_FactoryMethod::ConcreteProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de0/_product_8h_source.html#l00016">Product.h:17</a></div></div>
+<div class="ttc" id="a_chain_of_responsibility_2_main_8cpp_html_a5e1cf36bb0a3af6592ab784248814080"><div class="ttname"><a href="../../d7/d14/_chain_of_responsibility_2_main_8cpp.html#a5e1cf36bb0a3af6592ab784248814080">IntegerCheck</a></div><div class="ttdeci">bool IntegerCheck(int value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d14/_chain_of_responsibility_2_main_8cpp_source.html#l00011">Main.cpp:11</a></div></div>
+<div class="ttc" id="anamespace_sample_html"><div class="ttname"><a href="../../de/df2/namespace_sample.html">Sample</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00013">Material.h:14</a></div></div>
+<div class="ttc" id="aclass_go_f___factory_method_1_1_concrete_creator_html_acea5e84d753098d63ed8bb13e1a7f07a"><div class="ttname"><a href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#acea5e84d753098d63ed8bb13e1a7f07a">GoF_FactoryMethod::ConcreteCreator::CreateProduct</a></div><div class="ttdeci">Product * CreateProduct()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/_creator_8cpp_source.html#l00029">Creator.cpp:29</a></div></div>
+<div class="ttc" id="a_abstract_factory_2_main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../da/d07/_abstract_factory_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d07/_abstract_factory_2_main_8cpp_source.html#l00010">Main.cpp:10</a></div></div>
+<div class="ttc" id="aclass_go_f___factory_method_1_1_concrete_creator_html_a2169de71384fe2ffde2059e5348c94dc"><div class="ttname"><a href="../../df/d47/class_go_f___factory_method_1_1_concrete_creator.html#a2169de71384fe2ffde2059e5348c94dc">GoF_FactoryMethod::ConcreteCreator::ConcreteCreator</a></div><div class="ttdeci">ConcreteCreator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/_creator_8cpp_source.html#l00019">Creator.cpp:19</a></div></div>
+<div class="ttc" id="a_creator_8h_html"><div class="ttname"><a href="../../df/dd7/_creator_8h.html">Creator.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_d674e745305acfa4af19ab1717ebc7b0.html">FactoryMethod</a></li><li class="navelem"><a class="el" href="../../d5/d3e/_creator_8cpp.html">Creator.cpp</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

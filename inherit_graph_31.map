@@ -1,3 +1,4 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$de/d24/class_go_f___memento_1_1_data_manager.html" title=" " alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node1" href="$d3/d81/class_go_f___observer_1_1_subscriber.html" title=" " alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$d5/ddd/class_go_f___observer_1_1_clock_generator.html" title=" " alt="" coords="228,5,431,32"/>
 </map>

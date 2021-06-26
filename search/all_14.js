@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['watcher_392',['Watcher',['../d1/d46/class_go_f___factory_method_1_1_watcher.html',1,'GoF_FactoryMethod::Watcher'],['../d3/df5/class_go_f___observer_1_1_watcher.html',1,'GoF_Observer::Watcher'],['../d1/d46/class_go_f___factory_method_1_1_watcher.html#a5b9395cd341fc8fb76736558194dbd69',1,'GoF_FactoryMethod::Watcher::Watcher()'],['../d3/df5/class_go_f___observer_1_1_watcher.html#a283b044c2d6dbe866e7cde8ba29117aa',1,'GoF_Observer::Watcher::Watcher(int id)'],['../d3/df5/class_go_f___observer_1_1_watcher.html#ac2b508bd65f637197d0f38332a3e0fd6',1,'GoF_Observer::Watcher::Watcher()=delete']]],
-  ['watcher_2ecpp_393',['Watcher.cpp',['../d5/dda/_watcher_8cpp.html',1,'']]],
-  ['watcher_2eh_394',['Watcher.h',['../d5/dca/_watcher_8h.html',1,'']]],
+  ['watcher_394',['Watcher',['../d3/df5/class_go_f___observer_1_1_watcher.html',1,'GoF_Observer::Watcher'],['../d3/df5/class_go_f___observer_1_1_watcher.html#a283b044c2d6dbe866e7cde8ba29117aa',1,'GoF_Observer::Watcher::Watcher(int id)'],['../d3/df5/class_go_f___observer_1_1_watcher.html#ac2b508bd65f637197d0f38332a3e0fd6',1,'GoF_Observer::Watcher::Watcher()=delete']]],
   ['windowdisplayproduct_395',['WindowDisplayProduct',['../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html',1,'GoF_AbstractFactory::WindowDisplayProduct'],['../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html#a42dd647232a95dbf1f21c241c3fc09e2',1,'GoF_AbstractFactory::WindowDisplayProduct::WindowDisplayProduct()']]],
   ['windowdisplayproduct_2ecpp_396',['WindowDisplayProduct.cpp',['../d1/de7/_window_display_product_8cpp.html',1,'']]],
   ['windowdisplayproduct_2eh_397',['WindowDisplayProduct.h',['../d6/d6c/_window_display_product_8h.html',1,'']]],

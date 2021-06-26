@@ -17,9 +17,8 @@ var searchData=
   ['adapter_2eh_67',['Adapter.h',['../d2/d60/_adapter_8h.html',1,'']]],
   ['add_68',['Add',['../d1/d95/class_go_f___command_1_1_invoker.html#a1d3ea6b34f45363f267602ff1bdda6fa',1,'GoF_Command::Invoker::Add()'],['../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951',1,'GoF_Composite::Node::Add(Node *node)'],['../d0/de0/class_go_f___composite_1_1_node.html#a45e4e9d9c429c461f6ccfeb9cd1aa210',1,'GoF_Composite::Node::Add(Leaf *leaf)'],['../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a8b29e15130325974e1d7d9207d8bcd1f',1,'GoF_Iterator::ItemAggregate::Add()'],['../d3/d81/class_go_f___observer_1_1_subscriber.html#a38390500e5ee399a7125e0d4e6da5747',1,'GoF_Observer::Subscriber::Add()'],['../d5/df1/class_go_f___strategy1_1_1_container.html#aaebc744a1994b24c6f2f9ff2db8d822a',1,'GoF_Strategy1::Container::Add()']]],
   ['addcolleague_69',['AddColleague',['../d0/dfa/class_go_f___mediator_1_1_mediator.html#a6555331f981f5358f29fb28482cfaf90',1,'GoF_Mediator::Mediator::AddColleague()'],['../d7/df8/class_go_f___mediator_1_1_real_mediator.html#abbe0028898e493dbbb0d8b960927a9b9',1,'GoF_Mediator::RealMediator::AddColleague()']]],
-  ['addobserver_70',['AddObserver',['../df/db3/class_go_f___factory_method_1_1_subscriber.html#a55b7e866d8ffcf4843437ffd1c103b5f',1,'GoF_FactoryMethod::Subscriber']]],
-  ['advice_71',['Advice',['../d1/dab/class_go_f___mediator_1_1_colleague.html#a6869512b4bc0e2c865cc9cc6aecd0a2d',1,'GoF_Mediator::Colleague::Advice()'],['../dd/d67/class_go_f___mediator_1_1_real_colleague.html#aac53e5ebfc9afe5fad06da4cb8d2349e',1,'GoF_Mediator::RealColleague::Advice()']]],
-  ['aggregate_72',['Aggregate',['../d1/d1f/class_go_f___iterator_1_1_aggregate.html',1,'GoF_Iterator']]],
-  ['aggregate_2ecpp_73',['Aggregate.cpp',['../d7/dfa/_aggregate_8cpp.html',1,'']]],
-  ['aggregate_2eh_74',['Aggregate.h',['../de/d1c/_aggregate_8h.html',1,'']]]
+  ['advice_70',['Advice',['../d1/dab/class_go_f___mediator_1_1_colleague.html#a6869512b4bc0e2c865cc9cc6aecd0a2d',1,'GoF_Mediator::Colleague::Advice()'],['../dd/d67/class_go_f___mediator_1_1_real_colleague.html#aac53e5ebfc9afe5fad06da4cb8d2349e',1,'GoF_Mediator::RealColleague::Advice()']]],
+  ['aggregate_71',['Aggregate',['../d1/d1f/class_go_f___iterator_1_1_aggregate.html',1,'GoF_Iterator']]],
+  ['aggregate_2ecpp_72',['Aggregate.cpp',['../d7/dfa/_aggregate_8cpp.html',1,'']]],
+  ['aggregate_2eh_73',['Aggregate.h',['../de/d1c/_aggregate_8h.html',1,'']]]
 ];

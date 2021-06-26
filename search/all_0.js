@@ -33,7 +33,7 @@ var searchData=
   ['_5fnextoperation_30',['_NextOperation',['../d9/d8b/class_go_f___interpreter_1_1_operation.html#a60de8afa7919b99158977455fafdf621',1,'GoF_Interpreter::Operation']]],
   ['_5fnodes_31',['_nodes',['../d0/de0/class_go_f___composite_1_1_node.html#a2a5920b09c95803696d6b4af94407a1f',1,'GoF_Composite::Node']]],
   ['_5fnumber_32',['_number',['../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a',1,'GoF_Interpreter::CountOperand']]],
-  ['_5fobservers_33',['_observers',['../df/db3/class_go_f___factory_method_1_1_subscriber.html#a037762d7e323de7c3969e2d0cc230e42',1,'GoF_FactoryMethod::Subscriber::_observers()'],['../d3/d81/class_go_f___observer_1_1_subscriber.html#ac7f03e080ac1e49d7721560111101a6c',1,'GoF_Observer::Subscriber::_observers()']]],
+  ['_5fobservers_33',['_observers',['../d3/d81/class_go_f___observer_1_1_subscriber.html#ac7f03e080ac1e49d7721560111101a6c',1,'GoF_Observer::Subscriber']]],
   ['_5foperands_34',['_operands',['../d9/d8b/class_go_f___interpreter_1_1_operation.html#a52a6e2f51a3d20a95d4a215828ad6bb2',1,'GoF_Interpreter::Operation']]],
   ['_5fpoint_35',['_point',['../df/dde/class_go_f___visitor_1_1_shape.html#a9ab0edaa92c99373ac5f8ad21805b66f',1,'GoF_Visitor::Shape']]],
   ['_5fpos_36',['_pos',['../df/dde/class_go_f___visitor_1_1_shape.html#a2cabbe205589f2845a028243e3121ed6',1,'GoF_Visitor::Shape']]],
