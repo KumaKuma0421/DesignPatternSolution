@@ -1,0 +1,3 @@
+BaseDirectory=C:\Users\User01\source\repos\DesignPatternSolution\Flyweight
+TargetFile=Main.cpp
+IncludeFile=iostream

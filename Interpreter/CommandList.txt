@@ -1,0 +1,21 @@
+;
+; CommandList.txt
+;
+; Operator Operand
+
+; first operation
+go 10
+turn left1
+go 20
+turn right1
+
+; repeat operation
+loop loop1 3
+go 30
+turn left2
+go 40
+turn right2
+goto loop1
+
+; final operation
+go 50
