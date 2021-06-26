@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_AbstractFactory::WindowDisplayProduct クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d0/d4f/class_go_f___abstract_factory_1_1_window_display_product-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_AbstractFactory::WindowDisplayProduct クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d6/d6c/_window_display_product_8h_source.html">WindowDisplayProduct.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_AbstractFactory::WindowDisplayProduct の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/ded/class_go_f___abstract_factory_1_1_window_display_product__inherit__graph.png" border="0" usemap="#a_go_f___abstract_factory_1_1_window_display_product_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___abstract_factory_1_1_window_display_product_inherit__map" id="a_go_f___abstract_factory_1_1_window_display_product_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,95,169,136"/>
+<area shape="rect" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html" title=" " alt="" coords="14,5,161,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+GoF_AbstractFactory::WindowDisplayProduct 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d2f/class_go_f___abstract_factory_1_1_window_display_product__coll__graph.png" border="0" usemap="#a_go_f___abstract_factory_1_1_window_display_product_coll__map" alt="Collaboration graph"/></div>
+<map name="_go_f___abstract_factory_1_1_window_display_product_coll__map" id="a_go_f___abstract_factory_1_1_window_display_product_coll__map">
+<area shape="rect" title=" " alt="" coords="5,95,169,136"/>
+<area shape="rect" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html" title=" " alt="" coords="14,5,161,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a42dd647232a95dbf1f21c241c3fc09e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html#a42dd647232a95dbf1f21c241c3fc09e2">WindowDisplayProduct</a> ()</td></tr>
+<tr class="separator:a42dd647232a95dbf1f21c241c3fc09e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9611530718acaa33a191786b1ba08865"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html#a9611530718acaa33a191786b1ba08865">~WindowDisplayProduct</a> ()</td></tr>
+<tr class="separator:a9611530718acaa33a191786b1ba08865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf22bb2f0421da5598fc7a10e875e1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html#a1cf22bb2f0421da5598fc7a10e875e1d">Show</a> (std::string message)</td></tr>
+<tr class="separator:a1cf22bb2f0421da5598fc7a10e875e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_go_f___abstract_factory_1_1_display_product"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_go_f___abstract_factory_1_1_display_product')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html">GoF_AbstractFactory::DisplayProduct</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a293fa8d594b595a7519320fb5f09cd73 inherit pub_methods_class_go_f___abstract_factory_1_1_display_product"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html#a293fa8d594b595a7519320fb5f09cd73">DisplayProduct</a> ()</td></tr>
+<tr class="separator:a293fa8d594b595a7519320fb5f09cd73 inherit pub_methods_class_go_f___abstract_factory_1_1_display_product"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07683e4cf316ba2886c5903465e9a54a inherit pub_methods_class_go_f___abstract_factory_1_1_display_product"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html#a07683e4cf316ba2886c5903465e9a54a">~DisplayProduct</a> ()</td></tr>
+<tr class="separator:a07683e4cf316ba2886c5903465e9a54a inherit pub_methods_class_go_f___abstract_factory_1_1_display_product"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d6/d6c/_window_display_product_8h_source.html">WindowDisplayProduct.h</a> の <a class="el" href="../../d6/d6c/_window_display_product_8h_source.html#l00011">11</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a42dd647232a95dbf1f21c241c3fc09e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42dd647232a95dbf1f21c241c3fc09e2">&#9670;&nbsp;</a></span>WindowDisplayProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WindowDisplayProduct::WindowDisplayProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/de7/_window_display_product_8cpp_source.html">WindowDisplayProduct.cpp</a> の <a class="el" href="../../d1/de7/_window_display_product_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9611530718acaa33a191786b1ba08865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9611530718acaa33a191786b1ba08865">&#9670;&nbsp;</a></span>~WindowDisplayProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WindowDisplayProduct::~WindowDisplayProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/de7/_window_display_product_8cpp_source.html">WindowDisplayProduct.cpp</a> の <a class="el" href="../../d1/de7/_window_display_product_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a1cf22bb2f0421da5598fc7a10e875e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf22bb2f0421da5598fc7a10e875e1d">&#9670;&nbsp;</a></span>Show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WindowDisplayProduct::Show </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html#a4ffbb0baba76f06a504bf9e113549ed8">GoF_AbstractFactory::DisplayProduct</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d1/de7/_window_display_product_8cpp_source.html">WindowDisplayProduct.cpp</a> の <a class="el" href="../../d1/de7/_window_display_product_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/AbstractFactory/<a class="el" href="../../d6/d6c/_window_display_product_8h_source.html">WindowDisplayProduct.h</a></li>
+<li>DesignPatternSolution/AbstractFactory/<a class="el" href="../../d1/de7/_window_display_product_8cpp_source.html">WindowDisplayProduct.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/d47/namespace_go_f___abstract_factory.html">GoF_AbstractFactory</a></li><li class="navelem"><a class="el" href="../../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html">WindowDisplayProduct</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

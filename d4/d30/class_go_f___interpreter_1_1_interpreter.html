@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_Interpreter::Interpreter クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d30/class_go_f___interpreter_1_1_interpreter.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../d2/d69/class_go_f___interpreter_1_1_interpreter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_Interpreter::Interpreter クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d1/d0a/_interpreter_8h_source.html">Interpreter.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_Interpreter::Interpreter 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/de9/class_go_f___interpreter_1_1_interpreter__coll__graph.png" border="0" usemap="#a_go_f___interpreter_1_1_interpreter_coll__map" alt="Collaboration graph"/></div>
+<map name="_go_f___interpreter_1_1_interpreter_coll__map" id="a_go_f___interpreter_1_1_interpreter_coll__map">
+<area shape="rect" title=" " alt="" coords="5,200,184,227"/>
+<area shape="rect" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html" title=" " alt="" coords="7,96,183,123"/>
+<area shape="rect" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html" title=" " alt="" coords="10,5,179,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9faf0dca72cd27223e5c447b580de2a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a9faf0dca72cd27223e5c447b580de2a5">Interpreter</a> ()</td></tr>
+<tr class="separator:a9faf0dca72cd27223e5c447b580de2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1363264da8bbf7124440fc795b428557"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a1363264da8bbf7124440fc795b428557">Interpret</a> ()</td></tr>
+<tr class="separator:a1363264da8bbf7124440fc795b428557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9467a4ed4131b39cda1a6e489ef711eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a9467a4ed4131b39cda1a6e489ef711eb">Load</a> (std::string fileName)</td></tr>
+<tr class="separator:a9467a4ed4131b39cda1a6e489ef711eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d715c40428a12db9a442348c26b0ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a34d715c40428a12db9a442348c26b0ef">Run</a> ()</td></tr>
+<tr class="separator:a34d715c40428a12db9a442348c26b0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a46f40571c2019a31e1a5e384a7608c66"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a46f40571c2019a31e1a5e384a7608c66">_Commands</a></td></tr>
+<tr class="separator:a46f40571c2019a31e1a5e384a7608c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688d0615bd0c35b822c886ef605087df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a688d0615bd0c35b822c886ef605087df">_CurrentOperation</a></td></tr>
+<tr class="separator:a688d0615bd0c35b822c886ef605087df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86105c0581e5c3952a7577c28ee87d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a86105c0581e5c3952a7577c28ee87d9c">_FirstOperation</a></td></tr>
+<tr class="separator:a86105c0581e5c3952a7577c28ee87d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d1/d0a/_interpreter_8h_source.html">Interpreter.h</a> の <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00087">87</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a9faf0dca72cd27223e5c447b580de2a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9faf0dca72cd27223e5c447b580de2a5">&#9670;&nbsp;</a></span>Interpreter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Interpreter::Interpreter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html">Interpreter.cpp</a> の <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00012">12</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00099">_CurrentOperation</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00098">_FirstOperation</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a1363264da8bbf7124440fc795b428557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1363264da8bbf7124440fc795b428557">&#9670;&nbsp;</a></span>Interpret()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Interpreter::Interpret </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html">Interpreter.cpp</a> の <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00097">_Commands</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00099">_CurrentOperation</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00098">_FirstOperation</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00076">GoF_Interpreter::Operation::Chain()</a>, <a class="el" href="../../db/d91/_command_list_8txt_source.html#l00004">Operand</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00071">GoF_Interpreter::Operation::SetOperand()</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../df/d3f/_interpreter_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_cgraph.png" border="0" usemap="#ad4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_cgraph" alt=""/></div>
+<map name="d4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_cgraph" id="ad4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,184,80"/>
+<area shape="rect" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#afc97d8a6370cd97febb806ae7434a11c" title=" " alt="" coords="232,5,408,47"/>
+<area shape="rect" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a61e4814a6f5b4cac7024ff9d3a844ce8" title=" " alt="" coords="232,71,408,112"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_icgraph.png" border="0" usemap="#ad4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_icgraph" alt=""/></div>
+<map name="d4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_icgraph" id="ad4/d30/class_go_f___interpreter_1_1_interpreter_a1363264da8bbf7124440fc795b428557_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,283,47"/>
+<area shape="rect" href="../../df/d3f/_interpreter_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9467a4ed4131b39cda1a6e489ef711eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9467a4ed4131b39cda1a6e489ef711eb">&#9670;&nbsp;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Interpreter::Load </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html">Interpreter.cpp</a> の <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00018">18</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00097">_Commands</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../df/d3f/_interpreter_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d30/class_go_f___interpreter_1_1_interpreter_a9467a4ed4131b39cda1a6e489ef711eb_icgraph.png" border="0" usemap="#ad4/d30/class_go_f___interpreter_1_1_interpreter_a9467a4ed4131b39cda1a6e489ef711eb_icgraph" alt=""/></div>
+<map name="d4/d30/class_go_f___interpreter_1_1_interpreter_a9467a4ed4131b39cda1a6e489ef711eb_icgraph" id="ad4/d30/class_go_f___interpreter_1_1_interpreter_a9467a4ed4131b39cda1a6e489ef711eb_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,283,47"/>
+<area shape="rect" href="../../df/d3f/_interpreter_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a34d715c40428a12db9a442348c26b0ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d715c40428a12db9a442348c26b0ef">&#9670;&nbsp;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Interpreter::Run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html">Interpreter.cpp</a> の <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00104">104</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00098">_FirstOperation</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00022">GoF_Interpreter::AbstractExpression::GetExpression()</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00051">GoF_Interpreter::CountOperand::GetNumber()</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00072">GoF_Interpreter::Operation::GetOperand()</a>, <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00144">GoF_Interpreter::Operation::Interpret()</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00077">GoF_Interpreter::Operation::Next()</a>, <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00052">GoF_Interpreter::CountOperand::SetNumber()</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../df/d3f/_interpreter_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_cgraph.png" border="0" usemap="#ad4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_cgraph" alt=""/></div>
+<map name="d4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_cgraph" id="ad4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_cgraph">
+<area shape="rect" title=" " alt="" coords="5,177,215,203"/>
+<area shape="rect" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a4c81262eeb5315307aa5bb0e5dc645f1" title=" " alt="" coords="273,5,455,47"/>
+<area shape="rect" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a8f894f510c504a9b088e94f9fb92745c" title=" " alt="" coords="263,71,465,112"/>
+<area shape="rect" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a87f25caefb4a0c5c0f835a8d8f648d02" title=" " alt="" coords="276,136,452,177"/>
+<area shape="rect" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a7a0faf0d66b2b0040a8c9df2f74f052b" title=" " alt="" coords="276,201,452,243"/>
+<area shape="rect" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a6eec11ebd1a99bf133bc39afa92b553e" title=" " alt="" coords="276,267,452,308"/>
+<area shape="rect" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#aa11ffd0ce1b0a53d56ac4c269058d1c1" title=" " alt="" coords="263,332,465,373"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_icgraph.png" border="0" usemap="#ad4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_icgraph" alt=""/></div>
+<map name="d4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_icgraph" id="ad4/d30/class_go_f___interpreter_1_1_interpreter_a34d715c40428a12db9a442348c26b0ef_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,313,32"/>
+<area shape="rect" href="../../df/d3f/_interpreter_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a46f40571c2019a31e1a5e384a7608c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f40571c2019a31e1a5e384a7608c66">&#9670;&nbsp;</a></span>_Commands</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GoF_Interpreter::Interpreter::_Commands</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d0a/_interpreter_8h_source.html">Interpreter.h</a> の <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00097">97</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00041">Interpret()</a>, <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00018">Load()</a>.</p>
+
+</div>
+</div>
+<a id="a688d0615bd0c35b822c886ef605087df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688d0615bd0c35b822c886ef605087df">&#9670;&nbsp;</a></span>_CurrentOperation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a>* GoF_Interpreter::Interpreter::_CurrentOperation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d0a/_interpreter_8h_source.html">Interpreter.h</a> の <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00099">99</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00012">Interpreter()</a>, <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00041">Interpret()</a>.</p>
+
+</div>
+</div>
+<a id="a86105c0581e5c3952a7577c28ee87d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86105c0581e5c3952a7577c28ee87d9c">&#9670;&nbsp;</a></span>_FirstOperation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a>* GoF_Interpreter::Interpreter::_FirstOperation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d0a/_interpreter_8h_source.html">Interpreter.h</a> の <a class="el" href="../../d1/d0a/_interpreter_8h_source.html#l00098">98</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00012">Interpreter()</a>, <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00041">Interpret()</a>, <a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html#l00104">Run()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/Interpreter/<a class="el" href="../../d1/d0a/_interpreter_8h_source.html">Interpreter.h</a></li>
+<li>DesignPatternSolution/Interpreter/<a class="el" href="../../d6/d0f/_interpreter_8cpp_source.html">Interpreter.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../db/d00/namespace_go_f___interpreter.html">GoF_Interpreter</a></li><li class="navelem"><a class="el" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html">Interpreter</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

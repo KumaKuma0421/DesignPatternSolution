@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/Interpreter/Interpreter.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/d0a/_interpreter_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Interpreter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d0a/_interpreter_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Interpreter.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../db/d00/namespace_go_f___interpreter.html">   10</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d00/namespace_go_f___interpreter.html">GoF_Interpreter</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html">AbstractExpression</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#aef5fe0d538654ca3da97d97cdd35bb09">   15</a></span>&#160;        <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#aef5fe0d538654ca3da97d97cdd35bb09">AbstractExpression</a>(std::string  expression)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a71e37ec2a6f01a6ec7bc6ca0ffcf2434">_expression</a> = expression;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        };</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a327c8d849c92b014fd04b79cab9e2e21">   19</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a327c8d849c92b014fd04b79cab9e2e21">~AbstractExpression</a>() {};</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#ad82dea6220d61c9456693e36bbe97fa7">   20</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#ad82dea6220d61c9456693e36bbe97fa7">Interpret</a>() = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a4c81262eeb5315307aa5bb0e5dc645f1">   22</a></span>&#160;        std::string <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a4c81262eeb5315307aa5bb0e5dc645f1">GetExpression</a>()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a71e37ec2a6f01a6ec7bc6ca0ffcf2434">_expression</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a71e37ec2a6f01a6ec7bc6ca0ffcf2434">   28</a></span>&#160;        std::string <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a71e37ec2a6f01a6ec7bc6ca0ffcf2434">_expression</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a4f7625c67c1524f2bf8da85958797733">   31</a></span>&#160;        <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a4f7625c67c1524f2bf8da85958797733">AbstractExpression</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html">   34</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html">Operand</a> :<span class="keyword">public</span> <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html">AbstractExpression</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a41cf2dfc3f6f2dc97f1e99780863b8e7">   37</a></span>&#160;        <a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a41cf2dfc3f6f2dc97f1e99780863b8e7">Operand</a>(std::string operand) :<a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html">AbstractExpression</a>(operand) {};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a85811875363093101cfcde1ec2fecefd">Interpret</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a21bf01ba32e2efff37c2c9a05bf8b07d">   41</a></span>&#160;        <a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a21bf01ba32e2efff37c2c9a05bf8b07d">Operand</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html">CountOperand</a> : <span class="keyword">public</span> <a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html">Operand</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a47529a9ff96dbdf4aa84a31e0f1b5761">   47</a></span>&#160;        <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a47529a9ff96dbdf4aa84a31e0f1b5761">CountOperand</a>(std::string operand) : <a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html">Operand</a>(operand)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a">_number</a> = std::stoi(operand);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        };</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a8f894f510c504a9b088e94f9fb92745c">   51</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a8f894f510c504a9b088e94f9fb92745c">GetNumber</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a">_number</a>; };</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#aa11ffd0ce1b0a53d56ac4c269058d1c1">   52</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#aa11ffd0ce1b0a53d56ac4c269058d1c1">SetNumber</a>(<span class="keywordtype">int</span> number)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a">_number</a> = number;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a71e37ec2a6f01a6ec7bc6ca0ffcf2434">_expression</a> = std::to_string(<a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a">_number</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a90d19035e6cb3ef6aec9a20f458f3a08">   59</a></span>&#160;        <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a90d19035e6cb3ef6aec9a20f458f3a08">CountOperand</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a">   60</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a">_number</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">   63</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a> :<span class="keyword">public</span> <a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html">AbstractExpression</a></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a48dd0d5aa3ba99884a85d93ec604bfe9">   66</a></span>&#160;        <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a48dd0d5aa3ba99884a85d93ec604bfe9">Operation</a>(std::string operation) :<a class="code" href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html">AbstractExpression</a>(operation)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a60de8afa7919b99158977455fafdf621">_NextOperation</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a61e4814a6f5b4cac7024ff9d3a844ce8">   71</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a61e4814a6f5b4cac7024ff9d3a844ce8">SetOperand</a>(<a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html">Operand</a>* operand) { <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a52a6e2f51a3d20a95d4a215828ad6bb2">_operands</a>.push_back(operand); };</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a87f25caefb4a0c5c0f835a8d8f648d02">   72</a></span>&#160;        <a class="code" href="../../d8/d65/class_go_f___interpreter_1_1_operand.html">Operand</a>* <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a87f25caefb4a0c5c0f835a8d8f648d02">GetOperand</a>(<span class="keywordtype">int</span> index = 0)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a52a6e2f51a3d20a95d4a215828ad6bb2">_operands</a>[index];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        };</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#afc97d8a6370cd97febb806ae7434a11c">   76</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#afc97d8a6370cd97febb806ae7434a11c">Chain</a>(<a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a>* operation) { <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a60de8afa7919b99158977455fafdf621">_NextOperation</a> = operation; };</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a6eec11ebd1a99bf133bc39afa92b553e">   77</a></span>&#160;        <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a>* <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a6eec11ebd1a99bf133bc39afa92b553e">Next</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a60de8afa7919b99158977455fafdf621">_NextOperation</a>; };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a7a0faf0d66b2b0040a8c9df2f74f052b">Interpret</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a2f3b3c4006f07a8cd5760ca208a4819f">   82</a></span>&#160;        <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a2f3b3c4006f07a8cd5760ca208a4819f">Operation</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a52a6e2f51a3d20a95d4a215828ad6bb2">   83</a></span>&#160;        std::vector&lt;Operand*&gt; <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a52a6e2f51a3d20a95d4a215828ad6bb2">_operands</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a60de8afa7919b99158977455fafdf621">   84</a></span>&#160;        <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a>* <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a60de8afa7919b99158977455fafdf621">_NextOperation</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    };</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html">   87</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html">Interpreter</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a9faf0dca72cd27223e5c447b580de2a5">Interpreter</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a9467a4ed4131b39cda1a6e489ef711eb">Load</a>(std::string fileName);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a1363264da8bbf7124440fc795b428557">Interpret</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a34d715c40428a12db9a442348c26b0ef">Run</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a46f40571c2019a31e1a5e384a7608c66">   97</a></span>&#160;        std::vector&lt;std::string&gt; <a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a46f40571c2019a31e1a5e384a7608c66">_Commands</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a86105c0581e5c3952a7577c28ee87d9c">   98</a></span>&#160;        <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a>* <a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a86105c0581e5c3952a7577c28ee87d9c">_FirstOperation</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a688d0615bd0c35b822c886ef605087df">   99</a></span>&#160;        <a class="code" href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">Operation</a>* <a class="code" href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a688d0615bd0c35b822c886ef605087df">_CurrentOperation</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html">GoF_Interpreter::Operation</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00063">Interpreter.h:64</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operand_html"><div class="ttname"><a href="../../d8/d65/class_go_f___interpreter_1_1_operand.html">GoF_Interpreter::Operand</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00034">Interpreter.h:35</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operand_html_a85811875363093101cfcde1ec2fecefd"><div class="ttname"><a href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a85811875363093101cfcde1ec2fecefd">GoF_Interpreter::Operand::Interpret</a></div><div class="ttdeci">bool Interpret()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0f/_interpreter_8cpp_source.html#l00156">Interpreter.cpp:156</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_abstract_expression_html_a327c8d849c92b014fd04b79cab9e2e21"><div class="ttname"><a href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a327c8d849c92b014fd04b79cab9e2e21">GoF_Interpreter::AbstractExpression::~AbstractExpression</a></div><div class="ttdeci">virtual ~AbstractExpression()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00019">Interpreter.h:19</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a2f3b3c4006f07a8cd5760ca208a4819f"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a2f3b3c4006f07a8cd5760ca208a4819f">GoF_Interpreter::Operation::Operation</a></div><div class="ttdeci">Operation()=delete</div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html_a688d0615bd0c35b822c886ef605087df"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a688d0615bd0c35b822c886ef605087df">GoF_Interpreter::Interpreter::_CurrentOperation</a></div><div class="ttdeci">Operation * _CurrentOperation</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00099">Interpreter.h:99</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_abstract_expression_html"><div class="ttname"><a href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html">GoF_Interpreter::AbstractExpression</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00012">Interpreter.h:13</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_abstract_expression_html_a4c81262eeb5315307aa5bb0e5dc645f1"><div class="ttname"><a href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a4c81262eeb5315307aa5bb0e5dc645f1">GoF_Interpreter::AbstractExpression::GetExpression</a></div><div class="ttdeci">std::string GetExpression()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00022">Interpreter.h:22</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_abstract_expression_html_ad82dea6220d61c9456693e36bbe97fa7"><div class="ttname"><a href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#ad82dea6220d61c9456693e36bbe97fa7">GoF_Interpreter::AbstractExpression::Interpret</a></div><div class="ttdeci">virtual bool Interpret()=0</div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a6eec11ebd1a99bf133bc39afa92b553e"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a6eec11ebd1a99bf133bc39afa92b553e">GoF_Interpreter::Operation::Next</a></div><div class="ttdeci">Operation * Next()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00077">Interpreter.h:77</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a52a6e2f51a3d20a95d4a215828ad6bb2"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a52a6e2f51a3d20a95d4a215828ad6bb2">GoF_Interpreter::Operation::_operands</a></div><div class="ttdeci">std::vector&lt; Operand * &gt; _operands</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00083">Interpreter.h:83</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html_a1363264da8bbf7124440fc795b428557"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a1363264da8bbf7124440fc795b428557">GoF_Interpreter::Interpreter::Interpret</a></div><div class="ttdeci">bool Interpret()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0f/_interpreter_8cpp_source.html#l00041">Interpreter.cpp:41</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_count_operand_html_a8f894f510c504a9b088e94f9fb92745c"><div class="ttname"><a href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a8f894f510c504a9b088e94f9fb92745c">GoF_Interpreter::CountOperand::GetNumber</a></div><div class="ttdeci">int GetNumber()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00051">Interpreter.h:51</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html_a9faf0dca72cd27223e5c447b580de2a5"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a9faf0dca72cd27223e5c447b580de2a5">GoF_Interpreter::Interpreter::Interpreter</a></div><div class="ttdeci">Interpreter()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0f/_interpreter_8cpp_source.html#l00012">Interpreter.cpp:12</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_count_operand_html"><div class="ttname"><a href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html">GoF_Interpreter::CountOperand</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00044">Interpreter.h:45</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a48dd0d5aa3ba99884a85d93ec604bfe9"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a48dd0d5aa3ba99884a85d93ec604bfe9">GoF_Interpreter::Operation::Operation</a></div><div class="ttdeci">Operation(std::string operation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00066">Interpreter.h:66</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html_a86105c0581e5c3952a7577c28ee87d9c"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a86105c0581e5c3952a7577c28ee87d9c">GoF_Interpreter::Interpreter::_FirstOperation</a></div><div class="ttdeci">Operation * _FirstOperation</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00098">Interpreter.h:98</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html">GoF_Interpreter::Interpreter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00087">Interpreter.h:88</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_count_operand_html_a47529a9ff96dbdf4aa84a31e0f1b5761"><div class="ttname"><a href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a47529a9ff96dbdf4aa84a31e0f1b5761">GoF_Interpreter::CountOperand::CountOperand</a></div><div class="ttdeci">CountOperand(std::string operand)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00047">Interpreter.h:47</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html_a46f40571c2019a31e1a5e384a7608c66"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a46f40571c2019a31e1a5e384a7608c66">GoF_Interpreter::Interpreter::_Commands</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _Commands</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00097">Interpreter.h:97</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html_a9467a4ed4131b39cda1a6e489ef711eb"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a9467a4ed4131b39cda1a6e489ef711eb">GoF_Interpreter::Interpreter::Load</a></div><div class="ttdeci">bool Load(std::string fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0f/_interpreter_8cpp_source.html#l00018">Interpreter.cpp:18</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a7a0faf0d66b2b0040a8c9df2f74f052b"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a7a0faf0d66b2b0040a8c9df2f74f052b">GoF_Interpreter::Operation::Interpret</a></div><div class="ttdeci">bool Interpret()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0f/_interpreter_8cpp_source.html#l00144">Interpreter.cpp:144</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operand_html_a21bf01ba32e2efff37c2c9a05bf8b07d"><div class="ttname"><a href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a21bf01ba32e2efff37c2c9a05bf8b07d">GoF_Interpreter::Operand::Operand</a></div><div class="ttdeci">Operand()=delete</div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a60de8afa7919b99158977455fafdf621"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a60de8afa7919b99158977455fafdf621">GoF_Interpreter::Operation::_NextOperation</a></div><div class="ttdeci">Operation * _NextOperation</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00084">Interpreter.h:84</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_afc97d8a6370cd97febb806ae7434a11c"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#afc97d8a6370cd97febb806ae7434a11c">GoF_Interpreter::Operation::Chain</a></div><div class="ttdeci">void Chain(Operation *operation)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00076">Interpreter.h:76</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_count_operand_html_a27ebe710b627fd39bc1a528eb7bfdc0a"><div class="ttname"><a href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a27ebe710b627fd39bc1a528eb7bfdc0a">GoF_Interpreter::CountOperand::_number</a></div><div class="ttdeci">int _number</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00060">Interpreter.h:60</a></div></div>
+<div class="ttc" id="anamespace_go_f___interpreter_html"><div class="ttname"><a href="../../db/d00/namespace_go_f___interpreter.html">GoF_Interpreter</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00010">Interpreter.h:11</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a87f25caefb4a0c5c0f835a8d8f648d02"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a87f25caefb4a0c5c0f835a8d8f648d02">GoF_Interpreter::Operation::GetOperand</a></div><div class="ttdeci">Operand * GetOperand(int index=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00072">Interpreter.h:72</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_count_operand_html_aa11ffd0ce1b0a53d56ac4c269058d1c1"><div class="ttname"><a href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#aa11ffd0ce1b0a53d56ac4c269058d1c1">GoF_Interpreter::CountOperand::SetNumber</a></div><div class="ttdeci">void SetNumber(int number)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00052">Interpreter.h:52</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_abstract_expression_html_a71e37ec2a6f01a6ec7bc6ca0ffcf2434"><div class="ttname"><a href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a71e37ec2a6f01a6ec7bc6ca0ffcf2434">GoF_Interpreter::AbstractExpression::_expression</a></div><div class="ttdeci">std::string _expression</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00028">Interpreter.h:25</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_interpreter_html_a34d715c40428a12db9a442348c26b0ef"><div class="ttname"><a href="../../d4/d30/class_go_f___interpreter_1_1_interpreter.html#a34d715c40428a12db9a442348c26b0ef">GoF_Interpreter::Interpreter::Run</a></div><div class="ttdeci">bool Run()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d0f/_interpreter_8cpp_source.html#l00104">Interpreter.cpp:104</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operand_html_a41cf2dfc3f6f2dc97f1e99780863b8e7"><div class="ttname"><a href="../../d8/d65/class_go_f___interpreter_1_1_operand.html#a41cf2dfc3f6f2dc97f1e99780863b8e7">GoF_Interpreter::Operand::Operand</a></div><div class="ttdeci">Operand(std::string operand)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00037">Interpreter.h:37</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_abstract_expression_html_aef5fe0d538654ca3da97d97cdd35bb09"><div class="ttname"><a href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#aef5fe0d538654ca3da97d97cdd35bb09">GoF_Interpreter::AbstractExpression::AbstractExpression</a></div><div class="ttdeci">AbstractExpression(std::string expression)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00015">Interpreter.h:15</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_operation_html_a61e4814a6f5b4cac7024ff9d3a844ce8"><div class="ttname"><a href="../../d9/d8b/class_go_f___interpreter_1_1_operation.html#a61e4814a6f5b4cac7024ff9d3a844ce8">GoF_Interpreter::Operation::SetOperand</a></div><div class="ttdeci">void SetOperand(Operand *operand)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d0a/_interpreter_8h_source.html#l00071">Interpreter.h:71</a></div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_abstract_expression_html_a4f7625c67c1524f2bf8da85958797733"><div class="ttname"><a href="../../db/d29/class_go_f___interpreter_1_1_abstract_expression.html#a4f7625c67c1524f2bf8da85958797733">GoF_Interpreter::AbstractExpression::AbstractExpression</a></div><div class="ttdeci">AbstractExpression()=delete</div></div>
+<div class="ttc" id="aclass_go_f___interpreter_1_1_count_operand_html_a90d19035e6cb3ef6aec9a20f458f3a08"><div class="ttname"><a href="../../d7/de5/class_go_f___interpreter_1_1_count_operand.html#a90d19035e6cb3ef6aec9a20f458f3a08">GoF_Interpreter::CountOperand::CountOperand</a></div><div class="ttdeci">CountOperand()=delete</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_e838dd3fdf5fefa8f0c61fc4c826b018.html">Interpreter</a></li><li class="navelem"><a class="el" href="../../d1/d0a/_interpreter_8h.html">Interpreter.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_AbstractFactory::AbstractFactory クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="../../d1/dbc/class_go_f___abstract_factory_1_1_abstract_factory-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_AbstractFactory::AbstractFactory クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d9/d08/_abstract_factory_8h_source.html">AbstractFactory.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_AbstractFactory::AbstractFactory の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/d3e/class_go_f___abstract_factory_1_1_abstract_factory__inherit__graph.png" border="0" usemap="#a_go_f___abstract_factory_1_1_abstract_factory_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___abstract_factory_1_1_abstract_factory_inherit__map" id="a_go_f___abstract_factory_1_1_abstract_factory_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,39,152,80"/>
+<area shape="rect" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html" title=" " alt="" coords="209,5,365,47"/>
+<area shape="rect" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html" title=" " alt="" coords="200,71,373,112"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2fbbcbd545174c97cb300b82856d6171"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html#a2fbbcbd545174c97cb300b82856d6171">AbstractFactory</a> ()</td></tr>
+<tr class="separator:a2fbbcbd545174c97cb300b82856d6171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade79c844d1367a586069c67f0870cbc1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html#ade79c844d1367a586069c67f0870cbc1">~AbstractFactory</a> ()</td></tr>
+<tr class="separator:ade79c844d1367a586069c67f0870cbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d37e63ff987e07c01436e15bf93c88"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/d20/class_go_f___abstract_factory_1_1_control_product.html">ControlProduct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html#a84d37e63ff987e07c01436e15bf93c88">CreateControlProduct</a> ()=0</td></tr>
+<tr class="separator:a84d37e63ff987e07c01436e15bf93c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab40206f210e2704b7713343fa92b2f47"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html">DisplayProduct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html#ab40206f210e2704b7713343fa92b2f47">CreateDisplayProduct</a> ()=0</td></tr>
+<tr class="separator:ab40206f210e2704b7713343fa92b2f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18a02a8c1c91816b6ab477be68c7c78"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/df8/class_go_f___abstract_factory_1_1_storage_product.html">StorageProduct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html#ac18a02a8c1c91816b6ab477be68c7c78">CreateStorageProduct</a> ()=0</td></tr>
+<tr class="separator:ac18a02a8c1c91816b6ab477be68c7c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3291ab90f68e5ad4b012623a64c16039"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html">AbstractFactory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html#a3291ab90f68e5ad4b012623a64c16039">CreateFactory</a> (std::string type)</td></tr>
+<tr class="separator:a3291ab90f68e5ad4b012623a64c16039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d9/d08/_abstract_factory_8h_source.html">AbstractFactory.h</a> の <a class="el" href="../../d9/d08/_abstract_factory_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a2fbbcbd545174c97cb300b82856d6171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fbbcbd545174c97cb300b82856d6171">&#9670;&nbsp;</a></span>AbstractFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AbstractFactory::AbstractFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../dd/db6/_abstract_factory_8cpp_source.html">AbstractFactory.cpp</a> の <a class="el" href="../../dd/db6/_abstract_factory_8cpp_source.html#l00041">41</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ade79c844d1367a586069c67f0870cbc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade79c844d1367a586069c67f0870cbc1">&#9670;&nbsp;</a></span>~AbstractFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AbstractFactory::~AbstractFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../dd/db6/_abstract_factory_8cpp_source.html">AbstractFactory.cpp</a> の <a class="el" href="../../dd/db6/_abstract_factory_8cpp_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a84d37e63ff987e07c01436e15bf93c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84d37e63ff987e07c01436e15bf93c88">&#9670;&nbsp;</a></span>CreateControlProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dd/d20/class_go_f___abstract_factory_1_1_control_product.html">ControlProduct</a>* GoF_AbstractFactory::AbstractFactory::CreateControlProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a373d31796d4419ed85bf0e0a9f6b594d">GoF_AbstractFactory::RealtimeProcessFactory</a>, <a class="el" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#ae7471f327e440b6231080655212b45dd">GoF_AbstractFactory::BatchProcessFactory</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../da/d07/_abstract_factory_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a84d37e63ff987e07c01436e15bf93c88_icgraph.png" border="0" usemap="#ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a84d37e63ff987e07c01436e15bf93c88_icgraph" alt=""/></div>
+<map name="d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a84d37e63ff987e07c01436e15bf93c88_icgraph" id="ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a84d37e63ff987e07c01436e15bf93c88_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,315,61"/>
+<area shape="rect" href="../../da/d07/_abstract_factory_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab40206f210e2704b7713343fa92b2f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab40206f210e2704b7713343fa92b2f47">&#9670;&nbsp;</a></span>CreateDisplayProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html">DisplayProduct</a>* GoF_AbstractFactory::AbstractFactory::CreateDisplayProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#ab18b08ea5d161782ff5fbeaefa68e8cb">GoF_AbstractFactory::RealtimeProcessFactory</a>, <a class="el" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#af6bfaa1c51539340a99f29f80eb3ac57">GoF_AbstractFactory::BatchProcessFactory</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../da/d07/_abstract_factory_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ab40206f210e2704b7713343fa92b2f47_icgraph.png" border="0" usemap="#ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ab40206f210e2704b7713343fa92b2f47_icgraph" alt=""/></div>
+<map name="d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ab40206f210e2704b7713343fa92b2f47_icgraph" id="ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ab40206f210e2704b7713343fa92b2f47_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,316,61"/>
+<area shape="rect" href="../../da/d07/_abstract_factory_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3291ab90f68e5ad4b012623a64c16039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3291ab90f68e5ad4b012623a64c16039">&#9670;&nbsp;</a></span>CreateFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html">AbstractFactory</a> * AbstractFactory::CreateFactory </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../dd/db6/_abstract_factory_8cpp_source.html">AbstractFactory.cpp</a> の <a class="el" href="../../dd/db6/_abstract_factory_8cpp_source.html#l00051">51</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../da/d07/_abstract_factory_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a3291ab90f68e5ad4b012623a64c16039_icgraph.png" border="0" usemap="#ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a3291ab90f68e5ad4b012623a64c16039_icgraph" alt=""/></div>
+<map name="d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a3291ab90f68e5ad4b012623a64c16039_icgraph" id="ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_a3291ab90f68e5ad4b012623a64c16039_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,317,47"/>
+<area shape="rect" href="../../da/d07/_abstract_factory_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac18a02a8c1c91816b6ab477be68c7c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18a02a8c1c91816b6ab477be68c7c78">&#9670;&nbsp;</a></span>CreateStorageProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d9/df8/class_go_f___abstract_factory_1_1_storage_product.html">StorageProduct</a>* GoF_AbstractFactory::AbstractFactory::CreateStorageProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a6fe03d5174ec55774104ec3b91ba27b2">GoF_AbstractFactory::RealtimeProcessFactory</a>, <a class="el" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#a5b09fcad37d2de5838c52629908fb068">GoF_AbstractFactory::BatchProcessFactory</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../da/d07/_abstract_factory_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ac18a02a8c1c91816b6ab477be68c7c78_icgraph.png" border="0" usemap="#ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ac18a02a8c1c91816b6ab477be68c7c78_icgraph" alt=""/></div>
+<map name="d7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ac18a02a8c1c91816b6ab477be68c7c78_icgraph" id="ad7/d93/class_go_f___abstract_factory_1_1_abstract_factory_ac18a02a8c1c91816b6ab477be68c7c78_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,319,61"/>
+<area shape="rect" href="../../da/d07/_abstract_factory_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/AbstractFactory/<a class="el" href="../../d9/d08/_abstract_factory_8h_source.html">AbstractFactory.h</a></li>
+<li>DesignPatternSolution/AbstractFactory/<a class="el" href="../../dd/db6/_abstract_factory_8cpp_source.html">AbstractFactory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../de/d47/namespace_go_f___abstract_factory.html">GoF_AbstractFactory</a></li><li class="navelem"><a class="el" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html">AbstractFactory</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+var dir_ee0c84dd5717e627486bfb8062272cd0 =
+[
+    [ "AbstractFactory", "dir_d3dcc1661f45abbedaa8bc384638da41.html", "dir_d3dcc1661f45abbedaa8bc384638da41" ],
+    [ "Adapter", "dir_e57df1b18950d7aa4275dbe383b02ed8.html", "dir_e57df1b18950d7aa4275dbe383b02ed8" ],
+    [ "Bridge", "dir_2ea42f38b88018153454abe549b61db9.html", "dir_2ea42f38b88018153454abe549b61db9" ],
+    [ "Builder", "dir_339ab4c900ac56fae9ccce4b674084d2.html", "dir_339ab4c900ac56fae9ccce4b674084d2" ],
+    [ "ChainOfResponsibility", "dir_23965a7ed142042840acfe7dad2dc2ff.html", "dir_23965a7ed142042840acfe7dad2dc2ff" ],
+    [ "Command", "dir_c78a9cb774e56560148592ec3c41804c.html", "dir_c78a9cb774e56560148592ec3c41804c" ],
+    [ "Composite", "dir_29a2362808626aa41dbdc3ff526279f1.html", "dir_29a2362808626aa41dbdc3ff526279f1" ],
+    [ "Decorator", "dir_7b71c128d28e2867528f47958a647c0d.html", "dir_7b71c128d28e2867528f47958a647c0d" ],
+    [ "Doxygen", "dir_3e57b54b18da76fc28074cc99146c65f.html", null ],
+    [ "FactoryMethod", "dir_d674e745305acfa4af19ab1717ebc7b0.html", "dir_d674e745305acfa4af19ab1717ebc7b0" ],
+    [ "Flyweight", "dir_bb969a72d9e6a64a17137b4d5c46e9db.html", "dir_bb969a72d9e6a64a17137b4d5c46e9db" ],
+    [ "Interpreter", "dir_e838dd3fdf5fefa8f0c61fc4c826b018.html", "dir_e838dd3fdf5fefa8f0c61fc4c826b018" ],
+    [ "Iterator", "dir_848e49b125aa9fb1a1eb77f519fd5cc3.html", "dir_848e49b125aa9fb1a1eb77f519fd5cc3" ],
+    [ "Mediator", "dir_2e3f853e4b0a667b23d5902acc5677b3.html", "dir_2e3f853e4b0a667b23d5902acc5677b3" ],
+    [ "Memento", "dir_f26a38a85610fbed6acec94aed5ba013.html", "dir_f26a38a85610fbed6acec94aed5ba013" ],
+    [ "Observer", "dir_d801d48ab2624bca7c1bf5c028876a11.html", "dir_d801d48ab2624bca7c1bf5c028876a11" ],
+    [ "Prototype", "dir_0b40749eb061fa9fe896f3fcec7f3473.html", "dir_0b40749eb061fa9fe896f3fcec7f3473" ],
+    [ "Proxy", "dir_c3cd10f9586dd21db3f2466060f06cf1.html", "dir_c3cd10f9586dd21db3f2466060f06cf1" ],
+    [ "Singleton", "dir_5bac8abdd591e20c649e6168c1553a8a.html", "dir_5bac8abdd591e20c649e6168c1553a8a" ],
+    [ "State", "dir_c314ff49d2d275a2db3ddbe97bf5b994.html", "dir_c314ff49d2d275a2db3ddbe97bf5b994" ],
+    [ "Strategy1", "dir_83f3e0f082f9343552f1abbecded2f20.html", "dir_83f3e0f082f9343552f1abbecded2f20" ],
+    [ "Strategy2", "dir_44b93a0ae35c665c53a52fa2d4735ba0.html", "dir_44b93a0ae35c665c53a52fa2d4735ba0" ],
+    [ "TemplateMethod", "dir_e9f8d8497725c3da5a0e0035e66e891e.html", "dir_e9f8d8497725c3da5a0e0035e66e891e" ],
+    [ "VirtualConstructor", "dir_79a213b5f258e2d5b5e68a09bc055b51.html", "dir_79a213b5f258e2d5b5e68a09bc055b51" ],
+    [ "Visitor", "dir_594bac17580847f5c91851fb55108f7f.html", "dir_594bac17580847f5c91851fb55108f7f" ]
+];

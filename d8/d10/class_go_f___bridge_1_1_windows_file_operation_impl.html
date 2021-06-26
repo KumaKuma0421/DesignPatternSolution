@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_Bridge::WindowsFileOperationImpl クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../d5/d8a/class_go_f___bridge_1_1_windows_file_operation_impl-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_Bridge::WindowsFileOperationImpl クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html">AbstractBridgeImpl.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_Bridge::WindowsFileOperationImpl の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d90/class_go_f___bridge_1_1_windows_file_operation_impl__inherit__graph.png" border="0" usemap="#a_go_f___bridge_1_1_windows_file_operation_impl_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___bridge_1_1_windows_file_operation_impl_inherit__map" id="a_go_f___bridge_1_1_windows_file_operation_impl_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,259,107"/>
+<area shape="rect" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html" title=" " alt="" coords="32,5,232,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+GoF_Bridge::WindowsFileOperationImpl 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d3e/class_go_f___bridge_1_1_windows_file_operation_impl__coll__graph.png" border="0" usemap="#a_go_f___bridge_1_1_windows_file_operation_impl_coll__map" alt="Collaboration graph"/></div>
+<map name="_go_f___bridge_1_1_windows_file_operation_impl_coll__map" id="a_go_f___bridge_1_1_windows_file_operation_impl_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,259,107"/>
+<area shape="rect" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html" title=" " alt="" coords="32,5,232,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a676d7cc7fab42cee5e87ea87049a9d56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a676d7cc7fab42cee5e87ea87049a9d56">WindowsFileOperationImpl</a> ()</td></tr>
+<tr class="separator:a676d7cc7fab42cee5e87ea87049a9d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb17b435ce10898d9de717d37e8c78a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#afb17b435ce10898d9de717d37e8c78a0">~WindowsFileOperationImpl</a> ()</td></tr>
+<tr class="separator:afb17b435ce10898d9de717d37e8c78a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a166f43ec8fc59ce5bf8ce41d6a40a2c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a166f43ec8fc59ce5bf8ce41d6a40a2c3">Close</a> ()</td></tr>
+<tr class="separator:a166f43ec8fc59ce5bf8ce41d6a40a2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31e23d152ad6298c590f3963f87c81a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#ac31e23d152ad6298c590f3963f87c81a">Flush</a> ()</td></tr>
+<tr class="separator:ac31e23d152ad6298c590f3963f87c81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add185435762395adabf3d8deecc55172"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#add185435762395adabf3d8deecc55172">Open</a> (char *fileName)</td></tr>
+<tr class="separator:add185435762395adabf3d8deecc55172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9028a073bbf0ba625e2dbfd3cd8632e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#ab9028a073bbf0ba625e2dbfd3cd8632e">Read</a> (char *buffer, size_t size)</td></tr>
+<tr class="separator:ab9028a073bbf0ba625e2dbfd3cd8632e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5366cba395f0c8f0627fa0290152eba0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a5366cba395f0c8f0627fa0290152eba0">SetPos</a> (<a class="el" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">FilePos</a> pos, long offset)</td></tr>
+<tr class="separator:a5366cba395f0c8f0627fa0290152eba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3e7d512a68229572212e4a74bdcf2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a7e3e7d512a68229572212e4a74bdcf2e">Write</a> (char *buffer, size_t size)</td></tr>
+<tr class="separator:a7e3e7d512a68229572212e4a74bdcf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a8c304842ab17bb5bf84daf2898c55f7b"><td class="memItemLeft" align="right" valign="top">HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a8c304842ab17bb5bf84daf2898c55f7b">_hFile</a></td></tr>
+<tr class="separator:a8c304842ab17bb5bf84daf2898c55f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html">AbstractBridgeImpl.h</a> の <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a676d7cc7fab42cee5e87ea87049a9d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a676d7cc7fab42cee5e87ea87049a9d56">&#9670;&nbsp;</a></span>WindowsFileOperationImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WindowsFileOperationImpl::WindowsFileOperationImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">_hFile</a>.</p>
+
+</div>
+</div>
+<a id="afb17b435ce10898d9de717d37e8c78a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb17b435ce10898d9de717d37e8c78a0">&#9670;&nbsp;</a></span>~WindowsFileOperationImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WindowsFileOperationImpl::~WindowsFileOperationImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">_hFile</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a166f43ec8fc59ce5bf8ce41d6a40a2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a166f43ec8fc59ce5bf8ce41d6a40a2c3">&#9670;&nbsp;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WindowsFileOperationImpl::Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a796538b5c631b6eed28ace0155dece90">GoF_Bridge::FileOperationImpl</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00084">84</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">_hFile</a>.</p>
+
+</div>
+</div>
+<a id="ac31e23d152ad6298c590f3963f87c81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac31e23d152ad6298c590f3963f87c81a">&#9670;&nbsp;</a></span>Flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WindowsFileOperationImpl::Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#abd0782bc878b78292892c7d66f75f6b8">GoF_Bridge::FileOperationImpl</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00075">75</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">_hFile</a>.</p>
+
+</div>
+</div>
+<a id="add185435762395adabf3d8deecc55172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add185435762395adabf3d8deecc55172">&#9670;&nbsp;</a></span>Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WindowsFileOperationImpl::Open </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a627eb3417975c1ef11831ecf3145614a">GoF_Bridge::FileOperationImpl</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">_hFile</a>.</p>
+
+</div>
+</div>
+<a id="ab9028a073bbf0ba625e2dbfd3cd8632e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9028a073bbf0ba625e2dbfd3cd8632e">&#9670;&nbsp;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WindowsFileOperationImpl::Read </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a4e260dcb384897c01c54e4433595e52b">GoF_Bridge::FileOperationImpl</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00040">40</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">_hFile</a>.</p>
+
+</div>
+</div>
+<a id="a5366cba395f0c8f0627fa0290152eba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5366cba395f0c8f0627fa0290152eba0">&#9670;&nbsp;</a></span>SetPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WindowsFileOperationImpl::SetPos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">FilePos</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a40542a2675a1522ef37faec173fd9b9b">GoF_Bridge::FileOperationImpl</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7e3e7d512a68229572212e4a74bdcf2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3e7d512a68229572212e4a74bdcf2e">&#9670;&nbsp;</a></span>Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WindowsFileOperationImpl::Write </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#ada86a881ea6abd8c50fbc04166bee407">GoF_Bridge::FileOperationImpl</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a> の <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">_hFile</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a8c304842ab17bb5bf84daf2898c55f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c304842ab17bb5bf84daf2898c55f7b">&#9670;&nbsp;</a></span>_hFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HANDLE GoF_Bridge::WindowsFileOperationImpl::_hFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html">AbstractBridgeImpl.h</a> の <a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00009">WindowsFileOperationImpl()</a>, <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00014">~WindowsFileOperationImpl()</a>, <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00084">Close()</a>, <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00075">Flush()</a>, <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00019">Open()</a>, <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00040">Read()</a>, <a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00055">Write()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/Bridge/<a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h_source.html">AbstractBridgeImpl.h</a></li>
+<li>DesignPatternSolution/Bridge/<a class="el" href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html">AbstractBridgeImpl.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/d87/namespace_go_f___bridge.html">GoF_Bridge</a></li><li class="navelem"><a class="el" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html">WindowsFileOperationImpl</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

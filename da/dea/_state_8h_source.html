@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/State/State.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/dea/_state_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">State.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../da/dea/_state_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// State1.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d8/d8b/namespace_go_f___state.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d8/d8b/namespace_go_f___state.html">GoF_State</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">    9</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        Stopped,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        Playing,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        Forwarding,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        Reversing,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        Recording,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7aac23e2b09ebe6bf4cb5e2a9abe85c0be2">MaxSize</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8a">   19</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8a">Action</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8aa11a755d598c0c417f9a36758c3da7481">Stop</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d3/da5/class_go_f___state_1_1_play.html">Play</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="../../dd/d15/class_go_f___state_1_1_forward.html">Forward</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="../../d6/db1/class_go_f___state_1_1_reverse.html">Reverse</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="../../dc/dae/class_go_f___state_1_1_record.html">Record</a>,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8aa11a755d598c0c417f9a36758c3da7481">MaxSize</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d3/dab/class_go_f___state_1_1_state.html">   29</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d3/dab/class_go_f___state_1_1_state.html#ae69a3aaba664b92b4ad0d5b52818ccfa">   35</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html#ae69a3aaba664b92b4ad0d5b52818ccfa">Action</a>() = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d3/da5/class_go_f___state_1_1_play.html">   38</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d3/da5/class_go_f___state_1_1_play.html">Play</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../d3/da5/class_go_f___state_1_1_play.html#a12a05493ac32bf60d1fc9b14d5ad8bfd">Action</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../df/d76/class_go_f___state_1_1_stop.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/d76/class_go_f___state_1_1_stop.html">Stop</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../df/d76/class_go_f___state_1_1_stop.html#a073b8265c79bdea89130b860caf92e15">Action</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    };</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dd/d15/class_go_f___state_1_1_forward.html">   50</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dd/d15/class_go_f___state_1_1_forward.html">Forward</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../dd/d15/class_go_f___state_1_1_forward.html#ae0a36595c464975e90676342f956f505">Action</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d6/db1/class_go_f___state_1_1_reverse.html">   56</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d6/db1/class_go_f___state_1_1_reverse.html">Reverse</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../d6/db1/class_go_f___state_1_1_reverse.html#a78f9944d20d499b51d6440214b68a771">Action</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../dc/dae/class_go_f___state_1_1_record.html">   62</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/dae/class_go_f___state_1_1_record.html">Record</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../dc/dae/class_go_f___state_1_1_record.html#a707158b31a755b32e4347d98a203c92c">Action</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    };</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../dc/de1/class_go_f___state_1_1_discard.html">   68</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dc/de1/class_go_f___state_1_1_discard.html">Discard</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../dc/de1/class_go_f___state_1_1_discard.html#a99c05b3e033abe4520a0f894853013c0">Action</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html">   74</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html">VoiceRecorder</a> final</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#a33534f100b0cf8bf7fe431ca26ac1b7d">VoiceRecorder</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#ae493dcd7acdc217e94ee2ae763d2c156">~VoiceRecorder</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#a27aac372680c237ca5a32a314597d729">Init</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#aa27dbc22f22c7c1a4016af48d2e483e1">Command</a>(<a class="code" href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8a">Action</a> action);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">//         →Status</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// ↓Action│Stopped     │Playing     │Forwarding  │Reversing   │Recording │</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// ────┼──────┼──────┼──────┼──────┼─────┤</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// Stop    │x           │Stop        │Stop        │Stop        │Stop      │</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">//         │            │→Stopped   │→Stopped   │→Stopped   │→Stopped │</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// ────┼──────┼──────┼──────┼──────┼─────┤</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// Play    │Play        │x           │Play        │Play        │x         │</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">//         │→Playing   │            │→Playing   │→Playing   │          │</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="comment">// ────┼──────┼──────┼──────┼──────┼─────┤</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">// Forward │Forward     │Forward     │Forward     │Forward     │x         │</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//         │→Forwarding│→Forwarding│→Forwarding│→Forwarding│          │</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">// ────┼──────┼──────┼──────┼──────┼─────┤</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// Reverse │Reverse     │Reverse     │Reverse     │Reverse     │x         │</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">//         │→Reversing │→Reversing │→Reversing │→Reversing │          │</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">// ────┼──────┼──────┼──────┼──────┼─────┤</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">// Record  │Record      │x           │x           │x           │x         │</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">//         │→Recording │            │            │            │          │</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// ────┴──────┴──────┴──────┴──────┴─────┘</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#aa1375fe16a728578a7cfbb01a63897d1">  103</a></span>&#160;        <a class="code" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a>* <a class="code" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#aa1375fe16a728578a7cfbb01a63897d1">_Matrix</a>[(int)<a class="code" href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8aa11a755d598c0c417f9a36758c3da7481">Action::MaxSize</a>][(<span class="keywordtype">int</span>)<a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7aac23e2b09ebe6bf4cb5e2a9abe85c0be2">Status::MaxSize</a>];</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#a8cc58b3fda041923aa29a3ceace5a180">  104</a></span>&#160;        <a class="code" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> <a class="code" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#a8cc58b3fda041923aa29a3ceace5a180">_CurrentStatus</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespace_go_f___state_html_af330a938dcf2003eaa175adc38d3ad8a"><div class="ttname"><a href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8a">GoF_State::Action</a></div><div class="ttdeci">Action</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00019">State.h:20</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_play_html_a12a05493ac32bf60d1fc9b14d5ad8bfd"><div class="ttname"><a href="../../d3/da5/class_go_f___state_1_1_play.html#a12a05493ac32bf60d1fc9b14d5ad8bfd">GoF_State::Play::Action</a></div><div class="ttdeci">Status Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00071">State.cpp:71</a></div></div>
+<div class="ttc" id="anamespace_go_f___state_html_ae2e52077dc100c59f9d6396135558d7a"><div class="ttname"><a href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">GoF_State::Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00009">State.h:10</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_forward_html"><div class="ttname"><a href="../../dd/d15/class_go_f___state_1_1_forward.html">GoF_State::Forward</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00050">State.h:51</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_state_html"><div class="ttname"><a href="../../d3/dab/class_go_f___state_1_1_state.html">GoF_State::State</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00029">State.h:30</a></div></div>
+<div class="ttc" id="anamespace_go_f___state_html"><div class="ttname"><a href="../../d8/d8b/namespace_go_f___state.html">GoF_State</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00007">State.h:8</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_reverse_html"><div class="ttname"><a href="../../d6/db1/class_go_f___state_1_1_reverse.html">GoF_State::Reverse</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00056">State.h:57</a></div></div>
+<div class="ttc" id="anamespace_go_f___state_html_af330a938dcf2003eaa175adc38d3ad8aa11a755d598c0c417f9a36758c3da7481"><div class="ttname"><a href="../../d8/d8b/namespace_go_f___state.html#af330a938dcf2003eaa175adc38d3ad8aa11a755d598c0c417f9a36758c3da7481">GoF_State::Action::Stop</a></div><div class="ttdeci">@ Stop</div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_voice_recorder_html_ae493dcd7acdc217e94ee2ae763d2c156"><div class="ttname"><a href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#ae493dcd7acdc217e94ee2ae763d2c156">GoF_State::VoiceRecorder::~VoiceRecorder</a></div><div class="ttdeci">~VoiceRecorder()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00023">State.cpp:23</a></div></div>
+<div class="ttc" id="anamespace_go_f___state_html_ae2e52077dc100c59f9d6396135558d7aac23e2b09ebe6bf4cb5e2a9abe85c0be2"><div class="ttname"><a href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7aac23e2b09ebe6bf4cb5e2a9abe85c0be2">GoF_State::Status::Stopped</a></div><div class="ttdeci">@ Stopped</div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_stop_html"><div class="ttname"><a href="../../df/d76/class_go_f___state_1_1_stop.html">GoF_State::Stop</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00044">State.h:45</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_state_html_ae69a3aaba664b92b4ad0d5b52818ccfa"><div class="ttname"><a href="../../d3/dab/class_go_f___state_1_1_state.html#ae69a3aaba664b92b4ad0d5b52818ccfa">GoF_State::State::Action</a></div><div class="ttdeci">virtual Status Action()=0</div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_record_html_a707158b31a755b32e4347d98a203c92c"><div class="ttname"><a href="../../dc/dae/class_go_f___state_1_1_record.html#a707158b31a755b32e4347d98a203c92c">GoF_State::Record::Action</a></div><div class="ttdeci">Status Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00095">State.cpp:95</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_play_html"><div class="ttname"><a href="../../d3/da5/class_go_f___state_1_1_play.html">GoF_State::Play</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00038">State.h:39</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_forward_html_ae0a36595c464975e90676342f956f505"><div class="ttname"><a href="../../dd/d15/class_go_f___state_1_1_forward.html#ae0a36595c464975e90676342f956f505">GoF_State::Forward::Action</a></div><div class="ttdeci">Status Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00083">State.cpp:83</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_voice_recorder_html_a8cc58b3fda041923aa29a3ceace5a180"><div class="ttname"><a href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#a8cc58b3fda041923aa29a3ceace5a180">GoF_State::VoiceRecorder::_CurrentStatus</a></div><div class="ttdeci">Status _CurrentStatus</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00104">State.h:104</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_reverse_html_a78f9944d20d499b51d6440214b68a771"><div class="ttname"><a href="../../d6/db1/class_go_f___state_1_1_reverse.html#a78f9944d20d499b51d6440214b68a771">GoF_State::Reverse::Action</a></div><div class="ttdeci">Status Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00089">State.cpp:89</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_voice_recorder_html_aa1375fe16a728578a7cfbb01a63897d1"><div class="ttname"><a href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#aa1375fe16a728578a7cfbb01a63897d1">GoF_State::VoiceRecorder::_Matrix</a></div><div class="ttdeci">State * _Matrix[(int) Action::MaxSize][(int) Status::MaxSize]</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00103">State.h:103</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_discard_html"><div class="ttname"><a href="../../dc/de1/class_go_f___state_1_1_discard.html">GoF_State::Discard</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00068">State.h:69</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_voice_recorder_html"><div class="ttname"><a href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html">GoF_State::VoiceRecorder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00074">State.h:75</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_stop_html_a073b8265c79bdea89130b860caf92e15"><div class="ttname"><a href="../../df/d76/class_go_f___state_1_1_stop.html#a073b8265c79bdea89130b860caf92e15">GoF_State::Stop::Action</a></div><div class="ttdeci">Status Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00077">State.cpp:77</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_voice_recorder_html_aa27dbc22f22c7c1a4016af48d2e483e1"><div class="ttname"><a href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#aa27dbc22f22c7c1a4016af48d2e483e1">GoF_State::VoiceRecorder::Command</a></div><div class="ttdeci">Status Command(Action action)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00050">State.cpp:50</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_voice_recorder_html_a33534f100b0cf8bf7fe431ca26ac1b7d"><div class="ttname"><a href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#a33534f100b0cf8bf7fe431ca26ac1b7d">GoF_State::VoiceRecorder::VoiceRecorder</a></div><div class="ttdeci">VoiceRecorder()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00010">State.cpp:10</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_record_html"><div class="ttname"><a href="../../dc/dae/class_go_f___state_1_1_record.html">GoF_State::Record</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/dea/_state_8h_source.html#l00062">State.h:63</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_discard_html_a99c05b3e033abe4520a0f894853013c0"><div class="ttname"><a href="../../dc/de1/class_go_f___state_1_1_discard.html#a99c05b3e033abe4520a0f894853013c0">GoF_State::Discard::Action</a></div><div class="ttdeci">Status Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00101">State.cpp:101</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_voice_recorder_html_a27aac372680c237ca5a32a314597d729"><div class="ttname"><a href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#a27aac372680c237ca5a32a314597d729">GoF_State::VoiceRecorder::Init</a></div><div class="ttdeci">bool Init()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00028">State.cpp:28</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_state_html_ab91bb1dd5aa6260ab2a456581daf9ec2"><div class="ttname"><a href="../../d3/dab/class_go_f___state_1_1_state.html#ab91bb1dd5aa6260ab2a456581daf9ec2">GoF_State::State::State</a></div><div class="ttdeci">State()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00061">State.cpp:61</a></div></div>
+<div class="ttc" id="aclass_go_f___state_1_1_state_html_afab438d92b90dc18d194dbd9c9c8bab3"><div class="ttname"><a href="../../d3/dab/class_go_f___state_1_1_state.html#afab438d92b90dc18d194dbd9c9c8bab3">GoF_State::State::~State</a></div><div class="ttdeci">virtual ~State()</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d56/_state_8cpp_source.html#l00066">State.cpp:66</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_c314ff49d2d275a2db3ddbe97bf5b994.html">State</a></li><li class="navelem"><a class="el" href="../../da/dea/_state_8h.html">State.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

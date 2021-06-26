@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/VirtualConstructor/Material.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/d09/_material_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Material.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d09/_material_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Material.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d3/d09/_material_8h.html#ad98f93966d765ee7d69318272e22e3c2">    9</a></span>&#160;<span class="preprocessor">#define ICE_CREAM   &quot;IceCream&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d3/d09/_material_8h.html#a9677a33a9a5779ddc2847d8a15a2c4d3">   10</a></span>&#160;<span class="preprocessor">#define MENTOS      &quot;Mentos&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d3/d09/_material_8h.html#a8d2ae88ea551eeebff8f6d6948bdf227">   11</a></span>&#160;<span class="preprocessor">#define COCA_COLA   &quot;CocaCola&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../de/df2/namespace_sample.html">   13</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../de/df2/namespace_sample.html">Sample</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d0/d04/class_sample_1_1_material.html">Material</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../d0/d04/class_sample_1_1_material.html#afc9edb30acd6788d0e1e866cd0a3b8c3">Material</a>(std::string <span class="keywordtype">id</span>, std::string name, <span class="keywordtype">int</span> price, <span class="keywordtype">int</span> tax);</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#a80211cb36f79cf16e6e7afb95662edb3">   19</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a80211cb36f79cf16e6e7afb95662edb3">~Material</a>() {};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#ada884c64e08529af34a78af94a6da454">   21</a></span>&#160;        std::string <a class="code" href="../../d0/d04/class_sample_1_1_material.html#ada884c64e08529af34a78af94a6da454">GetID</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#adcdf68afb6351b9255b4eb60680caa6a">_id</a>; };</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#a8cf550cd9c130e2cdfffebfd00ed9068">   22</a></span>&#160;        std::string <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a8cf550cd9c130e2cdfffebfd00ed9068">GetName</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#af095eff9184607c1e093199d93985c6e">_name</a>; };</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#a9fb1014ed6936e449b9bd0faa7b8ae19">   23</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a9fb1014ed6936e449b9bd0faa7b8ae19">GetPrice</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a6e738ec7eec138eee1979891a89cec21">_price</a>; };</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#a9b204ef2fd0b336e1c1c747ab2ebc342">   24</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a9b204ef2fd0b336e1c1c747ab2ebc342">GetTax</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#ac61ffc6146889eb1a197cffc3b5b68d8">_tax</a>; };</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#a21d5e49fd839dc76da098d7aab22129b">   25</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a21d5e49fd839dc76da098d7aab22129b">GetTaxPrice</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a6e738ec7eec138eee1979891a89cec21">_price</a> + <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a6e738ec7eec138eee1979891a89cec21">_price</a> * <a class="code" href="../../d0/d04/class_sample_1_1_material.html#ac61ffc6146889eb1a197cffc3b5b68d8">_tax</a> / 100; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#adcdf68afb6351b9255b4eb60680caa6a">   28</a></span>&#160;        std::string <a class="code" href="../../d0/d04/class_sample_1_1_material.html#adcdf68afb6351b9255b4eb60680caa6a">_id</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#af095eff9184607c1e093199d93985c6e">   29</a></span>&#160;        std::string <a class="code" href="../../d0/d04/class_sample_1_1_material.html#af095eff9184607c1e093199d93985c6e">_name</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#a6e738ec7eec138eee1979891a89cec21">   30</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#a6e738ec7eec138eee1979891a89cec21">_price</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d0/d04/class_sample_1_1_material.html#ac61ffc6146889eb1a197cffc3b5b68d8">   31</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d0/d04/class_sample_1_1_material.html#ac61ffc6146889eb1a197cffc3b5b68d8">_tax</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_sample_1_1_material_html_adcdf68afb6351b9255b4eb60680caa6a"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#adcdf68afb6351b9255b4eb60680caa6a">Sample::Material::_id</a></div><div class="ttdeci">std::string _id</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00028">Material.h:28</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_a6e738ec7eec138eee1979891a89cec21"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#a6e738ec7eec138eee1979891a89cec21">Sample::Material::_price</a></div><div class="ttdeci">int _price</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00030">Material.h:30</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_af095eff9184607c1e093199d93985c6e"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#af095eff9184607c1e093199d93985c6e">Sample::Material::_name</a></div><div class="ttdeci">std::string _name</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00029">Material.h:29</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_ada884c64e08529af34a78af94a6da454"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#ada884c64e08529af34a78af94a6da454">Sample::Material::GetID</a></div><div class="ttdeci">std::string GetID()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00021">Material.h:21</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_a80211cb36f79cf16e6e7afb95662edb3"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#a80211cb36f79cf16e6e7afb95662edb3">Sample::Material::~Material</a></div><div class="ttdeci">virtual ~Material()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00019">Material.h:19</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html">Sample::Material</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00015">Material.h:16</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_a9fb1014ed6936e449b9bd0faa7b8ae19"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#a9fb1014ed6936e449b9bd0faa7b8ae19">Sample::Material::GetPrice</a></div><div class="ttdeci">int GetPrice()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00023">Material.h:23</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_a9b204ef2fd0b336e1c1c747ab2ebc342"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#a9b204ef2fd0b336e1c1c747ab2ebc342">Sample::Material::GetTax</a></div><div class="ttdeci">int GetTax()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00024">Material.h:24</a></div></div>
+<div class="ttc" id="anamespace_sample_html"><div class="ttname"><a href="../../de/df2/namespace_sample.html">Sample</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00013">Material.h:14</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_a8cf550cd9c130e2cdfffebfd00ed9068"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#a8cf550cd9c130e2cdfffebfd00ed9068">Sample::Material::GetName</a></div><div class="ttdeci">std::string GetName()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00022">Material.h:22</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_ac61ffc6146889eb1a197cffc3b5b68d8"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#ac61ffc6146889eb1a197cffc3b5b68d8">Sample::Material::_tax</a></div><div class="ttdeci">int _tax</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00031">Material.h:31</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_afc9edb30acd6788d0e1e866cd0a3b8c3"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#afc9edb30acd6788d0e1e866cd0a3b8c3">Sample::Material::Material</a></div><div class="ttdeci">Material(std::string id, std::string name, int price, int tax)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db5/_material_8cpp_source.html#l00009">Material.cpp:9</a></div></div>
+<div class="ttc" id="aclass_sample_1_1_material_html_a21d5e49fd839dc76da098d7aab22129b"><div class="ttname"><a href="../../d0/d04/class_sample_1_1_material.html#a21d5e49fd839dc76da098d7aab22129b">Sample::Material::GetTaxPrice</a></div><div class="ttdeci">int GetTaxPrice()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d09/_material_8h_source.html#l00025">Material.h:25</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_79a213b5f258e2d5b5e68a09bc055b51.html">VirtualConstructor</a></li><li class="navelem"><a class="el" href="../../d3/d09/_material_8h.html">Material.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

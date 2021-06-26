@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/Iterator/Aggregate.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('de/d1c/_aggregate_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Aggregate.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../de/d1c/_aggregate_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Aggregate.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d43/_item_8h.html">Item.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d38/_iterator_8h.html">Iterator.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d0/d3c/namespace_go_f___iterator.html">   11</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d0/d3c/namespace_go_f___iterator.html">GoF_Iterator</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">class </span><a class="code" href="../../de/de5/class_go_f___iterator_1_1_iterator.html">Iterator</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">class </span><a class="code" href="../../d0/d4e/class_go_f___iterator_1_1_item_iterator.html">ItemIterator</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d1/d1f/class_go_f___iterator_1_1_aggregate.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d1/d1f/class_go_f___iterator_1_1_aggregate.html">Aggregate</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d1/d1f/class_go_f___iterator_1_1_aggregate.html#aec59ea2d92e99a10e04cfd111c9b0f1b">   22</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../de/de5/class_go_f___iterator_1_1_iterator.html">Iterator&lt;T&gt;</a>* <a class="code" href="../../d1/d1f/class_go_f___iterator_1_1_aggregate.html#aec59ea2d92e99a10e04cfd111c9b0f1b">Itr</a>() = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html">   26</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html">ItemAggregate</a> : <span class="keyword">public</span> <a class="code" href="../../d1/d1f/class_go_f___iterator_1_1_aggregate.html">Aggregate</a>&lt;T&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a8b29e15130325974e1d7d9207d8bcd1f">   29</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a8b29e15130325974e1d7d9207d8bcd1f">Add</a>(T item)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#ad68e52d2c27d3fc633d2d2788781480b">_items</a>.push_back(item);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a77af8ce18572996a63974414f4ca9dea">   34</a></span>&#160;        T <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a77af8ce18572996a63974414f4ca9dea">Get</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#ad68e52d2c27d3fc633d2d2788781480b">_items</a>.at(index);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a7061e7e7613bcfdd7c3eea90a68e52ca">   39</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a7061e7e7613bcfdd7c3eea90a68e52ca">Size</a>()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#ad68e52d2c27d3fc633d2d2788781480b">_items</a>.size();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a2981bbf5a089fd253e72afc8478acc55">   44</a></span>&#160;        <a class="code" href="../../de/de5/class_go_f___iterator_1_1_iterator.html">Iterator&lt;T&gt;</a>* <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a2981bbf5a089fd253e72afc8478acc55">Itr</a>()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d0/d4e/class_go_f___iterator_1_1_item_iterator.html">ItemIterator&lt;T&gt;</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#ad68e52d2c27d3fc633d2d2788781480b">   50</a></span>&#160;        std::vector&lt;T&gt; <a class="code" href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#ad68e52d2c27d3fc633d2d2788781480b">_items</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___iterator_1_1_item_aggregate_html_a7061e7e7613bcfdd7c3eea90a68e52ca"><div class="ttname"><a href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a7061e7e7613bcfdd7c3eea90a68e52ca">GoF_Iterator::ItemAggregate::Size</a></div><div class="ttdeci">size_t Size()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00039">Aggregate.h:39</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_item_aggregate_html_a77af8ce18572996a63974414f4ca9dea"><div class="ttname"><a href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a77af8ce18572996a63974414f4ca9dea">GoF_Iterator::ItemAggregate::Get</a></div><div class="ttdeci">T Get(int index)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00034">Aggregate.h:34</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_iterator_html"><div class="ttname"><a href="../../de/de5/class_go_f___iterator_1_1_iterator.html">GoF_Iterator::Iterator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d38/_iterator_8h_source.html#l00018">Iterator.h:19</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_item_aggregate_html_ad68e52d2c27d3fc633d2d2788781480b"><div class="ttname"><a href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#ad68e52d2c27d3fc633d2d2788781480b">GoF_Iterator::ItemAggregate::_items</a></div><div class="ttdeci">std::vector&lt; T &gt; _items</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00050">Aggregate.h:47</a></div></div>
+<div class="ttc" id="anamespace_go_f___iterator_html"><div class="ttname"><a href="../../d0/d3c/namespace_go_f___iterator.html">GoF_Iterator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00011">Aggregate.h:12</a></div></div>
+<div class="ttc" id="a_item_8h_html"><div class="ttname"><a href="../../da/d43/_item_8h.html">Item.h</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_item_aggregate_html_a8b29e15130325974e1d7d9207d8bcd1f"><div class="ttname"><a href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a8b29e15130325974e1d7d9207d8bcd1f">GoF_Iterator::ItemAggregate::Add</a></div><div class="ttdeci">void Add(T item)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00029">Aggregate.h:29</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_item_aggregate_html_a2981bbf5a089fd253e72afc8478acc55"><div class="ttname"><a href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html#a2981bbf5a089fd253e72afc8478acc55">GoF_Iterator::ItemAggregate::Itr</a></div><div class="ttdeci">Iterator&lt; T &gt; * Itr()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00044">Aggregate.h:44</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_item_aggregate_html"><div class="ttname"><a href="../../db/d72/class_go_f___iterator_1_1_item_aggregate.html">GoF_Iterator::ItemAggregate</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00026">Aggregate.h:27</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_aggregate_html"><div class="ttname"><a href="../../d1/d1f/class_go_f___iterator_1_1_aggregate.html">GoF_Iterator::Aggregate</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d1c/_aggregate_8h_source.html#l00019">Aggregate.h:20</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_item_iterator_html"><div class="ttname"><a href="../../d0/d4e/class_go_f___iterator_1_1_item_iterator.html">GoF_Iterator::ItemIterator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d38/_iterator_8h_source.html#l00026">Iterator.h:27</a></div></div>
+<div class="ttc" id="a_iterator_8h_html"><div class="ttname"><a href="../../d3/d38/_iterator_8h.html">Iterator.h</a></div></div>
+<div class="ttc" id="aclass_go_f___iterator_1_1_aggregate_html_aec59ea2d92e99a10e04cfd111c9b0f1b"><div class="ttname"><a href="../../d1/d1f/class_go_f___iterator_1_1_aggregate.html#aec59ea2d92e99a10e04cfd111c9b0f1b">GoF_Iterator::Aggregate::Itr</a></div><div class="ttdeci">virtual Iterator&lt; T &gt; * Itr()=0</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_848e49b125aa9fb1a1eb77f519fd5cc3.html">Iterator</a></li><li class="navelem"><a class="el" href="../../de/d1c/_aggregate_8h.html">Aggregate.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

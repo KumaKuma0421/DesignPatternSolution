@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/AbstractFactory/BatchProcessFactory.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/ded/_batch_process_factory_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">BatchProcessFactory.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/ded/_batch_process_factory_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// BatchProcessFactory.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d08/_abstract_factory_8h.html">AbstractFactory.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../de/d47/namespace_go_f___abstract_factory.html">GoF_AbstractFactory</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html">BatchProcessFactory</a> : <span class="keyword">public</span> <a class="code" href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html">AbstractFactory</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#a532fa8873f22213dd645e28f85cdde96">BatchProcessFactory</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#af268737afbfb8e29d81305aa67f353aa">~BatchProcessFactory</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="../../d9/df8/class_go_f___abstract_factory_1_1_storage_product.html">StorageProduct</a>* <a class="code" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#a5b09fcad37d2de5838c52629908fb068">CreateStorageProduct</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html">DisplayProduct</a>* <a class="code" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#af6bfaa1c51539340a99f29f80eb3ac57">CreateDisplayProduct</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="../../dd/d20/class_go_f___abstract_factory_1_1_control_product.html">ControlProduct</a>* <a class="code" href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#ae7471f327e440b6231080655212b45dd">CreateControlProduct</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_display_product_html"><div class="ttname"><a href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html">GoF_AbstractFactory::DisplayProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00021">AbstractFactory.h:22</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_batch_process_factory_html_af268737afbfb8e29d81305aa67f353aa"><div class="ttname"><a href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#af268737afbfb8e29d81305aa67f353aa">GoF_AbstractFactory::BatchProcessFactory::~BatchProcessFactory</a></div><div class="ttdeci">~BatchProcessFactory()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/_batch_process_factory_8cpp_source.html#l00017">BatchProcessFactory.cpp:17</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_control_product_html"><div class="ttname"><a href="../../dd/d20/class_go_f___abstract_factory_1_1_control_product.html">GoF_AbstractFactory::ControlProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00030">AbstractFactory.h:31</a></div></div>
+<div class="ttc" id="anamespace_go_f___abstract_factory_html"><div class="ttname"><a href="../../de/d47/namespace_go_f___abstract_factory.html">GoF_AbstractFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00009">AbstractFactory.h:10</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_batch_process_factory_html_ae7471f327e440b6231080655212b45dd"><div class="ttname"><a href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#ae7471f327e440b6231080655212b45dd">GoF_AbstractFactory::BatchProcessFactory::CreateControlProduct</a></div><div class="ttdeci">ControlProduct * CreateControlProduct()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/_batch_process_factory_8cpp_source.html#l00032">BatchProcessFactory.cpp:32</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_batch_process_factory_html"><div class="ttname"><a href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html">GoF_AbstractFactory::BatchProcessFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ded/_batch_process_factory_8h_source.html#l00011">BatchProcessFactory.h:12</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_abstract_factory_html"><div class="ttname"><a href="../../d7/d93/class_go_f___abstract_factory_1_1_abstract_factory.html">GoF_AbstractFactory::AbstractFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00039">AbstractFactory.h:40</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_storage_product_html"><div class="ttname"><a href="../../d9/df8/class_go_f___abstract_factory_1_1_storage_product.html">GoF_AbstractFactory::StorageProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00011">AbstractFactory.h:12</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_batch_process_factory_html_a5b09fcad37d2de5838c52629908fb068"><div class="ttname"><a href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#a5b09fcad37d2de5838c52629908fb068">GoF_AbstractFactory::BatchProcessFactory::CreateStorageProduct</a></div><div class="ttdeci">StorageProduct * CreateStorageProduct()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/_batch_process_factory_8cpp_source.html#l00022">BatchProcessFactory.cpp:22</a></div></div>
+<div class="ttc" id="a_abstract_factory_8h_html"><div class="ttname"><a href="../../d9/d08/_abstract_factory_8h.html">AbstractFactory.h</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_batch_process_factory_html_a532fa8873f22213dd645e28f85cdde96"><div class="ttname"><a href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#a532fa8873f22213dd645e28f85cdde96">GoF_AbstractFactory::BatchProcessFactory::BatchProcessFactory</a></div><div class="ttdeci">BatchProcessFactory()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/_batch_process_factory_8cpp_source.html#l00012">BatchProcessFactory.cpp:12</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_batch_process_factory_html_af6bfaa1c51539340a99f29f80eb3ac57"><div class="ttname"><a href="../../db/da4/class_go_f___abstract_factory_1_1_batch_process_factory.html#af6bfaa1c51539340a99f29f80eb3ac57">GoF_AbstractFactory::BatchProcessFactory::CreateDisplayProduct</a></div><div class="ttdeci">DisplayProduct * CreateDisplayProduct()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dbd/_batch_process_factory_8cpp_source.html#l00027">BatchProcessFactory.cpp:27</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_d3dcc1661f45abbedaa8bc384638da41.html">AbstractFactory</a></li><li class="navelem"><a class="el" href="../../d1/ded/_batch_process_factory_8h.html">BatchProcessFactory.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

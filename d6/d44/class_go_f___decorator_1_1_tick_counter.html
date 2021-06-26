@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_Decorator::TickCounter クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/d44/class_go_f___decorator_1_1_tick_counter.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../d4/d05/class_go_f___decorator_1_1_tick_counter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_Decorator::TickCounter クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d6/de3/_decorator_8h_source.html">Decorator.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_Decorator::TickCounter の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/de0/class_go_f___decorator_1_1_tick_counter__inherit__graph.png" border="0" usemap="#a_go_f___decorator_1_1_tick_counter_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___decorator_1_1_tick_counter_inherit__map" id="a_go_f___decorator_1_1_tick_counter_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,192,107"/>
+<area shape="rect" href="../../d6/d51/class_go_f___decorator_1_1_core.html" title=" " alt="" coords="26,5,171,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+GoF_Decorator::TickCounter 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d7e/class_go_f___decorator_1_1_tick_counter__coll__graph.png" border="0" usemap="#a_go_f___decorator_1_1_tick_counter_coll__map" alt="Collaboration graph"/></div>
+<map name="_go_f___decorator_1_1_tick_counter_coll__map" id="a_go_f___decorator_1_1_tick_counter_coll__map">
+<area shape="rect" title=" " alt="" coords="5,95,192,121"/>
+<area shape="rect" href="../../d6/d51/class_go_f___decorator_1_1_core.html" title=" " alt="" coords="26,5,171,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a24cb86c3ddcb0c0d05286750d7bd6e01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/class_go_f___decorator_1_1_tick_counter.html#a24cb86c3ddcb0c0d05286750d7bd6e01">TickCounter</a> (<a class="el" href="../../d6/d51/class_go_f___decorator_1_1_core.html">Core</a> *core)</td></tr>
+<tr class="separator:a24cb86c3ddcb0c0d05286750d7bd6e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2131947e4ace378150ef5861a6ba52a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/class_go_f___decorator_1_1_tick_counter.html#af2131947e4ace378150ef5861a6ba52a">Action</a> (DWORD dwParam)</td></tr>
+<tr class="separator:af2131947e4ace378150ef5861a6ba52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:aa01ba1305c6d3fd00c8ed03ff28740fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d51/class_go_f___decorator_1_1_core.html">Core</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/class_go_f___decorator_1_1_tick_counter.html#aa01ba1305c6d3fd00c8ed03ff28740fe">_core</a></td></tr>
+<tr class="separator:aa01ba1305c6d3fd00c8ed03ff28740fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d6/de3/_decorator_8h_source.html">Decorator.h</a> の <a class="el" href="../../d6/de3/_decorator_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a24cb86c3ddcb0c0d05286750d7bd6e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24cb86c3ddcb0c0d05286750d7bd6e01">&#9670;&nbsp;</a></span>TickCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TickCounter::TickCounter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d51/class_go_f___decorator_1_1_core.html">Core</a> *&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d8/dff/_decorator_8cpp_source.html">Decorator.cpp</a> の <a class="el" href="../../d8/dff/_decorator_8cpp_source.html#l00009">9</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d6/de3/_decorator_8h_source.html#l00026">_core</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="af2131947e4ace378150ef5861a6ba52a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2131947e4ace378150ef5861a6ba52a">&#9670;&nbsp;</a></span>Action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TickCounter::Action </td>
+          <td>(</td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>dwParam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d6/d51/class_go_f___decorator_1_1_core.html#abca8c8a5ef81165fb7da6baacbab84a8">GoF_Decorator::Core</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../d8/dff/_decorator_8cpp_source.html">Decorator.cpp</a> の <a class="el" href="../../d8/dff/_decorator_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d6/de3/_decorator_8h_source.html#l00026">_core</a>, <a class="el" href="../../d6/d51/class_go_f___decorator_1_1_core.html#abca8c8a5ef81165fb7da6baacbab84a8">GoF_Decorator::Core::Action()</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d4/d04/_decorator_2_main_8cpp_source.html#l00010">main()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_cgraph.png" border="0" usemap="#ad6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_cgraph" alt=""/></div>
+<map name="d6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_cgraph" id="ad6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,192,47"/>
+<area shape="rect" href="../../d6/d51/class_go_f___decorator_1_1_core.html#abca8c8a5ef81165fb7da6baacbab84a8" title=" " alt="" coords="240,5,385,47"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_icgraph.png" border="0" usemap="#ad6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_icgraph" alt=""/></div>
+<map name="d6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_icgraph" id="ad6/d44/class_go_f___decorator_1_1_tick_counter_af2131947e4ace378150ef5861a6ba52a_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,291,47"/>
+<area shape="rect" href="../../d4/d04/_decorator_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="aa01ba1305c6d3fd00c8ed03ff28740fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01ba1305c6d3fd00c8ed03ff28740fe">&#9670;&nbsp;</a></span>_core</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d51/class_go_f___decorator_1_1_core.html">Core</a>* GoF_Decorator::TickCounter::_core</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d6/de3/_decorator_8h_source.html">Decorator.h</a> の <a class="el" href="../../d6/de3/_decorator_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d8/dff/_decorator_8cpp_source.html#l00009">TickCounter()</a>, <a class="el" href="../../d8/dff/_decorator_8cpp_source.html#l00014">Action()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/Decorator/<a class="el" href="../../d6/de3/_decorator_8h_source.html">Decorator.h</a></li>
+<li>DesignPatternSolution/Decorator/<a class="el" href="../../d8/dff/_decorator_8cpp_source.html">Decorator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d85/namespace_go_f___decorator.html">GoF_Decorator</a></li><li class="navelem"><a class="el" href="../../d6/d44/class_go_f___decorator_1_1_tick_counter.html">TickCounter</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

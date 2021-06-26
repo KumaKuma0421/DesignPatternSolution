@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_Mediator::Mediator クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/dfa/class_go_f___mediator_1_1_mediator.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d2/d11/class_go_f___mediator_1_1_mediator-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_Mediator::Mediator クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d2/dcd/_mediator_8h_source.html">Mediator.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_Mediator::Mediator の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d3b/class_go_f___mediator_1_1_mediator__inherit__graph.png" border="0" usemap="#a_go_f___mediator_1_1_mediator_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___mediator_1_1_mediator_inherit__map" id="a_go_f___mediator_1_1_mediator_inherit__map">
+<area shape="rect" title=" " alt="" coords="18,5,181,32"/>
+<area shape="rect" href="../../d7/df8/class_go_f___mediator_1_1_real_mediator.html" title=" " alt="" coords="5,80,193,107"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac1724c681199617539edd71cf5b7e077"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfa/class_go_f___mediator_1_1_mediator.html#ac1724c681199617539edd71cf5b7e077">Mediator</a> ()</td></tr>
+<tr class="separator:ac1724c681199617539edd71cf5b7e077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8002cdad1ca330d41e4479ce73355e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfa/class_go_f___mediator_1_1_mediator.html#a0d8002cdad1ca330d41e4479ce73355e">~Mediator</a> ()</td></tr>
+<tr class="separator:a0d8002cdad1ca330d41e4479ce73355e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6555331f981f5358f29fb28482cfaf90"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfa/class_go_f___mediator_1_1_mediator.html#a6555331f981f5358f29fb28482cfaf90">AddColleague</a> (<a class="el" href="../../d1/dab/class_go_f___mediator_1_1_colleague.html">Colleague</a> *colleague)=0</td></tr>
+<tr class="separator:a6555331f981f5358f29fb28482cfaf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f921ceb61c47617e5c2ecb9d48cd79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfa/class_go_f___mediator_1_1_mediator.html#a92f921ceb61c47617e5c2ecb9d48cd79">Consultation</a> (<a class="el" href="../../d1/dab/class_go_f___mediator_1_1_colleague.html">Colleague</a> *colleague)=0</td></tr>
+<tr class="separator:a92f921ceb61c47617e5c2ecb9d48cd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d2/dcd/_mediator_8h_source.html">Mediator.h</a> の <a class="el" href="../../d2/dcd/_mediator_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ac1724c681199617539edd71cf5b7e077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1724c681199617539edd71cf5b7e077">&#9670;&nbsp;</a></span>Mediator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoF_Mediator::Mediator::Mediator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dcd/_mediator_8h_source.html">Mediator.h</a> の <a class="el" href="../../d2/dcd/_mediator_8h_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0d8002cdad1ca330d41e4479ce73355e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8002cdad1ca330d41e4479ce73355e">&#9670;&nbsp;</a></span>~Mediator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GoF_Mediator::Mediator::~Mediator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/dcd/_mediator_8h_source.html">Mediator.h</a> の <a class="el" href="../../d2/dcd/_mediator_8h_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a6555331f981f5358f29fb28482cfaf90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6555331f981f5358f29fb28482cfaf90">&#9670;&nbsp;</a></span>AddColleague()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GoF_Mediator::Mediator::AddColleague </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dab/class_go_f___mediator_1_1_colleague.html">Colleague</a> *&#160;</td>
+          <td class="paramname"><em>colleague</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/df8/class_go_f___mediator_1_1_real_mediator.html#abbe0028898e493dbbb0d8b960927a9b9">GoF_Mediator::RealMediator</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a92f921ceb61c47617e5c2ecb9d48cd79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f921ceb61c47617e5c2ecb9d48cd79">&#9670;&nbsp;</a></span>Consultation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GoF_Mediator::Mediator::Consultation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dab/class_go_f___mediator_1_1_colleague.html">Colleague</a> *&#160;</td>
+          <td class="paramname"><em>colleague</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d7/df8/class_go_f___mediator_1_1_real_mediator.html#a653a5ee5680cf87131ac7415ce32bb61">GoF_Mediator::RealMediator</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d5/d3b/_colleague_8cpp_source.html#l00016">GoF_Mediator::RealColleague::Run()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dfa/class_go_f___mediator_1_1_mediator_a92f921ceb61c47617e5c2ecb9d48cd79_icgraph.png" border="0" usemap="#ad0/dfa/class_go_f___mediator_1_1_mediator_a92f921ceb61c47617e5c2ecb9d48cd79_icgraph" alt=""/></div>
+<map name="d0/dfa/class_go_f___mediator_1_1_mediator_a92f921ceb61c47617e5c2ecb9d48cd79_icgraph" id="ad0/dfa/class_go_f___mediator_1_1_mediator_a92f921ceb61c47617e5c2ecb9d48cd79_icgraph">
+<area shape="rect" title=" " alt="" coords="379,5,541,47"/>
+<area shape="rect" href="../../dd/d67/class_go_f___mediator_1_1_real_colleague.html#a5b66fba3bd1987d73375bf2f62bff762" title=" " alt="" coords="104,13,331,39"/>
+<area shape="rect" href="../../d8/d60/_mediator_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/Mediator/<a class="el" href="../../d2/dcd/_mediator_8h_source.html">Mediator.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/d7b/namespace_go_f___mediator.html">GoF_Mediator</a></li><li class="navelem"><a class="el" href="../../d0/dfa/class_go_f___mediator_1_1_mediator.html">Mediator</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

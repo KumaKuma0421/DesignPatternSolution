@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_Singleton::Singleton クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/d76/class_go_f___singleton_1_1_singleton.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pri-methods">非公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="#pri-static-attribs">静的非公開変数類</a> &#124;
+<a href="../../dd/d21/class_go_f___singleton_1_1_singleton-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_Singleton::Singleton クラス<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_Singleton::Singleton 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d69/class_go_f___singleton_1_1_singleton__coll__graph.png" border="0" usemap="#a_go_f___singleton_1_1_singleton_coll__map" alt="Collaboration graph"/></div>
+<map name="_go_f___singleton_1_1_singleton_coll__map" id="a_go_f___singleton_1_1_singleton_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,176,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a848d0bfef833de7ea45103a603e7a533"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#a848d0bfef833de7ea45103a603e7a533">Singleton</a> (const <a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html">Singleton</a> &amp;)=delete</td></tr>
+<tr class="separator:a848d0bfef833de7ea45103a603e7a533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279a75c11612d15e7e92316847c034e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#a279a75c11612d15e7e92316847c034e0">GetValue1</a> ()</td></tr>
+<tr class="separator:a279a75c11612d15e7e92316847c034e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0301f04537a2fe33a51aad9a207fda6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#ad0301f04537a2fe33a51aad9a207fda6">GetValue2</a> ()</td></tr>
+<tr class="separator:ad0301f04537a2fe33a51aad9a207fda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb242f6e897b56c18053b44dff37889f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#acb242f6e897b56c18053b44dff37889f">SetValue1</a> (int value1)</td></tr>
+<tr class="separator:acb242f6e897b56c18053b44dff37889f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24817cd1782b4d0a93def4624a5f8689"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#a24817cd1782b4d0a93def4624a5f8689">SetValue2</a> (int value2)</td></tr>
+<tr class="separator:a24817cd1782b4d0a93def4624a5f8689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7db3b42cb1d23eadfb128ecb65498a1d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html">Singleton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#a7db3b42cb1d23eadfb128ecb65498a1d">getInstance</a> ()</td></tr>
+<tr class="separator:a7db3b42cb1d23eadfb128ecb65498a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+非公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab388688fe6a7646209e65aef6808811b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#ab388688fe6a7646209e65aef6808811b">Singleton</a> ()=default</td></tr>
+<tr class="separator:ab388688fe6a7646209e65aef6808811b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea9aafd0452d10e9e8c7780e36253b8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#aea9aafd0452d10e9e8c7780e36253b8e">~Singleton</a> ()=default</td></tr>
+<tr class="separator:aea9aafd0452d10e9e8c7780e36253b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:ad69fb9ff51d23163f074673e7b56becc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#ad69fb9ff51d23163f074673e7b56becc">_value1</a> = -1</td></tr>
+<tr class="separator:ad69fb9ff51d23163f074673e7b56becc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499a4e2510ef63cbdee5ac59154d957b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#a499a4e2510ef63cbdee5ac59154d957b">_value2</a> = -1</td></tr>
+<tr class="separator:a499a4e2510ef63cbdee5ac59154d957b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+静的非公開変数類</h2></td></tr>
+<tr class="memitem:a3c29320e86eed01465f7174e3df7a585"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html">Singleton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#a3c29320e86eed01465f7174e3df7a585">_instance</a> = nullptr</td></tr>
+<tr class="separator:a3c29320e86eed01465f7174e3df7a585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a848d0bfef833de7ea45103a603e7a533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a848d0bfef833de7ea45103a603e7a533">&#9670;&nbsp;</a></span>Singleton() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoF_Singleton::Singleton::Singleton </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html">Singleton</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab388688fe6a7646209e65aef6808811b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab388688fe6a7646209e65aef6808811b">&#9670;&nbsp;</a></span>Singleton() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoF_Singleton::Singleton::Singleton </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">参照元 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00012">getInstance()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d76/class_go_f___singleton_1_1_singleton_ab388688fe6a7646209e65aef6808811b_icgraph.png" border="0" usemap="#ad0/d76/class_go_f___singleton_1_1_singleton_ab388688fe6a7646209e65aef6808811b_icgraph" alt=""/></div>
+<map name="d0/d76/class_go_f___singleton_1_1_singleton_ab388688fe6a7646209e65aef6808811b_icgraph" id="ad0/d76/class_go_f___singleton_1_1_singleton_ab388688fe6a7646209e65aef6808811b_icgraph">
+<area shape="rect" title=" " alt="" coords="323,5,493,47"/>
+<area shape="rect" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#a7db3b42cb1d23eadfb128ecb65498a1d" title=" " alt="" coords="104,5,275,47"/>
+<area shape="rect" href="../../db/da6/_singleton_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aea9aafd0452d10e9e8c7780e36253b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea9aafd0452d10e9e8c7780e36253b8e">&#9670;&nbsp;</a></span>~Singleton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoF_Singleton::Singleton::~Singleton </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a7db3b42cb1d23eadfb128ecb65498a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db3b42cb1d23eadfb128ecb65498a1d">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html">Singleton</a>* GoF_Singleton::Singleton::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#ab388688fe6a7646209e65aef6808811b">Singleton()</a>, <a class="el" href="../../de/dec/_singleton_8h_source.html#l00030">_instance</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/da6/_singleton_2_main_8cpp_source.html#l00011">main()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_cgraph.png" border="0" usemap="#ad0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_cgraph" alt=""/></div>
+<map name="d0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_cgraph" id="ad0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,176,47"/>
+<area shape="rect" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html#ab388688fe6a7646209e65aef6808811b" title=" " alt="" coords="224,5,395,47"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_icgraph.png" border="0" usemap="#ad0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_icgraph" alt=""/></div>
+<map name="d0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_icgraph" id="ad0/d76/class_go_f___singleton_1_1_singleton_a7db3b42cb1d23eadfb128ecb65498a1d_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,275,47"/>
+<area shape="rect" href="../../db/da6/_singleton_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a279a75c11612d15e7e92316847c034e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a279a75c11612d15e7e92316847c034e0">&#9670;&nbsp;</a></span>GetValue1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GoF_Singleton::Singleton::GetValue1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00033">_value1</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/da6/_singleton_2_main_8cpp_source.html#l00011">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d76/class_go_f___singleton_1_1_singleton_a279a75c11612d15e7e92316847c034e0_icgraph.png" border="0" usemap="#ad0/d76/class_go_f___singleton_1_1_singleton_a279a75c11612d15e7e92316847c034e0_icgraph" alt=""/></div>
+<map name="d0/d76/class_go_f___singleton_1_1_singleton_a279a75c11612d15e7e92316847c034e0_icgraph" id="ad0/d76/class_go_f___singleton_1_1_singleton_a279a75c11612d15e7e92316847c034e0_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,275,47"/>
+<area shape="rect" href="../../db/da6/_singleton_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0301f04537a2fe33a51aad9a207fda6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0301f04537a2fe33a51aad9a207fda6">&#9670;&nbsp;</a></span>GetValue2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GoF_Singleton::Singleton::GetValue2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00022">22</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00034">_value2</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/da6/_singleton_2_main_8cpp_source.html#l00011">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d76/class_go_f___singleton_1_1_singleton_ad0301f04537a2fe33a51aad9a207fda6_icgraph.png" border="0" usemap="#ad0/d76/class_go_f___singleton_1_1_singleton_ad0301f04537a2fe33a51aad9a207fda6_icgraph" alt=""/></div>
+<map name="d0/d76/class_go_f___singleton_1_1_singleton_ad0301f04537a2fe33a51aad9a207fda6_icgraph" id="ad0/d76/class_go_f___singleton_1_1_singleton_ad0301f04537a2fe33a51aad9a207fda6_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,275,47"/>
+<area shape="rect" href="../../db/da6/_singleton_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acb242f6e897b56c18053b44dff37889f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb242f6e897b56c18053b44dff37889f">&#9670;&nbsp;</a></span>SetValue1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GoF_Singleton::Singleton::SetValue1 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00033">_value1</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/da6/_singleton_2_main_8cpp_source.html#l00011">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d76/class_go_f___singleton_1_1_singleton_acb242f6e897b56c18053b44dff37889f_icgraph.png" border="0" usemap="#ad0/d76/class_go_f___singleton_1_1_singleton_acb242f6e897b56c18053b44dff37889f_icgraph" alt=""/></div>
+<map name="d0/d76/class_go_f___singleton_1_1_singleton_acb242f6e897b56c18053b44dff37889f_icgraph" id="ad0/d76/class_go_f___singleton_1_1_singleton_acb242f6e897b56c18053b44dff37889f_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,275,47"/>
+<area shape="rect" href="../../db/da6/_singleton_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24817cd1782b4d0a93def4624a5f8689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24817cd1782b4d0a93def4624a5f8689">&#9670;&nbsp;</a></span>SetValue2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GoF_Singleton::Singleton::SetValue2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00034">_value2</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/da6/_singleton_2_main_8cpp_source.html#l00011">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d76/class_go_f___singleton_1_1_singleton_a24817cd1782b4d0a93def4624a5f8689_icgraph.png" border="0" usemap="#ad0/d76/class_go_f___singleton_1_1_singleton_a24817cd1782b4d0a93def4624a5f8689_icgraph" alt=""/></div>
+<map name="d0/d76/class_go_f___singleton_1_1_singleton_a24817cd1782b4d0a93def4624a5f8689_icgraph" id="ad0/d76/class_go_f___singleton_1_1_singleton_a24817cd1782b4d0a93def4624a5f8689_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,275,47"/>
+<area shape="rect" href="../../db/da6/_singleton_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a3c29320e86eed01465f7174e3df7a585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c29320e86eed01465f7174e3df7a585">&#9670;&nbsp;</a></span>_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html">Singleton</a> * GoF_Singleton::Singleton::_instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00012">getInstance()</a>.</p>
+
+</div>
+</div>
+<a id="ad69fb9ff51d23163f074673e7b56becc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69fb9ff51d23163f074673e7b56becc">&#9670;&nbsp;</a></span>_value1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GoF_Singleton::Singleton::_value1 = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00021">GetValue1()</a>, <a class="el" href="../../de/dec/_singleton_8h_source.html#l00023">SetValue1()</a>.</p>
+
+</div>
+</div>
+<a id="a499a4e2510ef63cbdee5ac59154d957b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499a4e2510ef63cbdee5ac59154d957b">&#9670;&nbsp;</a></span>_value2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GoF_Singleton::Singleton::_value2 = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a> の <a class="el" href="../../de/dec/_singleton_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../de/dec/_singleton_8h_source.html#l00022">GetValue2()</a>, <a class="el" href="../../de/dec/_singleton_8h_source.html#l00024">SetValue2()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/Singleton/<a class="el" href="../../de/dec/_singleton_8h_source.html">Singleton.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../df/df1/namespace_go_f___singleton.html">GoF_Singleton</a></li><li class="navelem"><a class="el" href="../../d0/d76/class_go_f___singleton_1_1_singleton.html">Singleton</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

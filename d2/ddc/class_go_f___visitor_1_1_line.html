@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_Visitor::Line クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d2/ddc/class_go_f___visitor_1_1_line.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d8/d58/class_go_f___visitor_1_1_line-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_Visitor::Line クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d1/d27/_shapes_8h_source.html">Shapes.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_Visitor::Line の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d68/class_go_f___visitor_1_1_line__inherit__graph.png" border="0" usemap="#a_go_f___visitor_1_1_line_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___visitor_1_1_line_inherit__map" id="a_go_f___visitor_1_1_line_inherit__map">
+<area shape="rect" title=" " alt="" coords="12,80,135,107"/>
+<area shape="rect" href="../../df/dde/class_go_f___visitor_1_1_shape.html" title=" " alt="" coords="5,5,141,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+GoF_Visitor::Line 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/dea/class_go_f___visitor_1_1_line__coll__graph.png" border="0" usemap="#a_go_f___visitor_1_1_line_coll__map" alt="Collaboration graph"/></div>
+<map name="_go_f___visitor_1_1_line_coll__map" id="a_go_f___visitor_1_1_line_coll__map">
+<area shape="rect" title=" " alt="" coords="17,171,140,197"/>
+<area shape="rect" href="../../df/dde/class_go_f___visitor_1_1_shape.html" title=" " alt="" coords="11,95,147,121"/>
+<area shape="rect" href="../../d5/dfa/class_go_f___visitor_1_1_position.html" title=" " alt="" coords="5,5,152,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a48821ae88e7df778365bf98ace295501"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddc/class_go_f___visitor_1_1_line.html#a48821ae88e7df778365bf98ace295501">Line</a> (<a class="el" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> first, <a class="el" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> last)</td></tr>
+<tr class="separator:a48821ae88e7df778365bf98ace295501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a853e80363d15fb1ff5a5b22bfc1f6271"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddc/class_go_f___visitor_1_1_line.html#a853e80363d15fb1ff5a5b22bfc1f6271">Operate</a> (<a class="el" href="../../de/dfe/class_go_f___visitor_1_1_operation.html">Operation</a> *operation)</td></tr>
+<tr class="separator:a853e80363d15fb1ff5a5b22bfc1f6271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_go_f___visitor_1_1_shape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_go_f___visitor_1_1_shape')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html">GoF_Visitor::Shape</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:aaa8d87171e65e0d8ba3c5459978992a7 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#aaa8d87171e65e0d8ba3c5459978992a7">Shape</a> ()</td></tr>
+<tr class="separator:aaa8d87171e65e0d8ba3c5459978992a7 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935afc9e576015f967d90de56977167d inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a935afc9e576015f967d90de56977167d">~Shape</a> ()</td></tr>
+<tr class="separator:a935afc9e576015f967d90de56977167d inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803590558c8aaceca1457c95633294d8 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a803590558c8aaceca1457c95633294d8">Draw</a> ()</td></tr>
+<tr class="separator:a803590558c8aaceca1457c95633294d8 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4301203b84d6305c1e904d41e96779 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a1a4301203b84d6305c1e904d41e96779">GetPoint</a> ()</td></tr>
+<tr class="separator:a1a4301203b84d6305c1e904d41e96779 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a550bfb6cd4e90035fd4e8148bcc83 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a36a550bfb6cd4e90035fd4e8148bcc83">GetPosition</a> (int i)</td></tr>
+<tr class="separator:a36a550bfb6cd4e90035fd4e8148bcc83 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4266c211d37d73beabaa6082dd7c53 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a6c4266c211d37d73beabaa6082dd7c53">SetPosition</a> (int i, <a class="el" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> pos)</td></tr>
+<tr class="separator:a6c4266c211d37d73beabaa6082dd7c53 inherit pub_methods_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_go_f___visitor_1_1_shape"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_go_f___visitor_1_1_shape')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html">GoF_Visitor::Shape</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a9ab0edaa92c99373ac5f8ad21805b66f inherit pro_attribs_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a9ab0edaa92c99373ac5f8ad21805b66f">_point</a></td></tr>
+<tr class="separator:a9ab0edaa92c99373ac5f8ad21805b66f inherit pro_attribs_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cabbe205589f2845a028243e3121ed6 inherit pro_attribs_class_go_f___visitor_1_1_shape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a2cabbe205589f2845a028243e3121ed6">_pos</a></td></tr>
+<tr class="separator:a2cabbe205589f2845a028243e3121ed6 inherit pro_attribs_class_go_f___visitor_1_1_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d1/d27/_shapes_8h_source.html">Shapes.h</a> の <a class="el" href="../../d1/d27/_shapes_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a48821ae88e7df778365bf98ace295501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48821ae88e7df778365bf98ace295501">&#9670;&nbsp;</a></span>Line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Line::Line </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a>&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a>&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../de/d71/_shapes_8cpp_source.html">Shapes.cpp</a> の <a class="el" href="../../de/d71/_shapes_8cpp_source.html#l00051">51</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d1/d27/_shapes_8h_source.html#l00046">GoF_Visitor::Shape::_point</a>, <a class="el" href="../../d1/d27/_shapes_8h_source.html#l00047">GoF_Visitor::Shape::_pos</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a853e80363d15fb1ff5a5b22bfc1f6271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a853e80363d15fb1ff5a5b22bfc1f6271">&#9670;&nbsp;</a></span>Operate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Line::Operate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/dfe/class_go_f___visitor_1_1_operation.html">Operation</a> *&#160;</td>
+          <td class="paramname"><em>operation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../df/dde/class_go_f___visitor_1_1_shape.html#add7c1594a4fb614f049c8ecef8257347">GoF_Visitor::Shape</a>を実装しています。</p>
+
+<p class="definition"> <a class="el" href="../../de/d71/_shapes_8cpp_source.html">Shapes.cpp</a> の <a class="el" href="../../de/d71/_shapes_8cpp_source.html#l00057">57</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../de/dfe/class_go_f___visitor_1_1_operation.html#aa0794d83f1ecd3b15749d79cd4a89737">GoF_Visitor::Operation::DoOperation()</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../d4/d9a/_visitor_2_main_8cpp_source.html#l00011">main()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_cgraph.png" border="0" usemap="#ad2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_cgraph" alt=""/></div>
+<map name="d2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_cgraph" id="ad2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,47"/>
+<area shape="rect" href="../../de/dfe/class_go_f___visitor_1_1_operation.html#aa0794d83f1ecd3b15749d79cd4a89737" title=" " alt="" coords="184,5,339,47"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_icgraph.png" border="0" usemap="#ad2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_icgraph" alt=""/></div>
+<map name="d2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_icgraph" id="ad2/ddc/class_go_f___visitor_1_1_line_a853e80363d15fb1ff5a5b22bfc1f6271_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,235,47"/>
+<area shape="rect" href="../../d4/d9a/_visitor_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/Visitor/<a class="el" href="../../d1/d27/_shapes_8h_source.html">Shapes.h</a></li>
+<li>DesignPatternSolution/Visitor/<a class="el" href="../../de/d71/_shapes_8cpp_source.html">Shapes.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d4/d8a/namespace_go_f___visitor.html">GoF_Visitor</a></li><li class="navelem"><a class="el" href="../../d2/ddc/class_go_f___visitor_1_1_line.html">Line</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

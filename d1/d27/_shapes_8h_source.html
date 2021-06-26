@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/Visitor/Shapes.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d1/d27/_shapes_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Shapes.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d27/_shapes_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Shapes.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/dd6/_operation_8h.html">Operation.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d4/d8a/namespace_go_f___visitor.html">GoF_Visitor</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">class </span>Operation;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a369a577425f8ba02e8750d04b6a088db">Position</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a369a577425f8ba02e8750d04b6a088db">Position</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#ae41f8d8a1bed862a7269171ea28f5fec">Set</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#af208f79f3af689f979ead6479042a380">   21</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#af208f79f3af689f979ead6479042a380">SetX</a>(<span class="keywordtype">int</span> x) { <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a9611e9bf162460856167fc7f656f77c9">_x</a> = x; };</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#ad96bee2e04a533799dc0a126b1cf392b">   22</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#ad96bee2e04a533799dc0a126b1cf392b">SetY</a>(<span class="keywordtype">int</span> y) { <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a44fb65d725e7c6db3f18b32aa186b0c9">_y</a> = y; };</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a6e84d14b3b564f86c03a05eeaa0738cd">   23</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a6e84d14b3b564f86c03a05eeaa0738cd">GetX</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a9611e9bf162460856167fc7f656f77c9">_x</a>; };</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a4a193a435b152f258cf01d4988725098">   24</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a4a193a435b152f258cf01d4988725098">GetY</a>() { <span class="keywordflow">return</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a44fb65d725e7c6db3f18b32aa186b0c9">_y</a>; };</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a9611e9bf162460856167fc7f656f77c9">   27</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a9611e9bf162460856167fc7f656f77c9">_x</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a44fb65d725e7c6db3f18b32aa186b0c9">   28</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a44fb65d725e7c6db3f18b32aa186b0c9">_y</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// もし、Dotが増えたなら・・・</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../df/dde/class_go_f___visitor_1_1_shape.html">   33</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html">Shape</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#aaa8d87171e65e0d8ba3c5459978992a7">Shape</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a935afc9e576015f967d90de56977167d">~Shape</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a1a4301203b84d6305c1e904d41e96779">   39</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a1a4301203b84d6305c1e904d41e96779">GetPoint</a>() { <span class="keywordflow">return</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a9ab0edaa92c99373ac5f8ad21805b66f">_point</a>; };</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a36a550bfb6cd4e90035fd4e8148bcc83">   40</a></span>&#160;        <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a36a550bfb6cd4e90035fd4e8148bcc83">GetPosition</a>(<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a2cabbe205589f2845a028243e3121ed6">_pos</a>[i]; };</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a6c4266c211d37d73beabaa6082dd7c53">   41</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a6c4266c211d37d73beabaa6082dd7c53">SetPosition</a>(<span class="keywordtype">int</span> i, <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> pos) { <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a2cabbe205589f2845a028243e3121ed6">_pos</a>[i] = pos; }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a803590558c8aaceca1457c95633294d8">Draw</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../df/dde/class_go_f___visitor_1_1_shape.html#add7c1594a4fb614f049c8ecef8257347">   43</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#add7c1594a4fb614f049c8ecef8257347">Operate</a>(<a class="code" href="../../de/dfe/class_go_f___visitor_1_1_operation.html">Operation</a>* operation) = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a9ab0edaa92c99373ac5f8ad21805b66f">   46</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a9ab0edaa92c99373ac5f8ad21805b66f">_point</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a2cabbe205589f2845a028243e3121ed6">   47</a></span>&#160;        <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a>* <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html#a2cabbe205589f2845a028243e3121ed6">_pos</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    };</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d2/ddc/class_go_f___visitor_1_1_line.html">   50</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/ddc/class_go_f___visitor_1_1_line.html">Line</a> : <span class="keyword">public</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html">Shape</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../d2/ddc/class_go_f___visitor_1_1_line.html#a48821ae88e7df778365bf98ace295501">Line</a>(<a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> first, <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> last);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d2/ddc/class_go_f___visitor_1_1_line.html#a853e80363d15fb1ff5a5b22bfc1f6271">Operate</a>(<a class="code" href="../../de/dfe/class_go_f___visitor_1_1_operation.html">Operation</a>* operation);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../dd/de3/class_go_f___visitor_1_1_triangle.html">   57</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../dd/de3/class_go_f___visitor_1_1_triangle.html">Triangle</a> : <span class="keyword">public</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html">Shape</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="../../dd/de3/class_go_f___visitor_1_1_triangle.html#a498dee0128a4f2627a0a7f500c63b684">Triangle</a>(<a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> first, <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> second, <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> third);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/de3/class_go_f___visitor_1_1_triangle.html#ac9673b7f963bafb8b3ac9c3a3fcaafe8">Operate</a>(<a class="code" href="../../de/dfe/class_go_f___visitor_1_1_operation.html">Operation</a>* operation);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d9/de7/class_go_f___visitor_1_1_rectangle.html">   64</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d9/de7/class_go_f___visitor_1_1_rectangle.html">Rectangle</a> : <span class="keyword">public</span> <a class="code" href="../../df/dde/class_go_f___visitor_1_1_shape.html">Shape</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="../../d9/de7/class_go_f___visitor_1_1_rectangle.html#ae6f9ed6305dcfb34f1901ea7bffc1801">Rectangle</a>(<a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> first, <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> second, <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> third, <a class="code" href="../../d5/dfa/class_go_f___visitor_1_1_position.html">Position</a> forth);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/de7/class_go_f___visitor_1_1_rectangle.html#a94cc4a42e4bde2e9b7855da280daecba">Operate</a>(<a class="code" href="../../de/dfe/class_go_f___visitor_1_1_operation.html">Operation</a>* operation);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_add7c1594a4fb614f049c8ecef8257347"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#add7c1594a4fb614f049c8ecef8257347">GoF_Visitor::Shape::Operate</a></div><div class="ttdeci">virtual bool Operate(Operation *operation)=0</div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_a2cabbe205589f2845a028243e3121ed6"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#a2cabbe205589f2845a028243e3121ed6">GoF_Visitor::Shape::_pos</a></div><div class="ttdeci">Position * _pos</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00047">Shapes.h:47</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_a935afc9e576015f967d90de56977167d"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#a935afc9e576015f967d90de56977167d">GoF_Visitor::Shape::~Shape</a></div><div class="ttdeci">virtual ~Shape()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00033">Shapes.cpp:33</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_a9ab0edaa92c99373ac5f8ad21805b66f"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#a9ab0edaa92c99373ac5f8ad21805b66f">GoF_Visitor::Shape::_point</a></div><div class="ttdeci">int _point</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00046">Shapes.h:46</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_a369a577425f8ba02e8750d04b6a088db"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a369a577425f8ba02e8750d04b6a088db">GoF_Visitor::Position::Position</a></div><div class="ttdeci">Position()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00009">Shapes.cpp:9</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_triangle_html_ac9673b7f963bafb8b3ac9c3a3fcaafe8"><div class="ttname"><a href="../../dd/de3/class_go_f___visitor_1_1_triangle.html#ac9673b7f963bafb8b3ac9c3a3fcaafe8">GoF_Visitor::Triangle::Operate</a></div><div class="ttdeci">virtual bool Operate(Operation *operation)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00068">Shapes.cpp:68</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_aaa8d87171e65e0d8ba3c5459978992a7"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#aaa8d87171e65e0d8ba3c5459978992a7">GoF_Visitor::Shape::Shape</a></div><div class="ttdeci">Shape()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00027">Shapes.cpp:27</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_line_html"><div class="ttname"><a href="../../d2/ddc/class_go_f___visitor_1_1_line.html">GoF_Visitor::Line</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00050">Shapes.h:51</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_ae41f8d8a1bed862a7269171ea28f5fec"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#ae41f8d8a1bed862a7269171ea28f5fec">GoF_Visitor::Position::Set</a></div><div class="ttdeci">void Set(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00021">Shapes.cpp:21</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_rectangle_html"><div class="ttname"><a href="../../d9/de7/class_go_f___visitor_1_1_rectangle.html">GoF_Visitor::Rectangle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00064">Shapes.h:65</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_line_html_a853e80363d15fb1ff5a5b22bfc1f6271"><div class="ttname"><a href="../../d2/ddc/class_go_f___visitor_1_1_line.html#a853e80363d15fb1ff5a5b22bfc1f6271">GoF_Visitor::Line::Operate</a></div><div class="ttdeci">virtual bool Operate(Operation *operation)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00057">Shapes.cpp:57</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_a36a550bfb6cd4e90035fd4e8148bcc83"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#a36a550bfb6cd4e90035fd4e8148bcc83">GoF_Visitor::Shape::GetPosition</a></div><div class="ttdeci">Position GetPosition(int i)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00040">Shapes.h:40</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_line_html_a48821ae88e7df778365bf98ace295501"><div class="ttname"><a href="../../d2/ddc/class_go_f___visitor_1_1_line.html#a48821ae88e7df778365bf98ace295501">GoF_Visitor::Line::Line</a></div><div class="ttdeci">Line(Position first, Position last)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00051">Shapes.cpp:51</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_rectangle_html_a94cc4a42e4bde2e9b7855da280daecba"><div class="ttname"><a href="../../d9/de7/class_go_f___visitor_1_1_rectangle.html#a94cc4a42e4bde2e9b7855da280daecba">GoF_Visitor::Rectangle::Operate</a></div><div class="ttdeci">virtual bool Operate(Operation *operation)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00079">Shapes.cpp:79</a></div></div>
+<div class="ttc" id="anamespace_go_f___visitor_html"><div class="ttname"><a href="../../d4/d8a/namespace_go_f___visitor.html">GoF_Visitor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd6/_operation_8h_source.html#l00009">Operation.h:10</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_rectangle_html_ae6f9ed6305dcfb34f1901ea7bffc1801"><div class="ttname"><a href="../../d9/de7/class_go_f___visitor_1_1_rectangle.html#ae6f9ed6305dcfb34f1901ea7bffc1801">GoF_Visitor::Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(Position first, Position second, Position third, Position forth)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00073">Shapes.cpp:73</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_a4a193a435b152f258cf01d4988725098"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a4a193a435b152f258cf01d4988725098">GoF_Visitor::Position::GetY</a></div><div class="ttdeci">int GetY()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00024">Shapes.h:24</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_a9611e9bf162460856167fc7f656f77c9"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a9611e9bf162460856167fc7f656f77c9">GoF_Visitor::Position::_x</a></div><div class="ttdeci">int _x</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00027">Shapes.h:24</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_triangle_html"><div class="ttname"><a href="../../dd/de3/class_go_f___visitor_1_1_triangle.html">GoF_Visitor::Triangle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00057">Shapes.h:58</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_a1a4301203b84d6305c1e904d41e96779"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#a1a4301203b84d6305c1e904d41e96779">GoF_Visitor::Shape::GetPoint</a></div><div class="ttdeci">int GetPoint()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00039">Shapes.h:39</a></div></div>
+<div class="ttc" id="a_operation_8h_html"><div class="ttname"><a href="../../d6/dd6/_operation_8h.html">Operation.h</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_a6e84d14b3b564f86c03a05eeaa0738cd"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a6e84d14b3b564f86c03a05eeaa0738cd">GoF_Visitor::Position::GetX</a></div><div class="ttdeci">int GetX()</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00023">Shapes.h:23</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html">GoF_Visitor::Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00014">Shapes.h:15</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_operation_html"><div class="ttname"><a href="../../de/dfe/class_go_f___visitor_1_1_operation.html">GoF_Visitor::Operation</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd6/_operation_8h_source.html#l00017">Operation.h:18</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_a44fb65d725e7c6db3f18b32aa186b0c9"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#a44fb65d725e7c6db3f18b32aa186b0c9">GoF_Visitor::Position::_y</a></div><div class="ttdeci">int _y</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00028">Shapes.h:28</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_af208f79f3af689f979ead6479042a380"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#af208f79f3af689f979ead6479042a380">GoF_Visitor::Position::SetX</a></div><div class="ttdeci">void SetX(int x)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00021">Shapes.h:21</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_triangle_html_a498dee0128a4f2627a0a7f500c63b684"><div class="ttname"><a href="../../dd/de3/class_go_f___visitor_1_1_triangle.html#a498dee0128a4f2627a0a7f500c63b684">GoF_Visitor::Triangle::Triangle</a></div><div class="ttdeci">Triangle(Position first, Position second, Position third)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00062">Shapes.cpp:62</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_a6c4266c211d37d73beabaa6082dd7c53"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#a6c4266c211d37d73beabaa6082dd7c53">GoF_Visitor::Shape::SetPosition</a></div><div class="ttdeci">void SetPosition(int i, Position pos)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00041">Shapes.h:41</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html_a803590558c8aaceca1457c95633294d8"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html#a803590558c8aaceca1457c95633294d8">GoF_Visitor::Shape::Draw</a></div><div class="ttdeci">virtual bool Draw()</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d71/_shapes_8cpp_source.html#l00038">Shapes.cpp:38</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_shape_html"><div class="ttname"><a href="../../df/dde/class_go_f___visitor_1_1_shape.html">GoF_Visitor::Shape</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00033">Shapes.h:34</a></div></div>
+<div class="ttc" id="aclass_go_f___visitor_1_1_position_html_ad96bee2e04a533799dc0a126b1cf392b"><div class="ttname"><a href="../../d5/dfa/class_go_f___visitor_1_1_position.html#ad96bee2e04a533799dc0a126b1cf392b">GoF_Visitor::Position::SetY</a></div><div class="ttdeci">void SetY(int y)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d27/_shapes_8h_source.html#l00022">Shapes.h:22</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_594bac17580847f5c91851fb55108f7f.html">Visitor</a></li><li class="navelem"><a class="el" href="../../d1/d27/_shapes_8h.html">Shapes.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

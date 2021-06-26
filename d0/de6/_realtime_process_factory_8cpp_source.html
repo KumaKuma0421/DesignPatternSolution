@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/AbstractFactory/RealtimeProcessFactory.cpp ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/de6/_realtime_process_factory_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">RealtimeProcessFactory.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/de6/_realtime_process_factory_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// RealtimeProcessFactory.cpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d76/_realtime_process_factory_8h.html">RealtimeProcessFactory.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d10/_memory_storage_product_8h.html">MemoryStorageProduct.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d6c/_window_display_product_8h.html">WindowDisplayProduct.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/da1/_realtime_control_product_8h.html">RealtimeControlProduct.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../de/d47/namespace_go_f___abstract_factory.html">GoF_AbstractFactory</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a277d540367436533066888995c482c78">   12</a></span>&#160;<a class="code" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a277d540367436533066888995c482c78">RealtimeProcessFactory::RealtimeProcessFactory</a>()</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a15fba225a70345e6a21d1596d48ec43e">   17</a></span>&#160;<a class="code" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a15fba225a70345e6a21d1596d48ec43e">RealtimeProcessFactory::~RealtimeProcessFactory</a>()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a6fe03d5174ec55774104ec3b91ba27b2">   22</a></span>&#160;<a class="code" href="../../d9/df8/class_go_f___abstract_factory_1_1_storage_product.html">StorageProduct</a>* <a class="code" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a6fe03d5174ec55774104ec3b91ba27b2">RealtimeProcessFactory::CreateStorageProduct</a>()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d0/de7/class_go_f___abstract_factory_1_1_memory_storage_product.html">MemoryStorageProduct</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#ab18b08ea5d161782ff5fbeaefa68e8cb">   27</a></span>&#160;<a class="code" href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html">DisplayProduct</a>* <a class="code" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#ab18b08ea5d161782ff5fbeaefa68e8cb">RealtimeProcessFactory::CreateDisplayProduct</a>()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html">WindowDisplayProduct</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a373d31796d4419ed85bf0e0a9f6b594d">   32</a></span>&#160;<a class="code" href="../../dd/d20/class_go_f___abstract_factory_1_1_control_product.html">ControlProduct</a>* <a class="code" href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a373d31796d4419ed85bf0e0a9f6b594d">RealtimeProcessFactory::CreateControlProduct</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d7/df1/class_go_f___abstract_factory_1_1_realtime_control_product.html">RealtimeControlProduct</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_display_product_html"><div class="ttname"><a href="../../d4/d56/class_go_f___abstract_factory_1_1_display_product.html">GoF_AbstractFactory::DisplayProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00021">AbstractFactory.h:22</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_control_product_html"><div class="ttname"><a href="../../dd/d20/class_go_f___abstract_factory_1_1_control_product.html">GoF_AbstractFactory::ControlProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00030">AbstractFactory.h:31</a></div></div>
+<div class="ttc" id="anamespace_go_f___abstract_factory_html"><div class="ttname"><a href="../../de/d47/namespace_go_f___abstract_factory.html">GoF_AbstractFactory</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00009">AbstractFactory.h:10</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_memory_storage_product_html"><div class="ttname"><a href="../../d0/de7/class_go_f___abstract_factory_1_1_memory_storage_product.html">GoF_AbstractFactory::MemoryStorageProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d10/_memory_storage_product_8h_source.html#l00011">MemoryStorageProduct.h:12</a></div></div>
+<div class="ttc" id="a_window_display_product_8h_html"><div class="ttname"><a href="../../d6/d6c/_window_display_product_8h.html">WindowDisplayProduct.h</a></div></div>
+<div class="ttc" id="a_memory_storage_product_8h_html"><div class="ttname"><a href="../../d9/d10/_memory_storage_product_8h.html">MemoryStorageProduct.h</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_realtime_process_factory_html_a15fba225a70345e6a21d1596d48ec43e"><div class="ttname"><a href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a15fba225a70345e6a21d1596d48ec43e">GoF_AbstractFactory::RealtimeProcessFactory::~RealtimeProcessFactory</a></div><div class="ttdeci">~RealtimeProcessFactory()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de6/_realtime_process_factory_8cpp_source.html#l00017">RealtimeProcessFactory.cpp:17</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_realtime_process_factory_html_a277d540367436533066888995c482c78"><div class="ttname"><a href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a277d540367436533066888995c482c78">GoF_AbstractFactory::RealtimeProcessFactory::RealtimeProcessFactory</a></div><div class="ttdeci">RealtimeProcessFactory()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de6/_realtime_process_factory_8cpp_source.html#l00012">RealtimeProcessFactory.cpp:12</a></div></div>
+<div class="ttc" id="a_realtime_process_factory_8h_html"><div class="ttname"><a href="../../df/d76/_realtime_process_factory_8h.html">RealtimeProcessFactory.h</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_storage_product_html"><div class="ttname"><a href="../../d9/df8/class_go_f___abstract_factory_1_1_storage_product.html">GoF_AbstractFactory::StorageProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d08/_abstract_factory_8h_source.html#l00011">AbstractFactory.h:12</a></div></div>
+<div class="ttc" id="a_realtime_control_product_8h_html"><div class="ttname"><a href="../../dd/da1/_realtime_control_product_8h.html">RealtimeControlProduct.h</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_realtime_control_product_html"><div class="ttname"><a href="../../d7/df1/class_go_f___abstract_factory_1_1_realtime_control_product.html">GoF_AbstractFactory::RealtimeControlProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/da1/_realtime_control_product_8h_source.html#l00011">RealtimeControlProduct.h:12</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_window_display_product_html"><div class="ttname"><a href="../../d9/ddf/class_go_f___abstract_factory_1_1_window_display_product.html">GoF_AbstractFactory::WindowDisplayProduct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6c/_window_display_product_8h_source.html#l00011">WindowDisplayProduct.h:12</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_realtime_process_factory_html_a373d31796d4419ed85bf0e0a9f6b594d"><div class="ttname"><a href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a373d31796d4419ed85bf0e0a9f6b594d">GoF_AbstractFactory::RealtimeProcessFactory::CreateControlProduct</a></div><div class="ttdeci">ControlProduct * CreateControlProduct()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de6/_realtime_process_factory_8cpp_source.html#l00032">RealtimeProcessFactory.cpp:32</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_realtime_process_factory_html_a6fe03d5174ec55774104ec3b91ba27b2"><div class="ttname"><a href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#a6fe03d5174ec55774104ec3b91ba27b2">GoF_AbstractFactory::RealtimeProcessFactory::CreateStorageProduct</a></div><div class="ttdeci">StorageProduct * CreateStorageProduct()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de6/_realtime_process_factory_8cpp_source.html#l00022">RealtimeProcessFactory.cpp:22</a></div></div>
+<div class="ttc" id="aclass_go_f___abstract_factory_1_1_realtime_process_factory_html_ab18b08ea5d161782ff5fbeaefa68e8cb"><div class="ttname"><a href="../../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html#ab18b08ea5d161782ff5fbeaefa68e8cb">GoF_AbstractFactory::RealtimeProcessFactory::CreateDisplayProduct</a></div><div class="ttdeci">DisplayProduct * CreateDisplayProduct()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de6/_realtime_process_factory_8cpp_source.html#l00027">RealtimeProcessFactory.cpp:27</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_d3dcc1661f45abbedaa8bc384638da41.html">AbstractFactory</a></li><li class="navelem"><a class="el" href="../../d0/de6/_realtime_process_factory_8cpp.html">RealtimeProcessFactory.cpp</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

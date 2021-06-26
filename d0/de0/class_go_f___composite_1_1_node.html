@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_Composite::Node クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/de0/class_go_f___composite_1_1_node.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../de/d8c/class_go_f___composite_1_1_node-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_Composite::Node クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_Composite::Node の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d10/class_go_f___composite_1_1_node__inherit__graph.png" border="0" usemap="#a_go_f___composite_1_1_node_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___composite_1_1_node_inherit__map" id="a_go_f___composite_1_1_node_inherit__map">
+<area shape="rect" title=" " alt="" coords="21,80,176,107"/>
+<area shape="rect" href="../../dd/d58/class_go_f___composite_1_1_composite.html" title=" " alt="" coords="5,5,192,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+GoF_Composite::Node 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbe/class_go_f___composite_1_1_node__coll__graph.png" border="0" usemap="#a_go_f___composite_1_1_node_coll__map" alt="Collaboration graph"/></div>
+<map name="_go_f___composite_1_1_node_coll__map" id="a_go_f___composite_1_1_node_coll__map">
+<area shape="rect" title=" " alt="" coords="21,80,176,107"/>
+<area shape="rect" href="../../dd/d58/class_go_f___composite_1_1_composite.html" title=" " alt="" coords="5,5,192,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ac4373e4ba06868a2ee5720165d67c499"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#ac4373e4ba06868a2ee5720165d67c499">Node</a> ()</td></tr>
+<tr class="separator:ac4373e4ba06868a2ee5720165d67c499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9af8ecd294665615f76d74bf5e615d3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#a9af8ecd294665615f76d74bf5e615d3e">Node</a> (int <a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#a12ada2dce711879345ab8be0b1148d4f">id</a>, std::string <a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#ad25f946a26b0c8e112d0bdc15f3021f2">name</a>)</td></tr>
+<tr class="separator:a9af8ecd294665615f76d74bf5e615d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74589cf4815ab223bb887d29b19aef59"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#a74589cf4815ab223bb887d29b19aef59">~Node</a> ()</td></tr>
+<tr class="separator:a74589cf4815ab223bb887d29b19aef59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e4e9d9c429c461f6ccfeb9cd1aa210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#a45e4e9d9c429c461f6ccfeb9cd1aa210">Add</a> (<a class="el" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> *leaf)</td></tr>
+<tr class="separator:a45e4e9d9c429c461f6ccfeb9cd1aa210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d03b394d2f61a5f5b45a8c5ae74951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a> (<a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a> *node)</td></tr>
+<tr class="separator:a98d03b394d2f61a5f5b45a8c5ae74951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b2776569d63d5be8be49ace0ae1f79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#a01b2776569d63d5be8be49ace0ae1f79">GetLeafs</a> (size_t index)</td></tr>
+<tr class="separator:a01b2776569d63d5be8be49ace0ae1f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c2d9e4730f424a7ff26d3d535e5c68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#af9c2d9e4730f424a7ff26d3d535e5c68">GetNodes</a> (size_t index)</td></tr>
+<tr class="separator:af9c2d9e4730f424a7ff26d3d535e5c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_go_f___composite_1_1_composite"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_go_f___composite_1_1_composite')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html">GoF_Composite::Composite</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a0dab0c060f64ae4bc0e41b3bf26f3e42 inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#a0dab0c060f64ae4bc0e41b3bf26f3e42">Composite</a> ()</td></tr>
+<tr class="separator:a0dab0c060f64ae4bc0e41b3bf26f3e42 inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7288a41c0a3c2a5ed1484a75081792 inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#a5a7288a41c0a3c2a5ed1484a75081792">Composite</a> (int <a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#a12ada2dce711879345ab8be0b1148d4f">id</a>, std::string <a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#ad25f946a26b0c8e112d0bdc15f3021f2">name</a>)</td></tr>
+<tr class="separator:a5a7288a41c0a3c2a5ed1484a75081792 inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9520df561f7eb21c799a05fa4c1b2d inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#aeb9520df561f7eb21c799a05fa4c1b2d">~Composite</a> ()</td></tr>
+<tr class="separator:aeb9520df561f7eb21c799a05fa4c1b2d inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05ba77e71802e2383ebe41cb51f8ec9 inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#ae05ba77e71802e2383ebe41cb51f8ec9">Print</a> ()</td></tr>
+<tr class="separator:ae05ba77e71802e2383ebe41cb51f8ec9 inherit pub_methods_class_go_f___composite_1_1_composite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a6ca66b0776e5374af03ec0bf24787118"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#a6ca66b0776e5374af03ec0bf24787118">_leafs</a></td></tr>
+<tr class="separator:a6ca66b0776e5374af03ec0bf24787118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5920b09c95803696d6b4af94407a1f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html#a2a5920b09c95803696d6b4af94407a1f">_nodes</a></td></tr>
+<tr class="separator:a2a5920b09c95803696d6b4af94407a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_go_f___composite_1_1_composite"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_go_f___composite_1_1_composite')"><img src="../../closed.png" alt="-"/>&#160;基底クラス <a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html">GoF_Composite::Composite</a> に属する継承公開変数類</td></tr>
+<tr class="memitem:a12ada2dce711879345ab8be0b1148d4f inherit pub_attribs_class_go_f___composite_1_1_composite"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#a12ada2dce711879345ab8be0b1148d4f">id</a></td></tr>
+<tr class="separator:a12ada2dce711879345ab8be0b1148d4f inherit pub_attribs_class_go_f___composite_1_1_composite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25f946a26b0c8e112d0bdc15f3021f2 inherit pub_attribs_class_go_f___composite_1_1_composite"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d58/class_go_f___composite_1_1_composite.html#ad25f946a26b0c8e112d0bdc15f3021f2">name</a></td></tr>
+<tr class="separator:ad25f946a26b0c8e112d0bdc15f3021f2 inherit pub_attribs_class_go_f___composite_1_1_composite"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ac4373e4ba06868a2ee5720165d67c499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4373e4ba06868a2ee5720165d67c499">&#9670;&nbsp;</a></span>Node() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoF_Composite::Node::Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9af8ecd294665615f76d74bf5e615d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9af8ecd294665615f76d74bf5e615d3e">&#9670;&nbsp;</a></span>Node() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GoF_Composite::Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a74589cf4815ab223bb887d29b19aef59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74589cf4815ab223bb887d29b19aef59">&#9670;&nbsp;</a></span>~Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GoF_Composite::Node::~Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a45e4e9d9c429c461f6ccfeb9cd1aa210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e4e9d9c429c461f6ccfeb9cd1aa210">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GoF_Composite::Node::Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> *&#160;</td>
+          <td class="paramname"><em>leaf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00055">55</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00074">_leafs</a>.</p>
+
+</div>
+</div>
+<a id="a98d03b394d2f61a5f5b45a8c5ae74951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d03b394d2f61a5f5b45a8c5ae74951">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GoF_Composite::Node::Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00050">50</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00070">_nodes</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/d02/_composite_2_main_8cpp_source.html#l00012">main()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/de0/class_go_f___composite_1_1_node_a98d03b394d2f61a5f5b45a8c5ae74951_icgraph.png" border="0" usemap="#ad0/de0/class_go_f___composite_1_1_node_a98d03b394d2f61a5f5b45a8c5ae74951_icgraph" alt=""/></div>
+<map name="d0/de0/class_go_f___composite_1_1_node_a98d03b394d2f61a5f5b45a8c5ae74951_icgraph" id="ad0/de0/class_go_f___composite_1_1_node_a98d03b394d2f61a5f5b45a8c5ae74951_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,289,32"/>
+<area shape="rect" href="../../db/d02/_composite_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a01b2776569d63d5be8be49ace0ae1f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b2776569d63d5be8be49ace0ae1f79">&#9670;&nbsp;</a></span>GetLeafs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a>* GoF_Composite::Node::GetLeafs </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00066">66</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00074">_leafs</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/d02/_composite_2_main_8cpp_source.html#l00047">search()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/de0/class_go_f___composite_1_1_node_a01b2776569d63d5be8be49ace0ae1f79_icgraph.png" border="0" usemap="#ad0/de0/class_go_f___composite_1_1_node_a01b2776569d63d5be8be49ace0ae1f79_icgraph" alt=""/></div>
+<map name="d0/de0/class_go_f___composite_1_1_node_a01b2776569d63d5be8be49ace0ae1f79_icgraph" id="ad0/de0/class_go_f___composite_1_1_node_a01b2776569d63d5be8be49ace0ae1f79_icgraph">
+<area shape="rect" title=" " alt="" coords="213,5,368,47"/>
+<area shape="rect" href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413" title=" " alt="" coords="104,13,165,39"/>
+<area shape="rect" href="../../db/d02/_composite_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9c2d9e4730f424a7ff26d3d535e5c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c2d9e4730f424a7ff26d3d535e5c68">&#9670;&nbsp;</a></span>GetNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a>* GoF_Composite::Node::GetNodes </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00060">60</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00070">_nodes</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../db/d02/_composite_2_main_8cpp_source.html#l00047">search()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/de0/class_go_f___composite_1_1_node_af9c2d9e4730f424a7ff26d3d535e5c68_icgraph.png" border="0" usemap="#ad0/de0/class_go_f___composite_1_1_node_af9c2d9e4730f424a7ff26d3d535e5c68_icgraph" alt=""/></div>
+<map name="d0/de0/class_go_f___composite_1_1_node_af9c2d9e4730f424a7ff26d3d535e5c68_icgraph" id="ad0/de0/class_go_f___composite_1_1_node_af9c2d9e4730f424a7ff26d3d535e5c68_icgraph">
+<area shape="rect" title=" " alt="" coords="213,5,368,47"/>
+<area shape="rect" href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413" title=" " alt="" coords="104,13,165,39"/>
+<area shape="rect" href="../../db/d02/_composite_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a6ca66b0776e5374af03ec0bf24787118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca66b0776e5374af03ec0bf24787118">&#9670;&nbsp;</a></span>_leafs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a>*&gt; GoF_Composite::Node::_leafs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00074">74</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00055">Add()</a>, <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00066">GetLeafs()</a>.</p>
+
+</div>
+</div>
+<a id="a2a5920b09c95803696d6b4af94407a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5920b09c95803696d6b4af94407a1f">&#9670;&nbsp;</a></span>_nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a>*&gt; GoF_Composite::Node::_nodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a> の <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00073">73</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00050">Add()</a>, <a class="el" href="../../d4/d6d/_composite_8h_source.html#l00060">GetNodes()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/Composite/<a class="el" href="../../d4/d6d/_composite_8h_source.html">Composite.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/de6/namespace_go_f___composite.html">GoF_Composite</a></li><li class="navelem"><a class="el" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

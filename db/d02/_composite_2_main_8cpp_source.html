@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/Composite/Main.cpp ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d02/_composite_2_main_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../db/d02/_composite_2_main_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Main.cpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d4/d6d/_composite_8h.html">Composite.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d0/de6/namespace_go_f___composite.html">GoF_Composite</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413">search</a>(<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a>* node);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../db/d02/_composite_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   12</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../da/d07/_abstract_factory_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> nodeCounter = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> leafCounter = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a> rootNode(nodeCounter++, <span class="stringliteral">&quot;root node&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> rootLeaf1(leafCounter++, <span class="stringliteral">&quot;root leaf1&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> rootLeaf2(leafCounter++, <span class="stringliteral">&quot;root leaf2&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    rootNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;rootLeaf1);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    rootNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;rootLeaf2);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a> firstNode(nodeCounter++, <span class="stringliteral">&quot;1st node&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> firstLeaf1(leafCounter++, <span class="stringliteral">&quot;1st node 1st leaf&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> firstLeaf2(leafCounter++, <span class="stringliteral">&quot;1st node 2nd leaf&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    firstNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;firstLeaf1);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    firstNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;firstLeaf2);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    rootNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;firstNode);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a> secondNode(nodeCounter++, <span class="stringliteral">&quot;2nd node&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> secondLeaf1(leafCounter++, <span class="stringliteral">&quot;2nd node 1st leaf&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a> secondLeaf2(leafCounter++, <span class="stringliteral">&quot;2nd node 2nd leaf&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    secondNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;secondLeaf1);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    secondNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;secondLeaf2);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    firstNode.<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">Add</a>(&amp;secondNode);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413">search</a>(&amp;rootNode);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Done.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413">search</a>(<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a>* node)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">size_t</span> leafIndex = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../dc/d52/class_go_f___composite_1_1_leaf.html">Leaf</a>* leaf = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">while</span> ((leaf = node-&gt;<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#a01b2776569d63d5be8be49ace0ae1f79">GetLeafs</a>(leafIndex++)) != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        leaf-&gt;<a class="code" href="../../dd/d58/class_go_f___composite_1_1_composite.html#ae05ba77e71802e2383ebe41cb51f8ec9">Print</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">size_t</span> nodeIndex = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html">Node</a>* childNode = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">while</span> ((childNode = node-&gt;<a class="code" href="../../d0/de0/class_go_f___composite_1_1_node.html#af9c2d9e4730f424a7ff26d3d535e5c68">GetNodes</a>(nodeIndex++)) != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        childNode-&gt;<a class="code" href="../../dd/d58/class_go_f___composite_1_1_composite.html#ae05ba77e71802e2383ebe41cb51f8ec9">Print</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413">search</a>(childNode);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___composite_1_1_node_html_af9c2d9e4730f424a7ff26d3d535e5c68"><div class="ttname"><a href="../../d0/de0/class_go_f___composite_1_1_node.html#af9c2d9e4730f424a7ff26d3d535e5c68">GoF_Composite::Node::GetNodes</a></div><div class="ttdeci">Node * GetNodes(size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_composite_8h_source.html#l00060">Composite.h:60</a></div></div>
+<div class="ttc" id="aclass_go_f___composite_1_1_leaf_html"><div class="ttname"><a href="../../dc/d52/class_go_f___composite_1_1_leaf.html">GoF_Composite::Leaf</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_composite_8h_source.html#l00033">Composite.h:34</a></div></div>
+<div class="ttc" id="aclass_go_f___composite_1_1_node_html_a01b2776569d63d5be8be49ace0ae1f79"><div class="ttname"><a href="../../d0/de0/class_go_f___composite_1_1_node.html#a01b2776569d63d5be8be49ace0ae1f79">GoF_Composite::Node::GetLeafs</a></div><div class="ttdeci">Leaf * GetLeafs(size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_composite_8h_source.html#l00066">Composite.h:66</a></div></div>
+<div class="ttc" id="a_composite_2_main_8cpp_html_a934806ab7bbf360108d05fdea57cf413"><div class="ttname"><a href="../../db/d02/_composite_2_main_8cpp.html#a934806ab7bbf360108d05fdea57cf413">search</a></div><div class="ttdeci">void search(Node *node)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d02/_composite_2_main_8cpp_source.html#l00047">Main.cpp:47</a></div></div>
+<div class="ttc" id="a_composite_8h_html"><div class="ttname"><a href="../../d4/d6d/_composite_8h.html">Composite.h</a></div></div>
+<div class="ttc" id="anamespace_go_f___composite_html"><div class="ttname"><a href="../../d0/de6/namespace_go_f___composite.html">GoF_Composite</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_composite_8h_source.html#l00011">Composite.h:12</a></div></div>
+<div class="ttc" id="aclass_go_f___composite_1_1_node_html"><div class="ttname"><a href="../../d0/de0/class_go_f___composite_1_1_node.html">GoF_Composite::Node</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_composite_8h_source.html#l00042">Composite.h:43</a></div></div>
+<div class="ttc" id="aclass_go_f___composite_1_1_composite_html_ae05ba77e71802e2383ebe41cb51f8ec9"><div class="ttname"><a href="../../dd/d58/class_go_f___composite_1_1_composite.html#ae05ba77e71802e2383ebe41cb51f8ec9">GoF_Composite::Composite::Print</a></div><div class="ttdeci">virtual void Print()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_composite_8h_source.html#l00024">Composite.h:24</a></div></div>
+<div class="ttc" id="a_abstract_factory_2_main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="../../da/d07/_abstract_factory_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d07/_abstract_factory_2_main_8cpp_source.html#l00010">Main.cpp:10</a></div></div>
+<div class="ttc" id="aclass_go_f___composite_1_1_node_html_a98d03b394d2f61a5f5b45a8c5ae74951"><div class="ttname"><a href="../../d0/de0/class_go_f___composite_1_1_node.html#a98d03b394d2f61a5f5b45a8c5ae74951">GoF_Composite::Node::Add</a></div><div class="ttdeci">void Add(Node *node)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_composite_8h_source.html#l00050">Composite.h:50</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_29a2362808626aa41dbdc3ff526279f1.html">Composite</a></li><li class="navelem"><a class="el" href="../../db/d02/_composite_2_main_8cpp.html">Main.cpp</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

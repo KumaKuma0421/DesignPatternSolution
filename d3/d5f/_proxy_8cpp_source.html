@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/Proxy/Proxy.cpp ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/d5f/_proxy_8cpp_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Proxy.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d5f/_proxy_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Proxy.cpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/de4/_proxy_8h.html">Proxy.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d9/dd2/namespace_go_f___proxy.html">GoF_Proxy</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#a8a10e6098c20eceefecc7f35f3d15814">    9</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#a8a10e6098c20eceefecc7f35f3d15814">Proxy::Action1</a>(<span class="keywordtype">int</span> param)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Proxy::Action1()&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#ab669483b9e43a4e1a83a6e692689e058">   16</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#ab669483b9e43a4e1a83a6e692689e058">Proxy::Action2</a>(<span class="keywordtype">int</span> param)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Proxy::Action2()&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#ad67b561e49399877d9aaefda11f89996">_core</a> == <span class="keyword">nullptr</span>) <a class="code" href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#ad67b561e49399877d9aaefda11f89996">_core</a> = <span class="keyword">new</span> <a class="code" href="../../d0/da4/class_go_f___proxy_1_1_special_core.html">SpecialCore</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#ad67b561e49399877d9aaefda11f89996">_core</a>-&gt;<a class="code" href="../../db/d7b/class_go_f___proxy_1_1_core.html#a35ef2e4dae3bead5629c73e12695b8c5">Action2</a>(param);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d0/da4/class_go_f___proxy_1_1_special_core.html#ad2d9759891d58d6ca9009d0846748518">   25</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/da4/class_go_f___proxy_1_1_special_core.html#ad2d9759891d58d6ca9009d0846748518">SpecialCore::Action1</a>(<span class="keywordtype">int</span> param)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;SpecialCore::Action1()&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d0/da4/class_go_f___proxy_1_1_special_core.html#a442e7815d4e381e26501fde7c7a4f2df">   32</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/da4/class_go_f___proxy_1_1_special_core.html#a442e7815d4e381e26501fde7c7a4f2df">SpecialCore::Action2</a>(<span class="keywordtype">int</span> param)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;SpecialCore::Action2()&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___proxy_1_1_special_core_html"><div class="ttname"><a href="../../d0/da4/class_go_f___proxy_1_1_special_core.html">GoF_Proxy::SpecialCore</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/_proxy_8h_source.html#l00034">Proxy.h:35</a></div></div>
+<div class="ttc" id="aclass_go_f___proxy_1_1_proxy_html_ad67b561e49399877d9aaefda11f89996"><div class="ttname"><a href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#ad67b561e49399877d9aaefda11f89996">GoF_Proxy::Proxy::_core</a></div><div class="ttdeci">Core * _core</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/_proxy_8h_source.html#l00031">Proxy.h:31</a></div></div>
+<div class="ttc" id="aclass_go_f___proxy_1_1_core_html_a35ef2e4dae3bead5629c73e12695b8c5"><div class="ttname"><a href="../../db/d7b/class_go_f___proxy_1_1_core.html#a35ef2e4dae3bead5629c73e12695b8c5">GoF_Proxy::Core::Action2</a></div><div class="ttdeci">virtual bool Action2(int param)=0</div></div>
+<div class="ttc" id="aclass_go_f___proxy_1_1_special_core_html_ad2d9759891d58d6ca9009d0846748518"><div class="ttname"><a href="../../d0/da4/class_go_f___proxy_1_1_special_core.html#ad2d9759891d58d6ca9009d0846748518">GoF_Proxy::SpecialCore::Action1</a></div><div class="ttdeci">bool Action1(int param)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5f/_proxy_8cpp_source.html#l00025">Proxy.cpp:25</a></div></div>
+<div class="ttc" id="aclass_go_f___proxy_1_1_proxy_html_a8a10e6098c20eceefecc7f35f3d15814"><div class="ttname"><a href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#a8a10e6098c20eceefecc7f35f3d15814">GoF_Proxy::Proxy::Action1</a></div><div class="ttdeci">bool Action1(int param)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5f/_proxy_8cpp_source.html#l00009">Proxy.cpp:9</a></div></div>
+<div class="ttc" id="anamespace_go_f___proxy_html"><div class="ttname"><a href="../../d9/dd2/namespace_go_f___proxy.html">GoF_Proxy</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de4/_proxy_8h_source.html#l00009">Proxy.h:10</a></div></div>
+<div class="ttc" id="aclass_go_f___proxy_1_1_proxy_html_ab669483b9e43a4e1a83a6e692689e058"><div class="ttname"><a href="../../d6/dcf/class_go_f___proxy_1_1_proxy.html#ab669483b9e43a4e1a83a6e692689e058">GoF_Proxy::Proxy::Action2</a></div><div class="ttdeci">bool Action2(int param)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5f/_proxy_8cpp_source.html#l00016">Proxy.cpp:16</a></div></div>
+<div class="ttc" id="aclass_go_f___proxy_1_1_special_core_html_a442e7815d4e381e26501fde7c7a4f2df"><div class="ttname"><a href="../../d0/da4/class_go_f___proxy_1_1_special_core.html#a442e7815d4e381e26501fde7c7a4f2df">GoF_Proxy::SpecialCore::Action2</a></div><div class="ttdeci">bool Action2(int param)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5f/_proxy_8cpp_source.html#l00032">Proxy.cpp:32</a></div></div>
+<div class="ttc" id="a_proxy_8h_html"><div class="ttname"><a href="../../d5/de4/_proxy_8h.html">Proxy.h</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_c3cd10f9586dd21db3f2466060f06cf1.html">Proxy</a></li><li class="navelem"><a class="el" href="../../d3/d5f/_proxy_8cpp.html">Proxy.cpp</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

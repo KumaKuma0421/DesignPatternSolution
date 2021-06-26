@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/Bridge/AbstractBridgeImpl.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/d6b/_abstract_bridge_impl_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">AbstractBridgeImpl.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/d6b/_abstract_bridge_impl_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// AbstractBridgeImpl.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d7/d87/namespace_go_f___bridge.html">GoF_Bridge</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">   13</a></span>&#160;    <span class="keyword">enum class</span> <a class="code" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">FilePos</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        Begin,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        Current,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101a1a06729125544cab7cee73195fc044f0">End</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html">FileOperationImpl</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a627eb3417975c1ef11831ecf3145614a">   23</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a627eb3417975c1ef11831ecf3145614a">Open</a>(<span class="keywordtype">char</span>* fileName) = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a4e260dcb384897c01c54e4433595e52b">   24</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a4e260dcb384897c01c54e4433595e52b">Read</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size) = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#ada86a881ea6abd8c50fbc04166bee407">   25</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#ada86a881ea6abd8c50fbc04166bee407">Write</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size) = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a40542a2675a1522ef37faec173fd9b9b">   26</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a40542a2675a1522ef37faec173fd9b9b">SetPos</a>(<a class="code" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">FilePos</a> pos, <span class="keywordtype">long</span> offset) = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#abd0782bc878b78292892c7d66f75f6b8">   27</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#abd0782bc878b78292892c7d66f75f6b8">Flush</a>() = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a796538b5c631b6eed28ace0155dece90">   28</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a796538b5c631b6eed28ace0155dece90">Close</a>() = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html">   31</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html">WindowsFileOperationImpl</a> : <span class="keyword">public</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html">FileOperationImpl</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a676d7cc7fab42cee5e87ea87049a9d56">WindowsFileOperationImpl</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#afb17b435ce10898d9de717d37e8c78a0">~WindowsFileOperationImpl</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#add185435762395adabf3d8deecc55172">Open</a>(<span class="keywordtype">char</span>* fileName);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#ab9028a073bbf0ba625e2dbfd3cd8632e">Read</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a7e3e7d512a68229572212e4a74bdcf2e">Write</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a5366cba395f0c8f0627fa0290152eba0">SetPos</a>(<a class="code" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">FilePos</a> pos, <span class="keywordtype">long</span> offset);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#ac31e23d152ad6298c590f3963f87c81a">Flush</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a166f43ec8fc59ce5bf8ce41d6a40a2c3">Close</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a8c304842ab17bb5bf84daf2898c55f7b">   45</a></span>&#160;        HANDLE <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a8c304842ab17bb5bf84daf2898c55f7b">_hFile</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html">UnixFileOperationImpl</a> : <span class="keyword">public</span> <a class="code" href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html">FileOperationImpl</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a676ecb6cbb64244602e3035433c66610">UnixFileOperationImpl</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#ac9a385bbf2298d93e60bc7234ae287fb">~UnixFileOperationImpl</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a6684ebb84ca4ddb798de82b951d7ecfb">Open</a>(<span class="keywordtype">char</span>* fileName);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#ab36a61fcc56082150f8d2b53b866a040">Read</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a1c1a7ee2e454b8038c148cc1c0e2a465">Write</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a028c7f4a384529e29ca3ad983806b9f4">SetPos</a>(<a class="code" href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">FilePos</a> pos, <span class="keywordtype">long</span> offset);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8b43c5dee376ad5823346c9fe6f9268e">Flush</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a36dadfd77574891cb8e902cc69bacf29">Close</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8dfb87f81039fd1cfa1ef714490d2ea4">   62</a></span>&#160;        FILE* <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8dfb87f81039fd1cfa1ef714490d2ea4">_fp</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_a028c7f4a384529e29ca3ad983806b9f4"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a028c7f4a384529e29ca3ad983806b9f4">GoF_Bridge::UnixFileOperationImpl::SetPos</a></div><div class="ttdeci">bool SetPos(FilePos pos, long offset)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00126">AbstractBridgeImpl.cpp:126</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_a166f43ec8fc59ce5bf8ce41d6a40a2c3"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a166f43ec8fc59ce5bf8ce41d6a40a2c3">GoF_Bridge::WindowsFileOperationImpl::Close</a></div><div class="ttdeci">bool Close()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00084">AbstractBridgeImpl.cpp:84</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_a1c1a7ee2e454b8038c148cc1c0e2a465"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a1c1a7ee2e454b8038c148cc1c0e2a465">GoF_Bridge::UnixFileOperationImpl::Write</a></div><div class="ttdeci">bool Write(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00117">AbstractBridgeImpl.cpp:117</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_ac31e23d152ad6298c590f3963f87c81a"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#ac31e23d152ad6298c590f3963f87c81a">GoF_Bridge::WindowsFileOperationImpl::Flush</a></div><div class="ttdeci">bool Flush()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00075">AbstractBridgeImpl.cpp:75</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_ab36a61fcc56082150f8d2b53b866a040"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#ab36a61fcc56082150f8d2b53b866a040">GoF_Bridge::UnixFileOperationImpl::Read</a></div><div class="ttdeci">int Read(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00108">AbstractBridgeImpl.cpp:108</a></div></div>
+<div class="ttc" id="anamespace_go_f___bridge_html_a257e9aacfd84a45def5817c6d2d49101"><div class="ttname"><a href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101">GoF_Bridge::FilePos</a></div><div class="ttdeci">FilePos</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00013">AbstractBridgeImpl.h:14</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_a8b43c5dee376ad5823346c9fe6f9268e"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8b43c5dee376ad5823346c9fe6f9268e">GoF_Bridge::UnixFileOperationImpl::Flush</a></div><div class="ttdeci">bool Flush()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00135">AbstractBridgeImpl.cpp:135</a></div></div>
+<div class="ttc" id="anamespace_go_f___bridge_html"><div class="ttname"><a href="../../d7/d87/namespace_go_f___bridge.html">GoF_Bridge</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfc/_abstract_bridge_8h_source.html#l00009">AbstractBridge.h:10</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_file_operation_impl_html_ada86a881ea6abd8c50fbc04166bee407"><div class="ttname"><a href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#ada86a881ea6abd8c50fbc04166bee407">GoF_Bridge::FileOperationImpl::Write</a></div><div class="ttdeci">virtual bool Write(char *buffer, size_t size)=0</div></div>
+<div class="ttc" id="anamespace_go_f___bridge_html_a257e9aacfd84a45def5817c6d2d49101a1a06729125544cab7cee73195fc044f0"><div class="ttname"><a href="../../d7/d87/namespace_go_f___bridge.html#a257e9aacfd84a45def5817c6d2d49101a1a06729125544cab7cee73195fc044f0">GoF_Bridge::FilePos::Begin</a></div><div class="ttdeci">@ Begin</div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_a676d7cc7fab42cee5e87ea87049a9d56"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a676d7cc7fab42cee5e87ea87049a9d56">GoF_Bridge::WindowsFileOperationImpl::WindowsFileOperationImpl</a></div><div class="ttdeci">WindowsFileOperationImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00009">AbstractBridgeImpl.cpp:9</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_ac9a385bbf2298d93e60bc7234ae287fb"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#ac9a385bbf2298d93e60bc7234ae287fb">GoF_Bridge::UnixFileOperationImpl::~UnixFileOperationImpl</a></div><div class="ttdeci">~UnixFileOperationImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00096">AbstractBridgeImpl.cpp:96</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html">GoF_Bridge::WindowsFileOperationImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00031">AbstractBridgeImpl.h:32</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_a676ecb6cbb64244602e3035433c66610"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a676ecb6cbb64244602e3035433c66610">GoF_Bridge::UnixFileOperationImpl::UnixFileOperationImpl</a></div><div class="ttdeci">UnixFileOperationImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00091">AbstractBridgeImpl.cpp:91</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_a36dadfd77574891cb8e902cc69bacf29"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a36dadfd77574891cb8e902cc69bacf29">GoF_Bridge::UnixFileOperationImpl::Close</a></div><div class="ttdeci">bool Close()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00144">AbstractBridgeImpl.cpp:144</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_a7e3e7d512a68229572212e4a74bdcf2e"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a7e3e7d512a68229572212e4a74bdcf2e">GoF_Bridge::WindowsFileOperationImpl::Write</a></div><div class="ttdeci">bool Write(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00055">AbstractBridgeImpl.cpp:55</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_a8dfb87f81039fd1cfa1ef714490d2ea4"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8dfb87f81039fd1cfa1ef714490d2ea4">GoF_Bridge::UnixFileOperationImpl::_fp</a></div><div class="ttdeci">FILE * _fp</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00062">AbstractBridgeImpl.h:62</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_a8c304842ab17bb5bf84daf2898c55f7b"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a8c304842ab17bb5bf84daf2898c55f7b">GoF_Bridge::WindowsFileOperationImpl::_hFile</a></div><div class="ttdeci">HANDLE _hFile</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00045">AbstractBridgeImpl.h:45</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_file_operation_impl_html_a40542a2675a1522ef37faec173fd9b9b"><div class="ttname"><a href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a40542a2675a1522ef37faec173fd9b9b">GoF_Bridge::FileOperationImpl::SetPos</a></div><div class="ttdeci">virtual bool SetPos(FilePos pos, long offset)=0</div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_ab9028a073bbf0ba625e2dbfd3cd8632e"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#ab9028a073bbf0ba625e2dbfd3cd8632e">GoF_Bridge::WindowsFileOperationImpl::Read</a></div><div class="ttdeci">int Read(char *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00040">AbstractBridgeImpl.cpp:40</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_file_operation_impl_html"><div class="ttname"><a href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html">GoF_Bridge::FileOperationImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00020">AbstractBridgeImpl.h:21</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html_a6684ebb84ca4ddb798de82b951d7ecfb"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a6684ebb84ca4ddb798de82b951d7ecfb">GoF_Bridge::UnixFileOperationImpl::Open</a></div><div class="ttdeci">bool Open(char *fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00101">AbstractBridgeImpl.cpp:101</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_add185435762395adabf3d8deecc55172"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#add185435762395adabf3d8deecc55172">GoF_Bridge::WindowsFileOperationImpl::Open</a></div><div class="ttdeci">bool Open(char *fileName)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00019">AbstractBridgeImpl.cpp:19</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_afb17b435ce10898d9de717d37e8c78a0"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#afb17b435ce10898d9de717d37e8c78a0">GoF_Bridge::WindowsFileOperationImpl::~WindowsFileOperationImpl</a></div><div class="ttdeci">~WindowsFileOperationImpl()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00014">AbstractBridgeImpl.cpp:14</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_file_operation_impl_html_abd0782bc878b78292892c7d66f75f6b8"><div class="ttname"><a href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#abd0782bc878b78292892c7d66f75f6b8">GoF_Bridge::FileOperationImpl::Flush</a></div><div class="ttdeci">virtual bool Flush()=0</div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_file_operation_impl_html_a4e260dcb384897c01c54e4433595e52b"><div class="ttname"><a href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a4e260dcb384897c01c54e4433595e52b">GoF_Bridge::FileOperationImpl::Read</a></div><div class="ttdeci">virtual int Read(char *buffer, size_t size)=0</div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_file_operation_impl_html_a627eb3417975c1ef11831ecf3145614a"><div class="ttname"><a href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a627eb3417975c1ef11831ecf3145614a">GoF_Bridge::FileOperationImpl::Open</a></div><div class="ttdeci">virtual bool Open(char *fileName)=0</div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_windows_file_operation_impl_html_a5366cba395f0c8f0627fa0290152eba0"><div class="ttname"><a href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a5366cba395f0c8f0627fa0290152eba0">GoF_Bridge::WindowsFileOperationImpl::SetPos</a></div><div class="ttdeci">bool SetPos(FilePos pos, long offset)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d17/_abstract_bridge_impl_8cpp_source.html#l00070">AbstractBridgeImpl.cpp:70</a></div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_file_operation_impl_html_a796538b5c631b6eed28ace0155dece90"><div class="ttname"><a href="../../d7/d59/class_go_f___bridge_1_1_file_operation_impl.html#a796538b5c631b6eed28ace0155dece90">GoF_Bridge::FileOperationImpl::Close</a></div><div class="ttdeci">virtual bool Close()=0</div></div>
+<div class="ttc" id="aclass_go_f___bridge_1_1_unix_file_operation_impl_html"><div class="ttname"><a href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html">GoF_Bridge::UnixFileOperationImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d6b/_abstract_bridge_impl_8h_source.html#l00048">AbstractBridgeImpl.h:49</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_2ea42f38b88018153454abe549b61db9.html">Bridge</a></li><li class="navelem"><a class="el" href="../../dd/d6b/_abstract_bridge_impl_8h.html">AbstractBridgeImpl.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

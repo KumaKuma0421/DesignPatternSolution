@@ -1,0 +1,9 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="node1" href="$d3/dab/class_go_f___state_1_1_state.html" title=" " alt="" coords="5,132,129,159"/>
+<area shape="rect" id="node2" href="$dc/de1/class_go_f___state_1_1_discard.html" title=" " alt="" coords="178,5,315,32"/>
+<area shape="rect" id="node3" href="$dd/d15/class_go_f___state_1_1_forward.html" title=" " alt="" coords="177,56,316,83"/>
+<area shape="rect" id="node4" href="$d3/da5/class_go_f___state_1_1_play.html" title=" " alt="" coords="187,107,306,133"/>
+<area shape="rect" id="node5" href="$dc/dae/class_go_f___state_1_1_record.html" title=" " alt="" coords="179,157,314,184"/>
+<area shape="rect" id="node6" href="$d6/db1/class_go_f___state_1_1_reverse.html" title=" " alt="" coords="177,208,316,235"/>
+<area shape="rect" id="node7" href="$df/d76/class_go_f___state_1_1_stop.html" title=" " alt="" coords="187,259,307,285"/>
+</map>

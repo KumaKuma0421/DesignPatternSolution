@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: GoF_State::State クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/dab/class_go_f___state_1_1_state.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d2/d07/class_go_f___state_1_1_state-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">GoF_State::State クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../da/dea/_state_8h_source.html">State.h</a>&gt;</code></p>
+<div class="dynheader">
+GoF_State::State の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/d9b/class_go_f___state_1_1_state__inherit__graph.png" border="0" usemap="#a_go_f___state_1_1_state_inherit__map" alt="Inheritance graph"/></div>
+<map name="_go_f___state_1_1_state_inherit__map" id="a_go_f___state_1_1_state_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,132,129,159"/>
+<area shape="rect" href="../../dc/de1/class_go_f___state_1_1_discard.html" title=" " alt="" coords="178,5,315,32"/>
+<area shape="rect" href="../../dd/d15/class_go_f___state_1_1_forward.html" title=" " alt="" coords="177,56,316,83"/>
+<area shape="rect" href="../../d3/da5/class_go_f___state_1_1_play.html" title=" " alt="" coords="187,107,306,133"/>
+<area shape="rect" href="../../dc/dae/class_go_f___state_1_1_record.html" title=" " alt="" coords="179,157,314,184"/>
+<area shape="rect" href="../../d6/db1/class_go_f___state_1_1_reverse.html" title=" " alt="" coords="177,208,316,235"/>
+<area shape="rect" href="../../df/d76/class_go_f___state_1_1_stop.html" title=" " alt="" coords="187,259,307,285"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab91bb1dd5aa6260ab2a456581daf9ec2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dab/class_go_f___state_1_1_state.html#ab91bb1dd5aa6260ab2a456581daf9ec2">State</a> ()</td></tr>
+<tr class="separator:ab91bb1dd5aa6260ab2a456581daf9ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab438d92b90dc18d194dbd9c9c8bab3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dab/class_go_f___state_1_1_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a> ()</td></tr>
+<tr class="separator:afab438d92b90dc18d194dbd9c9c8bab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69a3aaba664b92b4ad0d5b52818ccfa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dab/class_go_f___state_1_1_state.html#ae69a3aaba664b92b4ad0d5b52818ccfa">Action</a> ()=0</td></tr>
+<tr class="separator:ae69a3aaba664b92b4ad0d5b52818ccfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../da/dea/_state_8h_source.html">State.h</a> の <a class="el" href="../../da/dea/_state_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ab91bb1dd5aa6260ab2a456581daf9ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab91bb1dd5aa6260ab2a456581daf9ec2">&#9670;&nbsp;</a></span>State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">State::State </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/d56/_state_8cpp_source.html">State.cpp</a> の <a class="el" href="../../da/d56/_state_8cpp_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afab438d92b90dc18d194dbd9c9c8bab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab438d92b90dc18d194dbd9c9c8bab3">&#9670;&nbsp;</a></span>~State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">State::~State </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../da/d56/_state_8cpp_source.html">State.cpp</a> の <a class="el" href="../../da/d56/_state_8cpp_source.html#l00066">66</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae69a3aaba664b92b4ad0d5b52818ccfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69a3aaba664b92b4ad0d5b52818ccfa">&#9670;&nbsp;</a></span>Action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d8/d8b/namespace_go_f___state.html#ae2e52077dc100c59f9d6396135558d7a">Status</a> GoF_State::State::Action </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../dc/de1/class_go_f___state_1_1_discard.html#a99c05b3e033abe4520a0f894853013c0">GoF_State::Discard</a>, <a class="el" href="../../dc/dae/class_go_f___state_1_1_record.html#a707158b31a755b32e4347d98a203c92c">GoF_State::Record</a>, <a class="el" href="../../d6/db1/class_go_f___state_1_1_reverse.html#a78f9944d20d499b51d6440214b68a771">GoF_State::Reverse</a>, <a class="el" href="../../dd/d15/class_go_f___state_1_1_forward.html#ae0a36595c464975e90676342f956f505">GoF_State::Forward</a>, <a class="el" href="../../df/d76/class_go_f___state_1_1_stop.html#a073b8265c79bdea89130b860caf92e15">GoF_State::Stop</a>, <a class="el" href="../../d3/da5/class_go_f___state_1_1_play.html#a12a05493ac32bf60d1fc9b14d5ad8bfd">GoF_State::Play</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../da/d56/_state_8cpp_source.html#l00050">GoF_State::VoiceRecorder::Command()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dab/class_go_f___state_1_1_state_ae69a3aaba664b92b4ad0d5b52818ccfa_icgraph.png" border="0" usemap="#ad3/dab/class_go_f___state_1_1_state_ae69a3aaba664b92b4ad0d5b52818ccfa_icgraph" alt=""/></div>
+<map name="d3/dab/class_go_f___state_1_1_state_ae69a3aaba664b92b4ad0d5b52818ccfa_icgraph" id="ad3/dab/class_go_f___state_1_1_state_ae69a3aaba664b92b4ad0d5b52818ccfa_icgraph">
+<area shape="rect" title=" " alt="" coords="331,13,500,39"/>
+<area shape="rect" href="../../d1/db5/class_go_f___state_1_1_voice_recorder.html#aa27dbc22f22c7c1a4016af48d2e483e1" title=" " alt="" coords="104,5,283,47"/>
+<area shape="rect" href="../../da/dd1/_state_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/State/<a class="el" href="../../da/dea/_state_8h_source.html">State.h</a></li>
+<li>DesignPatternSolution/State/<a class="el" href="../../da/d56/_state_8cpp_source.html">State.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d8/d8b/namespace_go_f___state.html">GoF_State</a></li><li class="navelem"><a class="el" href="../../d3/dab/class_go_f___state_1_1_state.html">State</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>
