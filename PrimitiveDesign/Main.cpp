@@ -14,6 +14,8 @@
 #include "Decorator.h"
 #include "Flywieght.h"
 #include "Proxy.h"
+#include "ChainOfResponsibility.h"
+#include "Command.h"
 
 int main(int argc, char** argv)
 {
@@ -104,6 +106,25 @@ int main(int argc, char** argv)
 
         proxy->Action();
         proxy->HeavyAction();
+    }
+
+    // ChainOfResponsibility
+    {
+        Primitive_ChainOfResponsibility::ConcreteHandler3* handler3 = new Primitive_ChainOfResponsibility::ConcreteHandler3(nullptr);
+        Primitive_ChainOfResponsibility::ConcreteHandler2* handler2 = new Primitive_ChainOfResponsibility::ConcreteHandler2(handler3);
+        Primitive_ChainOfResponsibility::ConcreteHandler1* handler1 = new Primitive_ChainOfResponsibility::ConcreteHandler1(handler2);
+        handler1->Request();
+    }
+
+    // Command
+    {
+        Primitive_Command::Invoker* invoker = new Primitive_Command::Invoker();
+        Primitive_Command::Receiver* receiver = new Primitive_Command::Receiver();
+        Primitive_Command::ConcreteCommand* command1 = new Primitive_Command::ConcreteCommand(receiver);
+        invoker->Add(command1);
+        Primitive_Command::ConcreteCommand* command2 = new Primitive_Command::ConcreteCommand(receiver);
+        invoker->Add(command2);
+        invoker->Action();
     }
 
     std::cout << "Hello World!" << std::endl;
