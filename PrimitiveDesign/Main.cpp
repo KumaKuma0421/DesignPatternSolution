@@ -16,6 +16,14 @@
 #include "Proxy.h"
 #include "ChainOfResponsibility.h"
 #include "Command.h"
+#include "Iterator.h"
+#include "Mediator.h"
+#include "Memento.h"
+#include "Observer.h"
+#include "State.h"
+#include "Strategy.h"
+#include "TemplateMethod.h"
+#include "Visitor.h"
 
 int main(int argc, char** argv)
 {
@@ -125,6 +133,72 @@ int main(int argc, char** argv)
         Primitive_Command::ConcreteCommand* command2 = new Primitive_Command::ConcreteCommand(receiver);
         invoker->Add(command2);
         invoker->Action();
+    }
+
+    // Iteratorは後回し
+
+    // Mediator
+    {
+        Primitive_Mediator::Mediator* mediator = new Primitive_Mediator::ConcreteMediator();
+        Primitive_Mediator::Colleague* colleague1 = new Primitive_Mediator::ConcreteColleague1();
+        Primitive_Mediator::Colleague* colleague2 = new Primitive_Mediator::ConcreteColleague2();
+        mediator->Add(colleague1);
+        mediator->Add(colleague2);
+        colleague1->Set(mediator);
+        colleague2->Set(mediator);
+    }
+
+    // Memento
+    {
+        Primitive_Memento::Caretaker* container = new Primitive_Memento::Caretaker();
+        Primitive_Memento::Originator* controller = new Primitive_Memento::Originator();
+        Primitive_Memento::Memento* memento = controller->CreateMemento();
+        container->Set(1, memento);
+        memento = container->Get(1);
+        controller->SetMemento(memento);
+    }
+
+    // Observer
+    {
+        Primitive_Observer::ConcreteSubscriber subscriber;
+        Primitive_Observer::ConcreteObserver1 observer1;
+        Primitive_Observer::ConcreteObserver2 observer2;
+        subscriber.Add(&observer1);
+        subscriber.Add(&observer2);
+        subscriber.Notify();
+    }
+
+    // State
+    {
+        Primitive_State::Invoker invoker;
+        invoker.Action(0);
+        invoker.Action(1);
+    }
+
+    // Strategy
+    {
+        Primitive_Strategy::Invoker invoker;
+        invoker.Action(1);
+        invoker.Action(2);
+    }
+
+    // TemplateMethod
+    {
+        Primitive_TemplateMethod::ConcreteMethod method;
+        method.Action();
+    }
+
+    // Visitor
+    {
+        Primitive_Visitor::ConcreteAcceptor1 acceptor1;
+        Primitive_Visitor::ConcreteAcceptor2 acceptor2;
+        Primitive_Visitor::ConcreteVisitor1 visitor1;
+        Primitive_Visitor::ConcreteVisitor1 visitor2;
+
+        acceptor1.Accept(&visitor1);
+        acceptor2.Accept(&visitor1);
+        acceptor1.Accept(&visitor2);
+        acceptor2.Accept(&visitor2);
     }
 
     std::cout << "Hello World!" << std::endl;
