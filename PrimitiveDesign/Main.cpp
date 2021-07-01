@@ -25,181 +25,280 @@
 #include "TemplateMethod.h"
 #include "Visitor.h"
 
-int main(int argc, char** argv)
+namespace Primitive_AbstractFactory
 {
-    // AbstractFactory
+    void Run_AbstractFactory()
     {
-        Primitive_AbstractFactory::AbstractFactory* myFactory = new Primitive_AbstractFactory::ConcreteFactory();
-        Primitive_AbstractFactory::Product1* myProduct1 = myFactory->CreateProduct1();
-        Primitive_AbstractFactory::Product2* myProduct2 = myFactory->CreateProduct2();
+        AbstractFactory* myFactory = new ConcreteFactory();
+        Product1* myProduct1 = myFactory->CreateProduct1();
+        Product2* myProduct2 = myFactory->CreateProduct2();
     }
+}
 
-    // Builder
+namespace Primitive_Builder
+{
+    void Run_Builder()
     {
-        Primitive_Builder::Builder* myBuilder = new Primitive_Builder::ConcreteBuilder();
-        Primitive_Builder::Product* myProduct = myBuilder->Build();
+        Builder* myBuilder = new ConcreteBuilder();
+        Product* myProduct = myBuilder->Build();
     }
+}
 
-    // FactoryMethod
+namespace Primitive_FactoryMethod
+{
+    void Run_FactoryMethod()
     {
-        Primitive_FactoryMethod::Creator* myCreator = new Primitive_FactoryMethod::ConcreteCreator();
-        Primitive_FactoryMethod::Product* myProduct = myCreator->CreateProduct();
+        Creator* myCreator = new ConcreteCreator();
+        Product* myProduct = myCreator->CreateProduct();
     }
+}
 
-    // Prototype
+namespace Primitive_Prototype
+{
+    void Run_Prototype()
     {
-        Primitive_Prototype::Prototype* prototype1 = new Primitive_Prototype::ConcretePrototype();
-        Primitive_Prototype::Prototype* prototype2 = prototype1->Clone();
+        Prototype* prototype1 = new ConcretePrototype();
+        Prototype* prototype2 = prototype1->Clone();
     }
+}
 
-    // Singleton
+namespace Primitive_Singleton
+{
+    void Run_Singleton()
     {
-        Primitive_Singleton::Singleton* singleton1 = Primitive_Singleton::Singleton::Instance();
-        Primitive_Singleton::Singleton* singleton2 = Primitive_Singleton::Singleton::Instance();
+        Singleton* singleton1 = Singleton::Instance();
+        Singleton* singleton2 = Singleton::Instance();
     }
+}
 
-    // Adapter
+namespace Primitive_Adapter
+{
+    void Run_Adapter()
     {
-        Primitive_Adapter::Adaptee* adaptee = new Primitive_Adapter::Adaptee();
-        Primitive_Adapter::Adapter* adapter = new Primitive_Adapter::Adapter(adaptee);
+        Adaptee* adaptee = new Adaptee();
+        Adapter* adapter = new Adapter(adaptee);
         bool ret = adapter->DoAction();
     }
+}
 
-    // Bridge
+namespace Primitive_Bridge
+{
+    void Run_Bridge()
     {
-        Primitive_Bridge::ConcreteImprementer1* impl1 = new Primitive_Bridge::ConcreteImprementer1();
-        Primitive_Bridge::ConcreteImprementer1* impl2 = new Primitive_Bridge::ConcreteImprementer1();
-        Primitive_Bridge::AbstractBridge* bridge1 = new Primitive_Bridge::ConcreteBridge(impl1);
-        Primitive_Bridge::AbstractBridge* bridge2 = new Primitive_Bridge::ConcreteBridge(impl2);
+        ConcreteImprementer1* impl1 = new ConcreteImprementer1();
+        ConcreteImprementer1* impl2 = new ConcreteImprementer1();
+        AbstractBridge* bridge1 = new ConcreteBridge(impl1);
+        AbstractBridge* bridge2 = new ConcreteBridge(impl2);
         bridge1->Action();
         bridge2->Action();
     }
+}
 
-    // Composite
+namespace Primitive_Composite
+{
+    void Run_Composite()
     {
-        Primitive_Composite::Composite* composite1 = new Primitive_Composite::Composite(1);
-        
-        Primitive_Composite::Leaf* leaf1 = new Primitive_Composite::Leaf(2);
+        Composite* composite1 = new Composite(1);
+
+        Leaf* leaf1 = new Leaf(2);
         composite1->Add(leaf1);
 
-        Primitive_Composite::Leaf* leaf2 = new Primitive_Composite::Leaf(3);
+        Leaf* leaf2 = new Leaf(3);
         composite1->Add(leaf1);
 
-        Primitive_Composite::Composite* composite2 = new Primitive_Composite::Composite(4);
+        Composite* composite2 = new Composite(4);
         composite1->Add(composite2);
     }
+}
 
-    // Decorator
+namespace Primitive_Decorator
+{
+    void Run_Decorator()
     {
-        Primitive_Decorator::ConcreteComponent* component = new Primitive_Decorator::ConcreteComponent();
-        Primitive_Decorator::Decorator* decorator = new Primitive_Decorator::Decorator(component);
+        ConcreteComponent* component = new ConcreteComponent();
+        Decorator* decorator = new Decorator(component);
 
         decorator->Action();
     }
+}
 
-    // Facadeは飛ばします。
-
-    // Flyweight
+namespace Primitive_Flyweight
+{
+    void Run_Flyweight()
     {
-        Primitive_Flyweight::FlyweightFactory* factory = new Primitive_Flyweight::FlyweightFactory();
-        Primitive_Flyweight::Flyweight* flyweightA = factory->GetFlyweight(1);
-        Primitive_Flyweight::Flyweight* flyweightB = factory->GetFlyweight(1);
-        Primitive_Flyweight::Flyweight* flyweightC = factory->GetFlyweight(2);
-        Primitive_Flyweight::Flyweight* flyweightD = factory->GetFlyweight(2);
+        FlyweightFactory* factory = new FlyweightFactory();
+        Flyweight* flyweightA = factory->GetFlyweight(1);
+        Flyweight* flyweightB = factory->GetFlyweight(1);
+        Flyweight* flyweightC = factory->GetFlyweight(2);
+        Flyweight* flyweightD = factory->GetFlyweight(2);
     }
+}
 
-    // Proxy
+namespace Primitive_Proxy
+{
+    void Run_Proxy()
     {
-        Primitive_Proxy::Proxy* proxy = new Primitive_Proxy::Proxy();
+        Proxy* proxy = new Proxy();
 
         proxy->Action();
         proxy->HeavyAction();
     }
+}
 
-    // ChainOfResponsibility
+namespace Primitive_ChainOfResponsibility
+{
+    void Run_ChainOfResponsibility()
     {
-        Primitive_ChainOfResponsibility::ConcreteHandler3* handler3 = new Primitive_ChainOfResponsibility::ConcreteHandler3(nullptr);
-        Primitive_ChainOfResponsibility::ConcreteHandler2* handler2 = new Primitive_ChainOfResponsibility::ConcreteHandler2(handler3);
-        Primitive_ChainOfResponsibility::ConcreteHandler1* handler1 = new Primitive_ChainOfResponsibility::ConcreteHandler1(handler2);
+        ConcreteHandler3* handler3 = new ConcreteHandler3(nullptr);
+        ConcreteHandler2* handler2 = new ConcreteHandler2(handler3);
+        ConcreteHandler1* handler1 = new ConcreteHandler1(handler2);
         handler1->Request();
     }
+}
 
-    // Command
+namespace Primitive_Command
+{
+    void Run_Command()
     {
-        Primitive_Command::Invoker* invoker = new Primitive_Command::Invoker();
-        Primitive_Command::Receiver* receiver = new Primitive_Command::Receiver();
-        Primitive_Command::ConcreteCommand* command1 = new Primitive_Command::ConcreteCommand(receiver);
+        Invoker* invoker = new Invoker();
+        Receiver* receiver = new Receiver();
+        ConcreteCommand* command1 = new ConcreteCommand(receiver);
         invoker->Add(command1);
-        Primitive_Command::ConcreteCommand* command2 = new Primitive_Command::ConcreteCommand(receiver);
+        ConcreteCommand* command2 = new ConcreteCommand(receiver);
         invoker->Add(command2);
         invoker->Action();
     }
+}
 
-    // Iteratorは後回し
-
-    // Mediator
+namespace Primitive_Mediator
+{
+    void Run_Mediator()
     {
-        Primitive_Mediator::Mediator* mediator = new Primitive_Mediator::ConcreteMediator();
-        Primitive_Mediator::Colleague* colleague1 = new Primitive_Mediator::ConcreteColleague1();
-        Primitive_Mediator::Colleague* colleague2 = new Primitive_Mediator::ConcreteColleague2();
+        Mediator* mediator = new ConcreteMediator();
+        Colleague* colleague1 = new ConcreteColleague1();
+        Colleague* colleague2 = new ConcreteColleague2();
         mediator->Add(colleague1);
         mediator->Add(colleague2);
         colleague1->Set(mediator);
         colleague2->Set(mediator);
     }
-
-    // Memento
+}
+namespace Primitive_Memento
+{
+    void Run_Memento()
     {
-        Primitive_Memento::Caretaker* container = new Primitive_Memento::Caretaker();
-        Primitive_Memento::Originator* controller = new Primitive_Memento::Originator();
-        Primitive_Memento::Memento* memento = controller->CreateMemento();
+        Caretaker* container = new Caretaker();
+        Originator* controller = new Originator();
+        Memento* memento = controller->CreateMemento();
         container->Set(1, memento);
         memento = container->Get(1);
         controller->SetMemento(memento);
     }
+}
 
-    // Observer
+namespace Primitive_Observer
+{
+    void Run_Observer()
     {
-        Primitive_Observer::ConcreteSubscriber subscriber;
-        Primitive_Observer::ConcreteObserver1 observer1;
-        Primitive_Observer::ConcreteObserver2 observer2;
+        ConcreteSubscriber subscriber;
+        ConcreteObserver1 observer1;
+        ConcreteObserver2 observer2;
         subscriber.Add(&observer1);
         subscriber.Add(&observer2);
         subscriber.Notify();
     }
+}
 
-    // State
+namespace Primitive_State
+{
+    void Run_State()
     {
-        Primitive_State::Invoker invoker;
+        Invoker invoker;
         invoker.Action(0);
         invoker.Action(1);
     }
+}
 
-    // Strategy
+namespace Primitive_Strategy
+{
+    void Run_Strategy()
     {
-        Primitive_Strategy::Invoker invoker;
+        Invoker invoker;
         invoker.Action(1);
         invoker.Action(2);
     }
+}
 
-    // TemplateMethod
+namespace Primitive_TemplateMethod
+{
+    void Run_TemplateMethod()
     {
-        Primitive_TemplateMethod::ConcreteMethod method;
+        ConcreteMethod method;
         method.Action();
     }
+}
 
-    // Visitor
+namespace Primitive_Visitor
+{
+    void Run_Visitor()
     {
-        Primitive_Visitor::ConcreteAcceptor1 acceptor1;
-        Primitive_Visitor::ConcreteAcceptor2 acceptor2;
-        Primitive_Visitor::ConcreteVisitor1 visitor1;
-        Primitive_Visitor::ConcreteVisitor1 visitor2;
+        ConcreteAcceptor1 acceptor1;
+        ConcreteAcceptor2 acceptor2;
+        ConcreteVisitor1 visitor1;
+        ConcreteVisitor1 visitor2;
 
         acceptor1.Accept(&visitor1);
         acceptor2.Accept(&visitor1);
         acceptor1.Accept(&visitor2);
         acceptor2.Accept(&visitor2);
     }
+}
 
-    std::cout << "Hello World!" << std::endl;
+int main(int argc, char** argv)
+{
+    Primitive_AbstractFactory::Run_AbstractFactory();
+
+    Primitive_Builder::Run_Builder();
+
+    Primitive_FactoryMethod::Run_FactoryMethod();
+
+    Primitive_Prototype::Run_Prototype();
+
+    Primitive_Singleton::Run_Singleton();
+
+    Primitive_Adapter::Run_Adapter();
+
+    Primitive_Bridge::Run_Bridge();
+
+    Primitive_Composite::Run_Composite();
+
+    Primitive_Decorator::Run_Decorator();
+
+    // Facadeは飛ばします。
+
+    Primitive_Flyweight::Run_Flyweight();
+
+    Primitive_Proxy::Run_Proxy();
+
+    Primitive_ChainOfResponsibility::Run_ChainOfResponsibility();
+
+    Primitive_Command::Run_Command();
+
+    // Iteratorは後回し
+
+    Primitive_Mediator::Run_Mediator();
+
+    Primitive_Memento::Run_Memento();
+
+    Primitive_Observer::Run_Observer();
+
+    Primitive_State::Run_State();
+
+    Primitive_Strategy::Run_Strategy();
+
+    Primitive_TemplateMethod::Run_TemplateMethod();
+
+    Primitive_Visitor::Run_Visitor();
+
+    std::cout << "Done!" << std::endl;
 }
