@@ -3,6 +3,8 @@
 //
 
 #include <iostream>
+#include <map>
+#include <functional>
 #include "AbstractFactory.h"
 #include "Builder.h"
 #include "FactoryMethod.h"
@@ -33,6 +35,7 @@ namespace Primitive_AbstractFactory
         Product1* myProduct1 = myFactory->CreateProduct1();
         Product2* myProduct2 = myFactory->CreateProduct2();
     }
+    auto run_ab = []() {};
 }
 
 namespace Primitive_Builder
@@ -256,49 +259,58 @@ namespace Primitive_Visitor
 
 int main(int argc, char** argv)
 {
-    Primitive_AbstractFactory::Run_AbstractFactory();
+    enum class DesignPattern
+    {
+        AbstractFactory,
+        Builder,
+        FactoryMethod,
+        Prototype,
+        Singleton,
+        Adapter,
+        Bridge,
+        Composite,
+        Decorator,
+        Facade, // まだ欠番
+        Flyweight,
+        Proxy,
+        ChainOfResponsibility,
+        Command,
+        Iterator,
+        Mediator,
+        Memento,
+        Observer,
+        State,
+        Strategy,
+        TemplateMethod,
+        Visitor,
+    };
 
-    Primitive_Builder::Run_Builder();
-
-    Primitive_FactoryMethod::Run_FactoryMethod();
-
-    Primitive_Prototype::Run_Prototype();
-
-    Primitive_Singleton::Run_Singleton();
-
-    Primitive_Adapter::Run_Adapter();
-
-    Primitive_Bridge::Run_Bridge();
-
-    Primitive_Composite::Run_Composite();
-
-    Primitive_Decorator::Run_Decorator();
-
+    std::map<DesignPattern, std::function<void()>> container;
+    container[DesignPattern::AbstractFactory] = Primitive_AbstractFactory::Run_AbstractFactory;
+    container[DesignPattern::Builder] = Primitive_Builder::Run_Builder;
+    container[DesignPattern::FactoryMethod] = Primitive_FactoryMethod::Run_FactoryMethod;
+    container[DesignPattern::Prototype] = Primitive_Prototype::Run_Prototype;
+    container[DesignPattern::Singleton] = Primitive_Singleton::Run_Singleton;
+    container[DesignPattern::Adapter] = Primitive_Adapter::Run_Adapter;
+    container[DesignPattern::Bridge] = Primitive_Bridge::Run_Bridge;
+    container[DesignPattern::Composite] = Primitive_Composite::Run_Composite;
+    container[DesignPattern::Decorator] = Primitive_Decorator::Run_Decorator;
     // Facadeは飛ばします。
-
-    Primitive_Flyweight::Run_Flyweight();
-
-    Primitive_Proxy::Run_Proxy();
-
-    Primitive_ChainOfResponsibility::Run_ChainOfResponsibility();
-
-    Primitive_Command::Run_Command();
-
+    container[DesignPattern::Flyweight] = Primitive_Flyweight::Run_Flyweight;
+    container[DesignPattern::Prototype] = Primitive_Proxy::Run_Proxy;
+    container[DesignPattern::ChainOfResponsibility] = Primitive_ChainOfResponsibility::Run_ChainOfResponsibility;
+    container[DesignPattern::Command] = Primitive_Command::Run_Command;
     // Iteratorは後回し
+    container[DesignPattern::Mediator] = Primitive_Mediator::Run_Mediator;
+    container[DesignPattern::Memento] = Primitive_Memento::Run_Memento;
+    container[DesignPattern::Observer] = Primitive_Observer::Run_Observer;
+    container[DesignPattern::State] = Primitive_State::Run_State;
+    container[DesignPattern::Strategy] = Primitive_Strategy::Run_Strategy;
+    container[DesignPattern::TemplateMethod] = Primitive_TemplateMethod::Run_TemplateMethod;
+    container[DesignPattern::Visitor] = Primitive_Visitor::Run_Visitor;
 
-    Primitive_Mediator::Run_Mediator();
-
-    Primitive_Memento::Run_Memento();
-
-    Primitive_Observer::Run_Observer();
-
-    Primitive_State::Run_State();
-
-    Primitive_Strategy::Run_Strategy();
-
-    Primitive_TemplateMethod::Run_TemplateMethod();
-
-    Primitive_Visitor::Run_Visitor();
+    // Action!
+    container[DesignPattern::Strategy]();
 
     std::cout << "Done!" << std::endl;
 }
