@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/PrimitiveDesign/Mediator.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d2/d5a/_primitive_design_2_mediator_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Mediator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/d5a/_primitive_design_2_mediator_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Mediator.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dc/d72/namespace_primitive___mediator.html">Primitive_Mediator</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">class </span>AbstractColleague;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html">AbstractMediator</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#ac0f41d41d2514855ff98e0562cf786b2">   16</a></span>&#160;        <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#ac0f41d41d2514855ff98e0562cf786b2">AbstractMediator</a>() {};</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a3f727bf85c820d8c462583a1a3fd8f7d">   17</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a3f727bf85c820d8c462583a1a3fd8f7d">~AbstractMediator</a>() {};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#ac2c512c8effecdf6e4f5e1f7169fcc8b">   19</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#ac2c512c8effecdf6e4f5e1f7169fcc8b">Add</a>(<a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html">AbstractColleague</a>* colleague) { <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#aa33b97afd1c6bb2411c466c63dbc5360">_colleagues</a>.push_back(colleague); };</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a8e9b773902bf4592a712224e9ed6d218">   20</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a8e9b773902bf4592a712224e9ed6d218">Consultation</a>() = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a703486212e11dc89865b2477b171e8d4">   21</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a703486212e11dc89865b2477b171e8d4">Kick</a>() { <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a8e9b773902bf4592a712224e9ed6d218">Consultation</a>(); };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#aa33b97afd1c6bb2411c466c63dbc5360">   24</a></span>&#160;        std::vector&lt;AbstractColleague*&gt; <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#aa33b97afd1c6bb2411c466c63dbc5360">_colleagues</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html">AbstractColleague</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a1d847e31f1db7dbde4131010e20e7921">   30</a></span>&#160;        <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a1d847e31f1db7dbde4131010e20e7921">AbstractColleague</a>() { <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a053d2709ad5c825988b661242f3fdc4a">_mediator</a> = <span class="keyword">nullptr</span>; };</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a05e0d2a59f7ea1dffc237093c5eeb748">   31</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a05e0d2a59f7ea1dffc237093c5eeb748">~AbstractColleague</a>() {};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a6f933bb9fcd77a61c45df4bd4e766b23">   33</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a6f933bb9fcd77a61c45df4bd4e766b23">Advice</a>() = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a798ccd6735fc2a4a9bf6f4cd66a8b849">   34</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a798ccd6735fc2a4a9bf6f4cd66a8b849">Set</a>(<a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html">AbstractMediator</a>* mediator) { <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a053d2709ad5c825988b661242f3fdc4a">_mediator</a> = mediator; };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a053d2709ad5c825988b661242f3fdc4a">   37</a></span>&#160;        <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html">AbstractMediator</a>* <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a053d2709ad5c825988b661242f3fdc4a">_mediator</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html">Mediator</a> : <span class="keyword">public</span> <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html">AbstractMediator</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#aeee5cbe954023b2f96687b33a65a9100">   43</a></span>&#160;        <a class="code" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#aeee5cbe954023b2f96687b33a65a9100">Mediator</a>() {};</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#a81d034c2a04085e95f255b6bec727519">   44</a></span>&#160;        <a class="code" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#a81d034c2a04085e95f255b6bec727519">~Mediator</a>() {};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#ab595880886018f110cca248273bf9949">   46</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#ab595880886018f110cca248273bf9949">Consultation</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> colleague : <a class="code" href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#aa33b97afd1c6bb2411c466c63dbc5360">_colleagues</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                colleague-&gt;Advice();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html">   55</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html">Colleague1</a> : <span class="keyword">public</span> <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html">AbstractColleague</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#adba8986a773c64a1dc03be4c3d406c03">   58</a></span>&#160;        <a class="code" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#adba8986a773c64a1dc03be4c3d406c03">Colleague1</a>() {};</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#a033ee5a1a01b406fcd5b75469c4dc384">   59</a></span>&#160;        <a class="code" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#a033ee5a1a01b406fcd5b75469c4dc384">~Colleague1</a>() {};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#a12a8d54483182cf78f42d60b8e19d86f">   61</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#a12a8d54483182cf78f42d60b8e19d86f">Advice</a>() {};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html">   64</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html">Colleague2</a> : <span class="keyword">public</span> <a class="code" href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html">AbstractColleague</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a05996041dd30386edaf11b63ad09ff78">   67</a></span>&#160;        <a class="code" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a05996041dd30386edaf11b63ad09ff78">Colleague2</a>() {};</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a2f2d11d8a3848f813bf8729331b45a16">   68</a></span>&#160;        <a class="code" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a2f2d11d8a3848f813bf8729331b45a16">~Colleague2</a>() {};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a8b818d62792aaf805648755129b5dedc">   70</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a8b818d62792aaf805648755129b5dedc">Advice</a>() {};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_colleague_html_a798ccd6735fc2a4a9bf6f4cd66a8b849"><div class="ttname"><a href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a798ccd6735fc2a4a9bf6f4cd66a8b849">Primitive_Mediator::AbstractColleague::Set</a></div><div class="ttdeci">virtual void Set(AbstractMediator *mediator)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00034">Mediator.h:34</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_mediator_html_aa33b97afd1c6bb2411c466c63dbc5360"><div class="ttname"><a href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#aa33b97afd1c6bb2411c466c63dbc5360">Primitive_Mediator::AbstractMediator::_colleagues</a></div><div class="ttdeci">std::vector&lt; AbstractColleague * &gt; _colleagues</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00024">Mediator.h:21</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague1_html_a033ee5a1a01b406fcd5b75469c4dc384"><div class="ttname"><a href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#a033ee5a1a01b406fcd5b75469c4dc384">Primitive_Mediator::Colleague1::~Colleague1</a></div><div class="ttdeci">~Colleague1()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00059">Mediator.h:59</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_mediator_html"><div class="ttname"><a href="../../d1/da4/class_primitive___mediator_1_1_mediator.html">Primitive_Mediator::Mediator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00040">Mediator.h:41</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_mediator_html_a3f727bf85c820d8c462583a1a3fd8f7d"><div class="ttname"><a href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a3f727bf85c820d8c462583a1a3fd8f7d">Primitive_Mediator::AbstractMediator::~AbstractMediator</a></div><div class="ttdeci">virtual ~AbstractMediator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00017">Mediator.h:17</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_mediator_html"><div class="ttname"><a href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html">Primitive_Mediator::AbstractMediator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00013">Mediator.h:14</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_colleague_html"><div class="ttname"><a href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html">Primitive_Mediator::AbstractColleague</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00027">Mediator.h:28</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_colleague_html_a05e0d2a59f7ea1dffc237093c5eeb748"><div class="ttname"><a href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a05e0d2a59f7ea1dffc237093c5eeb748">Primitive_Mediator::AbstractColleague::~AbstractColleague</a></div><div class="ttdeci">virtual ~AbstractColleague()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00031">Mediator.h:31</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_colleague_html_a6f933bb9fcd77a61c45df4bd4e766b23"><div class="ttname"><a href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a6f933bb9fcd77a61c45df4bd4e766b23">Primitive_Mediator::AbstractColleague::Advice</a></div><div class="ttdeci">virtual void Advice()=0</div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague2_html_a2f2d11d8a3848f813bf8729331b45a16"><div class="ttname"><a href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a2f2d11d8a3848f813bf8729331b45a16">Primitive_Mediator::Colleague2::~Colleague2</a></div><div class="ttdeci">~Colleague2()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00068">Mediator.h:68</a></div></div>
+<div class="ttc" id="anamespace_primitive___mediator_html"><div class="ttname"><a href="../../dc/d72/namespace_primitive___mediator.html">Primitive_Mediator</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d55/_primitive_design_2_main_8cpp_source.html#l00212">Main.cpp:213</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague2_html"><div class="ttname"><a href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html">Primitive_Mediator::Colleague2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00064">Mediator.h:65</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_mediator_html_a81d034c2a04085e95f255b6bec727519"><div class="ttname"><a href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#a81d034c2a04085e95f255b6bec727519">Primitive_Mediator::Mediator::~Mediator</a></div><div class="ttdeci">~Mediator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00044">Mediator.h:44</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_mediator_html_aeee5cbe954023b2f96687b33a65a9100"><div class="ttname"><a href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#aeee5cbe954023b2f96687b33a65a9100">Primitive_Mediator::Mediator::Mediator</a></div><div class="ttdeci">Mediator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00043">Mediator.h:43</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague1_html_a12a8d54483182cf78f42d60b8e19d86f"><div class="ttname"><a href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#a12a8d54483182cf78f42d60b8e19d86f">Primitive_Mediator::Colleague1::Advice</a></div><div class="ttdeci">void Advice()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00061">Mediator.h:61</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_colleague_html_a053d2709ad5c825988b661242f3fdc4a"><div class="ttname"><a href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a053d2709ad5c825988b661242f3fdc4a">Primitive_Mediator::AbstractColleague::_mediator</a></div><div class="ttdeci">AbstractMediator * _mediator</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00037">Mediator.h:34</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague1_html"><div class="ttname"><a href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html">Primitive_Mediator::Colleague1</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00055">Mediator.h:56</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_mediator_html_ac2c512c8effecdf6e4f5e1f7169fcc8b"><div class="ttname"><a href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#ac2c512c8effecdf6e4f5e1f7169fcc8b">Primitive_Mediator::AbstractMediator::Add</a></div><div class="ttdeci">virtual void Add(AbstractColleague *colleague)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00019">Mediator.h:19</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_mediator_html_a703486212e11dc89865b2477b171e8d4"><div class="ttname"><a href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a703486212e11dc89865b2477b171e8d4">Primitive_Mediator::AbstractMediator::Kick</a></div><div class="ttdeci">virtual void Kick()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00021">Mediator.h:21</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_mediator_html_a8e9b773902bf4592a712224e9ed6d218"><div class="ttname"><a href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#a8e9b773902bf4592a712224e9ed6d218">Primitive_Mediator::AbstractMediator::Consultation</a></div><div class="ttdeci">virtual void Consultation()=0</div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_colleague_html_a1d847e31f1db7dbde4131010e20e7921"><div class="ttname"><a href="../../df/d10/class_primitive___mediator_1_1_abstract_colleague.html#a1d847e31f1db7dbde4131010e20e7921">Primitive_Mediator::AbstractColleague::AbstractColleague</a></div><div class="ttdeci">AbstractColleague()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00030">Mediator.h:30</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague2_html_a05996041dd30386edaf11b63ad09ff78"><div class="ttname"><a href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a05996041dd30386edaf11b63ad09ff78">Primitive_Mediator::Colleague2::Colleague2</a></div><div class="ttdeci">Colleague2()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00067">Mediator.h:67</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague1_html_adba8986a773c64a1dc03be4c3d406c03"><div class="ttname"><a href="../../d0/d26/class_primitive___mediator_1_1_colleague1.html#adba8986a773c64a1dc03be4c3d406c03">Primitive_Mediator::Colleague1::Colleague1</a></div><div class="ttdeci">Colleague1()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00058">Mediator.h:58</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_abstract_mediator_html_ac0f41d41d2514855ff98e0562cf786b2"><div class="ttname"><a href="../../d7/d55/class_primitive___mediator_1_1_abstract_mediator.html#ac0f41d41d2514855ff98e0562cf786b2">Primitive_Mediator::AbstractMediator::AbstractMediator</a></div><div class="ttdeci">AbstractMediator()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00016">Mediator.h:16</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_mediator_html_ab595880886018f110cca248273bf9949"><div class="ttname"><a href="../../d1/da4/class_primitive___mediator_1_1_mediator.html#ab595880886018f110cca248273bf9949">Primitive_Mediator::Mediator::Consultation</a></div><div class="ttdeci">void Consultation()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00046">Mediator.h:46</a></div></div>
+<div class="ttc" id="aclass_primitive___mediator_1_1_colleague2_html_a8b818d62792aaf805648755129b5dedc"><div class="ttname"><a href="../../d7/de1/class_primitive___mediator_1_1_colleague2.html#a8b818d62792aaf805648755129b5dedc">Primitive_Mediator::Colleague2::Advice</a></div><div class="ttdeci">void Advice()</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d5a/_primitive_design_2_mediator_8h_source.html#l00070">Mediator.h:70</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_ddbd0e33c071e92feca600864d51e8e3.html">PrimitiveDesign</a></li><li class="navelem"><a class="el" href="../../d2/d5a/_primitive_design_2_mediator_8h.html">Mediator.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

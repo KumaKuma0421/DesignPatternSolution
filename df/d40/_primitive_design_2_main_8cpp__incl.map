@@ -1,0 +1,28 @@
+<map id="DesignPatternSolution/PrimitiveDesign/Main.cpp" name="DesignPatternSolution/PrimitiveDesign/Main.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="1253,5,1425,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,77,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1258,169,1305,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="208,95,285,121"/>
+<area shape="rect" id="node5" href="$da/d4a/_primitive_design_2_abstract_factory_8h.html" title=" " alt="" coords="310,95,437,121"/>
+<area shape="rect" id="node6" href="$d4/dc7/_primitive_design_2_builder_8h.html" title=" " alt="" coords="461,95,534,121"/>
+<area shape="rect" id="node7" href="$d5/d88/_factory_method_8h.html" title=" " alt="" coords="559,95,679,121"/>
+<area shape="rect" id="node8" href="$dc/d9b/_primitive_design_2_prototype_8h.html" title=" " alt="" coords="703,95,793,121"/>
+<area shape="rect" id="node9" href="$da/dee/_primitive_design_2_singleton_8h.html" title=" " alt="" coords="817,95,903,121"/>
+<area shape="rect" id="node10" href="$db/d8a/_primitive_design_2_adapter_8h.html" title=" " alt="" coords="927,95,1006,121"/>
+<area shape="rect" id="node11" href="$df/dbe/_bridge_8h.html" title=" " alt="" coords="1030,95,1101,121"/>
+<area shape="rect" id="node12" href="$d8/da5/_primitive_design_2_composite_8h.html" title=" " alt="" coords="1897,95,1991,121"/>
+<area shape="rect" id="node14" href="$da/d1c/_primitive_design_2_decorator_8h.html" title=" " alt="" coords="1238,95,1327,121"/>
+<area shape="rect" id="node15" href="$d0/d85/_flywieght_8h.html" title=" " alt="" coords="1125,95,1213,121"/>
+<area shape="rect" id="node16" href="$d8/d45/_primitive_design_2_proxy_8h.html" title=" " alt="" coords="1463,95,1529,121"/>
+<area shape="rect" id="node17" href="$d4/d6d/_chain_of_responsibility_8h.html" title=" " alt="" coords="1553,95,1713,121"/>
+<area shape="rect" id="node18" href="$d6/d14/_primitive_design_2_command_8h.html" title=" " alt="" coords="2015,95,2107,121"/>
+<area shape="rect" id="node19" href="$de/d21/_primitive_design_2_iterator_8h.html" title=" " alt="" coords="2131,95,2205,121"/>
+<area shape="rect" id="node20" href="$d2/d5a/_primitive_design_2_mediator_8h.html" title=" " alt="" coords="2317,95,2400,121"/>
+<area shape="rect" id="node21" href="$da/dab/_memento_8h.html" title=" " alt="" coords="1351,95,1438,121"/>
+<area shape="rect" id="node22" href="$d1/d6d/_primitive_design_2_observer_8h.html" title=" " alt="" coords="1789,95,1873,121"/>
+<area shape="rect" id="node23" href="$d2/dc8/_primitive_design_2_state_8h.html" title=" " alt="" coords="2229,95,2293,121"/>
+<area shape="rect" id="node24" href="$de/d10/_primitive_design_2_strategy_8h.html" title=" " alt="" coords="101,95,184,121"/>
+<area shape="rect" id="node25" href="$d2/d7e/_primitive_design_2_template_method_8h.html" title=" " alt="" coords="2425,95,2554,121"/>
+<area shape="rect" id="node26" href="$d0/d06/_visitor_8h.html" title=" " alt="" coords="2578,95,2649,121"/>
+<area shape="rect" id="node13" title=" " alt="" coords="2033,169,2089,196"/>
+</map>

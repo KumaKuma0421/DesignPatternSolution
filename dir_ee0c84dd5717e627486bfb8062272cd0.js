@@ -16,6 +16,7 @@ var dir_ee0c84dd5717e627486bfb8062272cd0 =
     [ "Mediator", "dir_2e3f853e4b0a667b23d5902acc5677b3.html", "dir_2e3f853e4b0a667b23d5902acc5677b3" ],
     [ "Memento", "dir_f26a38a85610fbed6acec94aed5ba013.html", "dir_f26a38a85610fbed6acec94aed5ba013" ],
     [ "Observer", "dir_d801d48ab2624bca7c1bf5c028876a11.html", "dir_d801d48ab2624bca7c1bf5c028876a11" ],
+    [ "PrimitiveDesign", "dir_ddbd0e33c071e92feca600864d51e8e3.html", "dir_ddbd0e33c071e92feca600864d51e8e3" ],
     [ "Prototype", "dir_0b40749eb061fa9fe896f3fcec7f3473.html", "dir_0b40749eb061fa9fe896f3fcec7f3473" ],
     [ "Proxy", "dir_c3cd10f9586dd21db3f2466060f06cf1.html", "dir_c3cd10f9586dd21db3f2466060f06cf1" ],
     [ "Singleton", "dir_5bac8abdd591e20c649e6168c1553a8a.html", "dir_5bac8abdd591e20c649e6168c1553a8a" ],

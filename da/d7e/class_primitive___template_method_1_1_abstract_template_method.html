@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: Primitive_TemplateMethod::AbstractTemplateMethod クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d7e/class_primitive___template_method_1_1_abstract_template_method.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="../../d1/d91/class_primitive___template_method_1_1_abstract_template_method-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Primitive_TemplateMethod::AbstractTemplateMethod クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html">TemplateMethod.h</a>&gt;</code></p>
+<div class="dynheader">
+Primitive_TemplateMethod::AbstractTemplateMethod の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/db4/class_primitive___template_method_1_1_abstract_template_method__inherit__graph.png" border="0" usemap="#a_primitive___template_method_1_1_abstract_template_method_inherit__map" alt="Inheritance graph"/></div>
+<map name="_primitive___template_method_1_1_abstract_template_method_inherit__map" id="a_primitive___template_method_1_1_abstract_template_method_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" href="../../dd/d17/class_primitive___template_method_1_1_template_method.html" title=" " alt="" coords="5,95,180,136"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2872e0c5db1c64e901c6653c7575b8d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a2872e0c5db1c64e901c6653c7575b8d1">AbstractTemplateMethod</a> ()</td></tr>
+<tr class="separator:a2872e0c5db1c64e901c6653c7575b8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add124aa265eda8b52012f489e0a27552"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#add124aa265eda8b52012f489e0a27552">~AbstractTemplateMethod</a> ()</td></tr>
+<tr class="separator:add124aa265eda8b52012f489e0a27552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912e8e80281cda55370725ed777d9f88"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a912e8e80281cda55370725ed777d9f88">Action</a> ()</td></tr>
+<tr class="separator:a912e8e80281cda55370725ed777d9f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c898df1efe841a537bebb2ecdb005b1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a3c898df1efe841a537bebb2ecdb005b1">Function1</a> ()=0</td></tr>
+<tr class="separator:a3c898df1efe841a537bebb2ecdb005b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51bfd862bd85fa873f79f71a4e10f38d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a51bfd862bd85fa873f79f71a4e10f38d">Function2</a> ()=0</td></tr>
+<tr class="separator:a51bfd862bd85fa873f79f71a4e10f38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c44fd24749d21302c8d1cbd28b1825"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#ac6c44fd24749d21302c8d1cbd28b1825">Function3</a> ()=0</td></tr>
+<tr class="separator:ac6c44fd24749d21302c8d1cbd28b1825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html">TemplateMethod.h</a> の <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html#l00009">9</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a2872e0c5db1c64e901c6653c7575b8d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2872e0c5db1c64e901c6653c7575b8d1">&#9670;&nbsp;</a></span>AbstractTemplateMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Primitive_TemplateMethod::AbstractTemplateMethod::AbstractTemplateMethod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html">TemplateMethod.h</a> の <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html#l00012">12</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="add124aa265eda8b52012f489e0a27552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add124aa265eda8b52012f489e0a27552">&#9670;&nbsp;</a></span>~AbstractTemplateMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Primitive_TemplateMethod::AbstractTemplateMethod::~AbstractTemplateMethod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html">TemplateMethod.h</a> の <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html#l00013">13</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a912e8e80281cda55370725ed777d9f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912e8e80281cda55370725ed777d9f88">&#9670;&nbsp;</a></span>Action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Primitive_TemplateMethod::AbstractTemplateMethod::Action </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html">TemplateMethod.h</a> の <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html#l00015">15</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a3c898df1efe841a537bebb2ecdb005b1">Function1()</a>, <a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a51bfd862bd85fa873f79f71a4e10f38d">Function2()</a>, <a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#ac6c44fd24749d21302c8d1cbd28b1825">Function3()</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../dc/d55/_primitive_design_2_main_8cpp_source.html#l00273">Primitive_TemplateMethod::Run_TemplateMethod()</a>.</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_cgraph.png" border="0" usemap="#ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_cgraph" alt=""/></div>
+<map name="da/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_cgraph" id="ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_cgraph">
+<area shape="rect" title=" " alt="" coords="5,85,180,141"/>
+<area shape="rect" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a3c898df1efe841a537bebb2ecdb005b1" title=" " alt="" coords="228,5,403,61"/>
+<area shape="rect" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a51bfd862bd85fa873f79f71a4e10f38d" title=" " alt="" coords="228,85,403,141"/>
+<area shape="rect" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#ac6c44fd24749d21302c8d1cbd28b1825" title=" " alt="" coords="228,165,403,221"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_icgraph.png" border="0" usemap="#ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_icgraph" alt=""/></div>
+<map name="da/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_icgraph" id="ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a912e8e80281cda55370725ed777d9f88_icgraph">
+<area shape="rect" title=" " alt="" coords="327,5,501,61"/>
+<area shape="rect" href="../../d5/de5/namespace_primitive___template_method.html#a6539b6faf26f2bcc0801d7995979f35b" title=" " alt="" coords="104,13,279,54"/>
+<area shape="rect" href="../../dc/d55/_primitive_design_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c898df1efe841a537bebb2ecdb005b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c898df1efe841a537bebb2ecdb005b1">&#9670;&nbsp;</a></span>Function1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Primitive_TemplateMethod::AbstractTemplateMethod::Function1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../dd/d17/class_primitive___template_method_1_1_template_method.html#ad3cb3bbee94c5db4fa450c15e78cd844">Primitive_TemplateMethod::TemplateMethod</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html#l00015">Action()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method_a3c898df1efe841a537bebb2ecdb005b1_icgraph.png" border="0" usemap="#ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a3c898df1efe841a537bebb2ecdb005b1_icgraph" alt=""/></div>
+<map name="da/d7e/class_primitive___template_method_1_1_abstract_template_method_a3c898df1efe841a537bebb2ecdb005b1_icgraph" id="ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a3c898df1efe841a537bebb2ecdb005b1_icgraph">
+<area shape="rect" title=" " alt="" coords="549,5,724,61"/>
+<area shape="rect" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a912e8e80281cda55370725ed777d9f88" title=" " alt="" coords="327,5,501,61"/>
+<area shape="rect" href="../../d5/de5/namespace_primitive___template_method.html#a6539b6faf26f2bcc0801d7995979f35b" title=" " alt="" coords="104,13,279,54"/>
+<area shape="rect" href="../../dc/d55/_primitive_design_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51bfd862bd85fa873f79f71a4e10f38d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51bfd862bd85fa873f79f71a4e10f38d">&#9670;&nbsp;</a></span>Function2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Primitive_TemplateMethod::AbstractTemplateMethod::Function2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../dd/d17/class_primitive___template_method_1_1_template_method.html#a8b19a32ded6bd65e4e7a2d3bb4369afd">Primitive_TemplateMethod::TemplateMethod</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html#l00015">Action()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method_a51bfd862bd85fa873f79f71a4e10f38d_icgraph.png" border="0" usemap="#ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a51bfd862bd85fa873f79f71a4e10f38d_icgraph" alt=""/></div>
+<map name="da/d7e/class_primitive___template_method_1_1_abstract_template_method_a51bfd862bd85fa873f79f71a4e10f38d_icgraph" id="ada/d7e/class_primitive___template_method_1_1_abstract_template_method_a51bfd862bd85fa873f79f71a4e10f38d_icgraph">
+<area shape="rect" title=" " alt="" coords="549,5,724,61"/>
+<area shape="rect" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a912e8e80281cda55370725ed777d9f88" title=" " alt="" coords="327,5,501,61"/>
+<area shape="rect" href="../../d5/de5/namespace_primitive___template_method.html#a6539b6faf26f2bcc0801d7995979f35b" title=" " alt="" coords="104,13,279,54"/>
+<area shape="rect" href="../../dc/d55/_primitive_design_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac6c44fd24749d21302c8d1cbd28b1825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c44fd24749d21302c8d1cbd28b1825">&#9670;&nbsp;</a></span>Function3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Primitive_TemplateMethod::AbstractTemplateMethod::Function3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../dd/d17/class_primitive___template_method_1_1_template_method.html#a0ef9bfdb62616cbc286b9c3927dbf6ab">Primitive_TemplateMethod::TemplateMethod</a>で実装されています。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html#l00015">Action()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method_ac6c44fd24749d21302c8d1cbd28b1825_icgraph.png" border="0" usemap="#ada/d7e/class_primitive___template_method_1_1_abstract_template_method_ac6c44fd24749d21302c8d1cbd28b1825_icgraph" alt=""/></div>
+<map name="da/d7e/class_primitive___template_method_1_1_abstract_template_method_ac6c44fd24749d21302c8d1cbd28b1825_icgraph" id="ada/d7e/class_primitive___template_method_1_1_abstract_template_method_ac6c44fd24749d21302c8d1cbd28b1825_icgraph">
+<area shape="rect" title=" " alt="" coords="549,5,724,61"/>
+<area shape="rect" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html#a912e8e80281cda55370725ed777d9f88" title=" " alt="" coords="327,5,501,61"/>
+<area shape="rect" href="../../d5/de5/namespace_primitive___template_method.html#a6539b6faf26f2bcc0801d7995979f35b" title=" " alt="" coords="104,13,279,54"/>
+<area shape="rect" href="../../dc/d55/_primitive_design_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/PrimitiveDesign/<a class="el" href="../../d2/d7e/_primitive_design_2_template_method_8h_source.html">TemplateMethod.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/de5/namespace_primitive___template_method.html">Primitive_TemplateMethod</a></li><li class="navelem"><a class="el" href="../../da/d7e/class_primitive___template_method_1_1_abstract_template_method.html">AbstractTemplateMethod</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

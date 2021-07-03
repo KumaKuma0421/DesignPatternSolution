@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/PrimitiveDesign/ChainOfResponsibility.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d6d/_chain_of_responsibility_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ChainOfResponsibility.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d6d/_chain_of_responsibility_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ChainOfResponsibility.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d0/d18/namespace_primitive___chain_of_responsibility.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d0/d18/namespace_primitive___chain_of_responsibility.html">Primitive_ChainOfResponsibility</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#ac1bd25c4595dda0ffed657c357751299">   12</a></span>&#160;        <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#ac1bd25c4595dda0ffed657c357751299">Handler</a>(<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>* handler) { <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a97128e13cc12445935750cb5b7f140dc">_next</a> = handler; };</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a51d6d2d97e2705adbb0922a1b6021f39">   13</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a51d6d2d97e2705adbb0922a1b6021f39">~Handler</a>() {};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#ae0522ad99cb80dc7aa05e31125e846f4">   15</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#ae0522ad99cb80dc7aa05e31125e846f4">Request</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a97128e13cc12445935750cb5b7f140dc">_next</a>) <span class="keywordflow">return</span> <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a97128e13cc12445935750cb5b7f140dc">_next</a>-&gt;<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#ae0522ad99cb80dc7aa05e31125e846f4">Request</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a4882527696c05f18ef27156318d551a1">   22</a></span>&#160;        <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a4882527696c05f18ef27156318d551a1">Handler</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a97128e13cc12445935750cb5b7f140dc">   24</a></span>&#160;        <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>* <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a97128e13cc12445935750cb5b7f140dc">_next</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html">ConcreteHandler1</a> : <span class="keyword">public</span> <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a6a44d6129a921744b70c54d27c53203d">   30</a></span>&#160;        <a class="code" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a6a44d6129a921744b70c54d27c53203d">ConcreteHandler1</a>(<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>* handler) :<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>(handler) {};</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a73776db2f3f2ac71932fef23905bd9e0">   31</a></span>&#160;        <a class="code" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a73776db2f3f2ac71932fef23905bd9e0">~ConcreteHandler1</a>() {};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a80c7592f47d9eb8686492cb1be8a39d8">   34</a></span>&#160;        <a class="code" href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a80c7592f47d9eb8686492cb1be8a39d8">ConcreteHandler1</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html">   37</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html">ConcreteHandler2</a> : <span class="keyword">public</span> <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#ae6f374a6784f296c914586470441450f">   40</a></span>&#160;        <a class="code" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#ae6f374a6784f296c914586470441450f">ConcreteHandler2</a>(<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>* handler) :<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>(handler) {};</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#ac50aa1e929cf8d0ff3d08bd8c154edcc">   41</a></span>&#160;        <a class="code" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#ac50aa1e929cf8d0ff3d08bd8c154edcc">~ConcreteHandler2</a>() {};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#a3919cdc8ec2e0a6e96e27b3befeafb81">   44</a></span>&#160;        <a class="code" href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#a3919cdc8ec2e0a6e96e27b3befeafb81">ConcreteHandler2</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html">ConcreteHandler3</a> : <span class="keyword">public</span> <a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#a999dc1e0b54ccd1b39b1904b0c6b9578">   50</a></span>&#160;        <a class="code" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#a999dc1e0b54ccd1b39b1904b0c6b9578">ConcreteHandler3</a>(<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>* handler) :<a class="code" href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Handler</a>(handler) {};</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#a0ce36f048993eddf779988daf294a635">   51</a></span>&#160;        <a class="code" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#a0ce36f048993eddf779988daf294a635">~ConcreteHandler3</a>() {};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#ad8396f30c4a6a37941f5e75308710e87">   54</a></span>&#160;        <a class="code" href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#ad8396f30c4a6a37941f5e75308710e87">ConcreteHandler3</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_handler_html_ae0522ad99cb80dc7aa05e31125e846f4"><div class="ttname"><a href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#ae0522ad99cb80dc7aa05e31125e846f4">Primitive_ChainOfResponsibility::Handler::Request</a></div><div class="ttdeci">bool Request()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00015">ChainOfResponsibility.h:15</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler1_html_a80c7592f47d9eb8686492cb1be8a39d8"><div class="ttname"><a href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a80c7592f47d9eb8686492cb1be8a39d8">Primitive_ChainOfResponsibility::ConcreteHandler1::ConcreteHandler1</a></div><div class="ttdeci">ConcreteHandler1()=delete</div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_handler_html"><div class="ttname"><a href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html">Primitive_ChainOfResponsibility::Handler</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00009">ChainOfResponsibility.h:10</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler1_html_a6a44d6129a921744b70c54d27c53203d"><div class="ttname"><a href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a6a44d6129a921744b70c54d27c53203d">Primitive_ChainOfResponsibility::ConcreteHandler1::ConcreteHandler1</a></div><div class="ttdeci">ConcreteHandler1(Handler *handler)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00030">ChainOfResponsibility.h:30</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler2_html_ae6f374a6784f296c914586470441450f"><div class="ttname"><a href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#ae6f374a6784f296c914586470441450f">Primitive_ChainOfResponsibility::ConcreteHandler2::ConcreteHandler2</a></div><div class="ttdeci">ConcreteHandler2(Handler *handler)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00040">ChainOfResponsibility.h:40</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_handler_html_ac1bd25c4595dda0ffed657c357751299"><div class="ttname"><a href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#ac1bd25c4595dda0ffed657c357751299">Primitive_ChainOfResponsibility::Handler::Handler</a></div><div class="ttdeci">Handler(Handler *handler)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00012">ChainOfResponsibility.h:12</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler1_html_a73776db2f3f2ac71932fef23905bd9e0"><div class="ttname"><a href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html#a73776db2f3f2ac71932fef23905bd9e0">Primitive_ChainOfResponsibility::ConcreteHandler1::~ConcreteHandler1</a></div><div class="ttdeci">~ConcreteHandler1()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00031">ChainOfResponsibility.h:31</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler3_html"><div class="ttname"><a href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html">Primitive_ChainOfResponsibility::ConcreteHandler3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00047">ChainOfResponsibility.h:48</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler2_html_a3919cdc8ec2e0a6e96e27b3befeafb81"><div class="ttname"><a href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#a3919cdc8ec2e0a6e96e27b3befeafb81">Primitive_ChainOfResponsibility::ConcreteHandler2::ConcreteHandler2</a></div><div class="ttdeci">ConcreteHandler2()=delete</div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler3_html_a0ce36f048993eddf779988daf294a635"><div class="ttname"><a href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#a0ce36f048993eddf779988daf294a635">Primitive_ChainOfResponsibility::ConcreteHandler3::~ConcreteHandler3</a></div><div class="ttdeci">~ConcreteHandler3()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00051">ChainOfResponsibility.h:51</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler3_html_a999dc1e0b54ccd1b39b1904b0c6b9578"><div class="ttname"><a href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#a999dc1e0b54ccd1b39b1904b0c6b9578">Primitive_ChainOfResponsibility::ConcreteHandler3::ConcreteHandler3</a></div><div class="ttdeci">ConcreteHandler3(Handler *handler)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00050">ChainOfResponsibility.h:50</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler3_html_ad8396f30c4a6a37941f5e75308710e87"><div class="ttname"><a href="../../d7/d87/class_primitive___chain_of_responsibility_1_1_concrete_handler3.html#ad8396f30c4a6a37941f5e75308710e87">Primitive_ChainOfResponsibility::ConcreteHandler3::ConcreteHandler3</a></div><div class="ttdeci">ConcreteHandler3()=delete</div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler2_html"><div class="ttname"><a href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html">Primitive_ChainOfResponsibility::ConcreteHandler2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00037">ChainOfResponsibility.h:38</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_handler_html_a51d6d2d97e2705adbb0922a1b6021f39"><div class="ttname"><a href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a51d6d2d97e2705adbb0922a1b6021f39">Primitive_ChainOfResponsibility::Handler::~Handler</a></div><div class="ttdeci">virtual ~Handler()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00013">ChainOfResponsibility.h:13</a></div></div>
+<div class="ttc" id="anamespace_primitive___chain_of_responsibility_html"><div class="ttname"><a href="../../d0/d18/namespace_primitive___chain_of_responsibility.html">Primitive_ChainOfResponsibility</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00007">ChainOfResponsibility.h:8</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler2_html_ac50aa1e929cf8d0ff3d08bd8c154edcc"><div class="ttname"><a href="../../d3/dfc/class_primitive___chain_of_responsibility_1_1_concrete_handler2.html#ac50aa1e929cf8d0ff3d08bd8c154edcc">Primitive_ChainOfResponsibility::ConcreteHandler2::~ConcreteHandler2</a></div><div class="ttdeci">~ConcreteHandler2()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00041">ChainOfResponsibility.h:41</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_handler_html_a4882527696c05f18ef27156318d551a1"><div class="ttname"><a href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a4882527696c05f18ef27156318d551a1">Primitive_ChainOfResponsibility::Handler::Handler</a></div><div class="ttdeci">Handler()=delete</div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_handler_html_a97128e13cc12445935750cb5b7f140dc"><div class="ttname"><a href="../../da/dc0/class_primitive___chain_of_responsibility_1_1_handler.html#a97128e13cc12445935750cb5b7f140dc">Primitive_ChainOfResponsibility::Handler::_next</a></div><div class="ttdeci">Handler * _next</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00024">ChainOfResponsibility.h:24</a></div></div>
+<div class="ttc" id="aclass_primitive___chain_of_responsibility_1_1_concrete_handler1_html"><div class="ttname"><a href="../../de/d3c/class_primitive___chain_of_responsibility_1_1_concrete_handler1.html">Primitive_ChainOfResponsibility::ConcreteHandler1</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6d/_chain_of_responsibility_8h_source.html#l00027">ChainOfResponsibility.h:28</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_ddbd0e33c071e92feca600864d51e8e3.html">PrimitiveDesign</a></li><li class="navelem"><a class="el" href="../../d4/d6d/_chain_of_responsibility_8h.html">ChainOfResponsibility.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

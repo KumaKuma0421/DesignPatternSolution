@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: DesignPatternSolution/PrimitiveDesign/Bridge.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('df/dbe/_bridge_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bridge.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/dbe/_bridge_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Bridge.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d8/d51/namespace_primitive___bridge.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d8/d51/namespace_primitive___bridge.html">Primitive_Bridge</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html">IImprementer</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html#a118b67f24b8942df4359a98dfa6e2109">   12</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html#a118b67f24b8942df4359a98dfa6e2109">Action</a>() = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    };</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html">AbstractBridge</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a00c6303fb79f17fcde3f513e61019c8a">   18</a></span>&#160;        <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a00c6303fb79f17fcde3f513e61019c8a">AbstractBridge</a>() { <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a43e3902e1eacc3a1ef5fc2ab225d69a0">_imprementer</a> = <span class="keyword">nullptr</span>; };</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a3053be942bc79b5d8b05b057e425f28a">   19</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a3053be942bc79b5d8b05b057e425f28a">~AbstractBridge</a>() {};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a01e5bd374dde862c095a3af4a425410c">   21</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a01e5bd374dde862c095a3af4a425410c">Action</a>() = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a43e3902e1eacc3a1ef5fc2ab225d69a0">   24</a></span>&#160;        <a class="code" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html">IImprementer</a>* <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a43e3902e1eacc3a1ef5fc2ab225d69a0">_imprementer</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html">Imprementer1</a> :<span class="keyword">public</span> <a class="code" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html">IImprementer</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#a3b533d6d7a6a871e23872a5adcdacca6">   30</a></span>&#160;        <a class="code" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#a3b533d6d7a6a871e23872a5adcdacca6">Imprementer1</a>() {};</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#a96f1dfc357665001c9a01d2f6e894a0c">   31</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#a96f1dfc357665001c9a01d2f6e894a0c">~Imprementer1</a>() {};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#ad953509b7f003e06e94b3948a9743908">   33</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#ad953509b7f003e06e94b3948a9743908">Action</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html">Imprementer2</a> :<span class="keyword">public</span> <a class="code" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html">IImprementer</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a19cdff246b6340533df854566e9058f2">   39</a></span>&#160;        <a class="code" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a19cdff246b6340533df854566e9058f2">Imprementer2</a>() {};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a25af77d9d5c7a0ef2a90b4c173de5b6d">   40</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a25af77d9d5c7a0ef2a90b4c173de5b6d">~Imprementer2</a>() {};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a19b200fac701618d271874c4ef2075c8">   42</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a19b200fac701618d271874c4ef2075c8">Action</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    };</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html">   45</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html">Bridge</a> : <span class="keyword">public</span> <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html">AbstractBridge</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#ad75ab3d52589d19a398b2a6a0ac0c8e1">   48</a></span>&#160;        <a class="code" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#ad75ab3d52589d19a398b2a6a0ac0c8e1">Bridge</a>(<a class="code" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html">IImprementer</a>* imprementer)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a43e3902e1eacc3a1ef5fc2ab225d69a0">_imprementer</a> = imprementer;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        };</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#aa6f84db7204b7cdddc234a1e2ae5ac9a">   52</a></span>&#160;        <a class="code" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#aa6f84db7204b7cdddc234a1e2ae5ac9a">~Bridge</a>() {};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#a1c36d3d2ff5e8d8bca8dcc192c6dfe9c">   54</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#a1c36d3d2ff5e8d8bca8dcc192c6dfe9c">Action</a>()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a43e3902e1eacc3a1ef5fc2ab225d69a0">_imprementer</a>-&gt;<a class="code" href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html#a118b67f24b8942df4359a98dfa6e2109">Action</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#a32edaa0dc1311b30b4abc7d40d472264">   60</a></span>&#160;        <a class="code" href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#a32edaa0dc1311b30b4abc7d40d472264">Bridge</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_primitive___bridge_1_1_bridge_html_a1c36d3d2ff5e8d8bca8dcc192c6dfe9c"><div class="ttname"><a href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#a1c36d3d2ff5e8d8bca8dcc192c6dfe9c">Primitive_Bridge::Bridge::Action</a></div><div class="ttdeci">bool Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00054">Bridge.h:54</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_bridge_html_ad75ab3d52589d19a398b2a6a0ac0c8e1"><div class="ttname"><a href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#ad75ab3d52589d19a398b2a6a0ac0c8e1">Primitive_Bridge::Bridge::Bridge</a></div><div class="ttdeci">Bridge(IImprementer *imprementer)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00048">Bridge.h:48</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer1_html"><div class="ttname"><a href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html">Primitive_Bridge::Imprementer1</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00027">Bridge.h:28</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_abstract_bridge_html_a3053be942bc79b5d8b05b057e425f28a"><div class="ttname"><a href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a3053be942bc79b5d8b05b057e425f28a">Primitive_Bridge::AbstractBridge::~AbstractBridge</a></div><div class="ttdeci">virtual ~AbstractBridge()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00019">Bridge.h:19</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer1_html_a96f1dfc357665001c9a01d2f6e894a0c"><div class="ttname"><a href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#a96f1dfc357665001c9a01d2f6e894a0c">Primitive_Bridge::Imprementer1::~Imprementer1</a></div><div class="ttdeci">virtual ~Imprementer1()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00031">Bridge.h:31</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_i_imprementer_html"><div class="ttname"><a href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html">Primitive_Bridge::IImprementer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00009">Bridge.h:10</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_abstract_bridge_html_a43e3902e1eacc3a1ef5fc2ab225d69a0"><div class="ttname"><a href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a43e3902e1eacc3a1ef5fc2ab225d69a0">Primitive_Bridge::AbstractBridge::_imprementer</a></div><div class="ttdeci">IImprementer * _imprementer</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00024">Bridge.h:24</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_abstract_bridge_html"><div class="ttname"><a href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html">Primitive_Bridge::AbstractBridge</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00015">Bridge.h:16</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer2_html"><div class="ttname"><a href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html">Primitive_Bridge::Imprementer2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00036">Bridge.h:37</a></div></div>
+<div class="ttc" id="anamespace_primitive___bridge_html"><div class="ttname"><a href="../../d8/d51/namespace_primitive___bridge.html">Primitive_Bridge</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00007">Bridge.h:8</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_bridge_html_aa6f84db7204b7cdddc234a1e2ae5ac9a"><div class="ttname"><a href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#aa6f84db7204b7cdddc234a1e2ae5ac9a">Primitive_Bridge::Bridge::~Bridge</a></div><div class="ttdeci">~Bridge()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00052">Bridge.h:52</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer1_html_ad953509b7f003e06e94b3948a9743908"><div class="ttname"><a href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#ad953509b7f003e06e94b3948a9743908">Primitive_Bridge::Imprementer1::Action</a></div><div class="ttdeci">bool Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00033">Bridge.h:33</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer2_html_a25af77d9d5c7a0ef2a90b4c173de5b6d"><div class="ttname"><a href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a25af77d9d5c7a0ef2a90b4c173de5b6d">Primitive_Bridge::Imprementer2::~Imprementer2</a></div><div class="ttdeci">virtual ~Imprementer2()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00040">Bridge.h:40</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_abstract_bridge_html_a01e5bd374dde862c095a3af4a425410c"><div class="ttname"><a href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a01e5bd374dde862c095a3af4a425410c">Primitive_Bridge::AbstractBridge::Action</a></div><div class="ttdeci">virtual bool Action()=0</div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_bridge_html_a32edaa0dc1311b30b4abc7d40d472264"><div class="ttname"><a href="../../df/dcf/class_primitive___bridge_1_1_bridge.html#a32edaa0dc1311b30b4abc7d40d472264">Primitive_Bridge::Bridge::Bridge</a></div><div class="ttdeci">Bridge()=delete</div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer2_html_a19b200fac701618d271874c4ef2075c8"><div class="ttname"><a href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a19b200fac701618d271874c4ef2075c8">Primitive_Bridge::Imprementer2::Action</a></div><div class="ttdeci">bool Action()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00042">Bridge.h:42</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_abstract_bridge_html_a00c6303fb79f17fcde3f513e61019c8a"><div class="ttname"><a href="../../d6/db5/class_primitive___bridge_1_1_abstract_bridge.html#a00c6303fb79f17fcde3f513e61019c8a">Primitive_Bridge::AbstractBridge::AbstractBridge</a></div><div class="ttdeci">AbstractBridge()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00018">Bridge.h:18</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_i_imprementer_html_a118b67f24b8942df4359a98dfa6e2109"><div class="ttname"><a href="../../d7/d85/class_primitive___bridge_1_1_i_imprementer.html#a118b67f24b8942df4359a98dfa6e2109">Primitive_Bridge::IImprementer::Action</a></div><div class="ttdeci">virtual bool Action()=0</div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer2_html_a19cdff246b6340533df854566e9058f2"><div class="ttname"><a href="../../d7/d41/class_primitive___bridge_1_1_imprementer2.html#a19cdff246b6340533df854566e9058f2">Primitive_Bridge::Imprementer2::Imprementer2</a></div><div class="ttdeci">Imprementer2()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00039">Bridge.h:39</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_bridge_html"><div class="ttname"><a href="../../df/dcf/class_primitive___bridge_1_1_bridge.html">Primitive_Bridge::Bridge</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00045">Bridge.h:46</a></div></div>
+<div class="ttc" id="aclass_primitive___bridge_1_1_imprementer1_html_a3b533d6d7a6a871e23872a5adcdacca6"><div class="ttname"><a href="../../d0/de7/class_primitive___bridge_1_1_imprementer1.html#a3b533d6d7a6a871e23872a5adcdacca6">Primitive_Bridge::Imprementer1::Imprementer1</a></div><div class="ttdeci">Imprementer1()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/_bridge_8h_source.html#l00030">Bridge.h:30</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_ee0c84dd5717e627486bfb8062272cd0.html">DesignPatternSolution</a></li><li class="navelem"><a class="el" href="../../dir_ddbd0e33c071e92feca600864d51e8e3.html">PrimitiveDesign</a></li><li class="navelem"><a class="el" href="../../df/dbe/_bridge_8h.html">Bridge.h</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

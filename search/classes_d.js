@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['shape_534',['Shape',['../df/dde/class_go_f___visitor_1_1_shape.html',1,'GoF_Visitor']]],
-  ['shiftoperation_535',['ShiftOperation',['../de/d90/class_go_f___visitor_1_1_shift_operation.html',1,'GoF_Visitor']]],
-  ['singleton_536',['Singleton',['../d0/d76/class_go_f___singleton_1_1_singleton.html',1,'GoF_Singleton']]],
-  ['specialcore_537',['SpecialCore',['../d0/da4/class_go_f___proxy_1_1_special_core.html',1,'GoF_Proxy']]],
-  ['state_538',['State',['../d3/dab/class_go_f___state_1_1_state.html',1,'GoF_State']]],
-  ['stop_539',['Stop',['../df/d76/class_go_f___state_1_1_stop.html',1,'GoF_State']]],
-  ['storageproduct_540',['StorageProduct',['../d9/df8/class_go_f___abstract_factory_1_1_storage_product.html',1,'GoF_AbstractFactory']]],
-  ['strategy_541',['Strategy',['../dd/ded/class_sample_1_1_strategy.html',1,'Sample']]],
-  ['strategy1_542',['Strategy1',['../d5/d34/class_go_f___strategy1_1_1_strategy1.html',1,'GoF_Strategy1']]],
-  ['strategy2_543',['Strategy2',['../d5/dfc/class_go_f___strategy2_1_1_strategy2.html',1,'GoF_Strategy2']]],
-  ['subscriber_544',['Subscriber',['../d3/d81/class_go_f___observer_1_1_subscriber.html',1,'GoF_Observer']]]
+  ['rangevalidation_753',['RangeValidation',['../dc/d05/class_go_f___chain_of_responsibility_1_1_range_validation.html',1,'GoF_ChainOfResponsibility']]],
+  ['realcolleague_754',['RealColleague',['../dd/d67/class_go_f___mediator_1_1_real_colleague.html',1,'GoF_Mediator']]],
+  ['realmediator_755',['RealMediator',['../d7/df8/class_go_f___mediator_1_1_real_mediator.html',1,'GoF_Mediator']]],
+  ['realreceiver_756',['RealReceiver',['../db/d34/class_go_f___command_1_1_real_receiver.html',1,'GoF_Command']]],
+  ['realtimecontrolproduct_757',['RealtimeControlProduct',['../d7/df1/class_go_f___abstract_factory_1_1_realtime_control_product.html',1,'GoF_AbstractFactory']]],
+  ['realtimeprocessfactory_758',['RealtimeProcessFactory',['../d6/d54/class_go_f___abstract_factory_1_1_realtime_process_factory.html',1,'GoF_AbstractFactory']]],
+  ['receiver_759',['Receiver',['../d3/d82/class_go_f___command_1_1_receiver.html',1,'GoF_Command::Receiver'],['../dc/d11/class_primitive___command_1_1_receiver.html',1,'Primitive_Command::Receiver']]],
+  ['record_760',['Record',['../dc/dae/class_go_f___state_1_1_record.html',1,'GoF_State']]],
+  ['rectangle_761',['Rectangle',['../d9/de7/class_go_f___visitor_1_1_rectangle.html',1,'GoF_Visitor']]],
+  ['reverse_762',['Reverse',['../d6/db1/class_go_f___state_1_1_reverse.html',1,'GoF_State']]],
+  ['rotateoperation_763',['RotateOperation',['../db/d25/class_go_f___visitor_1_1_rotate_operation.html',1,'GoF_Visitor']]]
 ];

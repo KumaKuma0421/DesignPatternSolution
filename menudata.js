@@ -28,6 +28,7 @@ var menudata={children:[
 {text:"名前空間一覧",url:"namespaces.html"},
 {text:"名前空間メンバ",url:"namespacemembers.html",children:[
 {text:"全て",url:"namespacemembers.html"},
+{text:"関数",url:"namespacemembers_func.html"},
 {text:"型定義",url:"namespacemembers_type.html"},
 {text:"列挙型",url:"namespacemembers_enum.html"}]}]},
 {text:"クラス",url:"annotated.html",children:[
@@ -46,6 +47,7 @@ var menudata={children:[
 {text:"g",url:"functions_g.html#index_g"},
 {text:"h",url:"functions_h.html#index_h"},
 {text:"i",url:"functions_i.html#index_i"},
+{text:"k",url:"functions_k.html#index_k"},
 {text:"l",url:"functions_l.html#index_l"},
 {text:"m",url:"functions_m.html#index_m"},
 {text:"n",url:"functions_n.html#index_n"},
@@ -68,6 +70,7 @@ var menudata={children:[
 {text:"g",url:"functions_func_g.html#index_g"},
 {text:"h",url:"functions_func_h.html#index_h"},
 {text:"i",url:"functions_func_i.html#index_i"},
+{text:"k",url:"functions_func_k.html#index_k"},
 {text:"l",url:"functions_func_l.html#index_l"},
 {text:"m",url:"functions_func_m.html#index_m"},
 {text:"n",url:"functions_func_n.html#index_n"},
@@ -99,6 +102,11 @@ var menudata={children:[
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"}]},
-{text:"関数",url:"globals_func.html"},
+{text:"関数",url:"globals_func.html",children:[
+{text:"d",url:"globals_func.html#index_d"},
+{text:"i",url:"globals_func.html#index_i"},
+{text:"m",url:"globals_func.html#index_m"},
+{text:"p",url:"globals_func.html#index_p"},
+{text:"s",url:"globals_func.html#index_s"}]},
 {text:"変数",url:"globals_vars.html"},
 {text:"マクロ定義",url:"globals_defs.html"}]}]}]}

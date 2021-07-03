@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['sample_583',['Sample',['../de/df2/namespace_sample.html',1,'']]]
+  ['primitive_5fabstractfactory_820',['Primitive_AbstractFactory',['../d8/d4f/namespace_primitive___abstract_factory.html',1,'']]],
+  ['primitive_5fadapter_821',['Primitive_Adapter',['../d6/ddd/namespace_primitive___adapter.html',1,'']]],
+  ['primitive_5fbridge_822',['Primitive_Bridge',['../d8/d51/namespace_primitive___bridge.html',1,'']]],
+  ['primitive_5fbuilder_823',['Primitive_Builder',['../d7/ded/namespace_primitive___builder.html',1,'']]],
+  ['primitive_5fchainofresponsibility_824',['Primitive_ChainOfResponsibility',['../d0/d18/namespace_primitive___chain_of_responsibility.html',1,'']]],
+  ['primitive_5fcommand_825',['Primitive_Command',['../db/d15/namespace_primitive___command.html',1,'']]],
+  ['primitive_5fcomposite_826',['Primitive_Composite',['../db/dc4/namespace_primitive___composite.html',1,'']]],
+  ['primitive_5fdecorator_827',['Primitive_Decorator',['../df/da1/namespace_primitive___decorator.html',1,'']]],
+  ['primitive_5ffactorymethod_828',['Primitive_FactoryMethod',['../de/d6c/namespace_primitive___factory_method.html',1,'']]],
+  ['primitive_5fflyweight_829',['Primitive_Flyweight',['../de/d9d/namespace_primitive___flyweight.html',1,'']]],
+  ['primitive_5fiterator_830',['Primitive_Iterator',['../de/ddc/namespace_primitive___iterator.html',1,'']]],
+  ['primitive_5fmediator_831',['Primitive_Mediator',['../dc/d72/namespace_primitive___mediator.html',1,'']]],
+  ['primitive_5fmemento_832',['Primitive_Memento',['../d5/d05/namespace_primitive___memento.html',1,'']]],
+  ['primitive_5fobserver_833',['Primitive_Observer',['../d7/d9f/namespace_primitive___observer.html',1,'']]],
+  ['primitive_5fprototype_834',['Primitive_Prototype',['../de/d46/namespace_primitive___prototype.html',1,'']]],
+  ['primitive_5fproxy_835',['Primitive_Proxy',['../db/d25/namespace_primitive___proxy.html',1,'']]],
+  ['primitive_5fsingleton_836',['Primitive_Singleton',['../d5/d09/namespace_primitive___singleton.html',1,'']]],
+  ['primitive_5fstate_837',['Primitive_State',['../d6/dec/namespace_primitive___state.html',1,'']]],
+  ['primitive_5fstrategy_838',['Primitive_Strategy',['../de/d40/namespace_primitive___strategy.html',1,'']]],
+  ['primitive_5ftemplatemethod_839',['Primitive_TemplateMethod',['../d5/de5/namespace_primitive___template_method.html',1,'']]],
+  ['primitive_5fvisitor_840',['Primitive_Visitor',['../dc/dd8/namespace_primitive___visitor.html',1,'']]]
 ];

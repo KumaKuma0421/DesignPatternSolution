@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('d7/d17/_abstract_bridge_impl_8cpp_sour
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        dwCreationDisposition,</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        dwFlagsAndAttributes,</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        hTemplateFile);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a8c304842ab17bb5bf84daf2898c55f7b">_hFile</a> == INVALID_HANDLE_VALUE ? false : <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('d7/d17/_abstract_bridge_impl_8cpp_sour
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        size,</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        &amp;dwNumberOfBytesRead,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> ret == TRUE ? dwNumberOfBytesRead : -1;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('d7/d17/_abstract_bridge_impl_8cpp_sour
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    BOOL ret;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ret = ::FlushFileBuffers(<a class="code" href="../../d8/d10/class_go_f___bridge_1_1_windows_file_operation_impl.html#a8c304842ab17bb5bf84daf2898c55f7b">_hFile</a>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> ret == TRUE ? true : <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('d7/d17/_abstract_bridge_impl_8cpp_sour
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a6684ebb84ca4ddb798de82b951d7ecfb">  101</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a6684ebb84ca4ddb798de82b951d7ecfb">UnixFileOperationImpl::Open</a>(<span class="keywordtype">char</span>* fileName)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    errno_t err = fopen_s(&amp;<a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8dfb87f81039fd1cfa1ef714490d2ea4">_fp</a>, fileName, <span class="stringliteral">&quot;w+&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> err == 0 ? true : <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
@@ -199,14 +199,14 @@ $(document).ready(function(){initNavTree('d7/d17/_abstract_bridge_impl_8cpp_sour
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">char</span>* ret;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    ret = fgets(buffer, size, <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8dfb87f81039fd1cfa1ef714490d2ea4">_fp</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> ret == <span class="keyword">nullptr</span> ? -1 : strlen(buffer);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a1c1a7ee2e454b8038c148cc1c0e2a465">  117</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a1c1a7ee2e454b8038c148cc1c0e2a465">UnixFileOperationImpl::Write</a>(<span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> size)</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">int</span> ret;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    ret = fputs(buffer, <a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8dfb87f81039fd1cfa1ef714490d2ea4">_fp</a>);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> ret &gt; 0 ? true : <span class="keyword">false</span>;</div>
@@ -217,7 +217,7 @@ $(document).ready(function(){initNavTree('d7/d17/_abstract_bridge_impl_8cpp_sour
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">int</span> ret;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    ret = fseek(<a class="code" href="../../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html#a8dfb87f81039fd1cfa1ef714490d2ea4">_fp</a>, offset, (<span class="keywordtype">int</span>)pos);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> ret == 0 ? true : <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>

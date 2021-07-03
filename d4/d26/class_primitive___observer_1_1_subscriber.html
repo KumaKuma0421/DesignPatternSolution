@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DesignPatternSolution: Primitive_Observer::Subscriber クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DesignPatternSolution
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Design Pattern on C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d26/class_primitive___observer_1_1_subscriber.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pri-attribs">非公開変数類</a> &#124;
+<a href="../../dd/db9/class_primitive___observer_1_1_subscriber-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">Primitive_Observer::Subscriber クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a>&gt;</code></p>
+<div class="dynheader">
+Primitive_Observer::Subscriber の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d57/class_primitive___observer_1_1_subscriber__inherit__graph.png" border="0" usemap="#a_primitive___observer_1_1_subscriber_inherit__map" alt="Inheritance graph"/></div>
+<map name="_primitive___observer_1_1_subscriber_inherit__map" id="a_primitive___observer_1_1_subscriber_inherit__map">
+<area shape="rect" title=" " alt="" coords="13,5,142,47"/>
+<area shape="rect" href="../../d7/dd6/class_primitive___observer_1_1_concrete_subscriber.html" title=" " alt="" coords="5,95,149,136"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3ddeefe126a21ea7da1bd1373ebd24e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d26/class_primitive___observer_1_1_subscriber.html#a3ddeefe126a21ea7da1bd1373ebd24e1">Subscriber</a> ()</td></tr>
+<tr class="separator:a3ddeefe126a21ea7da1bd1373ebd24e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0338a1aecc85fc8cdf77725d771358b7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d26/class_primitive___observer_1_1_subscriber.html#a0338a1aecc85fc8cdf77725d771358b7">~Subscriber</a> ()</td></tr>
+<tr class="separator:a0338a1aecc85fc8cdf77725d771358b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ee08fce8a5777b2e11492d0f92ed6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d26/class_primitive___observer_1_1_subscriber.html#a08ee08fce8a5777b2e11492d0f92ed6f">Add</a> (<a class="el" href="../../db/d72/class_primitive___observer_1_1_i_observer.html">IObserver</a> *observer)</td></tr>
+<tr class="separator:a08ee08fce8a5777b2e11492d0f92ed6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036f1e85fda3c3b987f285160bf74654"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d26/class_primitive___observer_1_1_subscriber.html#a036f1e85fda3c3b987f285160bf74654">Notify</a> ()</td></tr>
+<tr class="separator:a036f1e85fda3c3b987f285160bf74654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+非公開変数類</h2></td></tr>
+<tr class="memitem:a050d22d66b6c364683cb12f480faaf1e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d72/class_primitive___observer_1_1_i_observer.html">IObserver</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d26/class_primitive___observer_1_1_subscriber.html#a050d22d66b6c364683cb12f480faaf1e">_observers</a></td></tr>
+<tr class="separator:a050d22d66b6c364683cb12f480faaf1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock">
+<p class="definition"> <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a> の <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00017">17</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a3ddeefe126a21ea7da1bd1373ebd24e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddeefe126a21ea7da1bd1373ebd24e1">&#9670;&nbsp;</a></span>Subscriber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Primitive_Observer::Subscriber::Subscriber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a> の <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0338a1aecc85fc8cdf77725d771358b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0338a1aecc85fc8cdf77725d771358b7">&#9670;&nbsp;</a></span>~Subscriber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Primitive_Observer::Subscriber::~Subscriber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a> の <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a08ee08fce8a5777b2e11492d0f92ed6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ee08fce8a5777b2e11492d0f92ed6f">&#9670;&nbsp;</a></span>Add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Primitive_Observer::Subscriber::Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d72/class_primitive___observer_1_1_i_observer.html">IObserver</a> *&#160;</td>
+          <td class="paramname"><em>observer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a> の <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00030">_observers</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../dc/d55/_primitive_design_2_main_8cpp_source.html#l00240">Primitive_Observer::Run_Observer()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d26/class_primitive___observer_1_1_subscriber_a08ee08fce8a5777b2e11492d0f92ed6f_icgraph.png" border="0" usemap="#ad4/d26/class_primitive___observer_1_1_subscriber_a08ee08fce8a5777b2e11492d0f92ed6f_icgraph" alt=""/></div>
+<map name="d4/d26/class_primitive___observer_1_1_subscriber_a08ee08fce8a5777b2e11492d0f92ed6f_icgraph" id="ad4/d26/class_primitive___observer_1_1_subscriber_a08ee08fce8a5777b2e11492d0f92ed6f_icgraph">
+<area shape="rect" title=" " alt="" coords="281,5,411,47"/>
+<area shape="rect" href="../../d7/d9f/namespace_primitive___observer.html#a977ae1233e028577c02aaa6e7d0ae58d" title=" " alt="" coords="104,5,233,47"/>
+<area shape="rect" href="../../dc/d55/_primitive_design_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a036f1e85fda3c3b987f285160bf74654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036f1e85fda3c3b987f285160bf74654">&#9670;&nbsp;</a></span>Notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Primitive_Observer::Subscriber::Notify </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a> の <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00024">24</a> 行目に定義があります。</p>
+
+<p class="reference">参照先 <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00030">_observers</a>.</p>
+
+<p class="reference">参照元 <a class="el" href="../../dc/d55/_primitive_design_2_main_8cpp_source.html#l00240">Primitive_Observer::Run_Observer()</a>.</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d26/class_primitive___observer_1_1_subscriber_a036f1e85fda3c3b987f285160bf74654_icgraph.png" border="0" usemap="#ad4/d26/class_primitive___observer_1_1_subscriber_a036f1e85fda3c3b987f285160bf74654_icgraph" alt=""/></div>
+<map name="d4/d26/class_primitive___observer_1_1_subscriber_a036f1e85fda3c3b987f285160bf74654_icgraph" id="ad4/d26/class_primitive___observer_1_1_subscriber_a036f1e85fda3c3b987f285160bf74654_icgraph">
+<area shape="rect" title=" " alt="" coords="281,5,415,47"/>
+<area shape="rect" href="../../d7/d9f/namespace_primitive___observer.html#a977ae1233e028577c02aaa6e7d0ae58d" title=" " alt="" coords="104,5,233,47"/>
+<area shape="rect" href="../../dc/d55/_primitive_design_2_main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a050d22d66b6c364683cb12f480faaf1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050d22d66b6c364683cb12f480faaf1e">&#9670;&nbsp;</a></span>_observers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../db/d72/class_primitive___observer_1_1_i_observer.html">IObserver</a>*&gt; Primitive_Observer::Subscriber::_observers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a> の <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+
+<p class="reference">参照元 <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00023">Add()</a>, <a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html#l00024">Notify()</a>.</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DesignPatternSolution/PrimitiveDesign/<a class="el" href="../../d1/d6d/_primitive_design_2_observer_8h_source.html">Observer.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d7/d9f/namespace_primitive___observer.html">Primitive_Observer</a></li><li class="navelem"><a class="el" href="../../d4/d26/class_primitive___observer_1_1_subscriber.html">Subscriber</a></li>
+    <li class="footer">構築: <a href="http://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

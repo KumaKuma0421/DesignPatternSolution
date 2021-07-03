@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['validation_553',['Validation',['../d6/d1e/class_go_f___chain_of_responsibility_1_1_validation.html',1,'GoF_ChainOfResponsibility']]],
-  ['virtualshop_554',['VirtualShop',['../d5/dec/class_sample_1_1_virtual_shop.html',1,'Sample']]],
-  ['voicerecorder_555',['VoiceRecorder',['../d1/db5/class_go_f___state_1_1_voice_recorder.html',1,'GoF_State']]]
+  ['unixfileoperation_786',['UnixFileOperation',['../da/d3e/class_go_f___bridge_1_1_unix_file_operation.html',1,'GoF_Bridge']]],
+  ['unixfileoperationimpl_787',['UnixFileOperationImpl',['../d7/d5c/class_go_f___bridge_1_1_unix_file_operation_impl.html',1,'GoF_Bridge']]]
 ];

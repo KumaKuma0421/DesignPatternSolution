@@ -29,6 +29,7 @@ var NAVTREE =
       [ "名前空間一覧", "namespaces.html", "namespaces_dup" ],
       [ "名前空間メンバ", "namespacemembers.html", [
         [ "全て", "namespacemembers.html", null ],
+        [ "関数", "namespacemembers_func.html", null ],
         [ "型定義", "namespacemembers_type.html", null ],
         [ "列挙型", "namespacemembers_enum.html", null ]
       ] ]
@@ -59,9 +60,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d5/d06/_template_method_2_main_8cpp.html",
-"d9/d3d/class_go_f___prototype_1_1_concrete_prototype.html#ade70f157afad57c64874d31f876f2a69",
-"de/d00/class_go_f___abstract_factory_1_1_batch_control_product.html#a492256ad64f6e72b684b68d368f4f205"
+"d3/d5f/_proxy_8cpp_source.html",
+"d6/d65/class_primitive___abstract_factory_1_1_product_a2.html",
+"d9/d3d/class_go_f___prototype_1_1_concrete_prototype.html#ad3d12a3ca5ea112d4e3db7eb47c13291",
+"dc/d55/_primitive_design_2_main_8cpp.html#a3836e885929d1f597b05d5015e4b274c",
+"de/dfe/class_go_f___visitor_1_1_operation.html#a14089623bd8a73e73375353c3d8a4b6e"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

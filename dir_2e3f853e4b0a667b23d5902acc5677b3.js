@@ -7,7 +7,7 @@ var dir_2e3f853e4b0a667b23d5902acc5677b3 =
     ] ],
     [ "Main.cpp", "d8/d60/_mediator_2_main_8cpp.html", "d8/d60/_mediator_2_main_8cpp" ],
     [ "Mediator.cpp", "dd/d36/_mediator_8cpp.html", null ],
-    [ "Mediator.h", "d2/dcd/_mediator_8h.html", [
+    [ "Mediator.h", "dc/d62/_mediator_2_mediator_8h.html", [
       [ "Mediator", "d0/dfa/class_go_f___mediator_1_1_mediator.html", "d0/dfa/class_go_f___mediator_1_1_mediator" ],
       [ "RealMediator", "d7/df8/class_go_f___mediator_1_1_real_mediator.html", "d7/df8/class_go_f___mediator_1_1_real_mediator" ]
     ] ]
