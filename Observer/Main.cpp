@@ -41,7 +41,7 @@ int main(int argc, char** argv)
     std::cout << "Remove watcher1." << std::endl;
     clock.Remove(&watcher1);
     clock.Clock();
-    
+
     std::cout << "Nothing." << std::endl;
     clock.Clock();
 

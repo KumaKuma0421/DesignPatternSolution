@@ -8,40 +8,40 @@
 
 namespace Primitive_Mediator
 {
-    class Colleague;
+    class AbstractColleague;
 
-    class Mediator
+    class AbstractMediator
     {
     public:
-        Mediator() {};
-        virtual ~Mediator() {};
+        AbstractMediator() {};
+        virtual ~AbstractMediator() {};
 
-        virtual void Add(Colleague* colleague) { _colleagues.push_back(colleague); };
+        virtual void Add(AbstractColleague* colleague) { _colleagues.push_back(colleague); };
         virtual void Consultation() = 0;
         virtual void Kick() { Consultation(); };
 
     protected:
-        std::vector<Colleague*> _colleagues;
+        std::vector<AbstractColleague*> _colleagues;
     };
 
-    class Colleague
+    class AbstractColleague
     {
     public:
-        Colleague() { _mediator = nullptr; };
-        virtual ~Colleague() {};
+        AbstractColleague() { _mediator = nullptr; };
+        virtual ~AbstractColleague() {};
 
         virtual void Advice() = 0;
-        virtual void Set(Mediator* mediator) { _mediator = mediator; };
-    
+        virtual void Set(AbstractMediator* mediator) { _mediator = mediator; };
+
     private:
-        Mediator* _mediator;
+        AbstractMediator* _mediator;
     };
 
-    class ConcreteMediator : public Mediator
+    class Mediator : public AbstractMediator
     {
     public:
-        ConcreteMediator() {};
-        ~ConcreteMediator() {};
+        Mediator() {};
+        ~Mediator() {};
 
         void Consultation()
         {
@@ -52,20 +52,20 @@ namespace Primitive_Mediator
         };
     };
 
-    class ConcreteColleague1 : public Colleague
+    class Colleague1 : public AbstractColleague
     {
     public:
-        ConcreteColleague1() {};
-        ~ConcreteColleague1() {};
+        Colleague1() {};
+        ~Colleague1() {};
 
         void Advice() {};
     };
 
-    class ConcreteColleague2 : public Colleague
+    class Colleague2 : public AbstractColleague
     {
     public:
-        ConcreteColleague2() {};
-        ~ConcreteColleague2() {};
+        Colleague2() {};
+        ~Colleague2() {};
 
         void Advice() {};
     };

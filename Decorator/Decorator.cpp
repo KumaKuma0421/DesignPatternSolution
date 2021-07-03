@@ -38,7 +38,7 @@ bool FrequencyCounter::Action(DWORD dwParam)
     bool ret = _core->Action(dwParam);
     QueryPerformanceCounter(&liFinish);
 
-    ULONGLONG ulDuration = 
+    ULONGLONG ulDuration =
         (liFinish.QuadPart - liStart.QuadPart) * 1000 / _liFrequency.QuadPart;
     printf("duration = %lldms\n", ulDuration);
 

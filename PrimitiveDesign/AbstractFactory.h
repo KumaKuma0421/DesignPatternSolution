@@ -6,51 +6,78 @@
 
 namespace Primitive_AbstractFactory
 {
-    class Product1
+    class IProduct1
     {
     public:
-        Product1() {};
-        virtual ~Product1() {};
+        virtual bool Action1() = 0;
     };
 
-    class Product2
+    class IProduct2
     {
     public:
-        Product2() {};
-        virtual ~Product2() {};
+        virtual bool Action2() = 0;
     };
 
-    class AbstractFactory
+    class IFactory
     {
     public:
-        AbstractFactory() {};
-        virtual ~AbstractFactory() {};
-
-        virtual Product1* CreateProduct1() = 0;
-        virtual Product2* CreateProduct2() = 0;
+        virtual IProduct1* CreateProduct1() = 0;
+        virtual IProduct2* CreateProduct2() = 0;
     };
 
-    class ConcreteProduct1 : public Product1
+    class ProductA1 : public IProduct1
     {
     public:
-        ConcreteProduct1() {};
-        ~ConcreteProduct1() {};
+        ProductA1() {};
+        ~ProductA1() {};
+
+        bool Action1() { return true; };
     };
 
-    class ConcreteProduct2 : public Product2
+    class ProductA2 : public IProduct2
     {
     public:
-        ConcreteProduct2() {};
-        ~ConcreteProduct2() {};
+        ProductA2() {};
+        ~ProductA2() {};
+
+        bool Action2() { return true; };
     };
 
-    class ConcreteFactory : public AbstractFactory
+    class FactoryA : public IFactory
     {
     public:
-        ConcreteFactory() {};
-        ~ConcreteFactory() {};
+        FactoryA() {};
+        ~FactoryA() {};
 
-        Product1* CreateProduct1() { return new ConcreteProduct1(); };
-        Product2* CreateProduct2() { return new ConcreteProduct2(); };
+        IProduct1* CreateProduct1() { return new ProductA1(); };
+        IProduct2* CreateProduct2() { return new ProductA2(); };
+    };
+
+    class ProductB1 : public IProduct1
+    {
+    public:
+        ProductB1() {};
+        ~ProductB1() {};
+
+        bool Action1() { return true; };
+    };
+
+    class ProductB2 : public IProduct2
+    {
+    public:
+        ProductB2() {};
+        ~ProductB2() {};
+
+        bool Action2() { return true; };
+    };
+
+    class FactoryB : public IFactory
+    {
+    public:
+        FactoryB() {};
+        ~FactoryB() {};
+
+        IProduct1* CreateProduct1() { return new ProductB1(); };
+        IProduct2* CreateProduct2() { return new ProductB2(); };
     };
 }

@@ -47,7 +47,7 @@ FlyweightFactory::~FlyweightFactory()
 Flyweight* FlyweightFactory::GetFlyweight(std::string key)
 {
     Flyweight* flyweight = _container[key];
-    
+
     if (flyweight == nullptr)
     {
         if (key == "Type1")

@@ -6,27 +6,24 @@
 
 namespace Primitive_Proxy
 {
-    class Subject
+    class ISubject
     {
     public:
-        Subject() {};
-        virtual ~Subject() {};
-
         virtual bool Action() = 0;
         virtual bool HeavyAction() = 0;
     };
 
-    class RealSubject : public Subject
+    class Subject : public ISubject
     {
     public:
-        RealSubject() {};
-        ~RealSubject() {};
+        Subject() {};
+        ~Subject() {};
 
         bool Action() { return true; };
         bool HeavyAction() { return true; };
     };
 
-    class Proxy
+    class Proxy : public ISubject
     {
     public:
         Proxy() {};
@@ -35,7 +32,7 @@ namespace Primitive_Proxy
         bool Action() { return true; };
         bool HeavyAction()
         {
-            RealSubject* subject = new RealSubject();
+            Subject* subject = new Subject();
             bool response = subject->HeavyAction();
             delete subject;
             return response;

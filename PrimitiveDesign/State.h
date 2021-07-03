@@ -6,29 +6,26 @@
 
 namespace Primitive_State
 {
-    class State
+    class IState
     {
     public:
-        State() {};
-        virtual ~State() {};
-
         virtual void Action() = 0;
     };
 
-    class ConcreteState1 : public State
+    class State1 : public IState
     {
     public:
-        ConcreteState1() {};
-        ~ConcreteState1() {};
+        State1() {};
+        ~State1() {};
 
         void Action() {};
     };
 
-    class ConcreteState2 : public State
+    class State2 : public IState
     {
     public:
-        ConcreteState2() {};
-        ~ConcreteState2() {};
+        State2() {};
+        ~State2() {};
 
         void Action() {};
     };
@@ -38,17 +35,17 @@ namespace Primitive_State
     public:
         Invoker()
         {
-            _state[0][0] = new ConcreteState1();
-            _state[0][1] = new ConcreteState2();
-            _state[1][0] = new ConcreteState2();
-            _state[1][1] = new ConcreteState1();
+            _state[0][0] = new State1();
+            _state[0][1] = new State2();
+            _state[1][0] = new State2();
+            _state[1][1] = new State1();
             _status = 0;
         };
         virtual ~Invoker() {};
 
         virtual void Action(int event)
         {
-            State* state = _state[event][_status];
+            IState* state = _state[event][_status];
             if (state)
             {
                 state->Action();
@@ -58,7 +55,7 @@ namespace Primitive_State
         };
 
     private:
-        State* _state[2][2];
+        IState* _state[2][2];
         int _status;
     };
 }

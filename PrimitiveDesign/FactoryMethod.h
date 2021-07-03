@@ -6,35 +6,33 @@
 
 namespace Primitive_FactoryMethod
 {
-    class Product
+    class IProduct
+    {
+    public:
+        virtual void Action() = 0;
+    };
+
+    class ICreator
+    {
+    public:
+        virtual IProduct* CreateProduct() = 0;
+    };
+
+    class Product : public IProduct
     {
     public:
         Product() {};
         virtual ~Product() {};
+
+        void Action() {};
     };
 
-    class Creator
+    class Creator : public ICreator
     {
     public:
         Creator() {};
         virtual ~Creator() {};
 
-        virtual Product* CreateProduct() = 0;
-    };
-
-    class ConcreteProduct : public Product
-    {
-    public:
-        ConcreteProduct() {};
-        ~ConcreteProduct() {};
-    };
-
-    class ConcreteCreator : public Creator
-    {
-    public:
-        ConcreteCreator() {};
-        ~ConcreteCreator() {};
-
-        Product* CreateProduct() { return new ConcreteProduct(); };
+        IProduct* CreateProduct() { return new Product(); };
     };
 }

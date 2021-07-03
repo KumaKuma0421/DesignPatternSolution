@@ -33,7 +33,7 @@ bool WindowsFileOperationImpl::Open(char* fileName)
         dwCreationDisposition,
         dwFlagsAndAttributes,
         hTemplateFile);
-    
+
     return _hFile == INVALID_HANDLE_VALUE ? false : true;
 }
 
@@ -48,7 +48,7 @@ int WindowsFileOperationImpl::Read(char* buffer, size_t size)
         size,
         &dwNumberOfBytesRead,
         nullptr);
-    
+
     return ret == TRUE ? dwNumberOfBytesRead : -1;
 }
 
@@ -77,7 +77,7 @@ bool WindowsFileOperationImpl::Flush()
     BOOL ret;
 
     ret = ::FlushFileBuffers(_hFile);
-    
+
     return ret == TRUE ? true : false;
 }
 
@@ -101,7 +101,7 @@ UnixFileOperationImpl::~UnixFileOperationImpl()
 bool UnixFileOperationImpl::Open(char* fileName)
 {
     errno_t err = fopen_s(&_fp, fileName, "w+");
-    
+
     return err == 0 ? true : false;
 }
 
@@ -110,14 +110,14 @@ int UnixFileOperationImpl::Read(char* buffer, size_t size)
     char* ret;
 
     ret = fgets(buffer, size, _fp);
-    
+
     return ret == nullptr ? -1 : strlen(buffer);
 }
 
 bool UnixFileOperationImpl::Write(char* buffer, size_t size)
 {
     int ret;
-    
+
     ret = fputs(buffer, _fp);
 
     return ret > 0 ? true : false;
@@ -128,7 +128,7 @@ bool UnixFileOperationImpl::SetPos(FilePos pos, long offset)
     int ret;
 
     ret = fseek(_fp, offset, (int)pos);
-    
+
     return ret == 0 ? true : false;
 }
 

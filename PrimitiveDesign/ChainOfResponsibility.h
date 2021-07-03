@@ -27,7 +27,7 @@ namespace Primitive_ChainOfResponsibility
     class ConcreteHandler1 : public Handler
     {
     public:
-        ConcreteHandler1(Handler* handler):Handler(handler) {};
+        ConcreteHandler1(Handler* handler) :Handler(handler) {};
         ~ConcreteHandler1() {};
 
     private:
@@ -37,7 +37,7 @@ namespace Primitive_ChainOfResponsibility
     class ConcreteHandler2 : public Handler
     {
     public:
-        ConcreteHandler2(Handler* handler):Handler(handler) {};
+        ConcreteHandler2(Handler* handler) :Handler(handler) {};
         ~ConcreteHandler2() {};
 
     private:

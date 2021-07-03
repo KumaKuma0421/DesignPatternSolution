@@ -12,7 +12,7 @@ int main(int argc, char** argv)
     Interpreter interpreter;
 
     interpreter.Load("CommandList.txt");
-    
+
     interpreter.Interpret();
 
     interpreter.Run();

@@ -8,12 +8,9 @@
 
 namespace Primitive_Observer
 {
-    class Observer
+    class IObserver
     {
     public:
-        Observer() {};
-        virtual ~Observer() {};
-
         virtual void Update() = 0;
     };
 
@@ -23,7 +20,7 @@ namespace Primitive_Observer
         Subscriber() {};
         virtual ~Subscriber() {};
 
-        virtual void Add(Observer* observer) { _observers.push_back(observer); };
+        virtual void Add(IObserver* observer) { _observers.push_back(observer); };
         virtual void Notify()
         {
             for (auto observer : _observers)
@@ -33,23 +30,23 @@ namespace Primitive_Observer
         };
 
     private:
-        std::vector<Observer*> _observers;
+        std::vector<IObserver*> _observers;
     };
 
-    class ConcreteObserver1 : public Observer
+    class Observer1 : public IObserver
     {
     public:
-        ConcreteObserver1() {};
-        ~ConcreteObserver1() {};
-        
+        Observer1() {};
+        ~Observer1() {};
+
         void Update() {};
     };
-    
-    class ConcreteObserver2 : public Observer
+
+    class Observer2 : public IObserver
     {
     public:
-        ConcreteObserver2() {};
-        ~ConcreteObserver2() {};
+        Observer2() {};
+        ~Observer2() {};
 
         void Update() {};
     };

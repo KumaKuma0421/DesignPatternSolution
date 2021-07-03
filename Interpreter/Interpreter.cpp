@@ -77,7 +77,7 @@ bool Interpreter::Interpret()
         std::cout << std::endl;
 
         Operation* operation = new Operation(operationString);
-        
+
         Operand* operand1 = new Operand(operandString1);
         operation->SetOperand(operand1);
 

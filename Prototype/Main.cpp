@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 
     Prototype proto3;
     proto1.Clone(proto3);
-    
+
     Prototype proto4;
     proto4 = proto1;
 
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
     prot1.SetName("prot1");
 
     ConcretePrototype prot2(prot1);
-    
+
     ConcretePrototype prot3;
     prot1.Clone(prot3);
 

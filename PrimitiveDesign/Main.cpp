@@ -31,19 +31,27 @@ namespace Primitive_AbstractFactory
 {
     void Run_AbstractFactory()
     {
-        AbstractFactory* myFactory = new ConcreteFactory();
-        Product1* myProduct1 = myFactory->CreateProduct1();
-        Product2* myProduct2 = myFactory->CreateProduct2();
+        IFactory* factoryA = new FactoryA();
+        IProduct1* aProduct1 = factoryA->CreateProduct1();
+        IProduct2* aProduct2 = factoryA->CreateProduct2();
+        aProduct1->Action1();
+        aProduct2->Action2();
+
+        IFactory* factoryB = new FactoryB();
+        IProduct1* bProduct1 = factoryB->CreateProduct1();
+        IProduct2* bProduct2 = factoryB->CreateProduct2();
+        bProduct1->Action1();
+        bProduct2->Action2();
     }
-    auto run_ab = []() {};
 }
 
 namespace Primitive_Builder
 {
     void Run_Builder()
     {
-        Builder* myBuilder = new ConcreteBuilder();
+        IBuilder* myBuilder = new Builder();
         Product* myProduct = myBuilder->Build();
+        myProduct->Action();
     }
 }
 
@@ -51,8 +59,9 @@ namespace Primitive_FactoryMethod
 {
     void Run_FactoryMethod()
     {
-        Creator* myCreator = new ConcreteCreator();
-        Product* myProduct = myCreator->CreateProduct();
+        ICreator* myCreator = new Creator();
+        IProduct* myProduct = myCreator->CreateProduct();
+        myProduct->Action();
     }
 }
 
@@ -60,8 +69,29 @@ namespace Primitive_Prototype
 {
     void Run_Prototype()
     {
-        Prototype* prototype1 = new ConcretePrototype();
-        Prototype* prototype2 = prototype1->Clone();
+        bool bActive;
+        int iCounter;
+
+        Prototype* proto1 = new Prototype();
+        proto1->SetActive(true);
+        proto1->SetCounter(10);
+
+        Prototype* proto2 = new Prototype(*proto1);
+        bActive = proto2->GetActive();
+        iCounter = proto2->GetCounter();
+
+        Prototype* proto3 = proto1->Clone();
+        bActive = proto3->GetActive();
+        iCounter = proto3->GetCounter();
+
+        Prototype proto4 = *proto1; // run by copy constructor
+        bActive = proto4.GetActive();
+        iCounter = proto4.GetCounter();
+
+        Prototype proto5;
+        proto5 = proto4; // run by operator
+        bActive = proto5.GetActive();
+        iCounter = proto5.GetCounter();
     }
 }
 
@@ -76,10 +106,16 @@ namespace Primitive_Singleton
 
 namespace Primitive_Adapter
 {
-    void Run_Adapter()
+    void Run_Adapter1()
     {
         Adaptee* adaptee = new Adaptee();
-        Adapter* adapter = new Adapter(adaptee);
+        IAdapter* adapter = new Adapter1(adaptee);
+        bool ret = adapter->DoAction();
+    }
+
+    void Run_Adapter2()
+    {
+        IAdapter* adapter = new Adapter2();
         bool ret = adapter->DoAction();
     }
 }
@@ -88,10 +124,10 @@ namespace Primitive_Bridge
 {
     void Run_Bridge()
     {
-        ConcreteImprementer1* impl1 = new ConcreteImprementer1();
-        ConcreteImprementer1* impl2 = new ConcreteImprementer1();
-        AbstractBridge* bridge1 = new ConcreteBridge(impl1);
-        AbstractBridge* bridge2 = new ConcreteBridge(impl2);
+        Imprementer1* impl1 = new Imprementer1();
+        Imprementer1* impl2 = new Imprementer1();
+        AbstractBridge* bridge1 = new Bridge(impl1);
+        AbstractBridge* bridge2 = new Bridge(impl2);
         bridge1->Action();
         bridge2->Action();
     }
@@ -118,7 +154,7 @@ namespace Primitive_Decorator
 {
     void Run_Decorator()
     {
-        ConcreteComponent* component = new ConcreteComponent();
+        Component* component = new Component();
         Decorator* decorator = new Decorator(component);
 
         decorator->Action();
@@ -165,9 +201,9 @@ namespace Primitive_Command
     {
         Invoker* invoker = new Invoker();
         Receiver* receiver = new Receiver();
-        ConcreteCommand* command1 = new ConcreteCommand(receiver);
+        Command1* command1 = new Command1(receiver);
         invoker->Add(command1);
-        ConcreteCommand* command2 = new ConcreteCommand(receiver);
+        Command2* command2 = new Command2(receiver);
         invoker->Add(command2);
         invoker->Action();
     }
@@ -177,9 +213,9 @@ namespace Primitive_Mediator
 {
     void Run_Mediator()
     {
-        Mediator* mediator = new ConcreteMediator();
-        Colleague* colleague1 = new ConcreteColleague1();
-        Colleague* colleague2 = new ConcreteColleague2();
+        AbstractMediator* mediator = new Mediator();
+        AbstractColleague* colleague1 = new Colleague1();
+        AbstractColleague* colleague2 = new Colleague2();
         mediator->Add(colleague1);
         mediator->Add(colleague2);
         colleague1->Set(mediator);
@@ -204,8 +240,8 @@ namespace Primitive_Observer
     void Run_Observer()
     {
         ConcreteSubscriber subscriber;
-        ConcreteObserver1 observer1;
-        ConcreteObserver2 observer2;
+        Observer1 observer1;
+        Observer2 observer2;
         subscriber.Add(&observer1);
         subscriber.Add(&observer2);
         subscriber.Notify();
@@ -236,7 +272,7 @@ namespace Primitive_TemplateMethod
 {
     void Run_TemplateMethod()
     {
-        ConcreteMethod method;
+        TemplateMethod method;
         method.Action();
     }
 }
@@ -245,10 +281,10 @@ namespace Primitive_Visitor
 {
     void Run_Visitor()
     {
-        ConcreteAcceptor1 acceptor1;
-        ConcreteAcceptor2 acceptor2;
-        ConcreteVisitor1 visitor1;
-        ConcreteVisitor1 visitor2;
+        Acceptor1 acceptor1;
+        Acceptor2 acceptor2;
+        Visitor1 visitor1;
+        Visitor2 visitor2;
 
         acceptor1.Accept(&visitor1);
         acceptor2.Accept(&visitor1);
@@ -266,7 +302,8 @@ int main(int argc, char** argv)
         FactoryMethod,
         Prototype,
         Singleton,
-        Adapter,
+        Adapter1,
+        Adapter2,
         Bridge,
         Composite,
         Decorator,
@@ -291,13 +328,14 @@ int main(int argc, char** argv)
     container[DesignPattern::FactoryMethod] = Primitive_FactoryMethod::Run_FactoryMethod;
     container[DesignPattern::Prototype] = Primitive_Prototype::Run_Prototype;
     container[DesignPattern::Singleton] = Primitive_Singleton::Run_Singleton;
-    container[DesignPattern::Adapter] = Primitive_Adapter::Run_Adapter;
+    container[DesignPattern::Adapter1] = Primitive_Adapter::Run_Adapter1;
+    container[DesignPattern::Adapter2] = Primitive_Adapter::Run_Adapter2;
     container[DesignPattern::Bridge] = Primitive_Bridge::Run_Bridge;
     container[DesignPattern::Composite] = Primitive_Composite::Run_Composite;
     container[DesignPattern::Decorator] = Primitive_Decorator::Run_Decorator;
     // Facadeは飛ばします。
     container[DesignPattern::Flyweight] = Primitive_Flyweight::Run_Flyweight;
-    container[DesignPattern::Prototype] = Primitive_Proxy::Run_Proxy;
+    container[DesignPattern::Proxy] = Primitive_Proxy::Run_Proxy;
     container[DesignPattern::ChainOfResponsibility] = Primitive_ChainOfResponsibility::Run_ChainOfResponsibility;
     container[DesignPattern::Command] = Primitive_Command::Run_Command;
     // Iteratorは後回し
@@ -310,7 +348,7 @@ int main(int argc, char** argv)
     container[DesignPattern::Visitor] = Primitive_Visitor::Run_Visitor;
 
     // Action!
-    container[DesignPattern::Strategy]();
+    container[DesignPattern::Visitor]();
 
     std::cout << "Done!" << std::endl;
 }

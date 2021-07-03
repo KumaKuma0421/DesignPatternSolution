@@ -14,32 +14,44 @@ namespace Primitive_Command
         Receiver() {};
         virtual ~Receiver() {};
 
-        bool Action() { return true; };
+        bool Action(int number) { return true; };
     };
 
-    class Command
+    class AbstractCommand
     {
     public:
-        Command(Receiver* receiver) { _receiver = receiver; };
-        virtual ~Command() {};
+        AbstractCommand(Receiver* receiver) { _receiver = receiver; };
+        virtual ~AbstractCommand() {};
 
         virtual bool Action() = 0;
 
     protected:
-        Command() = delete;
+        AbstractCommand() = delete;
         Receiver* _receiver;
     };
 
-    class ConcreteCommand : public Command
+    class Command1 : public AbstractCommand
     {
     public:
-        ConcreteCommand(Receiver* receiver):Command(receiver) {};
-        ~ConcreteCommand() {};
+        Command1(Receiver* receiver) :AbstractCommand(receiver) {};
+        ~Command1() {};
 
-        bool Action() { return _receiver->Action(); };
+        bool Action() { return _receiver->Action(1); };
 
     private:
-        ConcreteCommand() = delete;
+        Command1() = delete;
+    };
+
+    class Command2 : public AbstractCommand
+    {
+    public:
+        Command2(Receiver* receiver) :AbstractCommand(receiver) {};
+        ~Command2() {};
+
+        bool Action() { return _receiver->Action(2); };
+
+    private:
+        Command2() = delete;
     };
 
     class Invoker
@@ -48,7 +60,7 @@ namespace Primitive_Command
         Invoker() {};
         virtual ~Invoker() {};
 
-        void Add(Command* command) { _container.push_back(command); };
+        void Add(AbstractCommand* command) { _container.push_back(command); };
         bool Action()
         {
             bool ret = false;
@@ -63,6 +75,6 @@ namespace Primitive_Command
         };
 
     private:
-        std::vector<Command*> _container;
+        std::vector<AbstractCommand*> _container;
     };
 }

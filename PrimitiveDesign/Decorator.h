@@ -6,28 +6,25 @@
 
 namespace Primitive_Decorator
 {
-    class Component
+    class IComponent
+    {
+    public:
+        virtual bool Action() = 0;
+    };
+
+    class Component : public IComponent
     {
     public:
         Component() {};
         virtual ~Component() {};
 
-        virtual bool Action() = 0;
-    };
-
-    class ConcreteComponent: public Component
-    {
-    public:
-        ConcreteComponent() {};
-        virtual ~ConcreteComponent() {};
-
         bool Action() { return true; };
     };
 
-    class Decorator : public Component
+    class Decorator : public IComponent
     {
     public:
-        Decorator(Component* component) { _component = component; };
+        Decorator(IComponent* component) { _component = component; };
         virtual ~Decorator() {};
 
         bool Action() { return true; };
@@ -35,6 +32,6 @@ namespace Primitive_Decorator
     private:
         Decorator() = delete;
 
-        Component* _component;
+        IComponent* _component;
     };
 }

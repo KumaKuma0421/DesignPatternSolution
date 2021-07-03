@@ -29,7 +29,7 @@ namespace Primitive_Flyweight
         Flyweight* GetFlyweight(int number)
         {
             Flyweight* response = _container.at(number);
-            if (nullptr== response)
+            if (nullptr == response)
             {
                 response = new Flyweight(number);
                 _container[number] = response;
