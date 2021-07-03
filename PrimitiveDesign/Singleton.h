@@ -16,7 +16,7 @@ namespace Primitive_Singleton
             if (_instance == nullptr) _instance = new Singleton();
             return _instance;
         };
-    
+
     private:
         Singleton() {};
 

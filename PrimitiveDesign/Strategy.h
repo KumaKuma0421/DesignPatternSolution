@@ -8,38 +8,35 @@
 
 namespace Primitive_Strategy
 {
-    class Strategy
+    class IStrategy
     {
     public:
-        Strategy() {};
-        virtual ~Strategy() {};
-
         virtual void Action() = 0;
     };
 
-    class ConcreteStrategy1 : public Strategy
+    class Strategy1 : public IStrategy
     {
     public:
-        ConcreteStrategy1() {};
-        ~ConcreteStrategy1() {};
+        Strategy1() {};
+        ~Strategy1() {};
 
         void Action() {};
     };
 
-    class ConcreteStrategy2 : public Strategy
+    class Strategy2 : public IStrategy
     {
     public:
-        ConcreteStrategy2() {};
-        ~ConcreteStrategy2() {};
+        Strategy2() {};
+        ~Strategy2() {};
 
         void Action() {};
     };
 
-    class ConcreteStrategy3 : public Strategy
+    class Strategy3 : public IStrategy
     {
     public:
-        ConcreteStrategy3() {};
-        ~ConcreteStrategy3() {};
+        Strategy3() {};
+        ~Strategy3() {};
 
         void Action() {};
     };
@@ -49,19 +46,19 @@ namespace Primitive_Strategy
     public:
         Invoker()
         {
-            _container[0] = new ConcreteStrategy1();
-            _container[1] = new ConcreteStrategy2();
-            _container[2] = new ConcreteStrategy3();
+            _container[0] = new Strategy1();
+            _container[1] = new Strategy2();
+            _container[2] = new Strategy3();
         };
         virtual ~Invoker() {};
 
         virtual void Action(int action)
         {
-            Strategy* strategy = _container.at(action);
+            IStrategy* strategy = _container.at(action);
             if (strategy) strategy->Action();
         };
 
     private:
-        std::map<int, Strategy*> _container;
+        std::map<int, IStrategy*> _container;
     };
 }

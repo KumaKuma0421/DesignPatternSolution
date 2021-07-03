@@ -6,67 +6,61 @@
 
 namespace Primitive_Visitor
 {
-    class Visitor;
-    class ConcreteAcceptor1;
-    class ConcreteAcceptor2;
+    class IVisitor;
+    class Acceptor1;
+    class Acceptor2;
 
-    class Acceptor
+    class IAcceptor
     {
     public:
-        Acceptor() {};
-        virtual ~Acceptor() {};
-
-        virtual void Accept(Visitor* visitor) = 0;
+        virtual void Accept(IVisitor* visitor) = 0;
         virtual void Action() = 0;
     };
 
-    class Visitor
+    class IVisitor
     {
     public:
-        Visitor() {};
-        virtual ~Visitor() {};
-
-        virtual void Visit(ConcreteAcceptor1* acceptor) = 0;
-        virtual void Visit(ConcreteAcceptor2* acceptor) = 0;
+        virtual void Visit(Acceptor1* acceptor) = 0;
+        virtual void Visit(Acceptor2* acceptor) = 0;
     };
 
-    class ConcreteAcceptor1 : public Acceptor
+    class Acceptor1 : public IAcceptor
     {
     public:
-        ConcreteAcceptor1() {};
-        ~ConcreteAcceptor1() {};
+        Acceptor1() {};
+        ~Acceptor1() {};
 
-        void Accept(Visitor* visitor) { visitor->Visit(this); };
+        void Accept(IVisitor* visitor) { visitor->Visit(this); };
         void Action() {};
     };
 
-    class ConcreteAcceptor2 : public Acceptor
+    class Acceptor2 : public IAcceptor
     {
     public:
-        ConcreteAcceptor2() {};
-        ~ConcreteAcceptor2() {};
+        Acceptor2() {};
+        ~Acceptor2() {};
 
-        void Accept(Visitor* visitor) { visitor->Visit(this); };
+        void Accept(IVisitor* visitor) { visitor->Visit(this); };
         void Action() {};
     };
 
-    class ConcreteVisitor1 : public Visitor
+    class Visitor1 : public IVisitor
     {
     public:
-        ConcreteVisitor1() {};
-        virtual ~ConcreteVisitor1() {};
+        Visitor1() {};
+        virtual ~Visitor1() {};
 
-        void Visit(ConcreteAcceptor1* acceptor) { acceptor->Action(); };
-        void Visit(ConcreteAcceptor2* acceptor) { acceptor->Action(); };
+        void Visit(Acceptor1* acceptor) { acceptor->Action(); };
+        void Visit(Acceptor2* acceptor) { acceptor->Action(); };
     };
 
-    class ConcreteVisitor2 : public Visitor
+    class Visitor2 : public IVisitor
     {
     public:
-        ConcreteVisitor2() {};
-        virtual ~ConcreteVisitor2() {};
+        Visitor2() {};
+        virtual ~Visitor2() {};
 
-        void Visit(ConcreteAcceptor1* acceptor) { acceptor->Action(); };
-        void Visit(ConcreteAcceptor2* acceptor) { acceptor->Action(); };
+        void Visit(Acceptor1* acceptor) { acceptor->Action(); };
+        void Visit(Acceptor2* acceptor) { acceptor->Action(); };
     };
 }

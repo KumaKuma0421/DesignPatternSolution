@@ -15,42 +15,36 @@ namespace Primitive_Iterator
         virtual ~Item() {};
     };
 
-    class Aggregate
+    class IAggregate
     {
     public:
-        Aggregate() {};
-        virtual ~Aggregate() {};
-
         virtual void Iterator() = 0;
     };
 
-    class Iterator
+    class IIterator
     {
     public:
-        Iterator() {};
-        virtual ~Iterator() {};
-
         virtual void HasNext() = 0;
         virtual void Next() = 0;
     };
 
-    class ConcreteAggregate : public Aggregate
+    class Aggregate : public IAggregate
     {
     public:
-        ConcreteAggregate() {};
-        virtual ~ConcreteAggregate() {};
+        Aggregate() {};
+        virtual ~Aggregate() {};
     };
 
-    class ConcreteIterator : public Iterator
+    class Iterator : public IIterator
     {
     public:
-        ConcreteIterator() {};
-        ~ConcreteIterator() {};
+        Iterator() {};
+        ~Iterator() {};
 
         void HasNext() {};
         void Next() {};
 
     private:
-        std::vector<ConcreteAggregate> _aggregate;
+        std::vector<Aggregate> _aggregate;
     };
 }

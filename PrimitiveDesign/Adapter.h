@@ -15,16 +15,31 @@ namespace Primitive_Adapter
         bool Action() { return true; };
     };
 
-    class Adapter
+    class IAdapter
     {
     public:
-        Adapter(Adaptee* adaptee) { _adaptee = adaptee; };
-        virtual ~ Adapter() {};
+        virtual bool DoAction() = 0;
+    };
+
+    class Adapter1 : public IAdapter
+    {
+    public:
+        Adapter1(Adaptee* adaptee) { _adaptee = adaptee; };
+        virtual ~Adapter1() {};
 
         bool DoAction() { return _adaptee->Action(); };
 
     private:
-        Adapter() { _adaptee = nullptr; };
+        Adapter1() { _adaptee = nullptr; };
         Adaptee* _adaptee;
+    };
+
+    class Adapter2 : public IAdapter, Adaptee
+    {
+    public:
+        Adapter2() {};
+        ~Adapter2() {};
+
+        bool DoAction() { return Action(); };
     };
 }

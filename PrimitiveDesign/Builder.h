@@ -11,22 +11,21 @@ namespace Primitive_Builder
     public:
         Product() {};
         virtual ~Product() {};
+
+        bool Action() { return true; };
     };
 
-    class Builder
+    class IBuilder
     {
     public:
-        Builder() {};
-        virtual ~Builder() {};
-
         virtual Product* Build() = 0;
     };
 
-    class ConcreteBuilder : public Builder
+    class Builder : public IBuilder
     {
     public:
-        ConcreteBuilder() {};
-        ~ConcreteBuilder() {};
+        Builder() {};
+        ~Builder() {};
 
         Product* Build() { return new Product(); };
     };

@@ -6,11 +6,11 @@
 
 namespace Primitive_TemplateMethod
 {
-    class TemplateMethod
+    class AbstractTemplateMethod
     {
     public:
-        TemplateMethod() {};
-        virtual ~TemplateMethod() {};
+        AbstractTemplateMethod() {};
+        virtual ~AbstractTemplateMethod() {};
 
         virtual bool Action()
         {
@@ -27,11 +27,11 @@ namespace Primitive_TemplateMethod
         virtual bool Function3() = 0;
     };
 
-    class ConcreteMethod : public TemplateMethod
+    class TemplateMethod : public AbstractTemplateMethod
     {
     public:
-        ConcreteMethod() {};
-        ~ConcreteMethod() {};
+        TemplateMethod() {};
+        ~TemplateMethod() {};
 
         bool Function1() { return true; };
         bool Function2() { return true; };

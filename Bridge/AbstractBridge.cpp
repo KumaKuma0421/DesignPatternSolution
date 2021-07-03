@@ -41,7 +41,7 @@ bool UnixFileOperation::ReadRowTest()
         return false;
     }
 
-    for(int i = 0; i < 1000; i++)
+    for (int i = 0; i < 1000; i++)
     {
         sprintf_s(buffer, "%d %s\n", i, "sample");
         _impl->Write(buffer, strlen(buffer));
