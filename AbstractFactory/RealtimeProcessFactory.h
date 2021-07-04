@@ -11,8 +11,8 @@ namespace GoF_AbstractFactory
     class RealtimeProcessFactory : public AbstractFactory
     {
     public:
-        RealtimeProcessFactory();
-        ~RealtimeProcessFactory();
+        RealtimeProcessFactory() {};
+        ~RealtimeProcessFactory() {};
 
         StorageProduct* CreateStorageProduct();
         DisplayProduct* CreateDisplayProduct();

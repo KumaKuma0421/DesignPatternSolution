@@ -11,8 +11,8 @@ namespace GoF_FactoryMethod
     class Creator
     {
     public:
-        Creator();
-        virtual ~Creator();
+        Creator() {};
+        virtual ~Creator() {};
 
         virtual Product* CreateProduct() = 0;
     };
@@ -20,8 +20,8 @@ namespace GoF_FactoryMethod
     class ConcreteCreator : public Creator
     {
     public:
-        ConcreteCreator();
-        ~ConcreteCreator();
+        ConcreteCreator() {};
+        ~ConcreteCreator() {};
 
         Product* CreateProduct();
     };

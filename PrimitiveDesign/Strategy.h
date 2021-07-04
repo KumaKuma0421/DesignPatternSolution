@@ -11,6 +11,7 @@ namespace Primitive_Strategy
     class IStrategy
     {
     public:
+        virtual ~IStrategy() {};
         virtual void Action() = 0;
     };
 

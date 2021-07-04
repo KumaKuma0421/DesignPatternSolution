@@ -18,12 +18,14 @@ namespace Primitive_Iterator
     class IAggregate
     {
     public:
+        virtual ~IAggregate() {};
         virtual void Iterator() = 0;
     };
 
     class IIterator
     {
     public:
+        virtual ~IIterator() {};
         virtual void HasNext() = 0;
         virtual void Next() = 0;
     };
@@ -32,7 +34,7 @@ namespace Primitive_Iterator
     {
     public:
         Aggregate() {};
-        virtual ~Aggregate() {};
+        ~Aggregate() {};
     };
 
     class Iterator : public IIterator

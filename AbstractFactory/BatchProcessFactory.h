@@ -11,8 +11,8 @@ namespace GoF_AbstractFactory
     class BatchProcessFactory : public AbstractFactory
     {
     public:
-        BatchProcessFactory();
-        ~BatchProcessFactory();
+        BatchProcessFactory() {};
+        ~BatchProcessFactory() {};
 
         StorageProduct* CreateStorageProduct();
         DisplayProduct* CreateDisplayProduct();

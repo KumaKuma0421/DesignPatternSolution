@@ -17,9 +17,9 @@ int main(int argc, char** argv)
 
     AbstractFactory* factory2 = AbstractFactory::CreateFactory("Realtime");
 
-    StorageProduct* storage2 = factory1->CreateStorageProduct();
-    DisplayProduct* display2 = factory1->CreateDisplayProduct();
-    ControlProduct* control2 = factory1->CreateControlProduct();
+    StorageProduct* storage2 = factory2->CreateStorageProduct();
+    DisplayProduct* display2 = factory2->CreateDisplayProduct();
+    ControlProduct* control2 = factory2->CreateControlProduct();
 
     std::cout << "Done." << std::endl;
 }

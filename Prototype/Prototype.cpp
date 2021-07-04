@@ -6,21 +6,6 @@
 
 using namespace GoF_Prototype;
 
-Prototype::Prototype()
-{
-    _id = -1;
-}
-
-Prototype::Prototype(const Prototype& obj)
-{
-    _id = obj._id;
-}
-
-Prototype::~Prototype()
-{
-
-}
-
 void Prototype::Clone(Prototype& obj)
 {
     obj._id = _id;
@@ -40,20 +25,10 @@ Prototype& Prototype::operator << (const Prototype& obj)
 
 // --------------------------------------------------------------------
 
-ConcretePrototype::ConcretePrototype()
-{
-
-}
-
 ConcretePrototype::ConcretePrototype(const ConcretePrototype& obj)
 {
     _id = obj._id;
     _name = obj._name;
-}
-
-ConcretePrototype::~ConcretePrototype()
-{
-
 }
 
 void ConcretePrototype::Clone(ConcretePrototype& obj)

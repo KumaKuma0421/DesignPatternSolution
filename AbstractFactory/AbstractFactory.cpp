@@ -8,46 +8,6 @@
 
 using namespace GoF_AbstractFactory;
 
-StorageProduct::StorageProduct()
-{
-
-}
-
-StorageProduct::~StorageProduct()
-{
-
-}
-
-DisplayProduct::DisplayProduct()
-{
-
-}
-
-DisplayProduct::~DisplayProduct()
-{
-
-}
-
-ControlProduct::ControlProduct()
-{
-
-}
-
-ControlProduct::~ControlProduct()
-{
-
-}
-
-AbstractFactory::AbstractFactory()
-{
-
-}
-
-AbstractFactory::~AbstractFactory()
-{
-
-}
-
 AbstractFactory* AbstractFactory::CreateFactory(std::string type)
 {
     AbstractFactory* response;

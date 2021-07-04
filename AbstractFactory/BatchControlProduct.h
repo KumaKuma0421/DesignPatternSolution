@@ -11,8 +11,8 @@ namespace GoF_AbstractFactory
     class BatchControlProduct : public ControlProduct
     {
     public:
-        BatchControlProduct();
-        ~BatchControlProduct();
+        BatchControlProduct() {};
+        ~BatchControlProduct() {};
 
         bool Start();
         bool Stop();

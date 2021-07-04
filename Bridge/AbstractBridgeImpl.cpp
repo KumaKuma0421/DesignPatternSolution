@@ -6,16 +6,6 @@
 
 using namespace GoF_Bridge;
 
-WindowsFileOperationImpl::WindowsFileOperationImpl()
-{
-    _hFile = nullptr;
-}
-
-WindowsFileOperationImpl::~WindowsFileOperationImpl()
-{
-    if (_hFile) ::CloseHandle(_hFile);
-}
-
 bool WindowsFileOperationImpl::Open(char* fileName)
 {
     DWORD dwDesiredAccess = GENERIC_ALL;
@@ -87,15 +77,6 @@ bool WindowsFileOperationImpl::Close()
 }
 
 // --------------------------------------------------------
-
-UnixFileOperationImpl::UnixFileOperationImpl()
-{
-    _fp = nullptr;
-}
-
-UnixFileOperationImpl::~UnixFileOperationImpl()
-{
-}
 
 // @sa https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/fopen-s-wfopen-s?redirectedfrom=MSDN&view=msvc-160
 bool UnixFileOperationImpl::Open(char* fileName)

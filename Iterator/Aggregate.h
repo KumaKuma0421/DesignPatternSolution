@@ -11,21 +11,25 @@
 namespace GoF_Iterator
 {
     template<class T>
-    class Iterator;
+    class IIterator;
     template<class T>
     class ItemIterator;
 
     template<class T>
-    class Aggregate
+    class IAggregate
     {
     public:
-        virtual Iterator<T>* Itr() = 0;
+        virtual ~IAggregate() {};
+        virtual IIterator<T>* Itr() = 0;
     };
 
     template<class T>
-    class ItemAggregate : public Aggregate<T>
+    class ItemAggregate : public IAggregate<T>
     {
     public:
+        ItemAggregate() {};
+        ~ItemAggregate() {};
+
         void Add(T item)
         {
             _items.push_back(item);
@@ -41,7 +45,7 @@ namespace GoF_Iterator
             return _items.size();
         };
 
-        Iterator<T>* Itr()
+        IIterator<T>* Itr()
         {
             return new ItemIterator<T>(this);
         };

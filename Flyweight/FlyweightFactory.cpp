@@ -34,16 +34,6 @@ bool Flyweight::Initialize(std::string fileName)
     return true;
 }
 
-FlyweightFactory::FlyweightFactory()
-{
-
-}
-
-FlyweightFactory::~FlyweightFactory()
-{
-
-}
-
 Flyweight* FlyweightFactory::GetFlyweight(std::string key)
 {
     Flyweight* flyweight = _container[key];

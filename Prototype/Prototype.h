@@ -10,9 +10,9 @@ namespace GoF_Prototype
     class Prototype
     {
     public:
-        Prototype();
-        Prototype(const Prototype& obj);
-        virtual ~Prototype();
+        Prototype() { _id = -1; };
+        Prototype(const Prototype& obj) { _id = obj._id; };
+        virtual ~Prototype() {};
 
         void Clone(Prototype& obj);
         Prototype& operator = (const Prototype& obj);
@@ -28,9 +28,9 @@ namespace GoF_Prototype
     class ConcretePrototype : public Prototype
     {
     public:
-        ConcretePrototype();
+        ConcretePrototype() {};
         ConcretePrototype(const ConcretePrototype& obj);
-        ~ConcretePrototype();
+        ~ConcretePrototype() {};
 
         void Clone(ConcretePrototype& obj);
         ConcretePrototype& operator = (const ConcretePrototype& obj);

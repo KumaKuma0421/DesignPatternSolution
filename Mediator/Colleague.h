@@ -36,5 +36,8 @@ namespace GoF_Mediator
         void Advice(std::string message);
 
         void Run();
+
+    private:
+        RealColleague() = delete;
     };
 }

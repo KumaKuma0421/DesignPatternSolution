@@ -20,6 +20,9 @@ namespace GoF_Bridge
     class FileOperationImpl
     {
     public:
+        FileOperationImpl() {};
+        virtual ~FileOperationImpl() {};
+
         virtual bool Open(char* fileName) = 0;
         virtual int Read(char* buffer, size_t size) = 0;
         virtual bool Write(char* buffer, size_t size) = 0;
@@ -31,8 +34,8 @@ namespace GoF_Bridge
     class WindowsFileOperationImpl : public FileOperationImpl
     {
     public:
-        WindowsFileOperationImpl();
-        ~WindowsFileOperationImpl();
+        WindowsFileOperationImpl() { _hFile = nullptr; };
+        ~WindowsFileOperationImpl() { if (_hFile) ::CloseHandle(_hFile); };
 
         bool Open(char* fileName);
         int Read(char* buffer, size_t size);
@@ -48,8 +51,8 @@ namespace GoF_Bridge
     class UnixFileOperationImpl : public FileOperationImpl
     {
     public:
-        UnixFileOperationImpl();
-        ~UnixFileOperationImpl();
+        UnixFileOperationImpl() { _fp = nullptr; };
+        ~UnixFileOperationImpl() { if (_fp) fclose(_fp); };
 
         bool Open(char* fileName);
         int Read(char* buffer, size_t size);

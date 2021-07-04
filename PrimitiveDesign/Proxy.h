@@ -9,6 +9,7 @@ namespace Primitive_Proxy
     class ISubject
     {
     public:
+        virtual ~ISubject() {};
         virtual bool Action() = 0;
         virtual bool HeavyAction() = 0;
     };
@@ -27,7 +28,7 @@ namespace Primitive_Proxy
     {
     public:
         Proxy() {};
-        virtual ~Proxy() {};
+        ~Proxy() {};
 
         bool Action() { return true; };
         bool HeavyAction()

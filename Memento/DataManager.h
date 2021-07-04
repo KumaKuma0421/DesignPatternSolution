@@ -17,8 +17,8 @@ namespace GoF_Memento
     class DataManager
     {
     public:
-        DataManager();
-        virtual ~DataManager();
+        DataManager() { _manager = new CacheManager(); };
+        virtual ~DataManager() { delete _manager; };
 
         bool Get(int id, std::string& data);
         void Set(int id, std::string& data);

@@ -16,6 +16,7 @@ namespace GoF_Visitor
     public:
         Position();
         Position(int x, int y);
+        virtual ~Position() {};
 
         void Set(int x, int y);
         void SetX(int x) { _x = x; };
@@ -51,6 +52,8 @@ namespace GoF_Visitor
     {
     public:
         Line(Position first, Position last);
+        ~Line() {};
+
         virtual bool Operate(Operation* operation);
     };
 
@@ -58,6 +61,8 @@ namespace GoF_Visitor
     {
     public:
         Triangle(Position first, Position second, Position third);
+        ~Triangle() {};
+
         virtual bool Operate(Operation* operation);
     };
 
@@ -65,6 +70,8 @@ namespace GoF_Visitor
     {
     public:
         Rectangle(Position first, Position second, Position third, Position forth);
+        ~Rectangle() {};
+
         virtual bool Operate(Operation* operation);
     };
 }

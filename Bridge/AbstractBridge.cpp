@@ -6,24 +6,69 @@
 
 using namespace GoF_Bridge;
 
-AbstractBridge::AbstractBridge()
+bool WindowsFileOperation::InitInstance()
 {
-    _impl = nullptr;
+    _impl = new WindowsFileOperationImpl();
+    return true;
 }
 
-AbstractBridge::~AbstractBridge()
+bool WindowsFileOperation::ExitInstance()
 {
-    if (!_impl) delete _impl;
+    delete _impl;
+    return true;
 }
 
-UnixFileOperation::UnixFileOperation()
+bool WindowsFileOperation::ReadRowTest()
 {
+    bool ret;
+    char* fileName = (char*)".\\sample_text.txt";
+    const size_t size = 1024;
+    char buffer[size];
+    int read;
 
+    ret = _impl->Open(fileName);
+    if (!ret)
+    {
+        printf("can't find file '%s'\n", fileName);
+        return false;
+    }
+
+    for (int i = 0; i < 1000; i++)
+    {
+        sprintf_s(buffer, "%d %s\n", i, "sample");
+        _impl->Write(buffer, strlen(buffer));
+    }
+
+    _impl->Flush();
+    _impl->SetPos(FilePos::Begin, 0);
+
+    while ((read = _impl->Read(buffer, size)) != -1)
+    {
+        printf("%s", buffer);
+    }
+
+    ret = _impl->Close();
+    if (!ret)
+    {
+        printf("file close failed. '%s'\n", fileName);
+        return false;
+    }
+
+    return true;
 }
 
-UnixFileOperation::~UnixFileOperation()
-{
+// --------------------------------------------------------
 
+bool UnixFileOperation::InitInstance()
+{
+    _impl = new UnixFileOperationImpl();
+    return true;
+}
+
+bool UnixFileOperation::ExitInstance()
+{
+    delete _impl;
+    return true;
 }
 
 bool UnixFileOperation::ReadRowTest()

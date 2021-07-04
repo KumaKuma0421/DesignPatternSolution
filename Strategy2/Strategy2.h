@@ -16,6 +16,9 @@ namespace GoF_Strategy2
     class Strategy2
     {
     public:
+        Strategy2() {};
+        virtual ~Strategy2() {};
+
         int Init();
         int Action(std::string criteria);
 

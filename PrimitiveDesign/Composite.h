@@ -25,7 +25,7 @@ namespace Primitive_Composite
     {
     public:
         Composite(int number) :Component(number) {};
-        virtual ~Composite() {};
+        ~Composite() {};
 
         void Add(Component* component)
         {
@@ -41,7 +41,7 @@ namespace Primitive_Composite
     {
     public:
         Leaf(int number) :Component(number) {};
-        virtual ~Leaf() {};
+        ~Leaf() {};
 
     private:
         Leaf() = delete;

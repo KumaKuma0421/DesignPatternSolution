@@ -9,18 +9,21 @@ namespace Primitive_AbstractFactory
     class IProduct1
     {
     public:
+        virtual ~IProduct1() {};
         virtual bool Action1() = 0;
     };
 
     class IProduct2
     {
     public:
+        virtual ~IProduct2() {};
         virtual bool Action2() = 0;
     };
 
     class IFactory
     {
     public:
+        virtual ~IFactory() {};
         virtual IProduct1* CreateProduct1() = 0;
         virtual IProduct2* CreateProduct2() = 0;
     };

@@ -11,8 +11,8 @@ namespace GoF_AbstractFactory
     class RealtimeControlProduct : public ControlProduct
     {
     public:
-        RealtimeControlProduct();
-        ~RealtimeControlProduct();
+        RealtimeControlProduct() {};
+        ~RealtimeControlProduct() {};
 
         bool Start();
         bool Stop();

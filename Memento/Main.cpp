@@ -51,7 +51,7 @@ int main(int argc, char** argv)
         if (ret) hitCount++;
         else missCount++;
 
-        double ratio = (double)hitCount / (double)(hitCount + missCount);
+        double ratio = (double)hitCount / ((double)hitCount + (double)missCount);
         if (ret) std::cout << "hit ratio=" << std::to_string(ratio) << std::endl;
         //std::cout << data << std::endl;
     }

@@ -6,16 +6,6 @@
 
 using namespace GoF_Memento;
 
-DataManager::DataManager()
-{
-    _manager = new CacheManager();
-}
-
-DataManager::~DataManager()
-{
-    delete _manager;
-}
-
 bool DataManager::Get(int id, std::string& data)
 {
     bool ret;

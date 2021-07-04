@@ -12,17 +12,23 @@ namespace GoF_Decorator
     class Core
     {
     public:
+        Core() {};
+        virtual ~Core() {};
+
         virtual bool Action(DWORD dwParam) = 0;
     };
 
     class TickCounter : public Core
     {
     public:
-        TickCounter(Core* core);
+        TickCounter(Core* core) { _core = core; };
+        ~TickCounter() {};
 
         bool Action(DWORD dwParam);
 
     private:
+        TickCounter() = delete;
+
         Core* _core;
     };
 
@@ -34,6 +40,8 @@ namespace GoF_Decorator
         bool Action(DWORD dwParam);
 
     private:
+        FrequencyCounter() = delete;
+
         Core* _core;
         LARGE_INTEGER _liFrequency;
     };
@@ -41,6 +49,9 @@ namespace GoF_Decorator
     class Execute : public Core
     {
     public:
+        Execute() {};
+        virtual ~Execute() {};
+
         bool Action(DWORD dwParam);
     };
 }

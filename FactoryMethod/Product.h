@@ -9,14 +9,14 @@ namespace GoF_FactoryMethod
     class Product
     {
     public:
-        Product();
-        virtual ~Product();
+        Product() {};
+        virtual ~Product() {};
     };
 
     class ConcreteProduct : public Product
     {
     public:
-        ConcreteProduct();
-        ~ConcreteProduct();
+        ConcreteProduct() {};
+        ~ConcreteProduct() {};
     };
 }

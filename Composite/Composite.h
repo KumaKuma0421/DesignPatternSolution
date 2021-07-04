@@ -21,10 +21,7 @@ namespace GoF_Composite
         };
         virtual ~Composite() {};
 
-        virtual void Print()
-        {
-            std::cout << id << ":" << name << std::endl;
-        };
+        virtual void Print();
 
         int id;
         std::string name;
@@ -47,27 +44,11 @@ namespace GoF_Composite
 
         virtual ~Node() {};
 
-        void Add(Node* node)
-        {
-            _nodes.push_back(node);
-        };
+        void Add(Node* node) { _nodes.push_back(node); };
+        void Add(Leaf* leaf) { _leafs.push_back(leaf); };
 
-        void Add(Leaf* leaf)
-        {
-            _leafs.push_back(leaf);
-        };
-
-        Node* GetNodes(size_t index)
-        {
-            if (index < _nodes.size()) return _nodes[index];
-            else return nullptr;
-        };
-
-        Leaf* GetLeafs(size_t index)
-        {
-            if (index < _leafs.size()) return _leafs[index];
-            else return nullptr;
-        };
+        Node* GetNodes(size_t index);
+        Leaf* GetLeafs(size_t index);
 
     private:
         std::vector<Node*> _nodes;

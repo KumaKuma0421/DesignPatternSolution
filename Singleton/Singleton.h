@@ -14,9 +14,6 @@ namespace GoF_Singleton
             if (_instance == nullptr) _instance = new Singleton();
             return _instance;
         }
-        Singleton(const Singleton&) = delete;
-
-        // --------------------
 
         int GetValue1() { return _value1; };
         int GetValue2() { return _value2; };
@@ -24,12 +21,12 @@ namespace GoF_Singleton
         void SetValue2(int value2) { _value2 = value2; };
 
     private:
+        Singleton(const Singleton&) = delete;
         Singleton() = default;
         ~Singleton() = default;
 
         static Singleton* _instance;
 
-        // --------------------
         int _value1 = -1;
         int _value2 = -1;
     };

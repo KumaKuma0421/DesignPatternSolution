@@ -6,16 +6,6 @@
 
 using namespace GoF_AbstractFactory;
 
-BatchControlProduct::BatchControlProduct()
-{
-
-}
-
-BatchControlProduct::~BatchControlProduct()
-{
-
-}
-
 bool BatchControlProduct::Start()
 {
     return true;

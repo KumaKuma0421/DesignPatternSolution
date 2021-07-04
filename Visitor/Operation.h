@@ -29,12 +29,14 @@ namespace GoF_Visitor
     {
     public:
         ShiftOperation(int x, int y);
+        ~ShiftOperation() {};
 
         bool DoOperation(Line* target);
         bool DoOperation(Triangle* target);
         bool DoOperation(Rectangle* target);
 
     private:
+        ShiftOperation() = delete;
         bool DoOperationCore(Shape* target);
 
         int _x;
@@ -45,12 +47,14 @@ namespace GoF_Visitor
     {
     public:
         RotateOperation(double radian);
+        ~RotateOperation() {};
 
         bool DoOperation(Line* target);
         bool DoOperation(Triangle* target);
         bool DoOperation(Rectangle* target);
 
     private:
+        RotateOperation() = delete;
         double _radian;
     };
 

@@ -14,7 +14,7 @@ namespace GoF_Memento
     class CacheObject
     {
     public:
-        virtual ~CacheObject();
+        virtual ~CacheObject() {};
 
     private:
         CacheObject();

@@ -6,11 +6,6 @@
 
 using namespace GoF_Decorator;
 
-TickCounter::TickCounter(Core* core)
-{
-    _core = core;
-}
-
 bool TickCounter::Action(DWORD dwParam)
 {
     ULONGLONG start = GetTickCount64();

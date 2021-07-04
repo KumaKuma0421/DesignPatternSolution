@@ -30,8 +30,8 @@ namespace GoF_Flyweight
     class FlyweightFactory
     {
     public:
-        FlyweightFactory();
-        virtual ~FlyweightFactory();
+        FlyweightFactory() {};
+        virtual ~FlyweightFactory() {};
 
         Flyweight* GetFlyweight(std::string key);
 

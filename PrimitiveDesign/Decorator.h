@@ -9,6 +9,7 @@ namespace Primitive_Decorator
     class IComponent
     {
     public:
+        virtual ~IComponent() {};
         virtual bool Action() = 0;
     };
 
@@ -16,7 +17,7 @@ namespace Primitive_Decorator
     {
     public:
         Component() {};
-        virtual ~Component() {};
+        ~Component() {};
 
         bool Action() { return true; };
     };
@@ -25,9 +26,9 @@ namespace Primitive_Decorator
     {
     public:
         Decorator(IComponent* component) { _component = component; };
-        virtual ~Decorator() {};
+        ~Decorator() {};
 
-        bool Action() { return true; };
+        bool Action() { return _component->Action(); };
 
     private:
         Decorator() = delete;

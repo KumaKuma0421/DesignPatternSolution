@@ -9,6 +9,7 @@ namespace Primitive_State
     class IState
     {
     public:
+        virtual ~IState() {};
         virtual void Action() = 0;
     };
 

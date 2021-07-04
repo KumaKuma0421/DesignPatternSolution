@@ -20,7 +20,7 @@ namespace Primitive_Prototype
             Take(obj);
         };
 
-        ~Prototype() {};
+        virtual ~Prototype() {};
 
         Prototype* Clone()
         {

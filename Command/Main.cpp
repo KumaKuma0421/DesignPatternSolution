@@ -11,17 +11,17 @@ using namespace GoF_Command;
 
 int main(int argc, char** argv)
 {
-    Invoker invoker;
-    RealReceiver receiver;
-    TurnOnCommand turnOn(&receiver);
-    TurnOffCommand turnOff(&receiver);
+    Invoker* invoker = new Invoker();
+    IReceiver* receiver = new RealReceiver();
+    TurnOnCommand turnOn(receiver);
+    TurnOffCommand turnOff(receiver);
 
-    invoker.Add(&turnOff);
-    invoker.Add(&turnOn);
-    invoker.Add(&turnOff);
-    invoker.Add(&turnOn);
+    invoker->Add(&turnOff);
+    invoker->Add(&turnOn);
+    invoker->Add(&turnOff);
+    invoker->Add(&turnOn);
 
-    invoker.Execute();
+    invoker->Execute();
 
     std::cout << "Done." << std::endl;
 }

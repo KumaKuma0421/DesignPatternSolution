@@ -38,10 +38,8 @@ namespace GoF_Builder
     class Maker
     {
     public:
-        Maker()
-        {
-            _selectedBuilder = nullptr;
-        };
+        Maker() { _selectedBuilder = nullptr; };
+        virtual ~Maker() {};
 
         void SelectBuilder(std::string builder);
         std::string GetPrint();

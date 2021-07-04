@@ -11,6 +11,7 @@ namespace Primitive_Observer
     class IObserver
     {
     public:
+        virtual ~IObserver() {};
         virtual void Update() = 0;
     };
 

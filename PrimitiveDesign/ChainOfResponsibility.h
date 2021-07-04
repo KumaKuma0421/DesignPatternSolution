@@ -12,7 +12,7 @@ namespace Primitive_ChainOfResponsibility
         Handler(Handler* handler) { _next = handler; };
         virtual ~Handler() {};
 
-        bool Request()
+        virtual bool Request()
         {
             if (_next) return _next->Request();
             else return false;
@@ -30,6 +30,11 @@ namespace Primitive_ChainOfResponsibility
         ConcreteHandler1(Handler* handler) :Handler(handler) {};
         ~ConcreteHandler1() {};
 
+        bool Request()
+        {
+            return Handler::Request();
+        };
+
     private:
         ConcreteHandler1() = delete;
     };
@@ -40,6 +45,11 @@ namespace Primitive_ChainOfResponsibility
         ConcreteHandler2(Handler* handler) :Handler(handler) {};
         ~ConcreteHandler2() {};
 
+        bool Request()
+        {
+            return Handler::Request();
+        };
+
     private:
         ConcreteHandler2() = delete;
     };
@@ -49,6 +59,11 @@ namespace Primitive_ChainOfResponsibility
     public:
         ConcreteHandler3(Handler* handler) :Handler(handler) {};
         ~ConcreteHandler3() {};
+
+        bool Request()
+        {
+            return Handler::Request();
+        };
 
     private:
         ConcreteHandler3() = delete;

@@ -11,8 +11,3 @@ CacheObject::CacheObject()
     _id = -1;
     _count = 0;
 }
-
-CacheObject::~CacheObject()
-{
-
-}

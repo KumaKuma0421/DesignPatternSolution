@@ -6,16 +6,6 @@
 
 using namespace GoF_Memento;
 
-CacheManager::CacheManager()
-{
-    _CacheObject = nullptr;
-}
-
-CacheManager::~CacheManager()
-{
-
-}
-
 CacheObject* CacheManager::CreateCacheObject(int rowNo, std::string data)
 {
     CacheObject* cache = new CacheObject();

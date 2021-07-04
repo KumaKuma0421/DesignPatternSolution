@@ -9,12 +9,14 @@ namespace Primitive_FactoryMethod
     class IProduct
     {
     public:
+        virtual ~IProduct() {};
         virtual void Action() = 0;
     };
 
     class ICreator
     {
     public:
+        virtual ~ICreator() {};
         virtual IProduct* CreateProduct() = 0;
     };
 
@@ -22,7 +24,7 @@ namespace Primitive_FactoryMethod
     {
     public:
         Product() {};
-        virtual ~Product() {};
+        ~Product() {};
 
         void Action() {};
     };
@@ -31,7 +33,7 @@ namespace Primitive_FactoryMethod
     {
     public:
         Creator() {};
-        virtual ~Creator() {};
+        ~Creator() {};
 
         IProduct* CreateProduct() { return new Product(); };
     };

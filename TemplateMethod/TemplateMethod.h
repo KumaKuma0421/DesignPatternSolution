@@ -9,6 +9,9 @@ namespace GoF_TempateMethod
     class Template
     {
     public:
+        Template() {};
+        virtual ~Template() {};
+
         bool Action();
 
     protected:
@@ -20,6 +23,10 @@ namespace GoF_TempateMethod
 
     class TemplateAction : public Template
     {
+    public:
+        TemplateAction() {};
+        ~TemplateAction() {};
+
     protected:
         bool Init();
         bool Start();

@@ -220,6 +220,8 @@ namespace Primitive_Mediator
         mediator->Add(colleague2);
         colleague1->Set(mediator);
         colleague2->Set(mediator);
+
+        mediator->Kick();
     }
 }
 namespace Primitive_Memento

@@ -10,20 +10,21 @@
 namespace GoF_Iterator
 {
     template<class T>
-    class Aggregate;
+    class IAggregate;
     template<class T>
     class ItemAggregate;
 
     template<class T>
-    class Iterator
+    class IIterator
     {
     public:
+        virtual ~IIterator() {};
         virtual bool HasNext() = 0;
         virtual T Next() = 0;
     };
 
     template<class T>
-    class ItemIterator : public Iterator<T>
+    class ItemIterator : public IIterator<T>
     {
     public:
         ItemIterator(ItemAggregate<T>* aggregate)
@@ -31,6 +32,8 @@ namespace GoF_Iterator
             _aggregate = aggregate;
             _index = 0;
         };
+
+        ~ItemIterator() {};
 
         bool HasNext()
         {
@@ -44,6 +47,8 @@ namespace GoF_Iterator
         };
 
     private:
+        ItemIterator() = delete;
+
         ItemAggregate<T>* _aggregate;
         size_t _index;
     };

@@ -13,6 +13,7 @@ namespace GoF_Strategy1
     class Strategy1
     {
     public:
+        virtual ~Strategy1() {};
         virtual int Action(void* param) = 0;
     };
 
@@ -40,9 +41,12 @@ namespace GoF_Strategy1
         int Action(void* lpvParam);
     };
 
-    class Container
+    class Container final
     {
     public:
+        Container() {};
+        ~Container() {};
+
         void Add(std::string& criteria, Strategy1* strategy);
         Strategy1* Get(std::string& criteria);
 

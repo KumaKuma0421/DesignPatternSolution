@@ -9,16 +9,6 @@
 
 using namespace GoF_AbstractFactory;
 
-BatchProcessFactory::BatchProcessFactory()
-{
-
-}
-
-BatchProcessFactory::~BatchProcessFactory()
-{
-
-}
-
 StorageProduct* BatchProcessFactory::CreateStorageProduct()
 {
     return new FileStorageProduct();

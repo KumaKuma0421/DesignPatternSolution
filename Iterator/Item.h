@@ -8,7 +8,7 @@
 
 namespace GoF_Iterator
 {
-    class Item
+    class Item final
     {
     public:
         Item() :Item(-1, "") {};
@@ -17,6 +17,8 @@ namespace GoF_Iterator
             _id = id;
             _name = name;
         };
+        virtual ~Item() {};
+
         int GetID() { return _id; };
         std::string GetName() { return _name; };
 

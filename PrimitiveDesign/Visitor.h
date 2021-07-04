@@ -13,6 +13,7 @@ namespace Primitive_Visitor
     class IAcceptor
     {
     public:
+        virtual ~IAcceptor() {};
         virtual void Accept(IVisitor* visitor) = 0;
         virtual void Action() = 0;
     };
@@ -20,6 +21,7 @@ namespace Primitive_Visitor
     class IVisitor
     {
     public:
+        virtual ~IVisitor() {};
         virtual void Visit(Acceptor1* acceptor) = 0;
         virtual void Visit(Acceptor2* acceptor) = 0;
     };
@@ -48,7 +50,7 @@ namespace Primitive_Visitor
     {
     public:
         Visitor1() {};
-        virtual ~Visitor1() {};
+        ~Visitor1() {};
 
         void Visit(Acceptor1* acceptor) { acceptor->Action(); };
         void Visit(Acceptor2* acceptor) { acceptor->Action(); };
@@ -58,7 +60,7 @@ namespace Primitive_Visitor
     {
     public:
         Visitor2() {};
-        virtual ~Visitor2() {};
+        ~Visitor2() {};
 
         void Visit(Acceptor1* acceptor) { acceptor->Action(); };
         void Visit(Acceptor2* acceptor) { acceptor->Action(); };

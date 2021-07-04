@@ -11,8 +11,8 @@ namespace GoF_Bridge
     class AbstractBridge
     {
     public:
-        AbstractBridge();
-        virtual ~AbstractBridge();
+        AbstractBridge() { _impl = nullptr; };
+        virtual ~AbstractBridge() { if (_impl) delete _impl; };
 
         virtual bool InitInstance() = 0;
         virtual bool ExitInstance() = 0;
@@ -23,23 +23,25 @@ namespace GoF_Bridge
         FileOperationImpl* _impl;
     };
 
+    class WindowsFileOperation : public AbstractBridge
+    {
+    public:
+        WindowsFileOperation() {};
+        ~WindowsFileOperation() {};
+
+        bool InitInstance();
+        bool ExitInstance();
+        bool ReadRowTest();
+    };
+
     class UnixFileOperation : public AbstractBridge
     {
     public:
-        UnixFileOperation();
-        ~UnixFileOperation();
+        UnixFileOperation() {};
+        ~UnixFileOperation() {};
 
-        bool InitInstance()
-        {
-            _impl = new UnixFileOperationImpl();
-            return true;
-        };
-        bool ExitInstance()
-        {
-            delete _impl;
-            return true;
-        };
-
+        bool InitInstance();
+        bool ExitInstance();
         bool ReadRowTest();
     };
 }

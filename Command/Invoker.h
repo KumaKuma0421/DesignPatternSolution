@@ -13,7 +13,7 @@ namespace GoF_Command
     {
     public:
         Invoker() {};
-        ~Invoker() {};
+        virtual ~Invoker() {};
 
         void Add(Command* command) { _commands.push_back(command); };
         bool Execute();

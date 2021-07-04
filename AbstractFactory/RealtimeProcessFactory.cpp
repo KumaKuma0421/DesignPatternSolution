@@ -9,16 +9,6 @@
 
 using namespace GoF_AbstractFactory;
 
-RealtimeProcessFactory::RealtimeProcessFactory()
-{
-
-}
-
-RealtimeProcessFactory::~RealtimeProcessFactory()
-{
-
-}
-
 StorageProduct* RealtimeProcessFactory::CreateStorageProduct()
 {
     return new MemoryStorageProduct();

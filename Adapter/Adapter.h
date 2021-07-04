@@ -28,7 +28,7 @@ namespace GoF_Adapter
     {
     public:
         Adapter();
-        ~Adapter();
+        virtual ~Adapter();
 
         BOOL Init();
         BOOL Exit();

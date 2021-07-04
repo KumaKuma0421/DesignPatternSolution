@@ -16,7 +16,9 @@ namespace GoF_Interpreter
         {
             _expression = expression;
         };
+
         virtual ~AbstractExpression() {};
+        
         virtual bool Interpret() = 0;
 
         std::string GetExpression()
@@ -35,6 +37,8 @@ namespace GoF_Interpreter
     {
     public:
         Operand(std::string operand) :AbstractExpression(operand) {};
+        ~Operand() {};
+
         bool Interpret();
 
     private:
@@ -48,7 +52,11 @@ namespace GoF_Interpreter
         {
             _number = std::stoi(operand);
         };
+
+        ~CountOperand() {};
+
         int GetNumber() { return _number; };
+
         void SetNumber(int number)
         {
             _number = number;
@@ -57,6 +65,7 @@ namespace GoF_Interpreter
 
     private:
         CountOperand() = delete;
+
         int _number;
     };
 
@@ -68,18 +77,24 @@ namespace GoF_Interpreter
             _NextOperation = nullptr;
         };
 
+        virtual ~Operation() {};
+
         void SetOperand(Operand* operand) { _operands.push_back(operand); };
+        
         Operand* GetOperand(int index = 0)
         {
             return _operands[index];
         };
+        
         void Chain(Operation* operation) { _NextOperation = operation; };
+        
         Operation* Next() { return _NextOperation; };
 
         bool Interpret();
 
     private:
         Operation() = delete;
+
         std::vector<Operand*> _operands;
         Operation* _NextOperation;
     };
@@ -88,6 +103,7 @@ namespace GoF_Interpreter
     {
     public:
         Interpreter();
+        virtual ~Interpreter() {};
 
         bool Load(std::string fileName);
         bool Interpret();

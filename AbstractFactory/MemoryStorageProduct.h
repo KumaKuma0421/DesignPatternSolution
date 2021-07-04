@@ -11,8 +11,8 @@ namespace GoF_AbstractFactory
     class MemoryStorageProduct : public StorageProduct
     {
     public:
-        MemoryStorageProduct();
-        ~MemoryStorageProduct();
+        MemoryStorageProduct() {};
+        ~MemoryStorageProduct() {};
 
         bool Store(std::string data);
         std::string Load();

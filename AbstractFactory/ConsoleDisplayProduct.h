@@ -11,8 +11,8 @@ namespace GoF_AbstractFactory
     class ConsoleDisplayProduct : public DisplayProduct
     {
     public:
-        ConsoleDisplayProduct();
-        ~ConsoleDisplayProduct();
+        ConsoleDisplayProduct() {};
+        ~ConsoleDisplayProduct() {};
 
         bool Show(std::string message);
     };

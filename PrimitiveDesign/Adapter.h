@@ -18,6 +18,7 @@ namespace Primitive_Adapter
     class IAdapter
     {
     public:
+        virtual ~IAdapter() {};
         virtual bool DoAction() = 0;
     };
 
@@ -25,7 +26,7 @@ namespace Primitive_Adapter
     {
     public:
         Adapter1(Adaptee* adaptee) { _adaptee = adaptee; };
-        virtual ~Adapter1() {};
+        ~Adapter1() {};
 
         bool DoAction() { return _adaptee->Action(); };
 

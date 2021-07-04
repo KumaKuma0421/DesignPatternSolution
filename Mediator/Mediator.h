@@ -25,10 +25,10 @@ namespace GoF_Mediator
     class RealMediator : public Mediator
     {
     public:
-        RealMediator();
-        ~RealMediator();
+        RealMediator() {};
+        ~RealMediator() {};
 
-        void AddColleague(Colleague* colleague);
+        void AddColleague(Colleague* colleague) { _colleagues.push_back(colleague); };
         void Consultation(Colleague* colleague);
 
     private:

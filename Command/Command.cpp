@@ -6,7 +6,7 @@
 
 using namespace GoF_Command;
 
-TurnOnCommand::TurnOnCommand(Receiver* receiver)
+TurnOnCommand::TurnOnCommand(IReceiver* receiver)
     :Command(receiver)
 {
 
@@ -17,7 +17,7 @@ bool TurnOnCommand::Execute()
     return _receiver->Action(1);
 }
 
-TurnOffCommand::TurnOffCommand(Receiver* receiver)
+TurnOffCommand::TurnOffCommand(IReceiver* receiver)
     :Command(receiver)
 {
 

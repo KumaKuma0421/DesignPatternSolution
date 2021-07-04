@@ -23,7 +23,7 @@ int main(int argc, char** argv)
         items.Add(item);
     }
 
-    Iterator<Item>* itr = items.Itr();
+    IIterator<Item>* itr = items.Itr();
 
     while (itr->HasNext())
     {

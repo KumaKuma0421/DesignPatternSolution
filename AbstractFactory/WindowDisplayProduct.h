@@ -11,8 +11,8 @@ namespace GoF_AbstractFactory
     class WindowDisplayProduct : public DisplayProduct
     {
     public:
-        WindowDisplayProduct();
-        ~WindowDisplayProduct();
+        WindowDisplayProduct() {};
+        ~WindowDisplayProduct() {};
 
         bool Show(std::string message);
     };

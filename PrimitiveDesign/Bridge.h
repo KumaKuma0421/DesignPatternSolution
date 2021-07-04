@@ -9,6 +9,7 @@ namespace Primitive_Bridge
     class IImprementer
     {
     public:
+        virtual ~IImprementer() {};
         virtual bool Action() = 0;
     };
 
@@ -28,7 +29,7 @@ namespace Primitive_Bridge
     {
     public:
         Imprementer1() {};
-        virtual ~Imprementer1() {};
+        ~Imprementer1() {};
 
         bool Action() { return true; };
     };
@@ -37,7 +38,7 @@ namespace Primitive_Bridge
     {
     public:
         Imprementer2() {};
-        virtual ~Imprementer2() {};
+        ~Imprementer2() {};
 
         bool Action() { return true; };
     };

@@ -18,6 +18,7 @@ namespace Primitive_Builder
     class IBuilder
     {
     public:
+        virtual ~IBuilder() {};
         virtual Product* Build() = 0;
     };
 
