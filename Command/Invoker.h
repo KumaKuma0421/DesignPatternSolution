@@ -9,16 +9,16 @@
 
 namespace GoF_Command
 {
-    class Invoker
-    {
-    public:
-        Invoker() {};
-        virtual ~Invoker() {};
+	class Invoker
+	{
+	public:
+		Invoker () {};
+		virtual ~Invoker () {};
 
-        void Add(Command* command) { _commands.push_back(command); };
-        bool Execute();
+		void Add (Command* command) { _commands.push_back (command); };
+		bool Execute ();
 
-    private:
-        std::vector<Command*> _commands;
-    };
+	private:
+		std::vector<Command*> _commands;
+	};
 }

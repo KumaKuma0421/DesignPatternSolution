@@ -7,28 +7,28 @@
 
 using namespace GoF_Bridge;
 
-void WindowsTest()
+void WindowsTest ()
 {
-    WindowsFileOperation test;
-    test.InitInstance();
-    test.ReadRowTest();
-    test.ExitInstance();
+	WindowsFileOperation test;
+	test.InitInstance ();
+	test.ReadRowTest ();
+	test.ExitInstance ();
 }
 
-void UnixTest()
+void UnixTest ()
 {
-    UnixFileOperation test;
-    test.InitInstance();
-    test.ReadRowTest();
-    test.ExitInstance();
+	UnixFileOperation test;
+	test.InitInstance ();
+	test.ReadRowTest ();
+	test.ExitInstance ();
 }
 
-int main(int argc, char** argv)
+int main (int argc, char** argv)
 {
-    WindowsTest();
-    UnixTest();
+	WindowsTest ();
+	UnixTest ();
 
-    printf("Done.");
+	printf ("Done.");
 
-    return 0;
+	return 0;
 }

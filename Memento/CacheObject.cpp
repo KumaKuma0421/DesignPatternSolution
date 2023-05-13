@@ -6,8 +6,8 @@
 
 using namespace GoF_Memento;
 
-CacheObject::CacheObject()
+CacheObject::CacheObject ()
 {
-    _id = -1;
-    _count = 0;
+	_id = -1;
+	_count = 0;
 }

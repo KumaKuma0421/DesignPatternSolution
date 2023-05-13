@@ -14,20 +14,20 @@
 
 namespace GoF_Memento
 {
-    class DataManager
-    {
-    public:
-        DataManager() { _manager = new CacheManager(); };
-        virtual ~DataManager() { delete _manager; };
+	class DataManager
+	{
+	public:
+		DataManager () { _manager = new CacheManager (); };
+		virtual ~DataManager () { delete _manager; };
 
-        bool Get(int id, std::string& data);
-        void Set(int id, std::string& data);
+		bool Get (int id, std::string& data);
+		void Set (int id, std::string& data);
 
-    private:
-        std::string GetFromCache(CacheObject* cache);
-        std::string GetFromFile(int id);
+	private:
+		std::string GetFromCache (CacheObject* cache);
+		std::string GetFromFile (int id);
 
-        CacheManager* _manager;
-        std::map<int, CacheObject*> _container;
-    };
+		CacheManager* _manager;
+		std::map<int, CacheObject*> _container;
+	};
 }

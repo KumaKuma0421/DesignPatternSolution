@@ -9,109 +9,109 @@
 
 namespace GoF_Interpreter
 {
-    class AbstractExpression
-    {
-    public:
-        AbstractExpression(std::string  expression)
-        {
-            _expression = expression;
-        };
+	class AbstractExpression
+	{
+	public:
+		AbstractExpression (std::string  expression)
+		{
+			_expression = expression;
+		};
 
-        virtual ~AbstractExpression() {};
-        
-        virtual bool Interpret() = 0;
+		virtual ~AbstractExpression () {};
 
-        std::string GetExpression()
-        {
-            return _expression;
-        };
+		virtual bool Interpret () = 0;
 
-    protected:
-        std::string _expression;
+		std::string GetExpression ()
+		{
+			return _expression;
+		};
 
-    private:
-        AbstractExpression() = delete;
-    };
+	protected:
+		std::string _expression;
 
-    class Operand :public AbstractExpression
-    {
-    public:
-        Operand(std::string operand) :AbstractExpression(operand) {};
-        ~Operand() {};
+	private:
+		AbstractExpression () = delete;
+	};
 
-        bool Interpret();
+	class Operand :public AbstractExpression
+	{
+	public:
+		Operand (std::string operand) :AbstractExpression (operand) {};
+		~Operand () {};
 
-    private:
-        Operand() = delete;
-    };
+		bool Interpret ();
 
-    class CountOperand : public Operand
-    {
-    public:
-        CountOperand(std::string operand) : Operand(operand)
-        {
-            _number = std::stoi(operand);
-        };
+	private:
+		Operand () = delete;
+	};
 
-        ~CountOperand() {};
+	class CountOperand : public Operand
+	{
+	public:
+		CountOperand (std::string operand) : Operand (operand)
+		{
+			_number = std::stoi (operand);
+		};
 
-        int GetNumber() { return _number; };
+		~CountOperand () {};
 
-        void SetNumber(int number)
-        {
-            _number = number;
-            _expression = std::to_string(_number);
-        };
+		int GetNumber () { return _number; };
 
-    private:
-        CountOperand() = delete;
+		void SetNumber (int number)
+		{
+			_number = number;
+			_expression = std::to_string (_number);
+		};
 
-        int _number;
-    };
+	private:
+		CountOperand () = delete;
 
-    class Operation :public AbstractExpression
-    {
-    public:
-        Operation(std::string operation) :AbstractExpression(operation)
-        {
-            _NextOperation = nullptr;
-        };
+		int _number;
+	};
 
-        virtual ~Operation() {};
+	class Operation :public AbstractExpression
+	{
+	public:
+		Operation (std::string operation) :AbstractExpression (operation)
+		{
+			_NextOperation = nullptr;
+		};
 
-        void SetOperand(Operand* operand) { _operands.push_back(operand); };
-        
-        Operand* GetOperand(int index = 0)
-        {
-            return _operands[index];
-        };
-        
-        void Chain(Operation* operation) { _NextOperation = operation; };
-        
-        Operation* Next() { return _NextOperation; };
+		virtual ~Operation () {};
 
-        bool Interpret();
+		void SetOperand (Operand* operand) { _operands.push_back (operand); };
 
-    private:
-        Operation() = delete;
+		Operand* GetOperand (int index = 0)
+		{
+			return _operands[index];
+		};
 
-        std::vector<Operand*> _operands;
-        Operation* _NextOperation;
-    };
+		void Chain (Operation* operation) { _NextOperation = operation; };
 
-    class Interpreter
-    {
-    public:
-        Interpreter();
-        virtual ~Interpreter() {};
+		Operation* Next () { return _NextOperation; };
 
-        bool Load(std::string fileName);
-        bool Interpret();
-        bool Run();
+		bool Interpret ();
 
-    private:
-        std::vector<std::string> _Commands;
-        Operation* _FirstOperation;
-        Operation* _CurrentOperation;
-    };
+	private:
+		Operation () = delete;
+
+		std::vector<Operand*> _operands;
+		Operation* _NextOperation;
+	};
+
+	class Interpreter
+	{
+	public:
+		Interpreter ();
+		virtual ~Interpreter () {};
+
+		bool Load (std::string fileName);
+		bool Interpret ();
+		bool Run ();
+
+	private:
+		std::vector<std::string> _Commands;
+		Operation* _FirstOperation;
+		Operation* _CurrentOperation;
+	};
 }

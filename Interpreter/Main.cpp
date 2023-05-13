@@ -7,15 +7,15 @@
 
 using namespace GoF_Interpreter;
 
-int main(int argc, char** argv)
+int main (int argc, char** argv)
 {
-    Interpreter interpreter;
+	Interpreter interpreter;
 
-    interpreter.Load("CommandList.txt");
+	interpreter.Load ("CommandList.txt");
 
-    interpreter.Interpret();
+	interpreter.Interpret ();
 
-    interpreter.Run();
+	interpreter.Run ();
 
-    std::cout << "Done." << std::endl;
+	std::cout << "Done." << std::endl;
 }

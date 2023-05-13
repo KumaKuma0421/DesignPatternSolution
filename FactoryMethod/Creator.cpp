@@ -6,7 +6,7 @@
 
 using namespace GoF_FactoryMethod;
 
-Product* ConcreteCreator::CreateProduct()
+Product* ConcreteCreator::CreateProduct ()
 {
-    return new ConcreteProduct();
+	return new ConcreteProduct ();
 }

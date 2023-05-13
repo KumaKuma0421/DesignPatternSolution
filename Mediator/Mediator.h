@@ -10,28 +10,28 @@
 
 namespace GoF_Mediator
 {
-    class Colleague;
+	class Colleague;
 
-    class Mediator
-    {
-    public:
-        Mediator() {};
-        virtual ~Mediator() {};
+	class Mediator
+	{
+	public:
+		Mediator () {};
+		virtual ~Mediator () {};
 
-        virtual void AddColleague(Colleague* colleague) = 0;
-        virtual void Consultation(Colleague* colleague) = 0;
-    };
+		virtual void AddColleague (Colleague* colleague) = 0;
+		virtual void Consultation (Colleague* colleague) = 0;
+	};
 
-    class RealMediator : public Mediator
-    {
-    public:
-        RealMediator() {};
-        ~RealMediator() {};
+	class RealMediator : public Mediator
+	{
+	public:
+		RealMediator () {};
+		~RealMediator () {};
 
-        void AddColleague(Colleague* colleague) { _colleagues.push_back(colleague); };
-        void Consultation(Colleague* colleague);
+		void AddColleague (Colleague* colleague) { _colleagues.push_back (colleague); };
+		void Consultation (Colleague* colleague);
 
-    private:
-        std::vector<Colleague*> _colleagues;
-    };
+	private:
+		std::vector<Colleague*> _colleagues;
+	};
 }

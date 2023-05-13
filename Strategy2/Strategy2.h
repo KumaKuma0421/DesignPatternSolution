@@ -11,18 +11,18 @@
 
 namespace GoF_Strategy2
 {
-    typedef std::function<int(void*)> Function;
+	typedef std::function<int (void*)> Function;
 
-    class Strategy2
-    {
-    public:
-        Strategy2() {};
-        virtual ~Strategy2() {};
+	class Strategy2
+	{
+	public:
+		Strategy2 () {};
+		virtual ~Strategy2 () {};
 
-        int Init();
-        int Action(std::string criteria);
+		int Init ();
+		int Action (std::string criteria);
 
-    private:
-        std::map<std::string, Function> _container;
-    };
+	private:
+		std::map<std::string, Function> _container;
+	};
 }

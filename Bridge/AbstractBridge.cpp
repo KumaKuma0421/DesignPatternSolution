@@ -6,106 +6,106 @@
 
 using namespace GoF_Bridge;
 
-bool WindowsFileOperation::InitInstance()
+bool WindowsFileOperation::InitInstance ()
 {
-    _impl = new WindowsFileOperationImpl();
-    return true;
+	_impl = new WindowsFileOperationImpl ();
+	return true;
 }
 
-bool WindowsFileOperation::ExitInstance()
+bool WindowsFileOperation::ExitInstance ()
 {
-    delete _impl;
-    return true;
+	delete _impl;
+	return true;
 }
 
-bool WindowsFileOperation::ReadRowTest()
+bool WindowsFileOperation::ReadRowTest ()
 {
-    bool ret;
-    char* fileName = (char*)".\\sample_text.txt";
-    const size_t size = 1024;
-    char buffer[size];
-    int read;
+	bool ret;
+	char* fileName = (char*)".\\sample_text.txt";
+	const size_t size = 1024;
+	char buffer[size];
+	int read;
 
-    ret = _impl->Open(fileName);
-    if (!ret)
-    {
-        printf("can't find file '%s'\n", fileName);
-        return false;
-    }
+	ret = _impl->Open (fileName);
+	if (!ret)
+	{
+		printf ("can't find file '%s'\n", fileName);
+		return false;
+	}
 
-    for (int i = 0; i < 1000; i++)
-    {
-        sprintf_s(buffer, "%d %s\n", i, "sample");
-        _impl->Write(buffer, strlen(buffer));
-    }
+	for (int i = 0; i < 1000; i++)
+	{
+		sprintf_s (buffer, "%d %s\n", i, "sample");
+		_impl->Write (buffer, strlen (buffer));
+	}
 
-    _impl->Flush();
-    _impl->SetPos(FilePos::Begin, 0);
+	_impl->Flush ();
+	_impl->SetPos (FilePos::Begin, 0);
 
-    while ((read = _impl->Read(buffer, size)) != -1)
-    {
-        printf("%s", buffer);
-    }
+	while ((read = _impl->Read (buffer, size)) != -1)
+	{
+		printf ("%s", buffer);
+	}
 
-    ret = _impl->Close();
-    if (!ret)
-    {
-        printf("file close failed. '%s'\n", fileName);
-        return false;
-    }
+	ret = _impl->Close ();
+	if (!ret)
+	{
+		printf ("file close failed. '%s'\n", fileName);
+		return false;
+	}
 
-    return true;
+	return true;
 }
 
 // --------------------------------------------------------
 
-bool UnixFileOperation::InitInstance()
+bool UnixFileOperation::InitInstance ()
 {
-    _impl = new UnixFileOperationImpl();
-    return true;
+	_impl = new UnixFileOperationImpl ();
+	return true;
 }
 
-bool UnixFileOperation::ExitInstance()
+bool UnixFileOperation::ExitInstance ()
 {
-    delete _impl;
-    return true;
+	delete _impl;
+	return true;
 }
 
-bool UnixFileOperation::ReadRowTest()
+bool UnixFileOperation::ReadRowTest ()
 {
-    bool ret;
-    char* fileName = (char*)".\\sample_text.txt";
-    const size_t size = 1024;
-    char buffer[size];
-    int read;
+	bool ret;
+	char* fileName = (char*)".\\sample_text.txt";
+	const size_t size = 1024;
+	char buffer[size];
+	int read;
 
-    ret = _impl->Open(fileName);
-    if (!ret)
-    {
-        printf("can't find file '%s'\n", fileName);
-        return false;
-    }
+	ret = _impl->Open (fileName);
+	if (!ret)
+	{
+		printf ("can't find file '%s'\n", fileName);
+		return false;
+	}
 
-    for (int i = 0; i < 1000; i++)
-    {
-        sprintf_s(buffer, "%d %s\n", i, "sample");
-        _impl->Write(buffer, strlen(buffer));
-    }
+	for (int i = 0; i < 1000; i++)
+	{
+		sprintf_s (buffer, "%d %s\n", i, "sample");
+		_impl->Write (buffer, strlen (buffer));
+	}
 
-    _impl->Flush();
-    _impl->SetPos(FilePos::Begin, 0);
+	_impl->Flush ();
+	_impl->SetPos (FilePos::Begin, 0);
 
-    while ((read = _impl->Read(buffer, size)) != -1)
-    {
-        printf("%s", buffer);
-    }
+	while ((read = _impl->Read (buffer, size)) != -1)
+	{
+		printf ("%s", buffer);
+	}
 
-    ret = _impl->Close();
-    if (!ret)
-    {
-        printf("file close failed. '%s'\n", fileName);
-        return false;
-    }
+	ret = _impl->Close ();
+	if (!ret)
+	{
+		printf ("file close failed. '%s'\n", fileName);
+		return false;
+	}
 
-    return true;
+	return true;
 }

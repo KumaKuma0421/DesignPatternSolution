@@ -8,42 +8,42 @@
 
 namespace GoF_Command
 {
-    class Command
-    {
-    public:
-        Command(IReceiver* receiver) { _receiver = receiver; };
-        virtual ~Command() {}
+	class Command
+	{
+	public:
+		Command (IReceiver* receiver) { _receiver = receiver; };
+		virtual ~Command () {}
 
-        virtual bool Execute() = 0;
+		virtual bool Execute () = 0;
 
-    protected:
-        IReceiver* _receiver;
-    
-    private:
-        Command() = delete;
-    };
+	protected:
+		IReceiver* _receiver;
 
-    class TurnOnCommand : public Command
-    {
-    public:
-        TurnOnCommand(IReceiver* receiver);
-        ~TurnOnCommand() {};
+	private:
+		Command () = delete;
+	};
 
-        bool Execute();
+	class TurnOnCommand : public Command
+	{
+	public:
+		TurnOnCommand (IReceiver* receiver);
+		~TurnOnCommand () {};
 
-    private:
-        TurnOnCommand() = delete;
-    };
+		bool Execute ();
 
-    class TurnOffCommand : public Command
-    {
-    public:
-        TurnOffCommand(IReceiver* receiver);
-        ~TurnOffCommand() {};
+	private:
+		TurnOnCommand () = delete;
+	};
 
-        bool Execute();
+	class TurnOffCommand : public Command
+	{
+	public:
+		TurnOffCommand (IReceiver* receiver);
+		~TurnOffCommand () {};
 
-    private:
-        TurnOffCommand() = delete;
-    };
+		bool Execute ();
+
+	private:
+		TurnOffCommand () = delete;
+	};
 }

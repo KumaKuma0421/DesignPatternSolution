@@ -7,11 +7,11 @@
 
 using namespace GoF_TempateMethod;
 
-int main(int argc, char** argv)
+int main (int argc, char** argv)
 {
-    TemplateAction action;
+	TemplateAction action;
 
-    action.Action();
+	action.Action ();
 
-    std::cout << "Done." << std::endl;
+	std::cout << "Done." << std::endl;
 }

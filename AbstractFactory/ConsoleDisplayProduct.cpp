@@ -6,7 +6,7 @@
 
 using namespace GoF_AbstractFactory;
 
-bool ConsoleDisplayProduct::Show(std::string message)
+bool ConsoleDisplayProduct::Show (std::string message)
 {
-    return true;
+	return true;
 }

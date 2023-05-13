@@ -9,17 +9,17 @@
 
 using namespace GoF_AbstractFactory;
 
-StorageProduct* RealtimeProcessFactory::CreateStorageProduct()
+StorageProduct* RealtimeProcessFactory::CreateStorageProduct ()
 {
-    return new MemoryStorageProduct();
+	return new MemoryStorageProduct ();
 }
 
-DisplayProduct* RealtimeProcessFactory::CreateDisplayProduct()
+DisplayProduct* RealtimeProcessFactory::CreateDisplayProduct ()
 {
-    return new WindowDisplayProduct();
+	return new WindowDisplayProduct ();
 }
 
-ControlProduct* RealtimeProcessFactory::CreateControlProduct()
+ControlProduct* RealtimeProcessFactory::CreateControlProduct ()
 {
-    return new RealtimeControlProduct();
+	return new RealtimeControlProduct ();
 }

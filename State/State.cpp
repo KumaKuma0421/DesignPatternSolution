@@ -7,99 +7,99 @@
 
 using namespace GoF_State;
 
-VoiceRecorder::VoiceRecorder()
+VoiceRecorder::VoiceRecorder ()
 {
-    for (int i = 0; i < (int)Action::MaxSize; i++)
-    {
-        for (int j = 0; j < (int)Status::MaxSize; j++)
-        {
-            _Matrix[i][j] = nullptr;
-        }
-    }
+	for (int i = 0; i < (int)Action::MaxSize; i++)
+	{
+		for (int j = 0; j < (int)Status::MaxSize; j++)
+		{
+			_Matrix[i][j] = nullptr;
+		}
+	}
 
-    _CurrentStatus = Status::Stopped;
+	_CurrentStatus = Status::Stopped;
 }
 
-VoiceRecorder::~VoiceRecorder()
+VoiceRecorder::~VoiceRecorder ()
 {
 
 }
 
-bool VoiceRecorder::Init()
+bool VoiceRecorder::Init ()
 {
-    State* matrix[(int)Action::MaxSize][(int)Status::MaxSize] =
-    {
-        { new Discard(), new Stop(),    new Stop(),    new Stop(),    new Stop()    },
-        { new Play(),    new Discard(), new Play(),    new Play(),    new Discard() },
-        { new Forward(), new Forward(), new Forward(), new Forward(), new Discard() },
-        { new Reverse(), new Reverse(), new Reverse(), new Reverse(), new Discard() },
-        { new Record(),  new Discard(), new Discard(), new Discard(), new Discard() },
-    };
+	State* matrix[(int)Action::MaxSize][(int)Status::MaxSize] =
+	{
+		{ new Discard (), new Stop (),    new Stop (),    new Stop (),    new Stop ()    },
+		{ new Play (),    new Discard (), new Play (),    new Play (),    new Discard () },
+		{ new Forward (), new Forward (), new Forward (), new Forward (), new Discard () },
+		{ new Reverse (), new Reverse (), new Reverse (), new Reverse (), new Discard () },
+		{ new Record (),  new Discard (), new Discard (), new Discard (), new Discard () },
+	};
 
-    for (int i = 0; i < (int)Status::MaxSize; i++)
-    {
-        for (int j = 0; j < (int)Action::MaxSize; j++)
-        {
-            _Matrix[i][j] = matrix[i][j];
-        }
-    }
+	for (int i = 0; i < (int)Status::MaxSize; i++)
+	{
+		for (int j = 0; j < (int)Action::MaxSize; j++)
+		{
+			_Matrix[i][j] = matrix[i][j];
+		}
+	}
 
-    return true;
+	return true;
 }
 
-Status VoiceRecorder::Command(Action action)
+Status VoiceRecorder::Command (Action action)
 {
-    State* state = _Matrix[(int)action][(int)_CurrentStatus];
-    Status status = state->Action();
-    if ((int)status > 0) _CurrentStatus = status;
+	State* state = _Matrix[(int)action][(int)_CurrentStatus];
+	Status status = state->Action ();
+	if ((int)status > 0) _CurrentStatus = status;
 
-    return status;
+	return status;
 }
 
 // ----------------------------------------------------------------------------
 
-State::State()
+State::State ()
 {
 
 }
 
-State::~State()
+State::~State ()
 {
 
 }
 
-Status Play::Action()
+Status Play::Action ()
 {
-    printf("Now Playing.\n");
-    return Status::Playing;
+	printf ("Now Playing.\n");
+	return Status::Playing;
 }
 
-Status Stop::Action()
+Status Stop::Action ()
 {
-    printf("Now Stopped.\n");
-    return Status::Stopped;
+	printf ("Now Stopped.\n");
+	return Status::Stopped;
 }
 
-Status Forward::Action()
+Status Forward::Action ()
 {
-    printf("Now Forwarding\n");
-    return Status::Forwarding;
+	printf ("Now Forwarding\n");
+	return Status::Forwarding;
 }
 
-Status Reverse::Action()
+Status Reverse::Action ()
 {
-    printf("Now Reversing\n");
-    return Status::Reversing;
+	printf ("Now Reversing\n");
+	return Status::Reversing;
 }
 
-Status Record::Action()
+Status Record::Action ()
 {
-    printf("Now Recording\n");
-    return Status::Recording;
+	printf ("Now Recording\n");
+	return Status::Recording;
 }
 
-Status Discard::Action()
+Status Discard::Action ()
 {
-    printf("Discard action\n");
-    return (Status)-1;
+	printf ("Discard action\n");
+	return (Status)-1;
 }

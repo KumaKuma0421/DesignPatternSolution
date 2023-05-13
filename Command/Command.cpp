@@ -6,24 +6,24 @@
 
 using namespace GoF_Command;
 
-TurnOnCommand::TurnOnCommand(IReceiver* receiver)
-    :Command(receiver)
+TurnOnCommand::TurnOnCommand (IReceiver* receiver)
+	:Command (receiver)
 {
 
 }
 
-bool TurnOnCommand::Execute()
+bool TurnOnCommand::Execute ()
 {
-    return _receiver->Action(1);
+	return _receiver->Action (1);
 }
 
-TurnOffCommand::TurnOffCommand(IReceiver* receiver)
-    :Command(receiver)
+TurnOffCommand::TurnOffCommand (IReceiver* receiver)
+	:Command (receiver)
 {
 
 }
 
-bool TurnOffCommand::Execute()
+bool TurnOffCommand::Execute ()
 {
-    return _receiver->Action(0);
+	return _receiver->Action (0);
 }

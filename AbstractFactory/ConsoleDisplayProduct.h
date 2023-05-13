@@ -8,12 +8,12 @@
 
 namespace GoF_AbstractFactory
 {
-    class ConsoleDisplayProduct : public DisplayProduct
-    {
-    public:
-        ConsoleDisplayProduct() {};
-        ~ConsoleDisplayProduct() {};
+	class ConsoleDisplayProduct : public DisplayProduct
+	{
+	public:
+		ConsoleDisplayProduct () {};
+		~ConsoleDisplayProduct () {};
 
-        bool Show(std::string message);
-    };
+		bool Show (std::string message);
+	};
 }

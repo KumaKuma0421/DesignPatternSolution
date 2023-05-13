@@ -7,47 +7,47 @@
 
 using namespace GoF_Strategy1;
 
-void init(Container* container)
+void init (Container* container)
 {
-    std::string criteria;
-    Strategy1* obj;
+	std::string criteria;
+	Strategy1* obj;
 
-    obj = new BeginStrategy();
-    criteria = "Begin";
-    container->Add(criteria, obj);
+	obj = new BeginStrategy ();
+	criteria = "Begin";
+	container->Add (criteria, obj);
 
-    obj = new NextStrategy();
-    criteria = "Next";
-    container->Add(criteria, obj);
+	obj = new NextStrategy ();
+	criteria = "Next";
+	container->Add (criteria, obj);
 
-    obj = new PreviousStrategy();
-    criteria = "Previous";
-    container->Add(criteria, obj);
+	obj = new PreviousStrategy ();
+	criteria = "Previous";
+	container->Add (criteria, obj);
 
-    obj = new EndStrategy();
-    criteria = "End";
-    container->Add(criteria, obj);
+	obj = new EndStrategy ();
+	criteria = "End";
+	container->Add (criteria, obj);
 }
 
-int main(int argc, char** argv)
+int main (int argc, char** argv)
 {
-    int ret = -1;
-    Container* container;
+	int ret = -1;
+	Container* container;
 
-    if (argc > 1)
-    {
-        std::string criteria;
-        container = new Container();
+	if (argc > 1)
+	{
+		std::string criteria;
+		container = new Container ();
 
-        init(container);
+		init (container);
 
-        criteria = argv[1];
-        Strategy1* obj = container->Get(criteria);
-        if (obj)
-        {
-            ret = obj->Action(argv[2]);
-        }
-    }
+		criteria = argv[1];
+		Strategy1* obj = container->Get (criteria);
+		if (obj)
+		{
+			ret = obj->Action (argv[2]);
+		}
+	}
 
-    return ret;
+	return ret;
 }

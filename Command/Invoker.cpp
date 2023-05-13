@@ -6,15 +6,15 @@
 
 using namespace GoF_Command;
 
-bool Invoker::Execute()
+bool Invoker::Execute ()
 {
-    bool ret = false;
+	bool ret = false;
 
-    for (Command* command : _commands)
-    {
-        ret = command->Execute();
-        if (!ret) break;
-    }
+	for (Command* command : _commands)
+	{
+		ret = command->Execute ();
+		if (!ret) break;
+	}
 
-    return ret;
+	return ret;
 }

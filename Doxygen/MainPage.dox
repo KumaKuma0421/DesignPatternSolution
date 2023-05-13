@@ -1,0 +1,40 @@
+/**
+
+@mainpage Design Pattern on C++
+
+@tableofcontents
+
+@section about_this DesignPatternSolutionとは
+
+DesignPatternSolutionソリューション配下のプロジェクトは以下の構成になっています。
+
+- @ref PrimitiveDesignPage
+- @ref AbstractFactoryPage
+ 
+@section how_to_use_this DesignPatternSolutionの使い方
+
+このソリューションは、Visual Studio Community 2022版で作成しています。全プロジェクトがスニペットのような状態です。
+
+- PrimitiveDesign
+- AbstractFactoryPage
+
+GoFの２３のデザインパターンは以下の構成になっています。
+
+@htmlonly
+
+<div class="mermaid">
+sequenceDiagram
+  participant cl as クライアント
+  participant sv as サーバー
+  participant db as データベース
+  cl ->>+ sv : データ取得要求
+  sv ->>+ db : select発行
+  db -->>- sv : select結果
+  sv -->>- cl : データ取得要求結果
+</div>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
+@endhtmlonly
+
+*/

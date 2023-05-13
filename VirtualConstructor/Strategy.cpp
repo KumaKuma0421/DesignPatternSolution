@@ -6,17 +6,17 @@
 
 using namespace Sample;
 
-Material* IceCreamMaker::Make()
+Material* IceCreamMaker::Make ()
 {
-    return new Material(ICE_CREAM, "アイスモナカ", 180, 10);
+	return new Material (ICE_CREAM, "アイスモナカ", 180, 10);
 }
 
-Material* MentosMaker::Make()
+Material* MentosMaker::Make ()
 {
-    return new Material(MENTOS, "メントス", 100, 10);
+	return new Material (MENTOS, "メントス", 100, 10);
 }
 
-Material* CocaColaMaker::Make()
+Material* CocaColaMaker::Make ()
 {
-    return new Material(COCA_COLA, "コカ・コーラ", 130, 10);
+	return new Material (COCA_COLA, "コカ・コーラ", 130, 10);
 }

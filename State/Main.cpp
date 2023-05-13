@@ -7,17 +7,17 @@
 
 using namespace GoF_State;
 
-int main(int argc, char** argv)
+int main (int argc, char** argv)
 {
-    Status status;
-    VoiceRecorder recorder;
-    recorder.Init();
+	Status status;
+	VoiceRecorder recorder;
+	recorder.Init ();
 
-    // Stop -> Play
-    status = recorder.Command(Action::Play);
+	// Stop -> Play
+	status = recorder.Command (Action::Play);
 
-    // Play -> Stop
-    status = recorder.Command(Action::Stop);
+	// Play -> Stop
+	status = recorder.Command (Action::Stop);
 
-    printf("Done.\n");
+	printf ("Done.\n");
 }

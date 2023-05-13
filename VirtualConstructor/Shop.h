@@ -12,27 +12,27 @@
 
 namespace Sample
 {
-    typedef std::map<std::string, Material*> Materials;
-    typedef std::map<std::string, Strategy*> Strategies;
-    typedef std::vector<Material*> Cart;
+	typedef std::map<std::string, Material*> Materials;
+	typedef std::map<std::string, Strategy*> Strategies;
+	typedef std::vector<Material*> Cart;
 
-    class VirtualShop final
-    {
-    public:
-        static VirtualShop* Instance();
-        void Prepare();
-        void Stock(std::string item);
-        bool Pickup(std::string item);
-        int Check();
-        Material* Factory(std::string item);
+	class VirtualShop final
+	{
+	public:
+		static VirtualShop* Instance ();
+		void Prepare ();
+		void Stock (std::string item);
+		bool Pickup (std::string item);
+		int Check ();
+		Material* Factory (std::string item);
 
-    protected:
-        VirtualShop() {};
-        ~VirtualShop() {};
+	protected:
+		VirtualShop () {};
+		~VirtualShop () {};
 
-        static VirtualShop* _instance;
-        Materials _stock;
-        Strategies _strategy;
-        Cart _cart;
-    };
+		static VirtualShop* _instance;
+		Materials _stock;
+		Strategies _strategy;
+		Cart _cart;
+	};
 }

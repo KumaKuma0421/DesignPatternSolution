@@ -6,12 +6,12 @@
 
 using namespace GoF_AbstractFactory;
 
-bool FileStorageProduct::Store(std::string data)
+bool FileStorageProduct::Store (std::string data)
 {
-    return true;
+	return true;
 }
 
-std::string FileStorageProduct::Load()
+std::string FileStorageProduct::Load ()
 {
-    return "";
+	return "";
 }

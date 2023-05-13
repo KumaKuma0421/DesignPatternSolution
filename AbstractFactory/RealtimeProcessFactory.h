@@ -8,14 +8,14 @@
 
 namespace GoF_AbstractFactory
 {
-    class RealtimeProcessFactory : public AbstractFactory
-    {
-    public:
-        RealtimeProcessFactory() {};
-        ~RealtimeProcessFactory() {};
+	class RealtimeProcessFactory : public AbstractFactory
+	{
+	public:
+		RealtimeProcessFactory () {};
+		~RealtimeProcessFactory () {};
 
-        StorageProduct* CreateStorageProduct();
-        DisplayProduct* CreateDisplayProduct();
-        ControlProduct* CreateControlProduct();
-    };
+		StorageProduct* CreateStorageProduct ();
+		DisplayProduct* CreateDisplayProduct ();
+		ControlProduct* CreateControlProduct ();
+	};
 }

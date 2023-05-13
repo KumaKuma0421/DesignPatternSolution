@@ -6,28 +6,28 @@
 
 namespace Primitive_Builder
 {
-    class Product
-    {
-    public:
-        Product() {};
-        virtual ~Product() {};
+	class Product
+	{
+	public:
+		Product () {};
+		virtual ~Product () {};
 
-        bool Action() { return true; };
-    };
+		bool Action () { return true; };
+	};
 
-    class IBuilder
-    {
-    public:
-        virtual ~IBuilder() {};
-        virtual Product* Build() = 0;
-    };
+	class IBuilder
+	{
+	public:
+		virtual ~IBuilder () {};
+		virtual Product* Build () = 0;
+	};
 
-    class Builder : public IBuilder
-    {
-    public:
-        Builder() {};
-        ~Builder() {};
+	class Builder : public IBuilder
+	{
+	public:
+		Builder () {};
+		~Builder () {};
 
-        Product* Build() { return new Product(); };
-    };
+		Product* Build () { return new Product (); };
+	};
 }

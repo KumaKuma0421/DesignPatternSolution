@@ -8,39 +8,39 @@
 
 namespace Primitive_Memento
 {
-    class Memento
-    {
-    public:
-        virtual ~Memento() {};
+	class Memento
+	{
+	public:
+		virtual ~Memento () {};
 
-    private:
-        Memento() {};
-        friend class Originator;
-    };
+	private:
+		Memento () {};
+		friend class Originator;
+	};
 
-    class Originator
-    {
-    public:
-        Originator() { _memento = nullptr; };
-        virtual ~Originator() {};
+	class Originator
+	{
+	public:
+		Originator () { _memento = nullptr; };
+		virtual ~Originator () {};
 
-        Memento* CreateMemento() { return new Memento(); };
-        void SetMemento(Memento* memento) { _memento = memento; };
+		Memento* CreateMemento () { return new Memento (); };
+		void SetMemento (Memento* memento) { _memento = memento; };
 
-    private:
-        Memento* _memento;
-    };
+	private:
+		Memento* _memento;
+	};
 
-    class Caretaker
-    {
-    public:
-        Caretaker() {};
-        virtual ~Caretaker() {};
+	class Caretaker
+	{
+	public:
+		Caretaker () {};
+		virtual ~Caretaker () {};
 
-        void Set(int number, Memento* memento) { _container[number] = memento; };
-        Memento* Get(int number) { return _container[number]; };
+		void Set (int number, Memento* memento) { _container[number] = memento; };
+		Memento* Get (int number) { return _container[number]; };
 
-    private:
-        std::map<int, Memento*> _container;
-    };
+	private:
+		std::map<int, Memento*> _container;
+	};
 }

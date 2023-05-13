@@ -6,7 +6,7 @@
 
 using namespace GoF_AbstractFactory;
 
-bool WindowDisplayProduct::Show(std::string message)
+bool WindowDisplayProduct::Show (std::string message)
 {
-    return true;
+	return true;
 }

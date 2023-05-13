@@ -9,17 +9,17 @@
 
 using namespace GoF_AbstractFactory;
 
-StorageProduct* BatchProcessFactory::CreateStorageProduct()
+StorageProduct* BatchProcessFactory::CreateStorageProduct ()
 {
-    return new FileStorageProduct();
+	return new FileStorageProduct ();
 }
 
-DisplayProduct* BatchProcessFactory::CreateDisplayProduct()
+DisplayProduct* BatchProcessFactory::CreateDisplayProduct ()
 {
-    return new ConsoleDisplayProduct();
+	return new ConsoleDisplayProduct ();
 }
 
-ControlProduct* BatchProcessFactory::CreateControlProduct()
+ControlProduct* BatchProcessFactory::CreateControlProduct ()
 {
-    return new BatchControlProduct();
+	return new BatchControlProduct ();
 }

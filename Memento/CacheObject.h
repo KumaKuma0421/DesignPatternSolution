@@ -9,20 +9,20 @@
 
 namespace GoF_Memento
 {
-    class CacheManager;
+	class CacheManager;
 
-    class CacheObject
-    {
-    public:
-        virtual ~CacheObject() {};
+	class CacheObject
+	{
+	public:
+		virtual ~CacheObject () {};
 
-    private:
-        CacheObject();
+	private:
+		CacheObject ();
 
-        int _id;
-        int _count;
-        std::string _data;
+		int _id;
+		int _count;
+		std::string _data;
 
-        friend class CacheManager;
-    };
+		friend class CacheManager;
+	};
 }

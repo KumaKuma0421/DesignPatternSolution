@@ -12,18 +12,18 @@
 
 namespace GoF_Memento
 {
-    class CacheManager
-    {
-    public:
-        CacheManager() { _CacheObject = nullptr; };
-        virtual ~CacheManager() {};
+	class CacheManager
+	{
+	public:
+		CacheManager () { _CacheObject = nullptr; };
+		virtual ~CacheManager () {};
 
-        CacheObject* CreateCacheObject(int rowNo, std::string data);
-        void SetCacheObject(CacheObject* cache);
+		CacheObject* CreateCacheObject (int rowNo, std::string data);
+		void SetCacheObject (CacheObject* cache);
 
-        std::string GetContent();
+		std::string GetContent ();
 
-    private:
-        CacheObject* _CacheObject;
-    };
+	private:
+		CacheObject* _CacheObject;
+	};
 }

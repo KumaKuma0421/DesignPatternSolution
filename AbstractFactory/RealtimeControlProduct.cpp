@@ -6,12 +6,12 @@
 
 using namespace GoF_AbstractFactory;
 
-bool RealtimeControlProduct::Start()
+bool RealtimeControlProduct::Start ()
 {
-    return true;
+	return true;
 }
 
-bool RealtimeControlProduct::Stop()
+bool RealtimeControlProduct::Stop ()
 {
-    return true;
+	return true;
 }
