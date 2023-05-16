@@ -9,6 +9,10 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Markdown">
+      <UniqueIdentifier>{7344df7b-5713-427f-9917-1e5306cc2594}</UniqueIdentifier>
+      <Extensions>*.md</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -79,5 +83,28 @@
     <ClInclude Include="Visitor.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AbstractFactory.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Adapter.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Readme.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Bridge.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Builder.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="ChainOfResponsibility.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Command.md">
+      <Filter>Markdown</Filter>
+    </None>
   </ItemGroup>
 </Project>
