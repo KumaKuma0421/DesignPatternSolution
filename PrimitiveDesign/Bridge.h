@@ -6,39 +6,39 @@
 
 namespace Primitive_Bridge
 {
-	class IImprementer
+	class IImplementer
 	{
 	public:
-		virtual ~IImprementer () {};
+		virtual ~IImplementer () {};
 		virtual bool Action () = 0;
 	};
 
 	class AbstractBridge
 	{
 	public:
-		AbstractBridge () { _imprementer = nullptr; };
+		AbstractBridge () { _implementer = nullptr; };
 		virtual ~AbstractBridge () {};
 
 		virtual bool Action () = 0;
 
 	protected:
-		IImprementer* _imprementer;
+		IImplementer* _implementer;
 	};
 
-	class Imprementer1 :public IImprementer
+	class Implementer1 :public IImplementer
 	{
 	public:
-		Imprementer1 () {};
-		~Imprementer1 () {};
+		Implementer1 () {};
+		~Implementer1 () {};
 
 		bool Action () { return true; };
 	};
 
-	class Imprementer2 :public IImprementer
+	class Implementer2 :public IImplementer
 	{
 	public:
-		Imprementer2 () {};
-		~Imprementer2 () {};
+		Implementer2 () {};
+		~Implementer2 () {};
 
 		bool Action () { return true; };
 	};
@@ -46,15 +46,15 @@ namespace Primitive_Bridge
 	class Bridge : public AbstractBridge
 	{
 	public:
-		Bridge (IImprementer* imprementer)
+		Bridge (IImplementer* implementer)
 		{
-			_imprementer = imprementer;
+			_implementer = implementer;
 		};
 		~Bridge () {};
 
 		bool Action ()
 		{
-			return _imprementer->Action ();
+			return _implementer->Action ();
 		};
 
 	private:

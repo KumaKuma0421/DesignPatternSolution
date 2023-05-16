@@ -124,8 +124,8 @@ namespace Primitive_Bridge
 {
 	void Run_Bridge ()
 	{
-		Imprementer1* impl1 = new Imprementer1 ();
-		Imprementer1* impl2 = new Imprementer1 ();
+		Implementer1* impl1 = new Implementer1 ();
+		Implementer1* impl2 = new Implementer1 ();
 		AbstractBridge* bridge1 = new Bridge (impl1);
 		AbstractBridge* bridge2 = new Bridge (impl2);
 		bridge1->Action ();
