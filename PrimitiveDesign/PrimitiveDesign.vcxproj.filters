@@ -47,9 +47,6 @@
     <ClInclude Include="Decorator.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Flywieght.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Proxy.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -83,6 +80,9 @@
     <ClInclude Include="Visitor.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Flyweight.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="AbstractFactory.md">
@@ -104,6 +104,51 @@
       <Filter>Markdown</Filter>
     </None>
     <None Include="Command.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Flyweight.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Composite.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Decorator.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="FactoryMethod.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Iterator.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Mediator.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Memento.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Observer.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Prototype.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Proxy.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Singleton.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="State.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Strategy.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="TemplateMethod.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Visitor.md">
       <Filter>Markdown</Filter>
     </None>
   </ItemGroup>

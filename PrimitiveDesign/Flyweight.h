@@ -1,5 +1,5 @@
 //
-// Flywieght.h
+// Flyweight.h
 //
 
 #pragma once

@@ -2,7 +2,7 @@
 
 ```mermaid
 classDiagram
-direction TB
+direction LR
   class Product {
     +Product()
     +~Product()*
@@ -17,6 +17,7 @@ direction TB
     +~Builder()
     Build() Product*
   }
+
   IBuilder <|-- Builder
   Builder --> Product : create
 ```

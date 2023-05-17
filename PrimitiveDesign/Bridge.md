@@ -25,12 +25,14 @@ direction TB
     +Action() bool
   }
   class Bridge {
-    +Bridge(implementer:IImplementer*)
+    +Bridge(implementer : IImplementer*)
     +~Bridge()
     +Action() bool
     -Bridge()
   }
+
   IImplementer <|-- Implementer1
   IImplementer <|-- Implementer2
+  IImplementer <-- AbstractBridge
   AbstractBridge <|-- Bridge
 ```

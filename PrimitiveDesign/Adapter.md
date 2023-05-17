@@ -14,7 +14,7 @@ classDiagram
     +DoAction()* bool
   }
   class Adapter1 {
-    +Adapter1(adaptee:Adaptee*)
+    +Adapter1(adaptee : Adaptee*)
     +~Adapter1()
     +DoAction() bool
   }

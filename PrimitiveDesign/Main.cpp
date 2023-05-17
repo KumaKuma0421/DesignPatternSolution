@@ -14,7 +14,7 @@
 #include "Bridge.h"
 #include "Composite.h"
 #include "Decorator.h"
-#include "Flywieght.h"
+#include "Flyweight.h"
 #include "Proxy.h"
 #include "ChainOfResponsibility.h"
 #include "Command.h"

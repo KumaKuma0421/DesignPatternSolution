@@ -161,7 +161,7 @@
     <ClInclude Include="Composite.h" />
     <ClInclude Include="Decorator.h" />
     <ClInclude Include="FactoryMethod.h" />
-    <ClInclude Include="Flywieght.h" />
+    <ClInclude Include="Flyweight.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Mediator.h" />
     <ClInclude Include="Memento.h" />
@@ -181,7 +181,22 @@
     <None Include="Builder.md" />
     <None Include="ChainOfResponsibility.md" />
     <None Include="Command.md" />
+    <None Include="Composite.md" />
+    <None Include="Decorator.md" />
+    <None Include="FactoryMethod.md" />
+    <None Include="Flyweight.md" />
+    <None Include="Iterator.md" />
+    <None Include="Mediator.md" />
+    <None Include="Memento.md" />
+    <None Include="Observer.md" />
+    <None Include="Prototype.md" />
+    <None Include="Proxy.md" />
     <None Include="Readme.md" />
+    <None Include="Singleton.md" />
+    <None Include="State.md" />
+    <None Include="Strategy.md" />
+    <None Include="TemplateMethod.md" />
+    <None Include="Visitor.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
