@@ -8,7 +8,7 @@
 
 namespace GoF_AbstractFactory
 {
-	class RealtimeControlProduct : public ControlProduct
+	class DLL_DECLSPEC RealtimeControlProduct : public ControlProduct
 	{
 	public:
 		RealtimeControlProduct () {};

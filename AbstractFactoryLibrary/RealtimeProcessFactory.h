@@ -8,7 +8,7 @@
 
 namespace GoF_AbstractFactory
 {
-	class RealtimeProcessFactory : public AbstractFactory
+	class DLL_DECLSPEC RealtimeProcessFactory : public AbstractFactory
 	{
 	public:
 		RealtimeProcessFactory () {};

@@ -8,7 +8,7 @@
 
 namespace GoF_AbstractFactory
 {
-	class ConsoleDisplayProduct : public DisplayProduct
+	class DLL_DECLSPEC ConsoleDisplayProduct : public DisplayProduct
 	{
 	public:
 		ConsoleDisplayProduct () {};

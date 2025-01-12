@@ -8,7 +8,7 @@
 
 namespace GoF_AbstractFactory
 {
-	class BatchControlProduct : public ControlProduct
+	class DLL_DECLSPEC BatchControlProduct : public ControlProduct
 	{
 	public:
 		BatchControlProduct () {};

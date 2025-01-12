@@ -8,7 +8,7 @@
 
 namespace GoF_AbstractFactory
 {
-	class BatchProcessFactory : public AbstractFactory
+	class DLL_DECLSPEC BatchProcessFactory : public AbstractFactory
 	{
 	public:
 		BatchProcessFactory () {};

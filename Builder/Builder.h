@@ -8,22 +8,61 @@
 
 namespace GoF_Builder
 {
+	class Product
+	{
+	public:
+		Product (std::string name);
+		virtual ~Product () {};
+		virtual std::string GetName () = 0;
+		virtual std::string GetSpec () = 0;
+
+	protected:
+		std::string _name;
+
+	private:
+		Product () = delete;
+	};
+
+	class MetalProduct : public Product
+	{
+	public:
+		MetalProduct (std::string name);
+		~MetalProduct () {};
+		std::string GetName ();
+		std::string GetSpec ();
+
+	private:
+		MetalProduct () = delete;
+	};
+
+	class WoodProduct : public Product
+	{
+	public:
+		WoodProduct (std::string name);
+		~WoodProduct () {};
+		std::string GetName ();
+		std::string GetSpec ();
+
+	private:
+		WoodProduct () = delete;
+	};
+
 	class Builder
 	{
 	public:
 		Builder () {};
 		virtual ~Builder () {};
 
-		virtual std::string Build () = 0;
+		virtual Product* BuildProduct () = 0;
 	};
 
-	class ConcreteBuilder : public Builder
+	class MetalBuilder : public Builder
 	{
 	public:
-		ConcreteBuilder () {};
-		~ConcreteBuilder () {};
+		MetalBuilder () {};
+		~MetalBuilder () {};
 
-		std::string Build ();
+		Product* BuildProduct ();
 	};
 
 	class WoodBuilder : public Builder
@@ -32,19 +71,6 @@ namespace GoF_Builder
 		WoodBuilder () {};
 		~WoodBuilder () {};
 
-		std::string Build ();
-	};
-
-	class Maker
-	{
-	public:
-		Maker () { _selectedBuilder = nullptr; };
-		virtual ~Maker () {};
-
-		void SelectBuilder (std::string builder);
-		std::string GetPrint ();
-
-	private:
-		Builder* _selectedBuilder;
+		Product* BuildProduct ();
 	};
 }

@@ -4,11 +4,26 @@
 
 #pragma once
 
+#include <iostream>
 #include <string>
+
+#ifdef ABSTRACTFACTORYLIBRARY_EXPORTS
+  #ifndef DLL_DECLSPEC
+    #define DLL_DECLSPEC __declspec(dllexport)
+  #endif
+#else
+  #ifndef DLL_DECLSPEC
+    #define DLL_DECLSPEC __declspec(dllimport)
+  #endif
+#pragma comment(lib, "AbstractFactoryLibrary.lib")
+#endif
+
+#define FUNCTION_BEGIN() std::cout << __FUNCTION__ << ":BEGIN" << std::endl
+#define FUNCTION_END() std::cout << __FUNCTION__ << ":END" << std::endl;
 
 namespace GoF_AbstractFactory
 {
-	class StorageProduct
+	class DLL_DECLSPEC StorageProduct
 	{
 	public:
 		StorageProduct () {};
@@ -18,7 +33,7 @@ namespace GoF_AbstractFactory
 		virtual std::string Load () = 0;
 	};
 
-	class DisplayProduct
+	class DLL_DECLSPEC DisplayProduct
 	{
 	public:
 		DisplayProduct () {};
@@ -27,7 +42,7 @@ namespace GoF_AbstractFactory
 		virtual bool Show (std::string message) = 0;
 	};
 
-	class ControlProduct
+	class DLL_DECLSPEC ControlProduct
 	{
 	public:
 		ControlProduct () {};
@@ -36,7 +51,8 @@ namespace GoF_AbstractFactory
 		virtual bool Start () = 0;
 		virtual bool Stop () = 0;
 	};
-	class AbstractFactory
+
+	class DLL_DECLSPEC AbstractFactory
 	{
 	public:
 		AbstractFactory () {};

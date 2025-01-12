@@ -1,5 +1,5 @@
 //
-// FileStorageProduct.h
+// MemoryStorageProduct.h
 //
 
 #pragma once
@@ -8,11 +8,11 @@
 
 namespace GoF_AbstractFactory
 {
-	class FileStorageProduct : public StorageProduct
+	class DLL_DECLSPEC MemoryStorageProduct : public StorageProduct
 	{
 	public:
-		FileStorageProduct () {};
-		~FileStorageProduct () {};
+		MemoryStorageProduct () {};
+		~MemoryStorageProduct () {};
 
 		bool Store (std::string data);
 		std::string Load ();

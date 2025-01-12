@@ -1,5 +1,12 @@
 # Abstract Factory
 
+複雑なクラス構成になっているが、要点は以下となる。
+
+- 一連のオブジェクト群を生成するFactoryを生成する。
+- 生成したFactoryでProduct群を生成する。
+
+## Class Diagram
+
 ```mermaid
 classDiagram
   direction TB
@@ -68,4 +75,29 @@ classDiagram
   FactoryB --> ProductB2 : create
   FactoryB --> IProduct1 : use
   FactoryB --> IProduct2 : use
+```
+
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+  participant main as  main()
+  participant factoryA as factoryA:FactoryA
+  participant aProduct1 as aProduct1:IProduct1
+  participant aProduct2 as aProduct2:IProduct2
+
+  main      ->>+  factoryA : new()
+  factoryA  -->>- main     : return (factoryA)
+  
+  main      ->>+  factoryA : createProduct1()
+  factoryA  -->>- main     : return (aProduct1)
+  
+  main      ->>+  factoryA : createProduct2()
+  factoryA  -->>- main     : return (aProduct2)
+
+  main      ->>+  aProduct1 : Action1()
+  aProduct1 -->>- main      : return
+
+  main      ->>+  aProduct2 : Action2()
+  aProduct2 -->>- main      : return
 ```

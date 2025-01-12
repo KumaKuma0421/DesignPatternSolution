@@ -6,43 +6,47 @@
 
 using namespace GoF_Builder;
 
-void Maker::SelectBuilder (std::string builder)
+Product::Product (std::string name)
 {
-	if (builder == "Concrete")
-	{
-		_selectedBuilder = new ConcreteBuilder ();
-	}
-	else if (builder == "Wood")
-	{
-		_selectedBuilder = new WoodBuilder ();
-	}
-	else
-	{
-		_selectedBuilder = nullptr;
-	}
+	_name = name;
 }
 
-std::string Maker::GetPrint ()
+MetalProduct::MetalProduct (std::string name)
+	:Product(name)
 {
-	return _selectedBuilder->Build ();
 }
 
-std::string ConcreteBuilder::Build ()
+std::string MetalProduct::GetName ()
 {
-	std::string buildmemo;
-
-	buildmemo = "これはコンクリート製の";
-	buildmemo += "家屋の作り方の設計図です。";
-
-	return buildmemo;
+	return "This is " + _name + ".";
 }
 
-std::string WoodBuilder::Build ()
+std::string MetalProduct::GetSpec ()
 {
-	std::string buildmemo;
+	return "This " + _name + " is so hard.";
+}
 
-	buildmemo = "これは木造の";
-	buildmemo += "家屋の作り方の設計図です。";
+WoodProduct::WoodProduct (std::string name)
+	:Product(name)
+{
+}
 
-	return buildmemo;
+std::string WoodProduct::GetName ()
+{
+	return "This is " +_name + ".";
+}
+
+std::string WoodProduct::GetSpec ()
+{
+	return "This " + _name + " is so soft.";
+}
+
+Product* MetalBuilder::BuildProduct ()
+{
+	return new MetalProduct ("iron");
+}
+
+Product* WoodBuilder::BuildProduct ()
+{
+	return new WoodProduct ("rawang");
 }
